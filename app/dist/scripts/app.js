@@ -1,0 +1,2 @@
+!function(){var o=document.documentElement;o.classList.remove("no-js"),o.classList.add("js")}(),document.addEventListener("DOMContentLoaded",function(){console.log("Hello world! I am Moira.")});
+//# sourceMappingURL=app/dist/scripts/app.js.map

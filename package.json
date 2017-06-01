@@ -1,0 +1,73 @@
+{
+    "name": "pvdsteen",
+    "version": "0.0.1",
+    "description": "Personal website of Peter van der Steen",
+    "author": "Peter van der Steen <pvdsteen@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pvds/pvdsteen"
+    },
+    "bugs": "https://github.com/pvds/moira/issues",
+    "keywords": [
+        "npm",
+        "scripts",
+        "npm scripts",
+        "watch",
+        "minify",
+        "compress"
+    ],
+    "scripts": {
+        "clean": "rimraf app/dist",
+        "lint": "eslint app/src/scripts",
+        "sass": "node-sass --output-style expanded --include-path node_modules/bourbon-neat/core/ -o app/dist/styles app/src/styles",
+        "postcss": "postcss -u autoprefixer -b \"last 2 versions\" -u cssnano -r app/dist/styles/*.css",
+        "uglify": "mkdirp app/dist/scripts && uglifyjs app/src/scripts/*.js app/src/scripts/components/*.js -m -c -o app/dist/scripts/app.js",
+            "uglify:api": "mkdirp test && node uglify.config.js",
+
+        "static": "npm-run-all static:*",
+            "static:fonts": "copyfiles -f app/src/fonts/**/* app/dist/fonts",
+            "static:imagemin": "imagemin app/src/images/**/* -o app/dist/images",
+            "static:icons": "svgo -f app/src/icons/* -o app/dist/images",
+
+        "build": "npm-run-all clean build:*",
+            "build:css": "npm run sass -- --source-map true && npm run postcss",
+            "build:js": "npm run lint && npm run uglify -- --source-map app/dist/scripts/app.js.map",
+            "build:static": "npm run static",
+
+        "deploy": "npm-run-all clean deploy:*",
+            "deploy:css": "npm run sass -- --compressed && npm run postcss",
+            "deploy:js": "npm run lint && npm run uglify",
+            "deploy:static": "npm run static",
+
+        "watch": "npm-run-all -p server watch:*",
+            "watch:css": "onchange app/src/styles -- npm run build:css",
+            "watch:js": "onchange app/src/scripts -- npm run build:js",
+            "watch:images": "onchange app/src/images -- npm run build:images",
+
+        "server": "browser-sync start --watchEvents [add, change] -p pvdsteen.dev --host pvdsteen.dev --open external --files [app/dist/styles/*.css, app/dist/scripts/*.js, app/templates/**/*.php]",
+
+        "postinstall": "npm run build && npm run watch"
+    },
+    "devDependencies": {
+        "autoprefixer": "^6.7.6",
+        "browser-sync": "^2.17.5",
+        "copyfiles": "^1.0.0",
+        "cssnano": "^3.10.0",
+        "eslint": "^3.16.1",
+        "imagemin-cli": "^3.0.0",
+        "mkdirp": "^0.5.1",
+        "node-sass": "^3.10.1",
+        "npm-run-all": "^3.1.1",
+        "onchange": "^3.0.2",
+        "postcss-cli": "^2.6.0",
+        "rimraf": "^2.6.1",
+        "standard": "^5.3.1",
+        "svgo": "^0.7.1",
+        "uglify-js": "^2.8.5"
+    },
+    "dependencies": {
+        "bourbon-neat": "^2.0.0",
+        "font-awesome": "^4.7.0"
+    }
+}

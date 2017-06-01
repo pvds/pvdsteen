@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/src/scripts/app.js","app/src/scripts/initialize.js"],"names":["doc","document","documentElement","classList","remove","add","addEventListener","console","log"],"mappings":"CAAC,WACG,GAAIA,GAAMC,SAASC,eAEnBF,GAAIG,UAAUC,OAAO,SACrBJ,EAAIG,UAAUE,IAAI,SCJtBJ,SAASK,iBAAiB,mBAAoB,WAC1CC,QAAQC,IAAI","file":"app/dist/scripts/app.js"}
