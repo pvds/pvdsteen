@@ -30,31 +30,3 @@ body{
         }
     }
 }
-
-header{
-    section{
-        &.top{
-            background: darken($white, 70);
-            color: darken($white, 20);
-            text-align: right;
-
-            li{
-                > *{
-                    padding: $gutter-fourth $gutter-half;
-                    margin: 2px 0 4px 0;
-                    display: inline-block;
-                }
-            }
-
-            a{
-                &:hover{
-                    color: $white;
-                }
-            }
-        }
-        #menu-dev{
-            font-size: 1.2rem;
-            margin: 0 $gutter;
-        }
-    }
-}
