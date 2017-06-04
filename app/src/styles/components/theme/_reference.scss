@@ -1,0 +1,54 @@
+.reference {
+    position: relative;
+    padding-left: 70px;
+    padding-bottom: $gutter-double;
+    margin-bottom: $gutter-double;
+    min-height: 58px;
+    box-sizing: content-box;
+    border-bottom: 2px dashed $black;
+    &:last-child {
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .reference-avatar {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    .reference-author {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        span {
+            display: block;
+            color: $grey-light;
+        }
+    }
+    .reference-cont {
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        border-width: 0;
+        max-width: 100%;
+        margin: 15px 0 0;
+    }
+}
+
+.desktop{
+    .reference{
+        &.is-animate {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .9s ease-out, visibility .9s ease-out;
+        }
+        &.is-animated {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .9s ease-out, visibility .9s ease-out;
+        }
+    }
+}

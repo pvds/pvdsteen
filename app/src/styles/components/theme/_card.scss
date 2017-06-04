@@ -1,0 +1,20 @@
+.card {
+    background: $blue;
+    padding: $gutter-double $gutter;
+    text-align: center;
+    .card-avatar {
+        width: 180px;
+        height: 180px;
+        border: 6px solid $black;
+    }
+    .card-info {
+        margin: $gutter 0 0 0;
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    .card-profession {
+        line-height: 1.6;
+    }
+}

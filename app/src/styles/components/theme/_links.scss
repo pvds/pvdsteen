@@ -1,0 +1,12 @@
+#links {
+    text-align: center;
+    margin: $gutter 0;
+    a{
+        margin: $gutter-half 0;
+        @include button($black, $white, $orange);
+        padding: 0 40px;
+        .fa{
+            margin-right: $gutter-half;
+        }
+    }
+}
