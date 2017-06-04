@@ -1,6 +1,3 @@
-/**
- * TODO: separate logic into main.js and theme.js
- **/
 (function () {
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -36,18 +33,12 @@
         /**
          * Listen for print actions
          */
-        var mediaQueryList = window.matchMedia('print');
-        mediaQueryList.addListener(function(mql) {
-            if (mql.matches) {
-                console.log('onbeforeprint equivalent');
-                manualProgressTrigger();
-            } else {
-                console.log('onafterprint equivalent');
-            }
-        });
+        listenPrintEvent();
 
         /**
          * Initiate scrollspy
+         *  Changelog:
+         *  - gumshoe.js line 9 | changed this.window to window
          * */
         gumshoe.init(moira.scrollspy);
 

@@ -190,4 +190,14 @@ function expander(){
     }
 }
 
+/* Print event listener */
+function listenPrintEvent(){
+    var mediaQueryList = window.matchMedia('print');
+    mediaQueryList.addListener(function(mql) {
+        if (mql.matches) {
+            console.log('onbeforeprint equivalent');
+            manualProgressTrigger();
+        }
+    });
+}
 
