@@ -1,24 +1,53 @@
-.expander {
-    .expander-trigger {
+.expander-trigger {
+    display: inline-block;
+    color: $grey-light;
+    cursor: pointer;
+    font-size: 90%;
+    transition: all .3s ease-in-out;
+    &:hover{
+        color: lighten($orange, 10);
+    }
+    &.is-once{
+        @extend .visually-hidden;
+        visibility: hidden;
+        opacity: 0;
+    }
+    &:before{
+        @include fa;
+        content: "\f196";
         position: relative;
-        display: block;
-        user-select: none;
-        cursor: pointer;
-
+        margin-right: $gutter-fourth;
+        top: 1px;
+    }
+    &.is-triggered{
         &:before {
-            @include fa;
-            content: "\f068";
-            margin-right: 0.5em;
+            content: "\f147";
+        }
+    }
+}
+
+.expander-content{
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .1s ease-in-out .3s;
+    &.is-visible{
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
+        transition: visibility .3s ease-in-out .1s, opacity .3s ease-in-out .1s, max-height .1s ease-in-out;
+    }
+    &.is-box{
+        padding: $gutter-half $gutter-half * 1.5;
+        border-radius: $border-radius-half;
+        background: darken($grey, 2);
+        font-size: 90%; // TODO: add separate is-smaller class!?
+        > :first-child{
+            margin-top: 0;
+        }
+        > :last-child{
+            margin-bottom: 0;
         }
     }
 
-    .expander-hidden {
-        &:before {
-            content: "\f067";
-        }
-    }
-
-    .expander-hidden + .expander-content {
-        display: none;
-    }
 }
