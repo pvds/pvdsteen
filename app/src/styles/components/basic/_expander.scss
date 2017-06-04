@@ -41,7 +41,6 @@
         padding: $gutter-half $gutter-half * 1.5;
         border-radius: $border-radius-half;
         background: darken($grey, 2);
-        font-size: 90%; // TODO: add separate is-smaller class!?
         > :first-child{
             margin-top: 0;
         }
@@ -49,5 +48,7 @@
             margin-bottom: 0;
         }
     }
-
+    &.has-small-text{
+        font-size: 90%;
+    }
 }
