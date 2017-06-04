@@ -6,15 +6,15 @@ $font-path-local: "../fonts";
 //$font-path-cdn: "//cdn.website.com/fonts";
 $font-path: $font-path-local;
 
-$font-base: "Lato", sans-serif;
-$font-theme: "Museo Sans", sans-serif;
+$font-base: "Quicksand", sans-serif;
+$font-theme: $font-base;
 $font-code: "monospace", monospace;
 
 $font-weight-base: 400;
 $font-weight-base-strong: 700;
-$font-weight-theme: 500;
-$font-weight-theme-strong: 700;
-$font-weight-theme-stronger: 900;
+$font-weight-theme: $font-weight-base;
+$font-weight-theme-strong: $font-weight-base-strong;
+$font-weight-theme-stronger: $font-weight-base-strong;
 
 $font-size-logo: 3.8rem;
 $font-size-h1: 3.2rem;
@@ -24,24 +24,29 @@ $font-size-h4: 1.6rem;
 $font-size-base: 1.6rem;
 
 $line-height-base: 1.1;
-$line-height: 1.6;
+$line-height: 1.8;
 
 // Colors
 $black: #222222;
 $white: #ffffff;
-$grey: #777777;
-$blue: blue;
+$grey: #373737;
+$grey-light: #bcbcbc;
+$orange: #C46210;
+$blue: #1d7889;
 $red: red;
 $green: green;
-$orange: orange;
 $purple: purple;
 $pink: pink;
 $yellow: yellow;
 
+$text-color: $white;
+$body-color: #2a2a2a;
+$border-color: #1f1f1f;
 
 // Layout
 $base-width: 0.5rem;
-$spacing: 0.9em;
+$letter-spacing: 0.08em;
+$spacing: 1em;
 $spacing-half: $spacing / 2;
 $spacing-fourth: $spacing / 4;
 $spacing-double: $spacing * 2;
