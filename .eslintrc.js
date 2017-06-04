@@ -29,6 +29,11 @@ module.exports = {
         "jquery": false,      // jquery global variables.
         "prototypejs": false, // prototypejs global variables.
         "shelljs": false,     // shelljs global variables.
+        "es6": true           // EcmaScript 2015
+    },
+
+    "parserOptions": {
+        "sourceType": "module"
     },
 
     "globals": {
