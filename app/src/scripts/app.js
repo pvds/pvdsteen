@@ -19,15 +19,10 @@
         /**
          * Animate Elements
          */
-        if(moira.progress.animation && !moira.vars.mobile) {
+        if(moira.animation.global || !moira.vars.mobile && moira.animation.mobile) {
             appearElems(moira.vars.animateEl, 150);
-        }
-
-        /**
-         * Circle & Line Charts
-         */
-        if(!moira.progress.animation || moira.vars.mobile) {
-            manualProgressTrigger();
+        } else{
+            manualAnimationTrigger();
         }
 
         /**

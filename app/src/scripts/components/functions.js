@@ -115,7 +115,7 @@ function appearElems(elems, vpart) {
     });
 }
 
-function manualProgressTrigger(){
+function manualAnimationTrigger(){
     // Animate Progress Bullets
     moira.progress.bullets = document.querySelectorAll(moira.progress.selectorBullets);
     for (var i = 0; i < moira.progress.bullets.length; i++) {
@@ -126,7 +126,7 @@ function manualProgressTrigger(){
     }
 
     // Animate Progress Chart
-    moira.progress.charts = document.querySelectorAll(moira.progress.classChart);
+    moira.progress.charts = document.querySelectorAll(moira.progress.selectorChart);
     for (var i = 0; i < moira.progress.charts.length; i++) {
         var chartItem = moira.progress.charts[i],
             chart = chartItem.querySelector(moira.progress.selectorBar);
@@ -135,10 +135,12 @@ function manualProgressTrigger(){
     }
 
     // Animate Progress Line
-    moira.progress.lines = document.querySelectorAll(moira.progress.classLine);
+    moira.progress.lines = document.querySelectorAll(moira.progress.selectorLine);
     for (var i = 0; i < moira.progress.lines.length; i++) {
         var lineItem = moira.progress.lines[i],
             line = lineItem.querySelector(moira.progress.selectorBar);
+
+        console.log(line);
 
         progressLine(line, line.getAttribute(moira.progress.attributeText), line.getAttribute(moira.progress.attributeValue), 1);
     }

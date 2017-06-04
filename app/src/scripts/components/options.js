@@ -7,6 +7,8 @@ var moira = {
         themeColor: '#c46210'
     },
     animation: {
+        global: true,
+        mobile: true,
         selectorBefore: 'is-animate',
         selectorAfter: 'is-animated'
     },
@@ -20,7 +22,6 @@ var moira = {
         classTrigger: 'is-triggered'
     },
     progress: {
-        animation: true, // animate on window scroll
         textColor: 'inherit', // set text color
         trailColor: 'rgba(0,0,0,0.07)', // set trail color
         attributeText: 'data-text',
@@ -29,7 +30,9 @@ var moira = {
         classLine: 'progress-line',
         classChart: 'progress-chart',
         selectorBar: '.progress-bar',
-        selectorBullets: '.progress-bullets'
+        selectorBullets: '.progress-bullets',
+        selectorLine: '.progress-line',
+        selectorChart: '.progress-chart',
     },
     scrollspy: {
         selector: '#nav-wrap a', // Default link selector (must use a valid CSS selector)
