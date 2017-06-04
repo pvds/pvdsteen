@@ -37,7 +37,9 @@ body {
     @include rem(font-size, $font-size-base); /* 2 */
     @include font-smoothing(on); /* 3 */
     font-weight: $font-weight-base;
-    color: $black;
+    letter-spacing: $letter-spacing;
+    background: $body-color;
+    color: $text-color;
     min-width: #{$bp-xxs-px - $gutter};
 }
 
@@ -72,7 +74,10 @@ ul,
 ol,
 blockquote,
 figure,
-button {
+button,
+dl,
+dt,
+dd{
     margin: 0;
     padding: 0;
 }
@@ -90,7 +95,7 @@ li {
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
-strong {
+strong, dt, th {
     font-weight: $font-weight-base-strong;
 }
 
@@ -98,7 +103,7 @@ strong {
    ========================================================================== */
 
 /**
- * Set project typography for headers
+ * Set header typography
  */
 
 h1,h2,h3,h4,h5,h6{
@@ -177,10 +182,10 @@ sup {
     top: -0.5em;
 }
 
-hr{
+hr {
     border: 0;
     border-top: .1rem solid darken($white, 5);
-    margin: 3.0rem 0;
+    margin: $gutter 0;
 }
 
 /**

@@ -15,7 +15,7 @@
         margin: $spacing 0;
     }
     ol,ul{
-        margin: $spacing 0 $spacing ($spacing-double+$spacing);
+        margin: $spacing 0 $spacing $spacing-double;
     }
     li{
         display: list-item;
