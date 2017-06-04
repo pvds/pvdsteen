@@ -31,4 +31,3 @@ vendor/
 
 # Moira output folder.
 app/dist/
-.gitignore
