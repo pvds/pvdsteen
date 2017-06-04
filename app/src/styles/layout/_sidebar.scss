@@ -1,0 +1,6 @@
+#side-wrap {
+    @include media(lg) {
+        float: left;
+        width: $side-width;
+    }
+}

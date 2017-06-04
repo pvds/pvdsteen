@@ -1,0 +1,65 @@
+#main-wrap{}
+
+.section-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    outline: 0;
+    background: $grey;
+}
+
+section {
+    width: 100%;
+    padding: $gutter $gutter $gutter * 1.5 $gutter;
+    > h3 {
+        font-size: 2.2rem;
+        font-weight: $font-weight-base;
+        color: $grey-light;
+        margin: 0 0 $gutter * 1.5 0;
+    }
+    &.has-progress-chart {
+        text-align: center;
+    }
+}
+
+hr {
+    width: 100%;
+    margin: $gutter-half $gutter $gutter-half * 1.5 $gutter;
+    border-color: darken($grey, 2);
+    border-width: 0.3rem;
+}
+
+@include media(md) {
+    .section-wrap {
+        border: 1px solid $border-color;
+        margin-bottom: $gutter;
+    }
+}
+
+@include media(lg) {
+    #main-wrap {
+        margin-left: $side-width + $gutter;
+        margin-right: $nav-width;
+    }
+}
+
+.desktop {
+    .section-wrap {
+        &.is-animate {
+            visibility: hidden;
+            opacity: 0;
+            transform: translate3d(0, 150px, 0) scale3d(1, 1, 1);
+            transition: transform .3s ease-out, opacity .3s ease-out, visibility .3s ease-out;
+        }
+        &.is-animated {
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+            transition: transform .3s ease-out, opacity .3s ease-out, visibility .3s ease-out;
+        }
+    }
+    @include media(lg){
+        [data-tooltip] {
+            @include tooltip(left, $blue, $white, 3px, $border-radius-half);
+        }
+    }
+}

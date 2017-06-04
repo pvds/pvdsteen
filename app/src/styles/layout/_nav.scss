@@ -1,0 +1,39 @@
+#nav-wrap {
+    display: none;
+
+    @include media(lg){
+        display: block;
+        float: right;
+        width: $nav-width;
+        text-align: center;
+        z-index: 1;
+        ul {
+            text-align: center;
+        }
+        li {
+            display: inline-block;
+            margin: $gutter-half 0;
+        }
+        a {
+            font-size: 3.2rem;
+            line-height: 50px;
+            width: $nav-item-size;
+            height: $nav-item-size;
+            .fa {
+                margin-left: 10px;
+            }
+            &.fa-folder-open {
+                font-size: 3.4rem;
+            }
+            &:hover {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            &.is-active {
+                color: $black;
+                &:hover{
+                    color: $black;
+                }
+            }
+        }
+    }
+}
