@@ -31,3 +31,6 @@ vendor/
 
 # Moira output folder.
 app/dist/
+
+# Uncompressed html files
+index.html
