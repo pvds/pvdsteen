@@ -3,7 +3,7 @@ $timeline-date-gutter: $gutter;
 
 .timeline {
     position: relative;
-    margin-left: 5px;
+    margin-left: $gutter;
     &:before {
         top: 10px;
         left: 0;
