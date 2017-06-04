@@ -8,7 +8,6 @@
 @import "basic/classes";
 
 //-- Fonts --//
-//@import "fonts/museosans";
 @import "fonts/fontawesome";
 
 //-- Dev --//
@@ -18,10 +17,12 @@
 //@import "dev/grid";
 
 //-- Layouts --//
+@import "layout/content";
+@import "layout/footer";
 @import "layout/header";
 @import "layout/main";
+@import "layout/nav";
 @import "layout/sidebar";
-@import "layout/footer";
 
 //-- Components --//
 @import "components/basic/alert";
@@ -30,11 +31,13 @@
 @import "components/basic/form";
 @import "components/basic/table";
 
-@import "components/global/menu";
-//@import "components/global/menu-mobile";
-@import "components/global/hero";
-
-//@import "components/theme/[component-name]";
+@import "components/theme/card";
+@import "components/theme/definition";
+@import "components/theme/links";
+@import "components/theme/progress";
+@import "components/theme/reference";
+@import "components/theme/shape";
+@import "components/theme/timeline";
 
 //-- Templates --//
 @import "templates/frontpage";
