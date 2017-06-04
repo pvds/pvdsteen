@@ -128,6 +128,10 @@ $progress-line-bar-height: 5px;
         margin: $gutter * 1.2 0 $gutter-half 0;
         color: $grey-light;
 
+        &.is-compressed{
+            margin: $gutter-half * 1.5 0 $gutter-half 0;
+        }
+
         .progress-title {
             margin-bottom: 10px;
             padding-right: 3.8em;

@@ -2,13 +2,6 @@
  * About section
  */
 
-#about-soft-skills, #about-interests {
-    // TODO refactor to progress theme class
-    .progress-line {
-        margin: $gutter-half * 1.5 0 $gutter-half;
-    }
-}
-
 @include media(md) {
     #about {
         @include grid-container;
