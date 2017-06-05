@@ -42,6 +42,15 @@
     }
 }
 
+/**
+ * Closure links
+ */
+#closure-links{
+    @include media(lg){
+        display: none;
+    }
+}
+
 @media print {
     @page {
         margin: 0;
