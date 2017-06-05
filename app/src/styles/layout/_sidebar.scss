@@ -1,6 +1,13 @@
 #side-wrap {
+    .links{
+        display: none;
+    }
     @include media(lg) {
         float: left;
         width: $side-width;
+
+        .links{
+            display: block;
+        }
     }
 }
