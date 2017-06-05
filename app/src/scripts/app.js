@@ -7,11 +7,6 @@
         moira.initGlobalVars();
 
         /**
-         * Initialize smooth anchor scrolling
-         **/
-        initSmoothScrolling();
-
-        /**
          * Initialize sticky elements
          **/
         new Sticky('.sticky');
@@ -30,12 +25,19 @@
          */
         listenPrintEvent();
 
-        /**
-         * Initiate scrollspy
-         *  Changelog:
-         *  - gumshoe.js line 9 | changed this.window to window
-         * */
-        gumshoe.init(moira.scrollspy);
+        if(!moira.vars.mobile){
+            /**
+             * Initialize smooth anchor scrolling
+             **/
+            initSmoothScrolling();
+
+            /**
+             * Initiate scrollspy
+             *  Changelog:
+             *  - gumshoe.js line 9 | changed this.window to window
+             * */
+            gumshoe.init(moira.scrollspy);
+        }
 
         /**
          * Initiate expander

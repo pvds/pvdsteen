@@ -6,6 +6,9 @@ var moira = {
         // Set theme primary color
         themeColor: '#c46210'
     },
+    nav: {
+        linkSelector: 'nav a'
+    },
     mood: {
         animationType: 'click',
         idMood: 'mood',
@@ -42,7 +45,7 @@ var moira = {
         selector: '#nav-wrap a', // Default link selector (must use a valid CSS selector)
         selectorHeader: 'header', // Fixed header selector (must use a valid CSS selector)
         container: window, // The element to spy on scrolling in (must be a valid DOM Node)
-        offset: -20, // Distance in pixels to offset calculations
+        offset: 70, // Distance in pixels to offset calculations
         activeClass: 'is-active', // Class to apply to active navigation link and its parent list item
         scrollDelay: false, // Wait until scrolling has stopped before updating the navigation
         callback: function (nav) {

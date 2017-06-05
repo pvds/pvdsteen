@@ -4,8 +4,10 @@ function initSmoothScrolling() {
         return;
     }
 
+    // TODO: add to moira variables
     var duration = 400,
-        offset = -20;
+        initialOffset = -20,
+        anchorTargetAnimationHeight = 150;
 
     var pageUrl = location.hash
         ? stripHash(location.href)
@@ -44,6 +46,14 @@ function initSmoothScrolling() {
         function onClick(e) {
             e.stopPropagation();
             e.preventDefault();
+
+            var navAnchor = this.hash,
+                anchorTarget = document.querySelector(navAnchor),
+                offset = initialOffset;
+
+            if(anchorTarget.classList.contains('is-animate')){
+                offset = initialOffset - anchorTargetAnimationHeight;
+            }
 
             jump(e.target.hash, {
                 duration: duration,
