@@ -41,6 +41,11 @@
          * Initiate expander
          * */
         expander();
+
+        /**
+         * Initiate mood listener
+         * */
+        moodListener()
     });
 
     window.addEventListener('resize', function() {

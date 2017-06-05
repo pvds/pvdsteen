@@ -203,3 +203,48 @@ function listenPrintEvent(){
     });
 }
 
+function getMood(moodField){
+    var moodSource = '/data/moods.json',
+        request = new XMLHttpRequest();
+
+    request.open('GET', moodSource, true);
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText),
+                moodList = data.moods;
+
+            setMood(moodList, moodField);
+        } else {
+            console.warn('Bummer.. mood killer, Status: '+request.statusText);
+            moodField.removeEventListener('click', function(){}, false);
+        }
+    };
+    request.onerror = function() {
+        // There was a connection error of some sort
+    };
+    request.send();
+}
+
+function setMood(moodList, moodField){
+    var mood = moodList[Math.floor(Math.random()*moodList.length)];
+    moodField.innerText = mood;
+    highlight(moodField);
+}
+
+function moodListener(){
+    var moodField = document.getElementById(moira.mood.idMood),
+        moodTrigger = moodField.parentNode;
+    moodTrigger.addEventListener('click', function(e) {
+        getMood(moodField);
+    });
+}
+
+
+function highlight(target, duration){
+    var timeout = !!duration ? duration : 750;
+    target.classList.add('is-highlight');
+
+    window.setTimeout(function () {
+        target.classList.remove('is-highlight');
+    }, timeout);
+}

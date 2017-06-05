@@ -6,6 +6,10 @@ var moira = {
         // Set theme primary color
         themeColor: '#c46210'
     },
+    mood: {
+        animationType: 'click',
+        idMood: 'mood',
+    },
     animation: {
         global: true,
         mobile: true,
