@@ -42,7 +42,7 @@ var moira = {
         selector: '#nav-wrap a', // Default link selector (must use a valid CSS selector)
         selectorHeader: 'header', // Fixed header selector (must use a valid CSS selector)
         container: window, // The element to spy on scrolling in (must be a valid DOM Node)
-        offset: 0, // Distance in pixels to offset calculations
+        offset: -20, // Distance in pixels to offset calculations
         activeClass: 'is-active', // Class to apply to active navigation link and its parent list item
         scrollDelay: false, // Wait until scrolling has stopped before updating the navigation
         callback: function (nav) {

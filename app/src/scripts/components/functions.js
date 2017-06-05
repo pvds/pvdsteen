@@ -239,7 +239,6 @@ function moodListener(){
     });
 }
 
-
 function highlight(target, duration){
     var timeout = !!duration ? duration : 750;
     target.classList.add('is-highlight');

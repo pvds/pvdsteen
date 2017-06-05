@@ -4,14 +4,15 @@ function initSmoothScrolling() {
         return;
     }
 
-    var duration = 400;
+    var duration = 400,
+        offset = -20;
 
     var pageUrl = location.hash
         ? stripHash(location.href)
         : location.href
     ;
 
-    delegatedLinkHijacking();
+    //delegatedLinkHijacking();
     directLinkHijacking();
 
     function delegatedLinkHijacking() {
@@ -26,6 +27,7 @@ function initSmoothScrolling() {
 
             jump(e.target.hash, {
                 duration: duration,
+                offset: offset,
                 callback: function() {
                     setFocus(e.target.hash);
                 }
@@ -44,7 +46,8 @@ function initSmoothScrolling() {
             e.preventDefault();
 
             jump(e.target.hash, {
-                duration: duration
+                duration: duration,
+                offset: offset,
             });
         }
 
