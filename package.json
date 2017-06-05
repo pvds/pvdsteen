@@ -18,13 +18,14 @@
         "compress"
     ],
     "scripts": {
+        "todo": "use html-minifier instead of html-minifier-cli and compile all html files",
         "clean": "rimraf app/dist && mkdirp app/dist/scripts",
         "lint": "eslint app/src/scripts",
         "sass": "node-sass --output-style expanded --include-path node_modules/bourbon-neat/core/ -o app/dist/styles app/src/styles",
         "postcss": "postcss -u autoprefixer -b \"last 2 versions\" -u cssnano -r app/dist/styles/*.css",
         "babel": "babel app/src/scripts --out-file app/dist/scripts/app.js --presets=es2015,babili",
         "static": "npm-run-all static:*",
-        "static:html": "htmlmin -o app/index.html app/index.raw.html",
+        "static:html": "htmlmin -o app/index.html app/templates/index.raw.html",
         "static:fonts": "copyfiles -f app/src/fonts/**/* app/dist/fonts",
         "static:imagemin": "imagemin app/src/images/**/* -o app/dist/images",
         "static:icons": "svgo -f app/src/icons/* -o app/dist/images",
@@ -37,10 +38,11 @@
         "deploy:js": "npm run lint && npm run babel",
         "deploy:static": "npm run static",
         "start": "npm-run-all -p server start:*",
+        "start:html": "onchange app/templates -- npm run static:html",
         "start:css": "onchange app/src/styles -- npm run build:css",
         "start:js": "onchange app/src/scripts -- npm run build:js",
-        "start:images": "onchange app/src/images -- npm run build:static",
-        "server": "browser-sync start --watchEvents [add, change] -p pvdsteen.dev --host pvdsteen.dev --open external --files [app/dist/styles/*.css, app/dist/scripts/*.js, app/templates/**/*.php]",
+        "start:images": "onchange app/src/images -- npm run build:static:imagemin",
+        "server": "browser-sync start --watchEvents [add, change] -p pvdsteen.dev --host pvdsteen.dev --open external --files [app/dist/styles/*.css, app/dist/scripts/*.js, app/templates/**/*.php, app/templates/*.html]",
         "postinstall": "npm run build && npm start"
     },
     "devDependencies": {
