@@ -3,6 +3,7 @@ $detail-term-width: 85px;
 .definition {
     font-size: 1.4rem;
     dt {
+        user-select: none;
         font-weight: $font-weight-base-strong;
         float: left;
         width: $detail-term-width;
@@ -12,7 +13,10 @@ $detail-term-width: 85px;
         white-space: nowrap;
     }
     dd {
-        margin: 0 0 $gutter-half * 1.5 ($detail-term-width + $gutter-half);
+        padding: 0 0 $gutter-half * 1.5 ($detail-term-width + $gutter-half);
+    }
+    #mood-label{
+        cursor: pointer;
     }
     #mood{
         transition: all .3s ease-out;
