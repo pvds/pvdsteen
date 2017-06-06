@@ -51,11 +51,16 @@ function initSmoothScrolling() {
                 anchorTarget = document.querySelector(navAnchor),
                 offset = initialOffset;
 
+            // TODO: check why e.target.hash is sometimes undefined
+            // console.log(navAnchor);
+            // console.log(e.target.hash);
+            // console.log(anchorTarget);
+
             if(anchorTarget.classList.contains('is-animate')){
                 offset = initialOffset - anchorTargetAnimationHeight;
             }
 
-            jump(e.target.hash, {
+            jump(navAnchor, {
                 duration: duration,
                 offset: offset,
             });
