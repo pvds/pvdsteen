@@ -7,6 +7,9 @@
 @import "basic/content";
 @import "basic/classes";
 
+//-- Theme --//
+@import "theme/elements";
+
 //-- Fonts --//
 @import "fonts/fontawesome";
 
@@ -22,7 +25,7 @@
 @import "layout/header";
 @import "layout/main";
 @import "layout/nav";
-@import "layout/sidebar";
+@import "layout/side";
 
 //-- Components --//
 //@import "components/basic/alert";
