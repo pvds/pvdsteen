@@ -13,23 +13,16 @@
         li {
             display: inline-block;
             margin: $gutter-half 0;
+            &:first-child{
+                margin-top: 0;
+            }
         }
         a {
-            font-size: 3.2rem;
-            line-height: 50px;
-            width: $nav-item-size;
-            height: $nav-item-size;
-            .fa {
-                margin-left: 10px;
-            }
-            &.fa-folder-open{
-                font-size: 3.4rem;
-            }
-            &.fa-user {
-                font-size: 4.2rem;
-            }
+            color: darken($orange,15);
+            display: inline-block;
             &:hover {
                 color: rgba(255, 255, 255, 0.5);
+                color: $white;
             }
             &.is-active {
                 color: $black;
@@ -37,6 +30,32 @@
                     color: $black;
                 }
             }
+        }
+        .fa {
+            width: 100%;
+            font-size: 3.2rem;
+            &.fa-folder-open{
+                font-size: 3.4rem;
+            }
+            &.fa-user {
+                font-size: 4.2rem;
+                &:before{
+                    margin-left: -2px;
+                }
+            }
+            &.fa-university{
+                margin-bottom: $gutter-fourth;
+            }
+            &.fa-address-book{
+                margin-bottom: $gutter-fourth;
+            }
+        }
+        .title{
+            display: block;
+            font-size: 0.8rem;
+            font-weight: $font-weight-base-strong;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
     }
 }
