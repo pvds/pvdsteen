@@ -5,10 +5,8 @@
         margin: ($spacing+$spacing-half) 0 0 0;
     }
     a{
-        font-weight: 700;
-        color: darken($blue,5);
         &:hover{
-            color: darken($blue,15);
+            color: lighten($orange,10);
         }
     }
     p{
@@ -23,7 +21,7 @@
     blockquote {
         margin: $spacing 0 $spacing $spacing-double;
         padding: $gutter-half;
-        border-left: 6px solid $green;
+        border-left: 6px solid $orange;
     }
     > :first-child{
         margin-top: 0;
