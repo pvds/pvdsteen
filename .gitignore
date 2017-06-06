@@ -29,9 +29,8 @@ bower_components/
 # Composer
 vendor/
 
-# Moira output folder.
+# Moira output folders and files.
 app/dist/
-
-# Uncompressed html files
 app/templates/compiled/
 app/*.html
+app/src/data/*.json

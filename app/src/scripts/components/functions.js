@@ -204,7 +204,7 @@ function listenPrintEvent(){
 }
 
 function getMood(moodField){
-    var moodSource = '/data/moods.json',
+    var moodSource = '/data/dist/moods.json',
         request = new XMLHttpRequest();
 
     request.open('GET', moodSource, true);

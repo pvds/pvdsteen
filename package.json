@@ -24,9 +24,11 @@
         "sass": "node-sass --output-style expanded --include-path node_modules/bourbon-neat/core/ -o app/dist/styles app/src/styles",
         "postcss": "postcss -u autoprefixer -b \"last 2 versions\" -u cssnano -r app/dist/styles/*.css",
         "babel": "babel app/src/scripts --out-file app/dist/scripts/app.js --presets=es2015,babili",
-        "mustache": "npm-run-all mustache:*:*",
-        "mustache:en:index": "mustache app/data/english.json app/templates/index.mustache > app/templates/compiled/index.html",
-        "mustache:en:404": "mustache app/data/english.json app/templates/404.mustache > app/templates/compiled/404.html",
+        "yamljson": "yaml2json app/src/data -p -s && mkdirp app/dist/data && mv app/src/data/*.json app/dist/data",
+        "mustache": "npm-run-all mustache:*",
+        "mustache:prepare": "mkdirp app/templates/compiled & npm run yamljson",
+        "mustache:index": "mustache app/dist/data/english.json app/templates/index.mustache > app/templates/compiled/index.html",
+        "mustache:404": "mustache app/dist/data/english.json app/templates/404.mustache > app/templates/compiled/404.html",
         "htmlminifier": "html-minifier --input-dir app/templates/compiled --output-dir app",
         "static": "npm-run-all static:*",
         "static:fonts": "copyfiles -f app/src/fonts/**/* app/dist/fonts",
@@ -57,6 +59,7 @@
         "babel-preset-es2015": "^6.24.1",
         "browser-sync": "^2.17.5",
         "copyfiles": "^1.0.0",
+        "cpx": "^1.5.0",
         "cssnano": "^3.10.0",
         "eslint": "^3.16.1",
         "html-minifier": "^3.5.2",
@@ -69,7 +72,8 @@
         "postcss-cli": "^2.6.0",
         "rimraf": "^2.6.1",
         "standard": "^5.3.1",
-        "svgo": "^0.7.1"
+        "svgo": "^0.7.1",
+        "yamljs": "^0.2.10"
     },
     "dependencies": {
         "bourbon-neat": "^2.0.0",
