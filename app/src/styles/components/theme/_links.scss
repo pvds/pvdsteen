@@ -5,7 +5,7 @@
         display: inline-block;
         margin: $gutter-half 0;
         @include button($black, $white, $orange);
-        padding: 0 40px;
+        padding: 0 $gutter;
         .fa{
             margin-right: $gutter-half;
         }
