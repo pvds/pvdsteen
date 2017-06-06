@@ -1,4 +1,4 @@
-.card {
+.vcard {
     background: $blue;
     padding: $gutter-double $gutter;
     text-align: center;
@@ -14,7 +14,20 @@
         font-size: 2rem;
         margin-bottom: 5px;
     }
+    .card-address{
+        font-size: 1.2rem;
+        color: lighten(desaturate($blue, 10), 50);
+        margin-bottom: $gutter-half * 1.5;
+    }
     .card-profession {
         line-height: 1.6;
+        font-weight: $font-weight-base-strong;
+        color: lighten($blue, 60);
+    }
+    @include media(lg){
+        .divider{
+            display: block;
+            line-height: .5;
+        }
     }
 }

@@ -51,13 +51,19 @@
         </nav>
     </div>
     <div id="side-wrap" class="sticky" data-margin-top="20" data-sticky-for="1023">
-        <aside class="card">
-            <img class="card-avatar is-round" src="dist/images/avatar.jpg" width="180" height="180"
+        <aside class="card vcard">
+            <img class="card-avatar photo is-round" src="dist/images/avatar.jpg" width="180" height="180"
                  alt="{{card.name}}, {{card.profession.first}} - {{card.profession.second}}"/>
             <div class="card-info">
-                <h1 class="card-name">{{card.name}}</h1>
-                <p class="card-profession"><span class="nowrap">{{card.profession.first}}</span> <span
-                    class="nowrap"> {{card.profession.second}}</span>
+                <h1 class="card-name fn">{{card.name}}</h1>
+                <p class="card-address adr">
+                    <span class="locality">Leiden</span>,
+                    <span class="country-name">the Netherlands</span>
+                </p>
+                <p class="card-profession title">
+                    <span class="nowrap">{{card.profession.first}}</span>
+                    <span class="divider"> - </span>
+                    <span class="nowrap">{{card.profession.second}}</span>
                 </p>
             </div>
         </aside>
@@ -75,36 +81,10 @@
             <section id="about-intro">
                 <h2>{{about.title}}</h2>
                 <div class="is-content">
-                    <p>
-                        As a front-end developer my main passion is to <strong>use and improve my existing
-                        knowledge</strong> of
-                        front-end development and user experience design <strong>in order to create engaging, but above
-                        all user friendly
-                        products and services</strong>.
-                    </p>
+                    {{{about.intro.content}}}
                     <span class="expander-trigger" data-trigger-once>{{about.intro.expander.triggertext}}</span>
                     <div class="expander-content is-box has-small-text">
-                        <p>
-                            My main interest lies in the <strong>combination of user experience design and front-end
-                            development</strong>,
-                            focusing on critical and creative thinking I am developing myself in the areas of
-                            Interaction
-                            Design, Information Architecture and Interface Design. Developing task flows, personas and
-                            scenarios
-                            based
-                            on research of user needs in order to construct wireframes, prototypes and perform usability
-                            studies.
-                        </p>
-                        <p>
-                            In order to support my knowledge, skills and experience I am <strong>constantly improving
-                            myself
-                            in
-                            various
-                            supporting disciplines</strong>: Human Computer Interaction, Cognitive Science, Heuristics,
-                            Micro
-                            Expressions
-                            and Usability Engineering.
-                        </p>
+                        {{{about.intro.expander.content}}}
                     </div>
                 </div>
 
@@ -114,7 +94,7 @@
                 <dl class="definition mood-trigger">
                     {{#about.personal.definitions}}
                         <dt>{{term}}</dt>
-                        <dd{{#id}} id="{{id}}"{{/id}}>{{def}}</dd>
+                        <dd{{#id}} id="{{id}}"{{/id}}>{{{def}}}</dd>
                     {{/about.personal.definitions}}
                 </dl>
             </section>
@@ -232,9 +212,6 @@
                         <span><strong class="text-upper">Now</strong> - ?<strong></strong></span>
                     </time>
                     <h3 class="timeline-function">Front-end developer - <span class="nowrap">UX designer</span></h3>
-                    <div class="timeline-logo">
-                        <!--<img src="dist/images/justwalk.png"/>-->
-                    </div>
                     <h4 class="timeline-place">Your company?</h4>
                     <div class="timeline-description is-content">
                         <p>
@@ -251,9 +228,6 @@
                         <span>May <strong class="text-upper">2013</strong> - June <strong>2017</strong></span>
                     </time>
                     <h3 class="timeline-function">Front-end developer</h3>
-                    <div class="timeline-logo">
-                        <!--<img src="dist/images/justwalk.png"/>-->
-                    </div>
                     <h4 class="timeline-place">Just Walk</h4>
                     <div class="timeline-description is-content">
                         <ul>
@@ -271,9 +245,6 @@
                     </time>
                     <h3 class="timeline-function">Owner - <span class="nowrap">UX Designer</span> / <span
                         class="nowrap">Developer</span></h3>
-                    <div class="timeline-logo">
-                        <!--<img src="dist/images/justwalk.png"/>-->
-                    </div>
                     <h4 class="timeline-place">Solid Core Web Solutions</h4>
                     <div class="timeline-description is-content">
                         <ul>
@@ -292,9 +263,6 @@
                         <span>Sep <strong class="text-upper">2010</strong> - May <strong>2011</strong></span>
                     </time>
                     <h3 class="timeline-function">Co Owner - Developer</h3>
-                    <div class="timeline-logo">
-                        <!--<img src="dist/images/justwalk.png"/>-->
-                    </div>
                     <h4 class="timeline-place">Triangle Productions</h4>
                     <div class="timeline-description is-content">
                         <p>Development of various interactive media projects</p>
@@ -305,9 +273,6 @@
                         <span>Jun <strong class="text-upper">2008</strong> - Aug <strong>2009</strong></span>
                     </time>
                     <h3 class="timeline-function">Mechanical Designer</h3>
-                    <div class="timeline-logo">
-                        <!--<img src="dist/images/justwalk.png"/>-->
-                    </div>
                     <h4 class="timeline-place">Bluewater Energy Services</h4>
                     <div class="timeline-description is-content">
                         <ul>
@@ -322,9 +287,6 @@
                         <span>Jun <strong class="text-upper">2006</strong> - Jun <strong>2008</strong></span>
                     </time>
                     <h3 class="timeline-function">Technical Document Controller</h3>
-                    <div class="timeline-logo">
-                        <!--<img src="dist/images/justwalk.png"/>-->
-                    </div>
                     <h4 class="timeline-place">Just Walk</h4>
                     <div class="timeline-description is-content">
                         <ul>
@@ -347,9 +309,6 @@
                         <span>Aug <strong class="text-upper">2010</strong> - Jun <strong>2011</strong></span>
                     </time>
                     <h3 class="timeline-function">Amsterdam University of Applied Sciences</h3>
-                    <div class="timeline-logo">
-                        <!--<img src="dist/images/justwalk.png"/>-->
-                    </div>
                     <h4 class="timeline-place">Interactive Media - Propaedeutic Cum Laude </h4>
                     <div class="timeline-description is-content">
                         <ul>
@@ -678,10 +637,10 @@
   "telephone" : "+31610425975",
   "email" : "pvdsteen@gmail.com"
 }
-
 </script>
 
 <!-- Javascript -->
 <script src="dist/scripts/app.js"></script>
+
 </body>
 </html>
