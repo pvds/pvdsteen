@@ -11,8 +11,23 @@ main {
         }
     }
 
-    @include media(md) {
-        padding-bottom: $gutter-double;
+    #closure-links{
+        margin: $gutter;
+        a{
+            margin: $gutter-half;
+        }
+    }
+
+    @include media(sm-max){
+        #closure-links{
+            a{
+                display: block;
+                margin-bottom: $gutter;
+                &:last-child{
+                    margin-bottom: $gutter-half;
+                }
+            }
+        }
     }
 
     @include media(lg) {

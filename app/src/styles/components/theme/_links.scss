@@ -1,18 +1,13 @@
 .links {
     text-align: center;
-    margin: $gutter 0;
+    margin-top: $gutter;
     a{
         display: inline-block;
-        margin: $gutter-half 0;
+        margin-bottom: $gutter-half;
         @include button($black, $white, $orange);
         padding: 0 $gutter;
         .fa{
             margin-right: $gutter-half;
-        }
-    }
-    @include media(md-max){
-        a{
-            margin: $gutter-half;
         }
     }
 }
