@@ -33,4 +33,4 @@ vendor/
 app/dist/
 
 # Uncompressed html files
-index.html
+app/index.html
