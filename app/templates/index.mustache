@@ -29,18 +29,23 @@
     <script>window.html5 || document.write('<script src="src/vendor/html5shiv/html5shiv.js"><\/script>')</script>
     <![endif]-->
 </head>
-<body>
+<body class="is-development">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
 <header></header>
 <main data-sticky-container>
-    <div id="nav-wrap" class="sticky" data-margin-top="40" data-sticky-for="1023">
+    <div id="nav-wrap" class="sticky" data-margin-top="10" data-sticky-for="1023">
         <nav>
             <ul>
                 {{#nav}}
-                    <li data-tooltip="{{title}}"><a href="#{{id}}" class="fa fa-{{icon}}" data-scroll-spy></a></li>
+                    <li>
+                        <a href="#{{id}}" data-scroll-spy>
+                            <span class="fa fa-{{icon}}"></span>
+                            <span class="title">{{title}}</span>
+                        </a>
+                    </li>
                 {{/nav}}
             </ul>
         </nav>
@@ -52,7 +57,7 @@
             <div class="card-info">
                 <h1 class="card-name">{{card.name}}</h1>
                 <p class="card-profession"><span class="nowrap">{{card.profession.first}}</span> <span
-                    class="nowrap"> {{card.profession.second}}r</span>
+                    class="nowrap"> {{card.profession.second}}</span>
                 </p>
             </div>
         </aside>
@@ -513,7 +518,7 @@
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.programming.skills}}
@@ -527,7 +532,7 @@
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.techniques.skills}}
@@ -540,7 +545,7 @@
                         <div class="progress-wrap progress-chart is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                             <strong class="progress-title">{{title}}</strong>
                         </div>
@@ -554,7 +559,7 @@
                         <div class="progress-wrap progress-chart is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                             <strong class="progress-title">{{title}}</strong>
                         </div>
@@ -568,7 +573,7 @@
                         <div class="progress-wrap progress-chart is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                             <strong class="progress-title">{{title}}</strong>
                         </div>
@@ -583,7 +588,7 @@
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.development.skills}}
@@ -597,7 +602,7 @@
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.cms-frameworks.skills}}
@@ -611,7 +616,7 @@
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.package-managers.skills}}
@@ -625,7 +630,7 @@
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}{{/text-alt}}"
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.build-tools.skills}}
@@ -663,7 +668,7 @@
   "@type" : "Person",
   "name" : "Peter van der Steen",
   "image" : "http://pvdsteen.com/dist/images/avatar.jpg",
-  "jobTitle": "Front end developer - UX designer",
+  "jobTitle": "Front-end developer - UX designer",
   "address" : {
     "@type" : "PostalAddress",
     "addressLocality" : "Leiden, the Netherlands",
