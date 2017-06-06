@@ -1,6 +1,6 @@
 main {
     margin: 0 auto;
-    max-width: #{$bp-xl}em;
+    max-width: #{$bp-xxl}em;
     transition: .3s;
     h2 {
         font-size: 3.2rem;
@@ -12,10 +12,10 @@ main {
     }
 
     @include media(md) {
-        padding: 0 $gutter $gutter-double $gutter;
+        padding-bottom: $gutter-double;
     }
 
     @include media(lg) {
-        padding-top: $gutter-double;
+        padding: $gutter $gutter $gutter-double $gutter;
     }
 }

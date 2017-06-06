@@ -18,21 +18,13 @@
 /**
  * Knowledge section
  */
-#knowledge {}
-
-@include media(md) {
-    #knowledge{
-        @include grid-container;
+#knowledge {
+    @include grid-container;
+    @include media(md) {
         section {
             &.has-progress-line {
                 &:not(is-custom){
                     @include grid-column(6, $neat-grid-no-gutter);
-                }
-                &#knowledge-programming {
-                    @include grid-column(5, $neat-grid-no-gutter);
-                }
-                &#knowledge-techniques {
-                    @include grid-column(7, $neat-grid-no-gutter);
                 }
             }
             &.has-progress-chart {
@@ -40,7 +32,31 @@
             }
         }
     }
+    @include media(lg){
+        section {
+            &.has-progress-line {
+                &#knowledge-programming {
+                    @include grid-column(5, $neat-grid-no-gutter);
+                }
+                &#knowledge-techniques {
+                    @include grid-column(7, $neat-grid-no-gutter);
+                }
+            }
+        }
+    }
+    @include media(lg-mid){
+        section {
+            &.has-progress-line {
+                &#knowledge-programming,&#knowledge-techniques{
+                    @include grid-column(6, $neat-grid-no-gutter);
+                }
+            }
+        }
+    }
 }
+
+
+
 
 /**
  * Closure links
