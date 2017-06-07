@@ -31,6 +31,9 @@ vendor/
 
 # Moira output folders and files.
 app/dist/
+app/templates/nl/
+app/templates/en/
 app/templates/compiled/
+app/nl/
 app/*.html
 app/src/data/*.json
