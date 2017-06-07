@@ -36,7 +36,7 @@
 <![endif]-->
 <header></header>
 <main data-sticky-container>
-    <div id="nav-wrap" class="sticky" data-margin-top="10" data-sticky-for="1023">
+    <div id="nav-wrap" class="sticky" data-margin-top="20" data-sticky-for="1023">
         <nav>
             <ul>
                 {{#nav}}
@@ -214,7 +214,15 @@
                         </time>
                         <h3 class="timeline-function">{{{function}}}</h3>
                         <h4 class="timeline-place">{{company}}</h4>
-                        <div class="timeline-description is-content">{{{content}}}</div>
+                        <div class="timeline-description is-content">
+                            {{{content}}}
+                            {{#expander}}
+                                <span class="expander-trigger" {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
+                                <div class="expander-content is-box has-small-text">
+                                    {{{content}}}
+                                </div>
+                            {{/expander}}
+                        </div>
                     </div>
                 {{/experience.timeline}}
             </section>
@@ -231,7 +239,15 @@
                         </time>
                         <h3 class="timeline-function">{{{function}}}</h3>
                         <h4 class="timeline-place">{{institution}}</h4>
-                        <div class="timeline-description is-content">{{{content}}}</div>
+                        <div class="timeline-description is-content">
+                            {{{content}}}
+                            {{#expander}}
+                                <span class="expander-trigger" {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
+                                <div class="expander-content is-box has-small-text">
+                                    {{{content}}}
+                                </div>
+                            {{/expander}}
+                        </div>
                     </div>
                 {{/education.timeline}}
             </section>
