@@ -207,96 +207,16 @@
                 <h2>{{experience.title}}</h2>
             </section>
             <section class="timeline">
-                <div class="timeline-item is-animate">
-                    <time class="timeline-date" datetime="2017-06T2017-06">
-                        <span><strong class="text-upper">Now</strong> - ?<strong></strong></span>
-                    </time>
-                    <h3 class="timeline-function">Front-end developer - <span class="nowrap">UX designer</span></h3>
-                    <h4 class="timeline-place">Your company?</h4>
-                    <div class="timeline-description is-content">
-                        <p>
-                            I'm looking for a new challenge!
-                        </p>
-                        <!--<span class="expander-trigger" data-text-alt="less motivation please.." data-trigger-once>motivation</span>-->
-                        <!--<div class="expander-content is-box">-->
-                        <!--<p></p>-->
-                        <!--</div>-->
+                {{#experience.timeline}}
+                    <div class="timeline-item is-animate">
+                        <time class="timeline-date">
+                            <span>{{from.month}}<strong class="text-upper">{{from.year}}</strong> - {{to.month}}<strong>{{to.year}}</strong></span>
+                        </time>
+                        <h3 class="timeline-function">{{{function}}}</h3>
+                        <h4 class="timeline-place">{{company}}</h4>
+                        <div class="timeline-description is-content">{{{content}}}</div>
                     </div>
-                </div>
-                <div class="timeline-item is-animate">
-                    <time class="timeline-date" datetime="2013-05T2017-06">
-                        <span>May <strong class="text-upper">2013</strong> - June <strong>2017</strong></span>
-                    </time>
-                    <h3 class="timeline-function">Front-end developer</h3>
-                    <h4 class="timeline-place">Just Walk</h4>
-                    <div class="timeline-description is-content">
-                        <ul>
-                            <li>Development and maintenance of websites.</li>
-                            <li>Development of modern front-end workflow</li>
-                            <li>Development HTML5 online advertising</li>
-                            <li>Improvement of interface design.</li>
-                            <li>Analysis and optimisation of user interaction.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item is-animate">
-                    <time class="timeline-date" datetime="2011-04T2016-04">
-                        <span>Apr <strong class="text-upper">2011</strong> - Apr <strong>2016</strong></span>
-                    </time>
-                    <h3 class="timeline-function">Owner - <span class="nowrap">UX Designer</span> / <span
-                        class="nowrap">Developer</span></h3>
-                    <h4 class="timeline-place">Solid Core Web Solutions</h4>
-                    <div class="timeline-description is-content">
-                        <ul>
-                            <li>Development of various websites and applications for clients.</li>
-                            <li>Clients ranging from Medical institutions and Legal services to non-profit
-                                foundations.
-                            </li>
-                            <li>Consulting for existing projects to analyse and optimise user interaction and interface
-                                design.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item is-animate">
-                    <time class="timeline-date" datetime="2010-09T2011-05">
-                        <span>Sep <strong class="text-upper">2010</strong> - May <strong>2011</strong></span>
-                    </time>
-                    <h3 class="timeline-function">Co Owner - Developer</h3>
-                    <h4 class="timeline-place">Triangle Productions</h4>
-                    <div class="timeline-description is-content">
-                        <p>Development of various interactive media projects</p>
-                    </div>
-                </div>
-                <div class="timeline-item is-animate">
-                    <time class="timeline-date" datetime="2008-06T2009-08">
-                        <span>Jun <strong class="text-upper">2008</strong> - Aug <strong>2009</strong></span>
-                    </time>
-                    <h3 class="timeline-function">Mechanical Designer</h3>
-                    <h4 class="timeline-place">Bluewater Energy Services</h4>
-                    <div class="timeline-description is-content">
-                        <ul>
-                            <li>Design of 'swivel bearing' modules</li>
-                            <li>Setup of design guidelines for the mechanical design department</li>
-                            <li>Setup of design templates for mechanical designing</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item is-animate">
-                    <time class="timeline-date" datetime="2006-06T2008-06">
-                        <span>Jun <strong class="text-upper">2006</strong> - Jun <strong>2008</strong></span>
-                    </time>
-                    <h3 class="timeline-function">Technical Document Controller</h3>
-                    <h4 class="timeline-place">Just Walk</h4>
-                    <div class="timeline-description is-content">
-                        <ul>
-                            <li>Automation of naming/archiving systems</li>
-                            <li>Coördinating the issuance and distribution of all the corporate documentation</li>
-                            <li>Coördinating the corporate management system</li>
-                            <li>Ensuring the CMS documentation required at Bluewater vessels is up to date</li>
-                        </ul>
-                    </div>
-                </div>
+                {{/experience.timeline}}
             </section>
         </div>
         <div id="education" class="section-wrap is-animate">
@@ -304,21 +224,16 @@
                 <h2>{{education.title}}</h2>
             </section>
             <section class="timeline">
-                <div class="timeline-item is-animate">
-                    <time class="timeline-date" datetime="2010-08T2011-06">
-                        <span>Aug <strong class="text-upper">2010</strong> - Jun <strong>2011</strong></span>
-                    </time>
-                    <h3 class="timeline-function">Amsterdam University of Applied Sciences</h3>
-                    <h4 class="timeline-place">Interactive Media - Propaedeutic Cum Laude </h4>
-                    <div class="timeline-description is-content">
-                        <ul>
-                            <li>Education on user centered design, interaction design and interactive media.</li>
-                            <li>Developing interactive solutions (installations and web applications) for various
-                                projects
-                            </li>
-                        </ul>
+                {{#education.timeline}}
+                    <div class="timeline-item is-animate">
+                        <time class="timeline-date">
+                            <span>{{from.month}}<strong class="text-upper">{{from.year}}</strong> - {{to.month}}<strong>{{to.year}}</strong></span>
+                        </time>
+                        <h3 class="timeline-function">{{{function}}}</h3>
+                        <h4 class="timeline-place">{{institution}}</h4>
+                        <div class="timeline-description is-content">{{{content}}}</div>
                     </div>
-                </div>
+                {{/education.timeline}}
             </section>
         </div>
         <div id="references" class="section-wrap is-animate">
@@ -326,148 +241,35 @@
                 <h2>{{references.title}}</h2>
             </section>
             <section id="reference-list">
-                <div class="reference is-animate">
-                    <div class="reference-avatar">
-                        <img alt="Marius van der Kooy" src="dist/images/avatar-marius.jpg" class="is-round" height="54"
-                             width="54">
-                    </div>
-                    <div class="reference-info">
-                        <div class="reference-author">
-                            <strong>Marius van der Kooy</strong>
-                            <span>Just Walk</span>
+                {{#references.reference}}
+                    <div class="reference is-animate">
+                        <div class="reference-avatar">
+                            <img alt="{{author}}" src="{{image}}" class="is-round" height="54"
+                                 width="54">
                         </div>
-                        <!--<blockquote hidden class="reference-cont is-content is-dutch">-->
-                        <!--<p>-->
-                        <!--Peter is IT. Hij leeft voor nieuwe ontwikkelingen, zonder de dagelijkse gang van zaken-->
-                        <!--uit-->
-                        <!--het oog te verliezen. De front-end ontwerpen, alternatieven presenteren, eventueel-->
-                        <!--aanpassen-->
-                        <!--en uiteindelijk ontwikkelen en beheren is voor hem daily business.-->
-                        <!--</p>-->
-                        <!--<span class="expander-trigger" data-text-alt="too much information..">read more</span>-->
-                        <!--<div class="expander-content">-->
-                        <!--<p>-->
-                        <!--Daarnaast kan hij als geen ander de communicatie op een effectieve manier tot stand-->
-                        <!--brengen-->
-                        <!--met de ontwikkelaars aan de achterkant. Zowel in persoonlijke zin, als in technische-->
-                        <!--zin-->
-                        <!--zullen ze Peter geen knollen voor citroenen verkopen.-->
-                        <!--Hij zorgt ervoor dat hij altijd op de hoogte is, en kennis heeft van alle delen van-->
-                        <!--de-->
-                        <!--website(s) en IT-structuur.-->
-                        <!--</p>-->
-                        <!--<p>Peter stelt je vragen. En die vragen zijn lastig, want raken de kern van je-->
-                        <!--vraagstuk. Daar-->
-                        <!--voorbij ontstaan mooie, bruikbare en efficiente processen; Zowel commercieel als-->
-                        <!--technisch.-->
-                        <!--</p>-->
-                        <!--<p>-->
-                        <!--Hij is absoluut een toegevoegde waarde in de breedste zin van het woord.-->
-                        <!--</p>-->
-                        <!--</div>-->
-                        <!--</blockquote>-->
-                        <blockquote class="reference-cont is-content">
-                            <p>
-                                Peter is IT. Development is his purpose in life, without losing track of the daily
-                                routine.
-                                Front-end development, presenting various iterations, implementing and maintaining are
-                                his daily business.
-                            </p>
-                            <span class="expander-trigger" data-text-alt="too much information..">read more</span>
-                            <div class="expander-content">
-                                <p>
-                                    He knows better than anybody how to initiate and communicate effectively with
-                                    back-end developers.
-                                    Both in personal as well as technical sense. They won't be selling him chalk for
-                                    cheese.
-                                    He is always on top of the situation, having knowledge of all parts of the website
-                                    and IT infrastructure.
-                                </p>
-                                <p>
-                                    Peter asks questions, hard questions, touching the core of the matter.
-                                    Thereby creating beautiful, useful and efficient processes; both commercial and
-                                    technical.
-                                </p>
-                                <p>
-                                    He is a valuable asset in the broadest sense of the word.
-                                </p>
+                        <div class="reference-info">
+                            <div class="reference-author">
+                                <strong>{{author}}</strong>
+                                <span>{{company}}</span>
                             </div>
-                        </blockquote>
-                    </div>
-                </div>
-                <div class="reference is-animate">
-                    <div class="reference-avatar">
-                        <img alt="Bart Lageweg" src="dist/images/avatar-bart.jpg" class="is-round" height="54"
-                             width="54">
-                    </div>
-                    <div class="reference-info">
-                        <div class="reference-author">
-                            <strong>Bart Lageweg</strong>
-                            <span>Bizway</span>
+                            <blockquote class="reference-cont is-content">
+                                {{{content}}}
+                                {{#expander}}
+                                    <span class="expander-trigger" {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
+                                    <div class="expander-content is-box has-small-text">
+                                        {{{content}}}
+                                    </div>
+                                {{/expander}}
+                            </blockquote>
                         </div>
-                        <!--<blockquote hidden class="reference-cont is-content is-dutch">-->
-                        <!--<p>-->
-                        <!--Peter was 5 jaar lang de onmisbare schakel tussen ons als leverancier en Just Walk.-->
-                        <!--</p>-->
-                        <!--<p>-->
-                        <!--Een top UX designer, met humor, communicatievaardigheden en groot-->
-                        <!--verantwoordelijkheidsgevoel.-->
-                        <!--</p>-->
-                        <!--</blockquote>-->
-                        <blockquote class="reference-cont is-content">
-                            <p>
-                                For a period of 5 years Peter was the vital link between us as a supplier and Just Walk.
-                            </p>
-                            <p>
-                                A top UX designer with a good sense of humour, communication skills and a great sense of
-                                responsibility.
-                            </p>
-                        </blockquote>
                     </div>
-                </div>
-                <div class="reference is-animate">
-                    <div class="reference-avatar">
-                        <img alt="Danny Visser" src="dist/images/avatar-danny.jpg" class="is-round" height="54"
-                             width="54">
-                    </div>
-                    <div class="reference-info">
-                        <div class="reference-author">
-                            <strong>Danny Visser</strong>
-                            <span>Just Walk</span>
-                        </div>
-                        <!--<blockquote hidden class="reference-cont is-content is-dutch">-->
-                        <!--<p>-->
-                        <!--Een uitstekende developer; flexibel met altijd oog voor de structurele oplossing en de-->
-                        <!--lange-->
-                        <!--termijn.-->
-                        <!--</p>-->
-                        <!--<p>-->
-                        <!--Peter was gedurende de afgelopen 5 jaar een gewaardeerd lid van ons team.-->
-                        <!--Altijd paraat en een groot verantwoordelijkheidsgevoel.-->
-                        <!--</p>-->
-                        <!--</blockquote>-->
-                        <blockquote class="reference-cont is-content">
-                            <p>
-                                An outstanding developer; flexible with an eye for structural and long term solutions.
-                            </p>
-                            <p>
-                                For the past five years Peter was a valued member of our team.<br/>
-                                Always well prepared and has a great sense of responsibility.
-                            </p>
-                        </blockquote>
-                    </div>
-                </div>
+                {{/references.reference}}
             </section>
         </div>
         <div id="knowledge" class="section-wrap is-animate">
             <section id="knowledge-intro">
                 <h2>{{knowledge.title}}</h2>
-                <div class="is-content">
-                    <p>
-                        I am developing myself continuously using and learning the latest front-end skills, tools and
-                        techniques:
-                    </p>
-                </div>
+                <div class="is-content">{{{knowledge.content}}}</div>
             </section>
             <section id="knowledge-programming" class="has-progress-line">
                 <h3>{{knowledge.programming.title}}</h3>
@@ -498,9 +300,9 @@
                 </div>
             </section>
             <section id="knowledge-content" class="has-progress-chart">
-                <h3>{{knowledge.content.title}}</h3>
+                <h3>{{knowledge.contents.title}}</h3>
                 <div class="skills">
-                    {{#knowledge.content.skills}}
+                    {{#knowledge.contents.skills}}
                         <div class="progress-wrap progress-chart is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
@@ -508,7 +310,7 @@
                                  data-value="{{value}}"></div>
                             <strong class="progress-title">{{title}}</strong>
                         </div>
-                    {{/knowledge.content.skills}}
+                    {{/knowledge.contents.skills}}
                 </div>
             </section>
             <section id="knowledge-visualisation" class="has-progress-chart">

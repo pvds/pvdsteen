@@ -193,12 +193,181 @@ about:
         text: running/climbing
 experience:
   title: Experience
+  timeline:
+    -
+      from:
+        month:
+        year: Now
+      to:
+        month:
+        year: ?
+      function: 'Front-end developer - <span class="nowrap">UX designer</span>'
+      company: 'Your company?'
+      content: '<p>
+          I am looking for a new challenge!
+        </p>
+        <!--<span class="expander-trigger" data-text-alt="less motivation please.." data-trigger-once>motivation</span>-->
+        <!--<div class="expander-content is-box">-->
+        <!--<p></p>-->
+        <!--</div>-->'
+    -
+      from:
+        month: May
+        year: 2013
+      to:
+        month: June
+        year: 2017
+      function: Front-end developer
+      company: 'Just Walk'
+      content: '
+        <ul>
+          <li>Development and maintenance of websites.</li>
+          <li>Development of modern front-end workflow</li>
+          <li>Development HTML5 online advertising</li>
+          <li>Improvement of interface design.</li>
+          <li>Analysis and optimisation of user interaction.</li>
+        </ul>'
+    -
+      from:
+        month: Apr
+        year: 2011
+      to:
+        month: Apr
+        year: 2016
+      function: 'Owner - <span class="nowrap">UX Designer</span> / <span class="nowrap">Developer</span>'
+      company: 'Solid Core Web Solutions'
+      content: '
+        <ul>
+          <li>Development of various websites and applications for clients.</li>
+          <li>Clients ranging from Medical institutions and Legal services to non-profit foundations.</li>
+          <li>Consulting for existing projects to analyse and optimise user interaction and interfacedesign.</li>
+        </ul>'
+    -
+      from:
+        month: Sep
+        year: 2010
+      to:
+        month: May
+        year: 2011
+      function: Partner - Developer
+      company: Triangle Productions
+      content: '
+        <p>
+          Development of various interactive media projects
+        </p>'
+    -
+      from:
+        month: Jun
+        year: 2008
+      to:
+        month: Aug
+        year: 2009
+      function: Mechanical Designer
+      company: Bluewater Energy Servicer
+      content: '
+        <ul>
+          <li>Design of "swivel bearing" modules</li>
+          <li>Setup of design guidelines for the mechanical design department</li>
+          <li>Setup of design templates for mechanical designing</li>
+        </ul>'
+    -
+      from:
+        month: Jun
+        year: 2006
+      to:
+        month: Jun
+        year: 2008
+      function: 'Technical Document Controller'
+      company: 'Bluewater Energy Services'
+      content: '
+        <ul>
+          <li>Automation of naming/archiving systems</li>
+          <li>Coördinating the issuance and distribution of all the corporate documentation</li>
+          <li>Coördinating the corporate management system</li>
+          <li>Ensuring the CMS documentation required at Bluewater vessels is up to date</li>
+        </ul>'
+
 education:
   title: Education
+  timeline:
+    -
+      from:
+        month: Aug
+        year: 2010
+      to:
+        month: Jun
+        year: 2011
+      function: 'Interactive Media - Propaedeutic Cum Laude'
+      institution: 'Amsterdam University of Applied Sciences'
+      content: '
+        <ul>
+            <li>Education on user centered design, interaction design and interactive media.</li>
+            <li>Developing interactive solutions (installations and web applications) for various projects</li>
+        </ul>'
 references:
   title: References
+  reference:
+    -
+      image: 'dist/images/avatar-marius.jpg'
+      author: 'Marius van der Kooy'
+      company: 'Just Walk'
+      content: '
+        <p>
+          Peter is IT. Development is his purpose in life, without losing track of the daily
+          routine. Front-end development, presenting various iterations, implementing and maintaining are
+          his daily business.
+        </p>'
+      expander:
+        text: 'read more'
+        text-alt: 'too much information..'
+        content: '
+          <p>
+            He knows better than anybody how to initiate and communicate effectively with
+            back-end developers.
+            Both in personal as well as technical sense. They will not be selling him chalk for
+            cheese.
+            He is always on top of the situation, having knowledge of all parts of the website
+            and IT infrastructure.
+          </p>
+          <p>
+            Peter asks questions, hard questions, touching the core of the matter.
+            Thereby creating beautiful, useful and efficient processes; both commercial and
+            technical.
+          </p>
+          <p>
+            He is a valuable asset in the broadest sense of the word.
+          </p>'
+    -
+      image: 'dist/images/avatar-bart.jpg'
+      author: 'Bart Lageweg'
+      company: 'Bizway'
+      content: '
+        <p>
+          For a period of 5 years Peter was the vital link between us as a supplier and Just Walk.
+        </p>
+        <p>
+          A top UX designer with a good sense of humour, communication skills and a great sense of
+          responsibility.
+        </p>'
+    -
+      image: 'dist/images/avatar-danny.jpg'
+      author: 'Danny Visser'
+      company: 'Just Walk'
+      content: '
+        <p>
+          An outstanding developer; flexible with an eye for structural and long term solutions.
+        </p>
+        <p>
+          For the past five years Peter was a valued member of our team.<br/>
+          Always well prepared and has a great sense of responsibility.
+        </p>'
 knowledge:
   title: Knowledge
+  content: '
+    <p>
+        I am developing myself continuously using and learning the latest front-end skills, tools and
+        techniques:
+    </p>'
   programming:
     title: Languages
     type: line
@@ -284,7 +453,7 @@ knowledge:
         aria-value: '60'
         value: '0.6'
         text: unit/integration/quality
-  content:
+  contents:
     title: Content
     type: chart
     skills:
