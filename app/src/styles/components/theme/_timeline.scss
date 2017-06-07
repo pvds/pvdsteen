@@ -4,6 +4,7 @@ $timeline-date-gutter: $gutter;
 .timeline {
     position: relative;
     margin-left: $gutter;
+    padding-left: 0;
     &:before {
         top: 10px;
         left: 0;
@@ -82,8 +83,10 @@ $timeline-date-gutter: $gutter;
             }
         }
     }
+    @include media(xs-max){
+        margin-left: 25px;
+    }
     @include media(sm) {
-        padding-left: 0;
         margin-left: $timeline-date-width + $timeline-date-gutter + $gutter;
         .timeline-date {
             margin-left: 0;
