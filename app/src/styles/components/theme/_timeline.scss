@@ -5,6 +5,8 @@ $timeline-date-gutter: $gutter;
     position: relative;
     margin-left: $gutter;
     padding-left: 0;
+    padding-top: 0;
+    margin-top: $gutter;
     &:before {
         top: 10px;
         left: 0;
