@@ -308,7 +308,7 @@ references:
   title: References
   reference:
     -
-      image: 'dist/images/avatar-marius.jpg'
+      image: '//dist/images/avatar-marius.jpg'
       author: 'Marius van der Kooy'
       company: 'Just Walk'
       content: '
@@ -338,7 +338,7 @@ references:
             He is a valuable asset in the broadest sense of the word.
           </p>'
     -
-      image: 'dist/images/avatar-bart.jpg'
+      image: '/dist/images/avatar-bart.jpg'
       author: 'Bart Lageweg'
       company: 'Bizway'
       content: '
@@ -350,7 +350,7 @@ references:
           responsibility.
         </p>'
     -
-      image: 'dist/images/avatar-danny.jpg'
+      image: '/dist/images/avatar-danny.jpg'
       author: 'Danny Visser'
       company: 'Just Walk'
       content: '
@@ -686,4 +686,4 @@ svg:
 util:
   folders:
     files: /dist/files/
-    images: /dist/images/
+    images: //dist/images/
