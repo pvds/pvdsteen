@@ -52,7 +52,7 @@ $spacing-fourth: $spacing / 4;
 $spacing-double: $spacing * 2;
 
 // Properties
-$border-radius: 6px;
+$border-radius: 4px;
 $border-radius-half: $border-radius / 2;
 $border-radius-double: $border-radius * 2;
 
@@ -108,8 +108,3 @@ $transition-duration-short: 0.2s;
 $transition-duration-medium: 0.3s;
 $transition-duration-long: 0.6s;
 $transition-delay: 0.1s;
-
-// Borders
-$border-radius: 8px;
-$border-radius-half: $border-radius / 2;
-$border-radius-fourth: $border-radius / 4;

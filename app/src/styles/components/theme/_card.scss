@@ -1,6 +1,7 @@
 .vcard {
     background: $blue;
     padding: $gutter-double $gutter;
+    border-radius: $border-radius-half;
     text-align: center;
     .card-avatar {
         width: 180px;

@@ -6,6 +6,7 @@
         margin-bottom: $gutter-half;
         @include button($black, $white, $orange);
         padding: 0 $gutter;
+        border-radius: $border-radius-half;
         .fa{
             margin-right: $gutter-half;
         }

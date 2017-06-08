@@ -18,10 +18,9 @@
             }
         }
         a {
-            color: darken($orange,15);
+            color: darken($orange,20);
             display: inline-block;
             &:hover {
-                color: rgba(255, 255, 255, 0.5);
                 color: $white;
             }
             &.is-active {

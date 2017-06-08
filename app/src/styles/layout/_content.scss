@@ -30,12 +30,15 @@ hr {
 
 @include media(md) {
     .section-wrap {
-        border: 1px solid $border-color;
+        //border: 1px solid $border-color;
         margin-bottom: $gutter;
     }
 }
 
 @include media(lg) {
+    .section-wrap{
+        border-radius: $border-radius-half;
+    }
     #main-wrap {
         margin-left: $side-width + $gutter;
         margin-right: $nav-width;

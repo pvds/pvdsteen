@@ -31,17 +31,18 @@
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .1s ease-in-out .3s;
+    transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .6s ease-in-out .1s;
     &.is-visible{
         opacity: 1;
         visibility: visible;
         max-height: 500px;
-        transition: visibility .3s ease-in-out .1s, opacity .3s ease-in-out .1s, max-height .1s ease-in-out;
+        transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .3s ease-in-out;
     }
     &.is-box{
         padding: $gutter-half $gutter-half * 1.5;
         border-radius: $border-radius-half;
         background: darken($grey, 2);
+        border: 1px solid $body-color;
         > :first-child{
             margin-top: 0;
         }
