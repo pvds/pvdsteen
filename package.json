@@ -48,11 +48,11 @@
         "deploy:js": "npm run lint && npm run babel",
         "deploy:static": "npm run static",
         "start": "npm-run-all -p server start:*",
-        "start:html": "onchange app/templates/*.mustache -- npm run build:html",
+        "start:html": "onchange app/src/data/*.yaml,app/templates/*.mustache -- npm run build:html",
         "start:css": "onchange app/src/styles -- npm run build:css",
         "start:js": "onchange app/src/scripts -- npm run build:js",
-        "start:images": "onchange app/src/images -- npm run build:static:imagemin",
-        "server": "browser-sync start --watchEvents [add, change] -p pvdsteen.dev --host pvdsteen.dev --open external --files [app/dist/styles/*.css, app/dist/scripts/*.js, app/templates/**/*.php, app/templates/*.mustache]",
+        "start:images": "onchange app/src/images -- npm run static:imagemin",
+        "server": "browser-sync start --watchEvents [add, change] -p pvdsteen.dev --host pvdsteen.dev --open external --files [app/dist, app/templates/**/*.html]",
         "postinstall": "npm run build && npm start"
     },
     "devDependencies": {
