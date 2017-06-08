@@ -204,7 +204,7 @@ function listenPrintEvent(){
 }
 
 function getMood(moodField){
-    var moodSource = '/data/dist/moods.json',
+    var moodSource = '/dist/data/moods.json',
         request = new XMLHttpRequest();
 
     request.open('GET', moodSource, true);
@@ -232,9 +232,8 @@ function setMood(moodList, moodField){
 }
 
 function moodListener(){
-    var moodField = document.getElementById(moira.mood.idMood),
-        moodTrigger = moodField.parentNode;
-    moodTrigger.addEventListener('click', function(e) {
+    var moodField = document.getElementById(moira.mood.idMood)
+    moodField.addEventListener('click', function(e) {
         getMood(moodField);
     });
 }
