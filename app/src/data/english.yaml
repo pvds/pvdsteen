@@ -87,10 +87,16 @@ about:
         def: 'Leiden, the Netherlands'
       -
         term: Email
-        def: '<a href=''mailto:pvdsteen@gmail.com''>pvdsteen@gmail.com</a>'
+        def: '<a href="mailto:pvdsteen@gmail.com">pvdsteen@gmail.com</a>'
       -
         term: Phone
         def: '+31 6 104 25 975'
+      -
+        term: Skype
+        def: '<a href="skype:rockfromtherock?call">rockfromtherock</a>'
+      -
+        term: License
+        def: 'Car B'
       -
         term: Mood
         def: Zealous
@@ -107,11 +113,11 @@ about:
       text: professional
     french:
       title: French
-      value: '3'
+      value: '4'
       text: elementary
     greek:
       title: Greek
-      value: '1'
+      value: '2'
       text: toddler
   softskills:
     title: 'Soft skills'
@@ -205,11 +211,26 @@ experience:
       company: 'Your company?'
       content: '<p>
           I am looking for a new challenge!
+        </p>'
+      expander:
+        text: 'read motivation'
+        text-alt: 'less motivation please..'
+        content: '
+        <p>
+          My main passion is to develop, enhance and implement interface and interaction designs.
         </p>
-        <!--<span class="expander-trigger" data-text-alt="less motivation please.." data-trigger-once>motivation</span>-->
-        <!--<div class="expander-content is-box">-->
-        <!--<p></p>-->
-        <!--</div>-->'
+        <p>
+          I have experience with developing usability research based task flows and scenarios.
+          In order to develop wireframes, interaction flows and prototypes I substantiate my decisions through qualitative and quantitative data and creative and critical thinking.
+        </p>
+        <p>
+          As a front-end developer I offer an extensive knowledge of Javascript, jQuery, AJAX and supplementary librarier.</br>
+          I am skillful in developing semantic and accessible content through HTML5, ARIA/WCAG and microdata and formats.
+          Visualising responsive designs using CSS, Sass, LESS is my second nature.
+        </p>
+        <p>
+          My codebase is Git versioned, cross browser/device compatible and is compiled with NPM scripts, Gulp or Webpack.
+        </p>'
     -
       from:
         month: May
@@ -220,12 +241,53 @@ experience:
       function: Front-end developer
       company: 'Just Walk'
       content: '
+        <p>
+          At Just Walk I was responsible for the development and maintenance of their e-commerce websites selling contracts for mobile phones, energy, internet and tv and tablets
+          Since 2014 these separate websites were integrated in the <a href="http://www.miky.nl" target="_blank">Miky</a> whitelabel.
+        </p>'
+      expander:
+        text: 'detailed explanation'
+        text-alt: 'too much information..'
+        content: '
+        <p>
+        As front-end developer, UX designer and occasional back-end developer I
+        </p>
         <ul>
-          <li>Development and maintenance of websites.</li>
-          <li>Development of modern front-end workflow</li>
-          <li>Development HTML5 online advertising</li>
-          <li>Improvement of interface design.</li>
-          <li>Analysis and optimisation of user interaction.</li>
+          <li><strong>Implemented</strong>
+            <ul>
+              <li>a modern front-end workflow</li>
+              <li>git versioning and deployment</li>
+              <li>an OTAP development cycle</li>
+              <li>Modular Sass with Bourbon Neat grid system</li>
+              <li>JS/AJAX functionality</li>
+              <li>microdata and microformats</li>
+              <li>data-driven development</li>
+              <li>optimisation of user interaction</li>
+            </ul>
+          </li>
+          <li><strong>Developed</strong>
+            <ul>
+              <li>a custom Wordpress theme</li>
+              <li>(co) custom Wordpress plugins</li>
+              <li>multistep order flows</li>
+              <li>wireframes, prototypes</li>
+            </ul>
+          </li>
+          <li><strong>Improved</strong>
+            <ul>
+                <li>interface and interaction design</li>
+                <li>performance, security and stability</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>Over the years I have done various tasks:</p>
+        <ul>
+          <li>development of gif/flash then HTML5 online advertising</li>
+          <li>maintenance of the intranet site</li>
+          <li>collaboration with hosting provider and CRM supplier and contract providers</li>
+          <li>training of junior front-end developer</li>
+          <li>miscellaneous IT support</li>
         </ul>'
     -
       from:
@@ -237,9 +299,11 @@ experience:
       function: 'Owner - <span class="nowrap">UX Designer</span> / <span class="nowrap">Developer</span>'
       company: 'Solid Core Web Solutions'
       content: '
+        <p>
+          Development of various project for clients ranging from Medical institutions and legal services to non-profit foundations.
+        </p>
         <ul>
-          <li>Development of various websites and applications for clients.</li>
-          <li>Clients ranging from Medical institutions and Legal services to non-profit foundations.</li>
+          <li>Consulting for data architecture</li>
           <li>Consulting for existing projects to analyse and optimise user interaction and interfacedesign.</li>
         </ul>'
     -
@@ -253,7 +317,10 @@ experience:
       company: Triangle Productions
       content: '
         <p>
-          Development of various interactive media projects
+          Development of Drupal based websites for Urban Resort Creative Incubators.
+        </p>
+        <p>
+          Consultancy and implementation of design specifications, wireframes and data architecture.
         </p>'
     -
       from:
@@ -265,8 +332,10 @@ experience:
       function: Mechanical Designer
       company: Bluewater Energy Servicer
       content: '
+        <p>
+          Design of various FPSO components, specifically Bluewater proprietary "swivel bearing" modules
+        </p>
         <ul>
-          <li>Design of "swivel bearing" modules</li>
           <li>Setup of design guidelines for the mechanical design department</li>
           <li>Setup of design templates for mechanical designing</li>
         </ul>'
@@ -280,6 +349,9 @@ experience:
       function: 'Technical Document Controller'
       company: 'Bluewater Energy Services'
       content: '
+        <p>
+          Responsible for assembly and final delivery of technical documentation of FPSO vessels and Single Point Mooring buoy systems.
+        </p>
         <ul>
           <li>Automation of naming/archiving systems</li>
           <li>Coördinating the issuance and distribution of all the corporate documentation</li>
@@ -297,13 +369,38 @@ education:
       to:
         month: Jun
         year: 2011
-      function: 'Interactive Media - Propaedeutic Cum Laude'
+      function: 'Interactive Media'
       institution: 'Amsterdam University of Applied Sciences'
       content: '
+        <p>
+          Education on Research, UX, Marketing, Design and Development practices.
+        </p>
+        <strong>Achievements</strong>
         <ul>
-            <li>Education on user centered design, interaction design and interactive media.</li>
-            <li>Developing interactive solutions (installations and web applications) for various projects</li>
+          <li>Propaedeutic Cum Laude</li>
+          <li>Accepted to honors program</li>
+          <li>Winner of Propaedeutic Team Project 2010 for Urban Resort Foundation</li>
         </ul>'
+      expander:
+        text: 'more information'
+        text-alt: 'too much information..'
+        content: '
+          <strong>Focus</strong>
+          <ul>
+              <li>User centered design research, interaction design and interactive media.</li>
+              <li>Developing interactive solutions (installations and web applications) for various projects</li>
+          </ul>
+          <strong>Course highlight</strong>
+          <ul>
+              <li>User Centered Development</li>
+              <li>Internet Standards</li>
+              <li>Media Design</li>
+              <li>Human Computer Interaction</li>
+              <li>Content and Editing</li>
+              <li>Marketing and Communication</li>
+              <li>Programming</li>
+              <li>Development methods and techniques</li>
+          </ul>'
 references:
   title: References
   reference:
