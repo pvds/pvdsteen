@@ -48,7 +48,7 @@
         "deploy:js": "npm run lint && npm run babel",
         "deploy:static": "npm run static",
         "start": "npm-run-all -p server start:*",
-        "start:html": "onchange app/src/data/*.yaml,app/templates/*.mustache -- npm run build:html",
+        "start:html": "onchange app/src/data/*.yaml app/templates/*.mustache -- npm run build:html",
         "start:css": "onchange app/src/styles -- npm run build:css",
         "start:js": "onchange app/src/scripts -- npm run build:js",
         "start:images": "onchange app/src/images -- npm run static:imagemin",
@@ -79,6 +79,7 @@
         "yamljs": "^0.2.10"
     },
     "dependencies": {
+        "autotrack": "^2.4.1",
         "bourbon-neat": "^2.0.0",
         "font-awesome": "^4.7.0"
     }
