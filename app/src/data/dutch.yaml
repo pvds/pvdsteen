@@ -205,11 +205,24 @@ experience:
       company: 'Your company?'
       content: '<p>
           I am looking for a new challenge!
+        </p>'
+      expander:
+        text: 'read motivation'
+        text-alt: 'less motivation please..'
+        content: '
+        <p>
+          Het is mijn passie om interface en interaction designs te ontwikkelen, verbeteren en implementeren.
         </p>
-        <!--<span class="expander-trigger" data-text-alt="less motivation please.." data-trigger-once>motivation</span>-->
-        <!--<div class="expander-content is-box">-->
-        <!--<p></p>-->
-        <!--</div>-->'
+        <p>
+          Ik heb ervaring met het ontwikkelen van op gebruikersonderzoek gebaseerde task flows en scenarios.
+          Door middel van user- en data driven design onderbouw ik mijn beslissingen voor de opzet van wireframes, interaction flows en prototypen. 
+        </p>
+        <p>
+          Als front-end developer bied ik een ruime kennis en ervaring met Javascript, jQuery, AJAX en aanvullende libraries. Ik ben bedreven in semantische en toegankelijke inhoud door middel van HTML5, ARIA/WCAG richtlijnen en microdata. CSS, Sass en LESS en het implementeren van responsive designs beheers ik volledig.
+        </p>
+        <p>
+          Mijn codebase is Git versioned, cross browser/device compatibel, en maakt gebruik van task runners/build tools als NPM, Gulp en Webpack.
+        </p>'
     -
       from:
         month: May

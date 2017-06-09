@@ -72,7 +72,8 @@ about:
         Micro Expressions and Usability Engineering.
       </p>'
       triggertext: 'read more'
-      triggertext-alt: false
+      triggertext-alt: 'less is more'
+      triggeronce: false
   personal:
     title: 'Personal information'
     definitions:
@@ -94,6 +95,7 @@ about:
       -
         term: Skype
         def: '<a href="skype:rockfromtherock?call">rockfromtherock</a>'
+        class: 'is-optional'
       -
         term: License
         def: 'Car B'
@@ -101,6 +103,7 @@ about:
         term: Mood
         def: Zealous
         id: mood
+        class: 'is-optional'
   languages:
     title: Languages
     dutch:
@@ -127,17 +130,22 @@ about:
         title: 'Work ethic'
         aria-value: '100'
         value: '1'
-        text: 'I give a damn'
+        text: 'I give a damn!'
       -
         title: 'Critical thinking'
         aria-value: '95'
         value: '0.95'
-        text: 'yummy, puzzles!'
+        text: 'yummy, puzzles'
+      -
+        title: Creativity
+        aria-value: '95'
+        value: '0.95'
+        text: 'it''s contagious, pass it on'
       -
         title: Communication
         aria-value: '95'
         value: '0.95'
-        text: 'I love talking!'
+        text: 'I love talking'
       -
         title: Listening
         aria-value: '90'
@@ -149,15 +157,10 @@ about:
         value: '0.85'
         text: 'hurray, collaboration!'
       -
-        title: Adaptability
-        aria-value: '80'
-        value: '0.8'
-        text: 'yes we can!'
-      -
         title: Judgement
         aria-value: '80'
         value: '0.8'
-        text: 'think before I act'
+        text: 'crystal clear'
   interests:
     title: Interests
     type: line
@@ -213,8 +216,8 @@ experience:
           I am looking for a new challenge!
         </p>'
       expander:
-        text: 'read motivation'
-        text-alt: 'less motivation please..'
+        text: 'why hire me?'
+        text-alt: 'closing this would ruin my day'
         content: '
         <p>
           My main passion is to develop, enhance and implement interface and interaction designs.
@@ -224,12 +227,18 @@ experience:
           In order to develop wireframes, interaction flows and prototypes I substantiate my decisions through qualitative and quantitative data and creative and critical thinking.
         </p>
         <p>
-          As a front-end developer I offer an extensive knowledge of Javascript, jQuery, AJAX and supplementary librarier.</br>
+          As a front-end developer I offer an extensive knowledge of Javascript, jQuery, AJAX and supplementary libraries.
           I am skillful in developing semantic and accessible content through HTML5, ARIA/WCAG and microdata and formats.
           Visualising responsive designs using CSS, Sass, LESS is my second nature.
         </p>
         <p>
           My codebase is Git versioned, cross browser/device compatible and is compiled with NPM scripts, Gulp or Webpack.
+        </p>
+        <p>
+          I am a people-oriented, social person who is creative in thinking and acting and has a great sense of responsibility.
+        </p>
+        <p>
+          <a href="#about-personal-information" class="button">Contact me</a>
         </p>'
     -
       from:
@@ -247,7 +256,7 @@ experience:
         </p>'
       expander:
         text: 'detailed explanation'
-        text-alt: 'too much information..'
+        text-alt: 'less is more..'
         content: '
         <p>
         As front-end developer, UX designer and occasional back-end developer I
@@ -383,7 +392,7 @@ education:
         </ul>'
       expander:
         text: 'more information'
-        text-alt: 'too much information..'
+        text-alt: 'less is more..'
         content: '
           <strong>Focus</strong>
           <ul>
@@ -416,7 +425,7 @@ references:
         </p>'
       expander:
         text: 'read more'
-        text-alt: 'too much information..'
+        text-alt: 'less is more..'
         content: '
           <p>
             He knows better than anybody how to initiate and communicate effectively with
@@ -516,15 +525,15 @@ knowledge:
     type: line
     skills:
       -
+        title: Compatibility
+        aria-value: '90'
+        value: '0.9'
+        text: browser/platform/device
+      -
         title: Principles
         aria-value: '90'
         value: '0.9'
         text: YAGNI/DRY/KISS
-      -
-        title: Compatibility
-        aria-value: '85'
-        value: '0.85'
-        text: browser/platform/device
       -
         title: Automation
         aria-value: '80'
@@ -643,8 +652,8 @@ knowledge:
     skills:
       -
         title: PHPStorm/Webstorm
-        aria-value: '90'
-        value: '0.9'
+        aria-value: '95'
+        value: '0.95'
         text: IDE
       -
         title: 'Sublime Text'
@@ -652,15 +661,15 @@ knowledge:
         value: '0.85'
         text: editor
       -
-        title: 'Command line/CLI'
-        aria-value: '80'
-        value: '0.8'
-        text: terminal
-      -
         title: Git
         aria-value: '80'
         value: '0.8'
         text: versioning
+      -
+        title: 'Command line/CLI'
+        aria-value: '80'
+        value: '0.8'
+        text: terminal
       -
         title: Valet
         aria-value: '80'
@@ -686,10 +695,10 @@ knowledge:
         value: '0.8'
         text: mix/blade
       -
-        title: Pico
+        title: Blowdown
         aria-value: '70'
         value: '0.7'
-        text: 'Flat file/markdown'
+        text: 'mustache/markdown'
       -
         title: Drupal
         aria-value: '60'
@@ -701,10 +710,10 @@ knowledge:
         value: '0.55'
         text: CMS
       -
-        title: Slim
+        title: Lumen
         aria-value: '20'
         value: '0.2'
-        text: API/services
+        text: 'Laravel microframework'
   package-managers:
     title: 'Package managers'
     type: line
