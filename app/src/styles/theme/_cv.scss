@@ -1,0 +1,56 @@
+body{
+    &.is-cv{
+        #main-wrap{
+            margin-right: 0 !important;
+        }
+        #nav-wrap,
+        #about-languages div:last-child,
+        #about-soft-skills,
+        #about-interests,
+        #about-personal-information .is-optional,
+        .expander-trigger,
+        .expander-content,
+        .links,
+        footer{
+            display: none !important;
+        }
+    }
+    &.is-printfriendly{
+        main{
+            padding: 0 !important;
+        }
+        #main-wrap{
+            color: $black !important;
+            background: none !important;
+            .section-wrap{
+                background: none !important;
+            }
+        }
+    }
+    &.is-motivation{
+        main{
+            padding: $gutter !important;
+        }
+        #closure-links{
+            display: block !important;
+            font-size: 1.4rem !important;
+            a{
+                background: $orange !important;
+            }
+            .fa{
+                display: none !important;
+            }
+        }
+        .is-content{
+            a{
+                color: lighten($orange,10) !important;
+            }
+        }
+    }
+    &.is-minimal,.is-printfriendly{
+        background: none !important;
+        svg{
+            display: none !important;
+        }
+    }
+}
