@@ -232,7 +232,7 @@ function setMood(moodList, moodField){
 }
 
 function moodListener(){
-    var moodField = document.getElementById(moira.mood.idMood)
+    var moodField = document.getElementById(moira.mood.idMood);
     moodField.addEventListener('click', function(e) {
         getMood(moodField);
     });
