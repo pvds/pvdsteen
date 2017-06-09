@@ -35,8 +35,13 @@
     &.is-visible{
         opacity: 1;
         visibility: visible;
-        max-height: 1000px;
-        transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .3s ease-in-out;
+        &.has-animate{
+            max-height: 1000px;
+            transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .3s ease-in-out;
+        }
+        &.is-high{
+            max-height: 5000px;
+        }
     }
     &.is-box{
         padding: $gutter-half $gutter-half * 1.5;
