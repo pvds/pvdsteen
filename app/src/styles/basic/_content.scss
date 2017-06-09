@@ -9,6 +9,13 @@
             color: lighten($orange,10);
         }
     }
+    .button{
+        padding: $gutter-half $gutter-double;
+        border-radius: $border-radius-half;
+        &:hover{
+            color: $white;
+        }
+    }
     p{
         margin: $spacing 0;
     }
