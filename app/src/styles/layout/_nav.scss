@@ -12,14 +12,20 @@
         }
         li {
             display: inline-block;
-            margin: $gutter-half 0;
+            width: 100%;
+            background: $orange;
             &:first-child{
-                margin-top: 0;
+                a{
+                    padding-top: 0;
+                }
             }
         }
         a {
-            color: darken($orange,20);
             display: inline-block;
+            width: 100%;
+            margin-bottom: $gutter-half;
+            padding: $gutter-half 0;
+            color: darken($orange,20);
             &:hover {
                 color: $white;
             }
