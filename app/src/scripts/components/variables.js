@@ -7,6 +7,9 @@ moira.initGlobalVars = function () {
     this.vars.html.classList.remove('no-js');
     this.vars.html.classList.add('js');
 
+    // get meta data
+    this.vars.language = document.documentElement.getAttribute('lang');
+
     // get document <body>
     this.vars.body = document.getElementsByTagName('body');
 
