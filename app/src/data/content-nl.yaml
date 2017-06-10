@@ -29,7 +29,7 @@ links:
     ref: /dist/files/cv-pvdsteen.pdf
     slug: resume
     icon: download
-    visible: false
+    visible: true
     download: true
   -
     text: 'LinkedIn Profiel'
