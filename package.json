@@ -30,7 +30,6 @@
         "mustache:en:index": "mustache app/dist/data/content-en.json app/templates/index.mustache > app/templates/en/index.html",
         "mustache:en:404": "mustache app/dist/data/content-en.json app/templates/404.mustache > app/templates/en/404.html",
         "mustache:nl:index": "mustache app/dist/data/content-nl.json app/templates/index.mustache > app/templates/nl/index.html",
-        "mustache:nl:404": "mustache app/dist/data/content-nl.json app/templates/404.mustache > app/templates/nl/404.html",
         "htmlminifier:en": "html-minifier --input-dir app/templates/en --output-dir app",
         "htmlminifier:nl": "html-minifier --input-dir app/templates/nl --output-dir app/nl",
         "static": "run-p static:*",
