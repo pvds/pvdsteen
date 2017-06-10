@@ -2,14 +2,6 @@ main {
     margin: 0 auto;
     max-width: #{$bp-xxl}em;
     transition: .3s;
-    h2 {
-        font-size: 3.2rem;
-        text-transform: uppercase;
-        margin: $gutter 0 0 0;
-        & + .is-content{
-            margin-top: $gutter * 1.5;
-        }
-    }
 
     #closure-links{
         margin: $gutter;

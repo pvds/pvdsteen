@@ -77,7 +77,8 @@
         <div id="side-links" class="links">
             {{#links}}
                 {{#visible}}
-                    <a class="{{slug}} button" href="{{ref}}" {{#download}}download{{/download}} {{#target}}target="{{target}}"{{/target}}><span
+                    <a class="{{slug}} button"
+                       href="{{ref}}" {{#download}}download{{/download}} {{#target}}target="{{target}}"{{/target}}><span
                         class="fa fa-{{icon}}"></span>{{text}}</a>
                 {{/visible}}
             {{/links}}
@@ -89,7 +90,8 @@
                 <h2>{{about.title}}</h2>
                 <div class="is-content">
                     {{{about.intro.content}}}
-                    <span class="expander-trigger" {{#about.intro.expander.triggeronce}}data-trigger-once{{/about.intro.expander.triggeronce}} {{#about.intro.expander.triggertext-alt}}data-text-alt="{{about.intro.expander.triggertext-alt}}"{{/about.intro.expander.triggertext-alt}}>{{about.intro.expander.triggertext}}</span>
+                    <span
+                        class="expander-trigger" {{#about.intro.expander.triggeronce}}data-trigger-once{{/about.intro.expander.triggeronce}} {{#about.intro.expander.triggertext-alt}}data-text-alt="{{about.intro.expander.triggertext-alt}}"{{/about.intro.expander.triggertext-alt}}>{{about.intro.expander.triggertext}}</span>
                     <div class="expander-content has-animate is-box has-small-text">
                         {{{about.intro.expander.content}}}
                     </div>
@@ -107,7 +109,8 @@
             </section>
             <section id="about-languages">
                 <h3>Languages</h3>
-                <div class="progress-wrap progress-bullets is-animate" role="progressbar" aria-valuenow="{{about.languages.dutch.value}}"
+                <div class="progress-wrap progress-bullets is-animate" role="progressbar"
+                     aria-valuenow="{{about.languages.dutch.value}}"
                      aria-valuemin="0"
                      aria-valuemax="10">
                     <strong class="progress-title">{{about.languages.dutch.title}}</strong>
@@ -125,7 +128,8 @@
                     </span>
                     <span class="progress-text">{{about.languages.dutch.text}}</span>
                 </div>
-                <div class="progress-wrap progress-bullets is-animate" role="progressbar" aria-valuenow="{{about.languages.english.value}}"
+                <div class="progress-wrap progress-bullets is-animate" role="progressbar"
+                     aria-valuenow="{{about.languages.english.value}}"
                      aria-valuemin="0"
                      aria-valuemax="10">
                     <strong class="progress-title">{{about.languages.english.title}}</strong>
@@ -143,7 +147,8 @@
                     </span>
                     <span class="progress-text text-muted">{{about.languages.english.text}}</span>
                 </div>
-                <div class="progress-wrap progress-bullets is-animate" role="progressbar" aria-valuenow="{{about.languages.french.value}}"
+                <div class="progress-wrap progress-bullets is-animate" role="progressbar"
+                     aria-valuenow="{{about.languages.french.value}}"
                      aria-valuemin="0"
                      aria-valuemax="10">
                     <strong class="progress-title">{{about.languages.french.title}}</strong>
@@ -161,7 +166,8 @@
                     </span>
                     <span class="progress-text text-muted">{{about.languages.french.text}}</span>
                 </div>
-                <div class="progress-wrap progress-bullets is-animate" role="progressbar" aria-valuenow="{{about.languages.greek.value}}"
+                <div class="progress-wrap progress-bullets is-animate" role="progressbar"
+                     aria-valuenow="{{about.languages.greek.value}}"
                      aria-valuemin="0"
                      aria-valuemax="10">
                     <strong class="progress-title">{{about.languages.greek.title}}</strong>
@@ -212,81 +218,86 @@
         <div id="experience" class="section-wrap is-animate">
             <section id="experience-intro">
                 <h2>{{experience.title}}</h2>
-            </section>
-            <section class="timeline">
-                {{#experience.timeline}}
-                    <div class="timeline-item is-animate">
-                        <div class="timeline-date">
-                            <span>{{from.month}} <strong class="text-upper">{{from.year}}</strong> - {{to.month}} <strong>{{to.year}}</strong></span>
+                <div class="timeline">
+                    {{#experience.timeline}}
+                        <div class="timeline-item is-animate">
+                            <div class="timeline-date">
+                                <span>{{from.month}} <strong class="text-upper">{{from.year}}</strong> - {{to.month}}
+                                    <strong>{{to.year}}</strong></span>
+                            </div>
+                            <h3 class="timeline-function">{{{function}}}</h3>
+                            <h4 class="timeline-place">{{company}}</h4>
+                            <div class="timeline-description is-content">
+                                {{{content}}}
+                                {{#expander}}
+                                    <span class="expander-trigger"
+                                          {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
+                                    <div class="expander-content has-animate is-box has-small-text">
+                                        {{{content}}}
+                                    </div>
+                                {{/expander}}
+                            </div>
                         </div>
-                        <h3 class="timeline-function">{{{function}}}</h3>
-                        <h4 class="timeline-place">{{company}}</h4>
-                        <div class="timeline-description is-content">
-                            {{{content}}}
-                            {{#expander}}
-                                <span class="expander-trigger" {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
-                                <div class="expander-content has-animate is-box has-small-text">
-                                    {{{content}}}
-                                </div>
-                            {{/expander}}
-                        </div>
-                    </div>
-                {{/experience.timeline}}
+                    {{/experience.timeline}}
+                </div>
             </section>
         </div>
         <div id="education" class="section-wrap is-animate">
             <section id="education-intro">
                 <h2>{{education.title}}</h2>
-            </section>
-            <section class="timeline">
-                {{#education.timeline}}
-                    <div class="timeline-item is-animate">
-                        <div class="timeline-date">
-                            <span>{{from.month}} <strong class="text-upper">{{from.year}}</strong> - {{to.month}} <strong>{{to.year}}</strong></span>
+                <div class="timeline">
+                    {{#education.timeline}}
+                        <div class="timeline-item is-animate">
+                            <div class="timeline-date">
+                                <span>{{from.month}} <strong class="text-upper">{{from.year}}</strong> - {{to.month}}
+                                    <strong>{{to.year}}</strong></span>
+                            </div>
+                            <h3 class="timeline-function">{{{function}}}</h3>
+                            <h4 class="timeline-place">{{institution}}</h4>
+                            <div class="timeline-description is-content">
+                                {{{content}}}
+                                {{#expander}}
+                                    <span class="expander-trigger"
+                                          {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
+                                    <div class="expander-content has-animate is-box has-small-text">
+                                        {{{content}}}
+                                    </div>
+                                {{/expander}}
+                            </div>
                         </div>
-                        <h3 class="timeline-function">{{{function}}}</h3>
-                        <h4 class="timeline-place">{{institution}}</h4>
-                        <div class="timeline-description is-content">
-                            {{{content}}}
-                            {{#expander}}
-                                <span class="expander-trigger" {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
-                                <div class="expander-content has-animate is-box has-small-text">
-                                    {{{content}}}
-                                </div>
-                            {{/expander}}
-                        </div>
-                    </div>
-                {{/education.timeline}}
+                    {{/education.timeline}}
+                </div>
             </section>
         </div>
         <div id="references" class="section-wrap is-animate">
             <section id="references-intro">
                 <h2>{{references.title}}</h2>
-            </section>
-            <section id="reference-list">
-                {{#references.reference}}
-                    <div class="reference is-animate">
-                        <div class="reference-avatar">
-                            <img alt="{{author}}" src="{{image}}" class="is-round" height="54"
-                                 width="54">
-                        </div>
-                        <div class="reference-info">
-                            <div class="reference-author">
-                                <strong>{{author}}</strong>
-                                <span>{{company}}</span>
+                <div id="reference-list">
+                    {{#references.reference}}
+                        <div class="reference is-animate">
+                            <div class="reference-avatar">
+                                <img alt="{{author}}" src="{{image}}" class="is-round" height="54"
+                                     width="54">
                             </div>
-                            <blockquote class="reference-cont is-content">
-                                {{{content}}}
-                                {{#expander}}
-                                    <span class="expander-trigger" {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
-                                    <div class="expander-content has-animate is-box has-small-text">
-                                        {{{content}}}
-                                    </div>
-                                {{/expander}}
-                            </blockquote>
+                            <div class="reference-info">
+                                <div class="reference-author">
+                                    <strong>{{author}}</strong>
+                                    <span>{{company}}</span>
+                                </div>
+                                <blockquote class="reference-cont is-content">
+                                    {{{content}}}
+                                    {{#expander}}
+                                        <span class="expander-trigger"
+                                              {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
+                                        <div class="expander-content has-animate is-box has-small-text">
+                                            {{{content}}}
+                                        </div>
+                                    {{/expander}}
+                                </blockquote>
+                            </div>
                         </div>
-                    </div>
-                {{/references.reference}}
+                    {{/references.reference}}
+                </div>
             </section>
         </div>
         <div id="knowledge" class="section-wrap is-animate">
@@ -298,11 +309,13 @@
                 <h3>{{knowledge.programming.title}}</h3>
                 <div class="skills">
                     {{#knowledge.programming.skills}}
-                        <div class="progress-wrap progress-line is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-line is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.programming.skills}}
@@ -312,11 +325,13 @@
                 <h3>{{knowledge.techniques.title}}</h3>
                 <div class="skills">
                     {{#knowledge.techniques.skills}}
-                        <div class="progress-wrap progress-line is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-line is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.techniques.skills}}
@@ -326,10 +341,12 @@
                 <h3>{{knowledge.contents.title}}</h3>
                 <div class="skills">
                     {{#knowledge.contents.skills}}
-                        <div class="progress-wrap progress-chart is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-chart is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                             <strong class="progress-title">{{title}}</strong>
                         </div>
@@ -340,10 +357,12 @@
                 <h3>{{knowledge.visualisation.title}}</h3>
                 <div class="skills">
                     {{#knowledge.visualisation.skills}}
-                        <div class="progress-wrap progress-chart is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-chart is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                             <strong class="progress-title">{{title}}</strong>
                         </div>
@@ -354,10 +373,12 @@
                 <h3>{{knowledge.interaction.title}}</h3>
                 <div class="skills">
                     {{#knowledge.interaction.skills}}
-                        <div class="progress-wrap progress-chart is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-chart is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                             <strong class="progress-title">{{title}}</strong>
                         </div>
@@ -368,11 +389,13 @@
                 <h3>{{knowledge.development.title}}</h3>
                 <div class="skills">
                     {{#knowledge.development.skills}}
-                        <div class="progress-wrap progress-line is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-line is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.development.skills}}
@@ -382,11 +405,13 @@
                 <h3>{{knowledge.cms-frameworks.title}}</h3>
                 <div class="skills">
                     {{#knowledge.cms-frameworks.skills}}
-                        <div class="progress-wrap progress-line is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-line is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.cms-frameworks.skills}}
@@ -396,11 +421,13 @@
                 <h3>{{knowledge.package-managers.title}}</h3>
                 <div class="skills">
                     {{#knowledge.package-managers.skills}}
-                        <div class="progress-wrap progress-line is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-line is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.package-managers.skills}}
@@ -410,11 +437,13 @@
                 <h3>{{knowledge.build-tools.title}}</h3>
                 <div class="skills">
                     {{#knowledge.build-tools.skills}}
-                        <div class="progress-wrap progress-line is-animate" role="progressbar" aria-valuenow="{{aria-value}}"
+                        <div class="progress-wrap progress-line is-animate" role="progressbar"
+                             aria-valuenow="{{aria-value}}"
                              aria-valuemin="0"
                              aria-valuemax="100">
                             <strong class="progress-title">{{title}}</strong>
-                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}} data-text-alt="{{text-alt}}"{{/text-alt}}
+                            <div class="progress-bar" data-text="{{text}}"{{#text-alt}}
+                                 data-text-alt="{{text-alt}}"{{/text-alt}}
                                  data-value="{{value}}"></div>
                         </div>
                     {{/knowledge.build-tools.skills}}
@@ -425,7 +454,8 @@
         <div id="closure-links" class="links">
             {{#links}}
                 {{#visible}}
-                    <a class="{{slug}} button" href="{{ref}}" {{#download}}download{{/download}} {{#target}}target="{{target}}"{{/target}}><span
+                    <a class="{{slug}} button"
+                       href="{{ref}}" {{#download}}download{{/download}} {{#target}}target="{{target}}"{{/target}}><span
                         class="fa fa-{{icon}}"></span>{{text}}</a>
                 {{/visible}}
             {{/links}}
@@ -462,6 +492,8 @@
   "telephone" : "+31610425975",
   "email" : "pvdsteen@gmail.com"
 }
+
+
 </script>
 
 <!-- Javascript -->
@@ -469,25 +501,25 @@
 
 <!-- Analytics -->
 <script>
-if(navigator.userAgent.indexOf("Speed Insights") == -1) {
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    if (navigator.userAgent.indexOf("Speed Insights") == -1) {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-15625647-1', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-15625647-1', 'auto');
+        ga('send', 'pageview');
 
-    <!-- Scrolldepth tracking  -->
-    gascrolldepth.init();
-}
+        <!-- Scrolldepth tracking  -->
+        gascrolldepth.init();
+    }
 </script>
 </body>
 </html>
