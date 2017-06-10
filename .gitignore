@@ -36,5 +36,6 @@ app/templates/nl/
 app/templates/en/
 app/templates/compiled/
 app/nl/
+app/src/data/*.merged.yaml
 app/*.html
 app/src/data/*.json

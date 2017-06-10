@@ -9,24 +9,14 @@ meta:
 nav:
   -
     title: 'About me'
-    id: about
-    icon: user
   -
     title: Experience
-    id: experience
-    icon: folder-open
   -
     title: Education
-    id: education
-    icon: university
   -
     title: References
-    id: references
-    icon: address-book
   -
     title: Knowledge
-    id: knowledge
-    icon: tasks
 card:
   name: 'Peter van der Steen'
   profession:
@@ -768,34 +758,3 @@ knowledge:
         aria-value: '60'
         value: '0.6'
         text: 'simplified build system'
-svg:
-  triangle:
-    -
-      id: '1'
-      height: '470'
-      width: '530'
-      points: '0,0,530,0,530,470'
-    -
-      id: '2'
-      height: '490'
-      width: '510'
-      points: '0,0,510,0,510,490'
-    -
-      id: '3'
-      height: '520'
-      width: '480'
-      points: '0,0,480,0,480,520'
-    -
-      id: '4'
-      height: '580'
-      width: '420'
-      points: '0,0,420,0,420,580'
-    -
-      id: '5'
-      height: '670'
-      width: '350'
-      points: '0,0,350,0,350,670'
-util:
-  folders:
-    files: /dist/files/
-    images: /dist/images/
