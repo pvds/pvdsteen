@@ -1,6 +1,6 @@
 .expander-trigger {
     display: inline-block;
-    margin: 0 0 $gutter-half $gutter-fourth;
+    margin-left: $gutter-fourth;
     color: $grey-light;
     cursor: pointer;
     font-size: 90%;
@@ -31,23 +31,14 @@
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .6s ease-in-out .1s;
-    &.is-visible{
-        opacity: 1;
-        visibility: visible;
-        &.has-animate{
-            max-height: 1000px;
-            transition: visibility .3s ease-in-out, opacity .3s ease-in-out, max-height .3s ease-in-out;
-        }
-        &.is-high{
-            max-height: 5000px;
-        }
-    }
+    padding: 0;
+    border-width: 0;
+    transition: visibility .3s ease-in-out, opacity .3s ease-in-out, margin .3s ease-in-out, padding .3s ease-in-out, border .3s ease-in-out, max-height .6s ease-in-out .1s;
     &.is-box{
-        padding: $gutter-half $gutter-half * 1.5;
+        padding: 0 $gutter-half * 1.5;
         border-radius: $border-radius-half;
         background: darken($grey, 2);
-        border: 1px solid $body-color;
+        border: 0 solid $body-color;
         > :first-child{
             margin-top: 0;
         }
@@ -57,5 +48,21 @@
     }
     &.has-small-text{
         font-size: 90%;
+    }
+    &.is-visible{
+        opacity: 1;
+        visibility: visible;
+        margin-top: $gutter-half;
+        &.has-animate{
+            max-height: 1000px;
+            transition: visibility .3s ease-in-out, opacity .3s ease-in-out, margin .3s ease-in-out, padding .3s ease-in-out, border .3s ease-in-out, max-height .3s ease-in-out;
+        }
+        &.is-high{
+            max-height: 5000px;
+        }
+        &.is-box{
+            padding: $gutter-half $gutter-half * 1.5;
+            border-width: 1px;
+        }
     }
 }
