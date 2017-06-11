@@ -140,8 +140,6 @@ function manualAnimationTrigger(){
         var lineItem = moira.progress.lines[i],
             line = lineItem.querySelector(moira.progress.selectorBar);
 
-        console.log(line);
-
         progressLine(line, line.getAttribute(moira.progress.attributeText), line.getAttribute(moira.progress.attributeValue), 1);
     }
 }
