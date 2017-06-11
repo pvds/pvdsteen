@@ -40,11 +40,6 @@ body {
                 display: none !important;
             }
         }
-        .is-content {
-            a {
-                color: lighten($orange, 10) !important;
-            }
-        }
     }
     &.is-minimal, .is-printfriendly {
         background: none !important;

@@ -6,7 +6,7 @@
     font-size: 90%;
     transition: all .3s ease-in-out;
     &:hover{
-        color: lighten($orange, 10);
+        color: $orange;
     }
     &.is-once{
         @extend .visually-hidden;
