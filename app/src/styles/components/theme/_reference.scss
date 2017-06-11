@@ -15,6 +15,9 @@
         top: 0;
         left: 0;
         position: absolute;
+        img{
+            border: 2px solid $grey-dark;
+        }
     }
     .reference-author {
         padding-top: 10px;
