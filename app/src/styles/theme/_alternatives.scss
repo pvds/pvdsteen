@@ -1,6 +1,6 @@
-body{
-    &.is-cv{
-        #main-wrap{
+body {
+    &.is-cv {
+        #main-wrap {
             margin-right: 0 !important;
         }
         #nav-wrap,
@@ -10,46 +10,58 @@ body{
         #about-personal-information .is-optional,
         .expander-trigger,
         .links,
-        footer{
+        footer {
             display: none !important;
         }
     }
-    &.is-printfriendly{
-        main{
+    &.is-printfriendly {
+        main {
             padding: 0 !important;
         }
-        #main-wrap{
+        #main-wrap {
             color: $black !important;
             background: none !important;
-            .section-wrap{
+            .section-wrap {
                 background: none !important;
             }
         }
     }
-    &.is-motivation{
-        main{
+    &.is-motivation {
+        main {
             padding: $gutter !important;
         }
-        #closure-links{
+        #closure-links {
             display: block !important;
             font-size: 1.4rem !important;
-            a{
+            a {
                 background: $orange !important;
             }
-            .fa{
+            .fa {
                 display: none !important;
             }
         }
-        .is-content{
-            a{
-                color: lighten($orange,10) !important;
+        .is-content {
+            a {
+                color: lighten($orange, 10) !important;
             }
         }
     }
-    &.is-minimal,.is-printfriendly{
+    &.is-minimal, .is-printfriendly {
         background: none !important;
-        svg{
+        svg {
             display: none !important;
+        }
+    }
+    &.is-high-contrast {
+        .vcard {
+            .card-address {
+                color: $white;
+            }
+        }
+        .timeline{
+            .timeline-date{
+                font-weight: $font-weight-base-strong;
+            }
         }
     }
 }
