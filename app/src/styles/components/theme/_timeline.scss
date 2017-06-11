@@ -76,14 +76,6 @@ $timeline-date-gutter: $gutter;
             border-radius: 50%;
             background-color: $white;
         }
-        &.is-current {
-            .timeline-date {
-                background-color: $blue;
-                &:before {
-                    border-right-color: $blue;
-                }
-            }
-        }
     }
     @include media(xs-max){
         margin-left: 25px;
