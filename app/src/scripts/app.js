@@ -45,6 +45,11 @@
         expander();
 
         /**
+         * Set skype link
+         * */
+        setSkypeLink(moira.skype.type, moira.skype.id);
+
+        /**
          * Initiate mood listener
          * */
         moodListener()

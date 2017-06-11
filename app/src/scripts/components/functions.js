@@ -244,6 +244,13 @@ function moodListener(){
     });
 }
 
+function setSkypeLink(type, elId) {
+    var el = document.getElementById(elId),
+        user = el.innerText;
+
+    el.innerHTML = '<a href="skype:'+user+'?'+type+'">'+user+'</a>';
+}
+
 function highlight(target, duration){
     var timeout = !!duration ? duration : 750;
     target.classList.add('is-highlight');

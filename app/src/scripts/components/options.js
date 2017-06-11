@@ -13,6 +13,10 @@ var moira = {
         animationType: 'click',
         idMood: 'mood',
     },
+    skype: {
+        id: 'skype',
+        type: 'call'
+    },
     animation: {
         global: true,
         mobile: true,

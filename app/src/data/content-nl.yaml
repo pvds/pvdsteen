@@ -90,7 +90,8 @@ about:
         def: '+31 6 104 25 975'
       -
         term: Skype
-        def: '<a href="skype:rockfromtherock?call">rockfromtherock</a>'
+        def: 'rockfromtherock'
+        id: skype
         class: 'is-optional'
       -
         term: Rijbewijs
