@@ -51,11 +51,12 @@ body {
         .vcard {
             .card-address {
                 color: $white;
+                font-size: 1.6rem;
             }
         }
         .timeline{
             .timeline-date{
-                font-weight: $font-weight-base-strong;
+                color: darken($orange, 20);
             }
         }
     }
