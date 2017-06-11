@@ -15,16 +15,14 @@
          * Animate Elements
          */
         if(moira.animation.global || !moira.vars.mobile && moira.animation.mobile) {
-            appearElems(moira.vars.animateEl, 150);
+            appearElems(moira.vars.animateEl, moira.animation.visibleBeforeAnimation);
         } else{
             manualAnimationTrigger();
         }
 
         /**
-         * Listen for print actions
-         */
-        listenPrintEvent();
-
+         * Initialize non mobile logic
+         **/
         if(!moira.vars.mobile){
             /**
              * Initialize smooth anchor scrolling
@@ -67,5 +65,9 @@
     });
 
     window.addEventListener('load', function() {
+        /**
+         * Listen for print actions
+         */
+        listenPrintEvent();
     });
 }());

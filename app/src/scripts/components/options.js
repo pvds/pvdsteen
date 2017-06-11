@@ -21,7 +21,8 @@ var moira = {
         global: true,
         mobile: true,
         selectorBefore: 'is-animate',
-        selectorAfter: 'is-animated'
+        selectorAfter: 'is-animated',
+        visibleBeforeAnimation: 150
     },
     expander: {
         selectorTrigger: '.expander-trigger',

@@ -17,7 +17,7 @@ moira.initGlobalVars = function () {
     this.vars.footer = document.getElementsByTagName('footer');
 
     // get animation elements
-    this.vars.animateEl = document.getElementsByClassName('is-animate');
+    this.vars.animateEl = document.querySelectorAll('.is-animate');
 
     // get window Width
     this.vars.windowW = window.innerWidth;
