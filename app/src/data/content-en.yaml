@@ -411,7 +411,9 @@ references:
   reference:
     -
       image: '/dist/images/avatar-marius.jpg'
+      alt: 'reference by'
       author: 'Marius van der Kooy'
+      function: 'Manager'
       company: 'Just Walk'
       content: '
         <p>
@@ -442,6 +444,8 @@ references:
     -
       image: '/dist/images/avatar-bart.jpg'
       author: 'Bart Lageweg'
+      alt: 'reference by'
+      function: 'Owner'
       company: 'Bizway'
       content: '
         <p>
@@ -454,6 +458,8 @@ references:
     -
       image: '/dist/images/avatar-danny.jpg'
       author: 'Danny Visser'
+      alt: 'reference by'
+      function: 'Owner'
       company: 'Just Walk'
       content: '
         <p>
