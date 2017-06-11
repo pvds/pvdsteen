@@ -28,10 +28,13 @@ $line-height: 1.8;
 
 // Colors
 $black: #222222;
+$black-light: #1f1f1f;
 $white: #ffffff;
 $grey: #373737;
 $grey-light: #bcbcbc;
+$grey-dark: #2a2a2a;
 $orange: #C46210;
+$orange: #dc6e12; //lighten(#C46210, 10)
 $blue: #1d7889;
 $red: red;
 $green: green;
@@ -40,8 +43,8 @@ $pink: pink;
 $yellow: yellow;
 
 $text-color: $white;
-$body-color: #2a2a2a;
-$border-color: #1f1f1f;
+$body-color: $grey-dark;
+$border-color: $black-light;
 
 // Layout
 $base-width: 0.5rem;
