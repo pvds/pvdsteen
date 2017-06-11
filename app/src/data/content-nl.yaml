@@ -333,7 +333,7 @@ experience:
         month: Aug
         year: 2009
       function: Mechanical Designer
-      company: Bluewater Energy Servicer
+      company: Bluewater Energy Services
       content: '
         <p>
           Ontwerp van verschillende FPSO componenten, specifiek voor de Bluewater "swivel bearing" modules.
@@ -408,7 +408,7 @@ references:
   title: Referenties
   reference:
     -
-      image: '/dist/images/avatar-marius.jpg'
+      image: 'avatar-marius'
       alt: 'referentie door'
       author: 'Marius van der Kooy'
       function: 'Manager'
@@ -434,7 +434,7 @@ references:
             Hij is absoluut een toegevoegde waarde in de breedste zin van het woord.
           </p>'
     -
-      image: '/dist/images/avatar-bart.jpg'
+      image: 'avatar-bart'
       alt: 'referentie door'
       author: 'Bart Lageweg'
       function: 'Eigenaar'
@@ -447,7 +447,7 @@ references:
           Een top UX designer, met humor, communicatievaardigheden en groot verantwoordelijkheidsgevoel.
         </p>'
     -
-      image: '/dist/images/avatar-danny.jpg'
+      image: 'avatar-danny'
       alt: 'referentie door'
       author: 'Danny Visser'
       function: 'Eigenaar'

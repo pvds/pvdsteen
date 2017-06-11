@@ -36,7 +36,7 @@
     <script>window.html5 || document.write('<script src="src/vendor/html5shiv/html5shiv.js"><\/script>')</script>
     <![endif]-->
 </head>
-<body>
+<body class="is-high-contrast">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -48,8 +48,8 @@
             <ul>
                 {{#nav}}
                     <li>
-                        <a href="#{{id}}" data-scroll-spy>
-                            <span class="fa fa-{{icon}}"></span>
+                        <a href="#{{id}}" class="faa-parent animated-hover" data-scroll-spy>
+                            <span class="fa fa-{{icon}} faa-{{icon-animation}}"></span>
                             <span class="title">{{title}}</span>
                         </a>
                     </li>
@@ -59,7 +59,7 @@
     </div>
     <div id="side-wrap" class="sticky" data-margin-top="20" data-sticky-for="1023">
         <aside class="card vcard">
-            <img class="card-avatar photo is-round" src="{{env.images}}avatar.jpg" width="180" height="180"
+            <img class="card-avatar photo is-round" src="{{env.images}}avatar.jpg" srcset="{{env.images}}avatar@2x.jpg 2x" width="180" height="180"
                  alt="{{card.name}}, {{card.profession.first}} - {{card.profession.second}}"/>
             <div class="card-info">
                 <h1 class="card-name fn">{{card.name}}</h1>
@@ -276,7 +276,7 @@
                     {{#references.reference}}
                         <div class="reference is-animate">
                             <div class="reference-avatar">
-                                <img alt="{{alt}} {{author}} {{function}},  {{company}}" src="{{image}}" class="is-round" height="54"
+                                <img alt="{{alt}} {{author}} {{function}},  {{company}}" src="{{env.images}}{{image}}" srcset="{{env.images}}{{image}}@2x.jpg 2x" class="is-round" height="54"
                                      width="54">
                             </div>
                             <div class="reference-info">
