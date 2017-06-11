@@ -4,7 +4,7 @@
 var moira = {
     vars: {
         // Set theme primary color
-        themeColor: '#c46210'
+        themeColor: '#dc6e12'
     },
     nav: {
         linkSelector: 'nav a'
