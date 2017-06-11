@@ -5,13 +5,24 @@
         margin: ($spacing+$spacing-half) 0 0 0;
     }
     a{
+        font-weight: $font-weight-base-strong;
+        color: $orange;
         &:hover{
             color: lighten($orange,10);
+        }
+        &[href*="//"]:not([href*="pvdsteen.com"]) {
+            &:after{
+                @include fa;
+                content: '\f08e';
+                font-size: 90%;
+                margin-left: $gutter-fourth;
+            }
         }
     }
     .button{
         padding: $gutter-half $gutter-double;
         border-radius: $border-radius-half;
+        color: $white;
         &:hover{
             color: $white;
         }
