@@ -91,8 +91,8 @@
                 <div class="is-content">
                     {{{about.intro.content}}}
                     <span
-                        class="expander-trigger" {{#about.intro.expander.triggeronce}}data-trigger-once{{/about.intro.expander.triggeronce}} {{#about.intro.expander.triggertext-alt}}data-text-alt="{{about.intro.expander.triggertext-alt}}"{{/about.intro.expander.triggertext-alt}}>{{about.intro.expander.triggertext}}</span>
-                    <div class="expander-content has-animate is-box has-small-text">
+                        class="expander-trigger" aria-expanded="false" aria-controls="{{about.intro.expander.id}}" {{#about.intro.expander.triggeronce}}data-trigger-once{{/about.intro.expander.triggeronce}} {{#about.intro.expander.triggertext-alt}}data-text-alt="{{about.intro.expander.triggertext-alt}}"{{/about.intro.expander.triggertext-alt}}>{{about.intro.expander.triggertext}}</span>
+                    <div id="{{about.intro.expander.id}}" class="expander-content has-animate is-box has-small-text">
                         {{{about.intro.expander.content}}}
                     </div>
                 </div>
@@ -230,9 +230,9 @@
                             <div class="timeline-description is-content">
                                 {{{content}}}
                                 {{#expander}}
-                                    <span class="expander-trigger"
+                                    <span class="expander-trigger" aria-expanded="false" aria-controls="{{id}}"
                                           {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
-                                    <div class="expander-content has-animate is-box has-small-text">
+                                    <div id="{{id}}" class="expander-content has-animate is-box has-small-text">
                                         {{{content}}}
                                     </div>
                                 {{/expander}}
@@ -257,9 +257,9 @@
                             <div class="timeline-description is-content">
                                 {{{content}}}
                                 {{#expander}}
-                                    <span class="expander-trigger"
+                                    <span class="expander-trigger" aria-expanded="false" aria-controls="{{id}}"
                                           {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
-                                    <div class="expander-content has-animate is-box has-small-text">
+                                    <div id="{{id}}" class="expander-content has-animate is-box has-small-text">
                                         {{{content}}}
                                     </div>
                                 {{/expander}}
@@ -287,9 +287,9 @@
                                 <blockquote class="reference-cont is-content">
                                     {{{content}}}
                                     {{#expander}}
-                                        <span class="expander-trigger"
+                                        <span class="expander-trigger" aria-expanded="false" aria-controls="{{id}}"
                                               {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
-                                        <div class="expander-content has-animate is-box has-small-text">
+                                        <div id="{{id}}" class="expander-content has-animate is-box has-small-text">
                                             {{{content}}}
                                         </div>
                                     {{/expander}}

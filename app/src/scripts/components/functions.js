@@ -153,7 +153,9 @@ function expander(){
         var trigger = triggers[i];
         trigger.addEventListener('click', function(e) {
             var triggered = this,
-                triggerContent = triggered.nextElementSibling,
+                triggeredTargetId = triggered.getAttribute(moira.expander.attributeTriggerTargetId),
+                triggeredTargetEl = document.getElementById(triggeredTargetId),
+                triggerContent = triggeredTargetEl ? triggeredTargetEl : triggered.nextElementSibling,
                 triggerText = triggered.innerText,
                 triggerTextAlt = triggered.getAttribute(moira.expander.attributeTextAlt),
                 triggerOnce = triggered.hasAttribute(moira.expander.attributeTriggerOnce);
@@ -163,17 +165,21 @@ function expander(){
              * */
             if(!triggered.classList.contains(moira.expander.classTrigger)){
                 triggered.classList.add(moira.expander.classTrigger);
+                triggered.setAttribute(moira.expander.attributeExpanded, 'true');
             } else{
                 triggered.classList.remove(moira.expander.classTrigger);
+                triggered.setAttribute(moira.expander.attributeExpanded, 'false');
             }
 
             /**
              * If initially hidden > show, otherwise hide
              * */
             if(!triggerContent.classList.contains(moira.expander.classVisible)){
+                triggerContent.setAttribute(moira.expander.attributeExpanded, 'true');
                 triggerContent.classList.add(moira.expander.classVisible);
             } else{
                 triggerContent.classList.remove(moira.expander.classVisible);
+                triggerContent.setAttribute(moira.expander.attributeExpanded, 'false');
             }
 
             /**

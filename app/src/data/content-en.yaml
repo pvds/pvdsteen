@@ -55,6 +55,7 @@ about:
         products and services</strong>.
     </p>'
     expander:
+      id: about-intro-expander
       content: '<p>
         My main interest lies in the <strong>combination of user experience design and front-end
         development</strong>, focusing on critical and creative thinking I am developing myself in the areas of
@@ -212,6 +213,7 @@ experience:
           I am looking for a new challenge!
         </p>'
       expander:
+        id: timeline-me-expander
         text: 'why me?'
         text-alt: 'closing this would ruin my day'
         content: '
@@ -251,6 +253,7 @@ experience:
           Since 2014 these separate websites were integrated in the <a href="http://www.miky.nl" target="_blank">Miky</a> whitelabel.
         </p>'
       expander:
+        id: timeline-justwalk-expander
         text: 'detailed explanation'
         text-alt: 'less is more..'
         content: '
@@ -387,6 +390,7 @@ education:
           <li>Winner of Propaedeutic Team Project 2010 for Urban Resort Foundation</li>
         </ul>'
       expander:
+        id: timeline-iam-expander
         text: 'more information'
         text-alt: 'less is more..'
         content: '
@@ -422,6 +426,7 @@ references:
           his daily business.
         </p>'
       expander:
+        id: reference-marius-expander
         text: 'read more'
         text-alt: 'less is more..'
         content: '

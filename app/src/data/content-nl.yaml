@@ -55,6 +55,7 @@ about:
       Met als doel de creatie en optimalisatie van boeiende maar vooral gebruiksvriendelijke online producten en services.
     </p>'
     expander:
+      id: about-intro-expander
       content: '<p>
         Op het gebied van UX design ben ik bekend met het ontwikkelen van op persona’s gebaseerde task flows en scenarios
         om onderbouwde beslissingen te maken voor de opzet van wireframes, interaction flows en prototypen.
@@ -211,6 +212,7 @@ experience:
           Ik ben op zoek naar een nieuwe uitdaging!
         </p>'
       expander:
+        id: timeline-me-expander
         text: 'waarom ik?'
         text-alt: 'minder over jezelf graag..'
         content: '
@@ -250,6 +252,7 @@ experience:
           Sinds 2014 zijn deze websites in het Merk <a href="http://www.miky.nl" target="_blank">Miky</a> ondergebracht.
         </p>'
       expander:
+        id: timeline-justwalk-expander
         text: 'uitgebreide omschrijving'
         text-alt: 'minder is meer..'
         content: '
@@ -385,6 +388,7 @@ education:
           <li>Winnaar van het Propedeutisch team project 2010 voor Stichting Urban Resort</li>
         </ul>'
       expander:
+        id: timeline-iam-expander
         text: 'meer informatie'
         text-alt: 'minder informatie graag..'
         content: '
@@ -419,6 +423,7 @@ references:
           De front-end ontwerpen, alternatieven presenteren, eventueel aanpassen en uiteindelijk ontwikkelen en beheren is voor hem daily business.
         </p>'
       expander:
+        id: reference-marius-expander
         text: 'verder lezen'
         text-alt: 'teveel informatie..'
         content: '

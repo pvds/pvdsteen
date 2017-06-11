@@ -22,6 +22,8 @@ var moira = {
     expander: {
         selectorTrigger: '.expander-trigger',
         selectorContent: '.expander-content',
+        attributeExpanded: 'aria-expanded',
+        attributeTriggerTargetId: 'aria-controls',
         attributeTextAlt: 'data-text-alt',
         attributeTriggerOnce: 'data-trigger-once',
         classVisible: 'is-visible',
