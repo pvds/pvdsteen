@@ -1,6 +1,5 @@
 function initSmoothScrolling() {
     if (isCssSmoothSCrollSupported()) {
-        // document.getElementById('css-support-msg').className = 'supported';
         return;
     }
 
