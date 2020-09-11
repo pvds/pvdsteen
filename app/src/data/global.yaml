@@ -26,7 +26,7 @@ svg:
       width: '550'
       points: '0,0,550,0,550,670'
 env:
-  url: 'http://pvdsteen.com'
+  url: 'https://pvdsteen.com'
   files: /dist/files/
   images: /dist/images/
   styles: /dist/styles/
