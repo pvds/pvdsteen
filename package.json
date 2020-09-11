@@ -56,7 +56,6 @@
     "start:js": "onchange app/src/scripts -- npm run build:js",
     "start:images": "onchange app/src/images -- npm run static:imagemin",
     "server": "browser-sync start --watchEvents [add, change] -p pvdsteen.dev --host pvdsteen.dev --open external --files [app/dist, app/templates/**/*.html]",
-    "postinstall": "npm run build && npm start"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",
