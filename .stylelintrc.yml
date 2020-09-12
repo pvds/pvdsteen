@@ -1,0 +1,9 @@
+extends:
+  - stylelint-config-pragmatic
+rules:
+  block-no-empty: null
+  no-empty-source: null
+  font-family-no-missing-generic-family-keyword:
+    - true
+    - ignoreFontFamilies:
+        - FontAwesome

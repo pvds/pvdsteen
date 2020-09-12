@@ -22,7 +22,7 @@
     "lint": "run-s lint:*",
     "lint:js": "eslint src/scripts --cache --fix ",
     "lint:css": "stylelint src/styles --cache --fix ",
-    "lint:format": "prettier --write **/*.{js,md,scss,mustache,yaml}",
+    "lint:format": "prettier --write .",
     "sass": "node-sass --include-path node_modules/bourbon-neat/core/ -o dist/app/styles src/styles",
     "postcss": "postcss -u autoprefixer -b \"last 2 versions\" -u cssnano -r dist/app/styles/*.css",
     "prebabel": "mkdirp dist/app/scripts",
@@ -62,17 +62,30 @@
     "start:images": "onchange src/images -- npm run static:imagemin",
     "server": "browser-sync start --watchEvents [add, change] -p pvdsteen.dev --host pvdsteen.dev --open external --files [dist/app]"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.scss": "stylelint --fix",
+    "*.{js,scss,md,yaml,yml}": "prettier --write"
+  },
   "devDependencies": {
+    "autotrack": "^2.4.1",
     "autoprefixer": "^9.8.6",
     "babel-cli": "^6.24.1",
     "babel-preset-babili": "^0.1.2",
     "babel-preset-es2015": "^6.24.1",
+    "bourbon-neat": "^4.0.0",
     "browser-sync": "^2.17.5",
     "copyfiles": "^2.3.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.8.1",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^6.11.0",
+    "font-awesome": "^4.7.0",
     "html-minifier": "^4.0.0",
     "husky": "^4.3.0",
     "imagemin-cli": "^6.0.0",
@@ -84,25 +97,12 @@
     "npm-run-all": "^4.1.5",
     "onchange": "^7.0.2",
     "postcss-cli": "^7.1.2",
+    "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
     "standard": "^14.3.4",
+    "stylelint": "^13.7.1",
+    "stylelint-config-pragmatic": "^1.5.0",
     "svgo": "^1.3.2",
     "yamljs": "^0.3.0"
-  },
-  "dependencies": {
-    "autotrack": "^2.4.1",
-    "bourbon-neat": "^4.0.0",
-    "font-awesome": "^4.7.0",
-    "prettier": "^2.1.1",
-    "stylelint": "^13.7.1",
-    "stylelint-config-pragmatic": "^1.5.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix"
   }
 }
