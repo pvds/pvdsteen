@@ -1,26 +1,30 @@
-.alert{
-    background: darken($white, 10);
-    color: $grey;
-    padding: $gutter-half;
-    font-size: 1.4rem;
-    &.is-success{
-        background-color: lighten($green, 40);
-        color: $green;
-    }
-    &.is-info{
-        background-color: lighten($blue, 40);
-        color: darken($blue, 10);
-    }
-    &.is-warning{
-        background-color: lighten($orange, 32);
-        color: $orange;
-    }
-    &.is-error{
-        background-color: lighten($red, 36);
-        color: $red;
-    }
+.alert {
+  padding: $gutter-half;
+  font-size: 1.4rem;
+  background: darken($white, 10);
+  color: $grey;
 
-    &.is-centered{
-        text-align: center;
-    }
+  &.is-success {
+    background-color: lighten($green, 40);
+    color: $green;
+  }
+
+  &.is-info {
+    background-color: lighten($blue, 40);
+    color: darken($blue, 10);
+  }
+
+  &.is-warning {
+    background-color: lighten($orange, 32);
+    color: $orange;
+  }
+
+  &.is-error {
+    background-color: lighten($red, 36);
+    color: $red;
+  }
+
+  &.is-centered {
+    text-align: center;
+  }
 }

@@ -1,47 +1,44 @@
 function jump(target, options) {
-    var 
-        start = window.pageYOffset,
-        opt = {
-            duration: options.duration,
-            offset: options.offset || 0,
-            callback: options.callback,
-            easing: options.easing || easeInOutQuad
-        },
-        distance = typeof target === 'string'
-            ? opt.offset + document.querySelector(target).getBoundingClientRect().top
-            : target,
-        duration = typeof opt.duration === 'function'
-            ? opt.duration(distance)
-            : opt.duration,
-        timeStart, timeElapsed
-    ;
-    
-    requestAnimationFrame(function(time) { timeStart = time; loop(time); });
-    
-    function loop(time) {
-        timeElapsed = time - timeStart;
+  const start = window.pageYOffset;
+  const opt = {
+    duration: options.duration,
+    offset: options.offset || 0,
+    callback: options.callback,
+    easing: options.easing || easeInOutQuad,
+  };
+  const distance =
+    typeof target === 'string'
+      ? opt.offset + document.querySelector(target).getBoundingClientRect().top
+      : target;
+  const duration = typeof opt.duration === 'function' ? opt.duration(distance) : opt.duration;
+  let timeStart;
+  let timeElapsed;
 
-        window.scrollTo(0, opt.easing(timeElapsed, start, distance, duration));
+  requestAnimationFrame(function (time) {
+    timeStart = time;
+    loop(time);
+  });
 
-        if (timeElapsed < duration)
-            requestAnimationFrame(loop)
-        else
-            end();
-    }
+  function loop(time) {
+    timeElapsed = time - timeStart;
 
-    function end() {
-        window.scrollTo(0, start + distance);
+    window.scrollTo(0, opt.easing(timeElapsed, start, distance, duration));
 
-        if (typeof opt.callback === 'function')
-            opt.callback();
-    }
-    
-    // Robert Penner's easeInOutQuad - http://robertpenner.com/easing/
-    function easeInOutQuad(t, b, c, d)  {
-        t /= d / 2
-        if(t < 1) return c / 2 * t * t + b
-        t--
-        return -c / 2 * (t * (t - 2) - 1) + b
-    }
- 
+    if (timeElapsed < duration) requestAnimationFrame(loop);
+    else end();
+  }
+
+  function end() {
+    window.scrollTo(0, start + distance);
+
+    if (typeof opt.callback === 'function') opt.callback();
+  }
+
+  // Robert Penner's easeInOutQuad - http://robertpenner.com/easing/
+  function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
 }

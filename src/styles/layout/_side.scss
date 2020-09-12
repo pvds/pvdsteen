@@ -1,16 +1,18 @@
 #side-wrap {
-    .links{
-        display: none;
-    }
-    @include media(lg) {
-        float: left;
-        width: $side-width;
+  .links {
+    display: none;
+  }
 
-        .links{
-            display: block;
-            a{
-                width: 100%;
-            }
-        }
+  @include media(lg) {
+    float: left;
+    width: $side-width;
+
+    .links {
+      display: block;
+
+      a {
+        width: 100%;
+      }
     }
+  }
 }

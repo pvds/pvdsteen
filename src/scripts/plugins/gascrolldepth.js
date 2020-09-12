@@ -1,23 +1,21 @@
-/*!
+/* !
  * @preserve
  * gascrolldepth.js | v0.9
  * Copyright (c) 2015 Rob Flaherty (@robflaherty), Leigh McCulloch (@___leigh___)
  * Licensed under the MIT and GPL licenses.
  */
-;(function ( window, document, undefined ) {
-
-  "use strict";
+(function (window, document, undefined) {
+  'use strict';
 
   /*
    * Extend a series of objects with the properties of each.
    * Ref: http://stackoverflow.com/a/11197343/159762
    */
 
-  function extend(){
-    for ( var i=1; i<arguments.length; i++ )
-      for ( var key in arguments[i] )
-        if ( arguments[i].hasOwnProperty(key) )
-          arguments[0][key] = arguments[i][key];
+  function extend() {
+    for (let i = 1; i < arguments.length; i++)
+      for (const key in arguments[i])
+        if (arguments[i].hasOwnProperty(key)) arguments[0][key] = arguments[i][key];
     return arguments[0];
   }
 
@@ -26,9 +24,7 @@
    */
 
   function inArray(array, element) {
-    for ( var i=0; i<array.length; i++ )
-      if ( array[i] === element )
-        return true;
+    for (let i = 0; i < array.length; i++) if (array[i] === element) return true;
     return false;
   }
 
@@ -51,9 +47,11 @@
 
   function getDocumentHeight() {
     return Math.max(
-      document.documentElement["scrollHeight"], document.body["scrollHeight"],
-      document.documentElement["offsetHeight"], document.body["offsetHeight"],
-      document.documentElement["clientHeight"]
+      document.documentElement['scrollHeight'],
+      document.body['scrollHeight'],
+      document.documentElement['offsetHeight'],
+      document.body['offsetHeight'],
+      document.documentElement['clientHeight']
     );
   }
 
@@ -63,7 +61,9 @@
    */
 
   function getWindowHeight() {
-    return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    return (
+      window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    );
   }
 
   /*
@@ -72,7 +72,12 @@
    */
 
   function getPageYOffset() {
-    return window.pageYOffset || (document.compatMode === "CSS1Compat" ? document.documentElement.scrollTop : document.body.scrollTop);
+    return (
+      window.pageYOffset ||
+      (document.compatMode === 'CSS1Compat'
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop)
+    );
   }
 
   /*
@@ -106,9 +111,9 @@
    */
 
   function addEventListener(element, eventName, handler) {
-    if ( element.addEventListener ) {
+    if (element.addEventListener) {
       element.addEventListener(eventName, handler, false);
-    } else if ( element.attachEvent )  {
+    } else if (element.attachEvent) {
       element.attachEvent('on' + eventName, handler);
     } else {
       element['on' + eventName] = handler;
@@ -116,9 +121,9 @@
   }
 
   function removeEventListener(element, eventName, handler) {
-    if ( element.removeEventListener ) {
+    if (element.removeEventListener) {
       element.removeEventListener(eventName, handler, false);
-    } else if ( element.detachEvent ) {
+    } else if (element.detachEvent) {
       element.detachEvent('on' + eventName, handler);
     } else {
       element['on' + type] = null;
@@ -128,7 +133,7 @@
   /*
    * Module variables.
    */
-  var defaults = {
+  const defaults = {
     minHeight: 0,
     elements: [],
     percentage: true,
@@ -136,18 +141,18 @@
     pixelDepth: true,
     nonInteraction: true,
     gaGlobal: false,
-    gtmOverride: false
+    gtmOverride: false,
   };
 
-  var options = extend({}, defaults),
-    cache = [],
-    scrollEventBound = false,
-    lastPixelDepth = 0,
-    universalGA,
-    classicGA,
-    gaGlobal,
-    standardEventHandler,
-    scrollEventHandler;
+  let options = extend({}, defaults);
+  let cache = [];
+  let scrollEventBound = false;
+  let lastPixelDepth = 0;
+  let universalGA;
+  let classicGA;
+  let gaGlobal;
+  let standardEventHandler;
+  let scrollEventHandler;
 
   /*
    * Bind and unbind the scroll event handler.
@@ -168,14 +173,13 @@
    */
 
   // Initialize the library.
-  var init = function(initOptions) {
-
-    var startTime = +new Date;
+  const init = function (initOptions) {
+    const startTime = +new Date();
 
     options = extend({}, defaults, initOptions);
 
     // Return early if document height is too small
-    if ( getDocumentHeight() < options.minHeight ) {
+    if (getDocumentHeight() < options.minHeight) {
       return;
     }
 
@@ -187,23 +191,26 @@
     if (options.gaGlobal) {
       universalGA = true;
       gaGlobal = options.gaGlobal;
-    } else if (typeof ga === "function") {
+    } else if (typeof ga === 'function') {
       universalGA = true;
       gaGlobal = 'ga';
-    } else if (typeof __gaTracker === "function") {
+    } else if (typeof __gaTracker === 'function') {
       universalGA = true;
       gaGlobal = '__gaTracker';
     }
 
-    if (typeof _gaq !== "undefined" && typeof _gaq.push === "function") {
+    if (typeof _gaq !== 'undefined' && typeof _gaq.push === 'function') {
       classicGA = true;
     }
 
-    if (typeof options.eventHandler === "function") {
+    if (typeof options.eventHandler === 'function') {
       standardEventHandler = options.eventHandler;
-    } else if (typeof dataLayer !== "undefined" && typeof dataLayer.push === "function" && !options.gtmOverride) {
-
-      standardEventHandler = function(data) {
+    } else if (
+      typeof dataLayer !== 'undefined' &&
+      typeof dataLayer.push === 'function' &&
+      !options.gtmOverride
+    ) {
+      standardEventHandler = function (data) {
         dataLayer.push(data);
       };
     }
@@ -213,73 +220,99 @@
      */
 
     function sendEvent(action, label, scrollDistance, timing) {
-
       if (standardEventHandler) {
-
-        standardEventHandler({'event': 'ScrollDistance', 'eventCategory': 'Scroll Depth', 'eventAction': action, 'eventLabel': label, 'eventValue': 1, 'eventNonInteraction': options.nonInteraction});
+        standardEventHandler({
+          event: 'ScrollDistance',
+          eventCategory: 'Scroll Depth',
+          eventAction: action,
+          eventLabel: label,
+          eventValue: 1,
+          eventNonInteraction: options.nonInteraction,
+        });
 
         if (options.pixelDepth && arguments.length > 2 && scrollDistance > lastPixelDepth) {
           lastPixelDepth = scrollDistance;
-          standardEventHandler({'event': 'ScrollDistance', 'eventCategory': 'Scroll Depth', 'eventAction': 'Pixel Depth', 'eventLabel': rounded(scrollDistance), 'eventValue': 1, 'eventNonInteraction': options.nonInteraction});
+          standardEventHandler({
+            event: 'ScrollDistance',
+            eventCategory: 'Scroll Depth',
+            eventAction: 'Pixel Depth',
+            eventLabel: rounded(scrollDistance),
+            eventValue: 1,
+            eventNonInteraction: options.nonInteraction,
+          });
         }
 
         if (options.userTiming && arguments.length > 3) {
-          standardEventHandler({'event': 'ScrollTiming', 'eventCategory': 'Scroll Depth', 'eventAction': action, 'eventLabel': label, 'eventTiming': timing});
+          standardEventHandler({
+            event: 'ScrollTiming',
+            eventCategory: 'Scroll Depth',
+            eventAction: action,
+            eventLabel: label,
+            eventTiming: timing,
+          });
         }
-
       } else {
-
         if (universalGA) {
-
-          window[gaGlobal]('send', 'event', 'Scroll Depth', action, label, 1, {'nonInteraction': options.nonInteraction});
+          window[gaGlobal]('send', 'event', 'Scroll Depth', action, label, 1, {
+            nonInteraction: options.nonInteraction,
+          });
 
           if (options.pixelDepth && arguments.length > 2 && scrollDistance > lastPixelDepth) {
             lastPixelDepth = scrollDistance;
-            window[gaGlobal]('send', 'event', 'Scroll Depth', 'Pixel Depth', rounded(scrollDistance), 1, {'nonInteraction': options.nonInteraction});
+            window[gaGlobal](
+              'send',
+              'event',
+              'Scroll Depth',
+              'Pixel Depth',
+              rounded(scrollDistance),
+              1,
+              { nonInteraction: options.nonInteraction }
+            );
           }
 
           if (options.userTiming && arguments.length > 3) {
             window[gaGlobal]('send', 'timing', 'Scroll Depth', action, timing, label);
           }
-
         }
 
         if (classicGA) {
-
           _gaq.push(['_trackEvent', 'Scroll Depth', action, label, 1, options.nonInteraction]);
 
           if (options.pixelDepth && arguments.length > 2 && scrollDistance > lastPixelDepth) {
             lastPixelDepth = scrollDistance;
-            _gaq.push(['_trackEvent', 'Scroll Depth', 'Pixel Depth', rounded(scrollDistance), 1, options.nonInteraction]);
+            _gaq.push([
+              '_trackEvent',
+              'Scroll Depth',
+              'Pixel Depth',
+              rounded(scrollDistance),
+              1,
+              options.nonInteraction,
+            ]);
           }
 
           if (options.userTiming && arguments.length > 3) {
             _gaq.push(['_trackTiming', 'Scroll Depth', action, timing, label, 100]);
           }
-
         }
-
       }
-
     }
 
     function calculateMarks(docHeight) {
       return {
-        '25%' : parseInt(docHeight * 0.25, 10),
-        '50%' : parseInt(docHeight * 0.50, 10),
-        '75%' : parseInt(docHeight * 0.75, 10),
+        '25%': parseInt(docHeight * 0.25, 10),
+        '50%': parseInt(docHeight * 0.5, 10),
+        '75%': parseInt(docHeight * 0.75, 10),
         // Cushion to trigger 100% event in iOS
-        '100%': docHeight - 5
+        '100%': docHeight - 5,
       };
     }
 
     function checkMarks(marks, scrollDistance, timing) {
       // Check each active mark
-      for ( var key in marks ) {
-        if ( !marks.hasOwnProperty(key) )
-          continue;
-        var val = marks[key];
-        if ( !inArray(cache, key) && scrollDistance >= val ) {
+      for (const key in marks) {
+        if (!marks.hasOwnProperty(key)) continue;
+        const val = marks[key];
+        if (!inArray(cache, key) && scrollDistance >= val) {
           sendEvent('Percentage', key, scrollDistance, timing);
           cache.push(key);
         }
@@ -287,24 +320,24 @@
     }
 
     function checkElements(elements, scrollDistance, timing) {
-      for ( var i=0; i<elements.length; i++) {
-        var elem = elements[i];
-        if ( !inArray(cache, elem) ) {
-          var elemNode = (typeof elem === "string") ? getElementBySelector(elem) : elem;
-          if ( elemNode ) {
-            var elemYOffset = getElementYOffsetToDocumentTop(elemNode);
-            if ( scrollDistance >= elemYOffset ) {
+      for (let i = 0; i < elements.length; i++) {
+        const elem = elements[i];
+        if (!inArray(cache, elem)) {
+          const elemNode = typeof elem === 'string' ? getElementBySelector(elem) : elem;
+          if (elemNode) {
+            const elemYOffset = getElementYOffsetToDocumentTop(elemNode);
+            if (scrollDistance >= elemYOffset) {
               sendEvent('Elements', elem, scrollDistance, timing);
               cache.push(elem);
             }
           }
         }
-      };
+      }
     }
 
     function rounded(scrollDistance) {
       // Returns String
-      return (Math.floor(scrollDistance/250) * 250).toString();
+      return (Math.floor(scrollDistance / 250) * 250).toString();
     }
 
     /*
@@ -316,18 +349,20 @@
      */
 
     function throttle(func, wait) {
-      var context, args, result;
-      var timeout = null;
-      var previous = 0;
-      var later = function() {
-        previous = new Date;
+      let context;
+      let args;
+      let result;
+      let timeout = null;
+      let previous = 0;
+      const later = function () {
+        previous = new Date();
         timeout = null;
         result = func.apply(context, args);
       };
-      return function() {
-        var now = new Date;
+      return function () {
+        const now = new Date();
         if (!previous) previous = now;
-        var remaining = wait - (now - previous);
+        const remaining = wait - (now - previous);
         context = this;
         args = arguments;
         if (remaining <= 0) {
@@ -346,21 +381,21 @@
      * Scroll Event
      */
 
-    scrollEventHandler = throttle(function() {
+    scrollEventHandler = throttle(function () {
       /*
        * We calculate document and window height on each scroll event to
        * account for dynamic DOM changes.
        */
 
-      var docHeight = getDocumentHeight(),
-        winHeight = getWindowHeight(),
-        scrollDistance = getPageYOffset() + winHeight,
+      const docHeight = getDocumentHeight();
+      const winHeight = getWindowHeight();
+      const scrollDistance = getPageYOffset() + winHeight;
 
-        // Recalculate percentage marks
-        marks = calculateMarks(docHeight),
+      // Recalculate percentage marks
+      const marks = calculateMarks(docHeight);
 
-        // Timing
-        timing = +new Date - startTime;
+      // Timing
+      const timing = +new Date() - startTime;
 
       // If all marks already hit, unbind scroll event
       if (cache.length >= 4 + options.elements.length) {
@@ -383,11 +418,11 @@
   };
 
   // Reset Scroll Depth with the originally initialized options
-  var reset = function() {
+  const reset = function () {
     cache = [];
     lastPixelDepth = 0;
 
-    if (typeof scrollEventHandler == "undefined") {
+    if (typeof scrollEventHandler == 'undefined') {
       return;
     }
 
@@ -396,14 +431,14 @@
   };
 
   // Add DOM elements to be tracked
-  var addElements = function(elems) {
-    if (typeof elems == "undefined" || !isArray(elems)) {
+  const addElements = function (elems) {
+    if (typeof elems == 'undefined' || !isArray(elems)) {
       return;
     }
 
-    for (var i=0; i<elems.length; i++) {
-      var elem = elems[i];
-      var elemIndex = options.elements.indexOf(elem);
+    for (let i = 0; i < elems.length; i++) {
+      const elem = elems[i];
+      const elemIndex = options.elements.indexOf(elem);
       if (elemIndex == -1) {
         options.elements.push(elem);
       }
@@ -415,20 +450,20 @@
   };
 
   // Remove DOM elements currently tracked
-  var removeElements = function(elems) {
-    if (typeof elems == "undefined" || !isArray(elems)) {
+  const removeElements = function (elems) {
+    if (typeof elems == 'undefined' || !isArray(elems)) {
       return;
     }
 
-    for (var i=0; i<elems.length; i++) {
-      var elem = elems[i];
+    for (let i = 0; i < elems.length; i++) {
+      const elem = elems[i];
 
-      var elementsIndex = options.elements.indexOf(elem);
+      const elementsIndex = options.elements.indexOf(elem);
       if (elementsIndex > -1) {
         options.elements.splice(elementsIndex, 1);
       }
 
-      var cacheIndex = cache.indexOf(elem);
+      const cacheIndex = cache.indexOf(elem);
       if (cacheIndex > -1) {
         cache.splice(cacheIndex, 1);
       }
@@ -443,15 +478,14 @@
     init: init,
     reset: reset,
     addElements: addElements,
-    removeElements: removeElements
+    removeElements: removeElements,
   };
 
   /*
    * jQuery Plugin
    */
 
-  if ( typeof window['jQuery'] !== 'undefined' ) {
+  if (typeof window['jQuery'] !== 'undefined') {
     window['jQuery'].gascrolldepth = init;
   }
-
-})( window, document );
+})(window, document);

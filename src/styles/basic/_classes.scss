@@ -1,23 +1,26 @@
-.is-hidden{
-    display: none;
+.is-hidden {
+  display: none;
 }
 
-.sr-only{
-    display: none;
+.sr-only {
+  display: none;
 }
 
 .visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px; width: 1px;
-    margin: -1px; padding: 0; border: 0;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
-.nowrap{
-    white-space: nowrap;
+.nowrap {
+  white-space: nowrap;
 }
 
 .is-round {
-    border-radius: 50%;
+  border-radius: 50%;
 }

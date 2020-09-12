@@ -7,38 +7,30 @@ meta:
   location: 'Leiden, the Netherlands'
   region: 'South Holland'
 nav:
-  -
-    title: 'About me'
-  -
-    title: Experience
-  -
-    title: Education
-  -
-    title: References
-  -
-    title: Knowledge
+  - title: 'About me'
+  - title: Experience
+  - title: Education
+  - title: References
+  - title: Knowledge
 card:
   name: 'Peter van der Steen'
   profession:
     first: 'Front-end developer'
     second: 'UX designer'
 links:
-  -
-    text: 'Download Resumé'
+  - text: 'Download Resumé'
     ref: /dist/files/resume-pvdsteen.pdf
     slug: resume
     icon: download
     visible: true
     download: true
-  -
-    text: 'LinkedIn Profile'
+  - text: 'LinkedIn Profile'
     ref: 'https://www.linkedin.com/in/pvdsteen'
     slug: linkedin
     icon: linkedin
     visible: true
     target: _blank
-  -
-    text: 'GitHub Profile'
+  - text: 'GitHub Profile'
     ref: 'https://github.com/pvds'
     slug: github
     icon: github
@@ -48,12 +40,12 @@ about:
   title: 'About me'
   intro:
     content: '<p>
-        As a front-end developer my main passion is to <strong>use and improve my existing
-        knowledge</strong> of
-        front-end development and user experience design <strong>in order to create engaging, but above
-        all user friendly
-        products and services</strong>.
-    </p>'
+      As a front-end developer my main passion is to <strong>use and improve my existing
+      knowledge</strong> of
+      front-end development and user experience design <strong>in order to create engaging, but above
+      all user friendly
+      products and services</strong>.
+      </p>'
     expander:
       id: about-intro-expander
       content: '<p>
@@ -62,43 +54,35 @@ about:
         Interaction Design, Information Architecture and Interface Design. Developing task flows, personas and
         scenarios based on research of user needs in order to construct wireframes, prototypes and perform usability
         studies.
-      </p>
-      <p>
+        </p>
+        <p>
         In order to support my knowledge, skills and experience I am <strong>constantly improving myself in various
         supporting disciplines</strong>: Human Computer Interaction, Cognitive Science, Heuristics,
         Micro Expressions and Usability Engineering.
-      </p>'
+        </p>'
       triggertext: 'read more'
       triggertext-alt: 'less is more'
       triggeronce: false
   personal:
     title: 'Personal information'
     definitions:
-      -
-        term: Name
+      - term: Name
         def: 'Peter van der Steen'
-      -
-        term: 'Birth date'
+      - term: 'Birth date'
         def: '12 July 1986'
-      -
-        term: Location
+      - term: Location
         def: 'Leiden, the Netherlands'
-      -
-        term: Email
+      - term: Email
         def: '<a href="mailto:pvdsteen@gmail.com">pvdsteen@gmail.com</a>'
-      -
-        term: Phone
+      - term: Phone
         def: '+31 6 104 25 975'
-      -
-        term: Skype
+      - term: Skype
         def: 'rockfromtherock'
         id: skype
         class: 'is-optional'
-      -
-        term: License
+      - term: License
         def: 'Car'
-      -
-        term: Mood
+      - term: Mood
         def: Zealous
         id: mood
         class: 'is-optional'
@@ -124,38 +108,31 @@ about:
     title: 'Soft skills'
     type: line
     skills:
-      -
-        title: 'Work ethic'
+      - title: 'Work ethic'
         aria-value: '100'
         value: '1'
         text: 'I give a damn!'
-      -
-        title: 'Critical thinking'
+      - title: 'Critical thinking'
         aria-value: '95'
         value: '0.95'
         text: 'yummy, puzzles'
-      -
-        title: Creativity
+      - title: Creativity
         aria-value: '95'
         value: '0.95'
-        text: 'it''s contagious, pass it on'
-      -
-        title: Communication
+        text: "it's contagious, pass it on"
+      - title: Communication
         aria-value: '95'
         value: '0.95'
         text: 'I love talking'
-      -
-        title: Listening
+      - title: Listening
         aria-value: '90'
         value: '0.9'
-        text: 'when I''m not talking'
-      -
-        title: Teamwork
+        text: "when I'm not talking"
+      - title: Teamwork
         aria-value: '85'
         value: '0.85'
         text: 'hurray, collaboration!'
-      -
-        title: Judgement
+      - title: Judgement
         aria-value: '80'
         value: '0.8'
         text: 'crystal clear'
@@ -163,84 +140,74 @@ about:
     title: Interests
     type: line
     skills:
-      -
-        title: Technology
+      - title: Technology
         aria-value: '100'
         value: '1'
         text: software/hardware
-      -
-        title: Science
+      - title: Science
         aria-value: '95'
         value: '0.95'
         text: social/physics/biology
-      -
-        title: Culinary
+      - title: Culinary
         aria-value: '95'
         value: '0.95'
         text: cooking/tasting
-      -
-        title: Travelling
+      - title: Travelling
         aria-value: '90'
         value: '0.9'
         text: Asia/Mediterranean
-      -
-        title: Nature
+      - title: Nature
         aria-value: '90'
         value: '0.9'
         text: quietness/relaxation!
-      -
-        title: Culture
+      - title: Culture
         aria-value: '85'
         value: '0.85'
         text: music/books/plays
-      -
-        title: Sports
+      - title: Sports
         aria-value: '80'
         value: '0.8'
         text: running/climbing
 experience:
   title: Experience
   timeline:
-    -
-      from:
+    - from:
         month:
         year: Now
       to:
         month:
-        year: ?
+        year: '?'
       function: 'Front-end developer - <span class="nowrap">UX designer</span>'
       company: 'Your company?'
       content: '<p>
-          I am looking for a new challenge!
+        I am looking for a new challenge!
         </p>'
       expander:
         id: timeline-me-expander
         text: 'why me?'
         text-alt: 'closing this would ruin my day'
-        content: '
-        <p>
+        content: '<p>
           My main passion is to develop, enhance and implement interface and interaction designs.
-        </p>
-        <p>
+          </p>
+          <p>
           I have experience with developing usability research based task flows and scenarios.
           In order to develop wireframes, interaction flows and prototypes I substantiate my decisions through qualitative and quantitative data and creative and critical thinking.
-        </p>
-        <p>
+          </p>
+          <p>
           As a front-end developer I offer an extensive knowledge of Javascript, jQuery, AJAX and supplementary libraries.
           I am skillful in developing semantic and accessible content through HTML5, ARIA/WCAG and microdata and formats.
           Visualising responsive designs using CSS, Sass, LESS is my second nature.
-        </p>
-        <p>
+          </p>
+          <p>
           My codebase is Git versioned, cross browser/device compatible and is compiled with NPM scripts, Gulp or Webpack.
-        </p>
-        <p>
+          </p>
+          <p>
           I am a people-oriented, social person who is creative in thinking and acting and has a great sense of responsibility.
-        </p>
-        <p>
+          </p>
+          <p>
           <a href="#about-personal-information" class="button">Contact me</a>
-        </p>'
-    -
-      from:
+          </p>'
+    - from:
         month: May
         year: 2013
       to:
@@ -250,56 +217,55 @@ experience:
       company: 'Just Walk'
       content: '
         <p>
-          At Just Walk I was responsible for the development and maintenance of their e-commerce websites selling contracts for mobile phones, energy, internet and tv and tablets.
-          Since 2014 these separate websites were integrated in the <a href="http://www.miky.nl" target="_blank">Miky</a> whitelabel.
+        At Just Walk I was responsible for the development and maintenance of their e-commerce websites selling contracts for mobile phones, energy, internet and tv and tablets.
+        Since 2014 these separate websites were integrated in the <a href="http://www.miky.nl" target="_blank">Miky</a> whitelabel.
         </p>'
       expander:
         id: timeline-justwalk-expander
         text: 'detailed explanation'
         text-alt: 'less is more..'
         content: '
-        <p>
-        As front-end developer, UX designer and occasional back-end developer I
-        </p>
-        <ul>
+          <p>
+          As front-end developer, UX designer and occasional back-end developer I
+          </p>
+          <ul>
           <li><strong>Implemented</strong>
-            <ul>
-              <li>a modern front-end workflow</li>
-              <li>git versioning and deployment</li>
-              <li>an OTAP development cycle</li>
-              <li>Modular Sass with Bourbon Neat grid system</li>
-              <li>JS/AJAX functionality</li>
-              <li>microdata and microformats</li>
-              <li>data-driven development</li>
-              <li>optimisation of user interaction</li>
-            </ul>
+          <ul>
+          <li>a modern front-end workflow</li>
+          <li>git versioning and deployment</li>
+          <li>an OTAP development cycle</li>
+          <li>Modular Sass with Bourbon Neat grid system</li>
+          <li>JS/AJAX functionality</li>
+          <li>microdata and microformats</li>
+          <li>data-driven development</li>
+          <li>optimisation of user interaction</li>
+          </ul>
           </li>
           <li><strong>Developed</strong>
-            <ul>
-              <li>a custom Wordpress theme</li>
-              <li>(co) custom Wordpress plugins</li>
-              <li>multistep order flows</li>
-              <li>wireframes, prototypes</li>
-            </ul>
+          <ul>
+          <li>a custom Wordpress theme</li>
+          <li>(co) custom Wordpress plugins</li>
+          <li>multistep order flows</li>
+          <li>wireframes, prototypes</li>
+          </ul>
           </li>
           <li><strong>Improved</strong>
-            <ul>
-                <li>interface and interaction design</li>
-                <li>performance, security and reliability</li>
-            </ul>
+          <ul>
+          <li>interface and interaction design</li>
+          <li>performance, security and reliability</li>
+          </ul>
           </li>
-        </ul>
+          </ul>
 
-        <p>Over the years I have done various tasks:</p>
-        <ul>
+          <p>Over the years I have done various tasks:</p>
+          <ul>
           <li>development of gif/flash then HTML5 online advertising</li>
           <li>maintenance of the intranet site</li>
           <li>collaboration with hosting provider and CRM supplier and contract providers</li>
           <li>training of junior front-end developer</li>
           <li>miscellaneous IT support</li>
-        </ul>'
-    -
-      from:
+          </ul>'
+    - from:
         month: Apr
         year: 2011
       to:
@@ -309,14 +275,13 @@ experience:
       company: 'Solid Core Web Solutions'
       content: '
         <p>
-          Development of various project for clients ranging from Medical institutions and legal services to non-profit foundations.
+        Development of various project for clients ranging from Medical institutions and legal services to non-profit foundations.
         </p>
         <ul>
-          <li>Consulting for analysis and setup of data architecture</li>
-          <li>Consulting for existing projects to analyse and optimise user interaction and interfacedesign.</li>
+        <li>Consulting for analysis and setup of data architecture</li>
+        <li>Consulting for existing projects to analyse and optimise user interaction and interfacedesign.</li>
         </ul>'
-    -
-      from:
+    - from:
         month: Sep
         year: 2010
       to:
@@ -326,13 +291,12 @@ experience:
       company: Triangle Productions
       content: '
         <p>
-          Development of Drupal based websites for Urban Resort Creative Incubators.
+        Development of Drupal based websites for Urban Resort Creative Incubators.
         </p>
         <p>
-          Consultancy and implementation of design specifications, wireframes and data architecture.
+        Consultancy and implementation of design specifications, wireframes and data architecture.
         </p>'
-    -
-      from:
+    - from:
         month: Jun
         year: 2008
       to:
@@ -342,14 +306,13 @@ experience:
       company: Bluewater Energy Services
       content: '
         <p>
-          Design of various FPSO components, specifically Bluewater proprietary "swivel bearing" modules
+        Design of various FPSO components, specifically Bluewater proprietary "swivel bearing" modules
         </p>
         <ul>
-          <li>Setup of design guidelines for the mechanical design department</li>
-          <li>Setup of design templates for mechanical designing</li>
+        <li>Setup of design guidelines for the mechanical design department</li>
+        <li>Setup of design templates for mechanical designing</li>
         </ul>'
-    -
-      from:
+    - from:
         month: Jun
         year: 2006
       to:
@@ -359,20 +322,19 @@ experience:
       company: 'Bluewater Energy Services'
       content: '
         <p>
-          Responsible for assembly and final delivery of technical documentation of FPSO vessels and Single Point Mooring buoy systems.
+        Responsible for assembly and final delivery of technical documentation of FPSO vessels and Single Point Mooring buoy systems.
         </p>
         <ul>
-          <li>Automation of naming and archiving systems</li>
-          <li>Coördinating the issuance and distribution of corporate documentation</li>
-          <li>Coördinating the corporate management system</li>
-          <li>Ensuring the CMS documentation required at Bluewater vessels is up to date</li>
+        <li>Automation of naming and archiving systems</li>
+        <li>Coördinating the issuance and distribution of corporate documentation</li>
+        <li>Coördinating the corporate management system</li>
+        <li>Ensuring the CMS documentation required at Bluewater vessels is up to date</li>
         </ul>'
 
 education:
   title: Education
   timeline:
-    -
-      from:
+    - from:
         month: Aug
         year: 2010
       to:
@@ -382,13 +344,13 @@ education:
       institution: 'Amsterdam University of Applied Sciences'
       content: '
         <p>
-          Education on research, UX, marketing, design and development practices.
+        Education on research, UX, marketing, design and development practices.
         </p>
         <strong>Achievements</strong>
         <ul>
-          <li>Propaedeutic Cum Laude</li>
-          <li>Accepted to honors program</li>
-          <li>Winner of Propaedeutic Team Project 2010 for Urban Resort Foundation</li>
+        <li>Propaedeutic Cum Laude</li>
+        <li>Accepted to honors program</li>
+        <li>Winner of Propaedeutic Team Project 2010 for Urban Resort Foundation</li>
         </ul>'
       expander:
         id: timeline-iam-expander
@@ -397,34 +359,33 @@ education:
         content: '
           <strong>Focus</strong>
           <ul>
-              <li>User centered design research, interaction design and interactive media.</li>
-              <li>Developing interactive solutions (installations and web applications) for various projects</li>
+          <li>User centered design research, interaction design and interactive media.</li>
+          <li>Developing interactive solutions (installations and web applications) for various projects</li>
           </ul>
           <strong>Course highlight</strong>
           <ul>
-              <li>User Centered Development</li>
-              <li>Internet Standards</li>
-              <li>Media Design</li>
-              <li>Human Computer Interaction</li>
-              <li>Content and Editing</li>
-              <li>Marketing and Communication</li>
-              <li>Programming</li>
-              <li>Development methods and techniques</li>
+          <li>User Centered Development</li>
+          <li>Internet Standards</li>
+          <li>Media Design</li>
+          <li>Human Computer Interaction</li>
+          <li>Content and Editing</li>
+          <li>Marketing and Communication</li>
+          <li>Programming</li>
+          <li>Development methods and techniques</li>
           </ul>'
 references:
   title: References
   reference:
-    -
-      image: 'avatar-marius'
+    - image: 'avatar-marius'
       alt: 'reference by'
       author: 'Marius van der Kooy'
       function: 'Manager'
       company: 'Just Walk'
       content: '
         <p>
-          Peter is IT. Development is his purpose in life, without losing track of the daily
-          routine. Front-end development, presenting various iterations, implementing and maintaining are
-          his daily business.
+        Peter is IT. Development is his purpose in life, without losing track of the daily
+        routine. Front-end development, presenting various iterations, implementing and maintaining are
+        his daily business.
         </p>'
       expander:
         id: reference-marius-expander
@@ -432,98 +393,89 @@ references:
         text-alt: 'less is more..'
         content: '
           <p>
-            He knows better than anybody how to initiate and communicate effectively with
-            back-end developers.
-            Both in personal as well as technical sense. They will not be selling him chalk for
-            cheese.
-            He is always on top of the situation, having knowledge of all parts of the website
-            and IT infrastructure.
+          He knows better than anybody how to initiate and communicate effectively with
+          back-end developers.
+          Both in personal as well as technical sense. They will not be selling him chalk for
+          cheese.
+          He is always on top of the situation, having knowledge of all parts of the website
+          and IT infrastructure.
           </p>
           <p>
-            Peter asks questions, hard questions, touching the core of the matter.
-            Thereby creating beautiful, useful and efficient processes; both commercial and
-            technical.
+          Peter asks questions, hard questions, touching the core of the matter.
+          Thereby creating beautiful, useful and efficient processes; both commercial and
+          technical.
           </p>
           <p>
-            He is a valuable asset in the broadest sense of the word.
+          He is a valuable asset in the broadest sense of the word.
           </p>'
-    -
-      image: 'avatar-bart'
+    - image: 'avatar-bart'
       author: 'Bart Lageweg'
       alt: 'reference by'
       function: 'Owner'
       company: 'Bizway'
       content: '
         <p>
-          For a period of 5 years Peter was the vital link between us as a supplier and Just Walk.
+        For a period of 5 years Peter was the vital link between us as a supplier and Just Walk.
         </p>
         <p>
-          A top UX designer with a good sense of humour, communication skills and a great sense of
-          responsibility.
+        A top UX designer with a good sense of humour, communication skills and a great sense of
+        responsibility.
         </p>'
-    -
-      image: 'avatar-danny'
+    - image: 'avatar-danny'
       author: 'Danny Visser'
       alt: 'reference by'
       function: 'Owner'
       company: 'Just Walk'
       content: '
         <p>
-          An outstanding developer; flexible with an eye for structural and long term solutions.
+        An outstanding developer; flexible with an eye for structural and long term solutions.
         </p>
         <p>
-          For the past five years Peter was a valued member of our team.<br/>
-          Always well prepared and has a great sense of responsibility.
+        For the past five years Peter was a valued member of our team.<br/>
+        Always well prepared and has a great sense of responsibility.
         </p>'
 knowledge:
   title: Knowledge
   content: '
     <p>
-        I am developing myself continuously using and learning the latest front-end skills, tools and
-        techniques:
+    I am developing myself continuously using and learning the latest front-end skills, tools and
+    techniques:
     </p>'
   programming:
     title: Languages
     type: line
     skills:
-      -
-        title: HTML
+      - title: HTML
         aria-value: '95'
         value: '0.95'
         text: expert
         text-alt: 'I dream semantically'
-      -
-        title: CSS
+      - title: CSS
         aria-value: '95'
         value: '0.95'
         text: expert
-        text-alt: 'my wife Sass I''m responsive'
-      -
-        title: JS
+        text-alt: "my wife Sass I'm responsive"
+      - title: JS
         aria-value: '80'
         value: '0.8'
         text: proficient
         text-alt: 'let me promise'
-      -
-        title: PHP
+      - title: PHP
         aria-value: '70'
         value: '0.7'
         text: competent
         text-alt: 'I love recursive acronyms'
-      -
-        title: Bash
+      - title: Bash
         aria-value: '60'
         value: '0.6'
         text: competent
         text-alt: 'I believe in reincarnation'
-      -
-        title: Ruby
+      - title: Ruby
         aria-value: '40'
         value: '0.4'
         text: beginner
         text-alt: 'busy polishing my gems'
-      -
-        title: Python
+      - title: Python
         aria-value: '30'
         value: '0.3'
         text: novice
@@ -532,38 +484,31 @@ knowledge:
     title: Techniques
     type: line
     skills:
-      -
-        title: Compatibility
+      - title: Compatibility
         aria-value: '90'
         value: '0.9'
         text: browser/platform/device
-      -
-        title: Principles
+      - title: Principles
         aria-value: '90'
         value: '0.9'
         text: YAGNI/DRY/KISS
-      -
-        title: Automation
+      - title: Automation
         aria-value: '80'
         value: '0.8'
         text: 'task runners/build tools'
-      -
-        title: 'Design Patterns'
+      - title: 'Design Patterns'
         aria-value: '80'
         value: '0.8'
         text: structure/create/behave
-      -
-        title: Paradigms
+      - title: Paradigms
         aria-value: '75'
         value: '0.75'
         text: object/functional/procedural
-      -
-        title: Security
+      - title: Security
         aria-value: '70'
         value: '0.7'
         text: CORS/XXS
-      -
-        title: Testing
+      - title: Testing
         aria-value: '60'
         value: '0.6'
         text: unit/integration/quality
@@ -571,28 +516,23 @@ knowledge:
     title: Structure
     type: chart
     skills:
-      -
-        title: Semantics
+      - title: Semantics
         aria-value: '90'
         value: '0.9'
         text: proficient
-      -
-        title: Microdata
+      - title: Microdata
         aria-value: '90'
         value: '0.9'
         text: proficient
-      -
-        title: JSON/XML
+      - title: JSON/XML
         aria-value: '85'
         value: '0.85'
         text: proficient
-      -
-        title: Templating
+      - title: Templating
         aria-value: '75'
         value: '0.75'
         text: competent
-      -
-        title: Accessibility
+      - title: Accessibility
         aria-value: '70'
         value: '0.7'
         text: competent
@@ -600,28 +540,23 @@ knowledge:
     title: Visualisation
     type: chart
     skills:
-      -
-        title: Sass/Scss
+      - title: Sass/Scss
         aria-value: '95'
         value: '0.95'
         text: expert
-      -
-        title: Responsive
+      - title: Responsive
         aria-value: '95'
         value: '0.95'
         text: expert
-      -
-        title: 'Grid systems'
+      - title: 'Grid systems'
         aria-value: '90'
         value: '0.9'
         text: expert
-      -
-        title: 'CSS Animation'
+      - title: 'CSS Animation'
         aria-value: '90'
         value: '0.9'
         text: expert
-      -
-        title: Photoshop
+      - title: Photoshop
         aria-value: '70'
         value: '0.7'
         text: competent
@@ -629,28 +564,23 @@ knowledge:
     title: Interaction
     type: chart
     skills:
-      -
-        title: ES5
+      - title: ES5
         aria-value: '85'
         value: '0.85'
         text: proficient
-      -
-        title: XHR/AJAX
+      - title: XHR/AJAX
         aria-value: '85'
         value: '0.85'
         text: proficient
-      -
-        title: jQuery
+      - title: jQuery
         aria-value: '85'
         value: '0.85'
         text: proficient
-      -
-        title: ES6
+      - title: ES6
         aria-value: '70'
         value: '0.7'
         text: competent
-      -
-        title: Frameworks
+      - title: Frameworks
         aria-value: '25'
         value: '0.25'
         text: beginner
@@ -658,33 +588,27 @@ knowledge:
     title: Development
     type: line
     skills:
-      -
-        title: PHPStorm/Webstorm
+      - title: PHPStorm/Webstorm
         aria-value: '95'
         value: '0.95'
         text: IDE
-      -
-        title: 'Sublime Text'
+      - title: 'Sublime Text'
         aria-value: '85'
         value: '0.85'
         text: editor
-      -
-        title: Git
+      - title: Git
         aria-value: '80'
         value: '0.8'
         text: versioning
-      -
-        title: 'Command line/CLI'
+      - title: 'Command line/CLI'
         aria-value: '80'
         value: '0.8'
         text: terminal
-      -
-        title: Valet
+      - title: Valet
         aria-value: '80'
         value: '0.8'
         text: 'minimal NGINX dev environment'
-      -
-        title: Homestead
+      - title: Homestead
         aria-value: '60'
         value: '0.6'
         text: 'Vagrant box'
@@ -692,33 +616,27 @@ knowledge:
     title: CMS/frameworks
     type: line
     skills:
-      -
-        title: Wordpress
+      - title: Wordpress
         aria-value: '95'
         value: '0.95'
         text: bedrock/sage
-      -
-        title: Laravel
+      - title: Laravel
         aria-value: '80'
         value: '0.8'
         text: mix/blade
-      -
-        title: Blogdown
+      - title: Blogdown
         aria-value: '70'
         value: '0.7'
         text: 'mustache/markdown'
-      -
-        title: Drupal
+      - title: Drupal
         aria-value: '60'
         value: '0.6'
         text: CMS
-      -
-        title: Joomla
+      - title: Joomla
         aria-value: '55'
         value: '0.55'
         text: CMS
-      -
-        title: Lumen
+      - title: Lumen
         aria-value: '20'
         value: '0.2'
         text: 'Laravel microframework'
@@ -726,23 +644,19 @@ knowledge:
     title: 'Package managers'
     type: line
     skills:
-      -
-        title: Bower
+      - title: Bower
         aria-value: '90'
         value: '0.9'
         text: front-end
-      -
-        title: NPM
+      - title: NPM
         aria-value: '85'
         value: '0.85'
         text: 'task builder/front-end'
-      -
-        title: Homebrew
+      - title: Homebrew
         aria-value: '75'
         value: '0.75'
         text: OSX
-      -
-        title: Composer
+      - title: Composer
         aria-value: '75'
         value: '0.75'
         text: PHP
@@ -750,23 +664,19 @@ knowledge:
     title: 'Build tools'
     type: line
     skills:
-      -
-        title: 'NPM scripts'
+      - title: 'NPM scripts'
         aria-value: '90'
         value: '0.9'
         text: cli/compiling/testing
-      -
-        title: Grunt/Gulp
+      - title: Grunt/Gulp
         aria-value: '85'
         value: '0.85'
         text: 'build systems'
-      -
-        title: Webpack
+      - title: Webpack
         aria-value: '75'
         value: '0.75'
         text: 'module bundler'
-      -
-        title: Brunch
+      - title: Brunch
         aria-value: '60'
         value: '0.6'
         text: 'simplified build system'

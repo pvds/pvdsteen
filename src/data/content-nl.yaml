@@ -8,38 +8,30 @@ meta:
   location: 'Leiden, Nederland'
   region: 'Zuid-Holland'
 nav:
-  -
-    title: 'Over mij'
-  -
-    title: Ervaring
-  -
-    title: Opleiding
-  -
-    title: Referenties
-  -
-    title: Kennis
+  - title: 'Over mij'
+  - title: Ervaring
+  - title: Opleiding
+  - title: Referenties
+  - title: Kennis
 card:
   name: 'Peter van der Steen'
   profession:
     first: 'Front-end developer'
     second: 'UX designer'
 links:
-  -
-    text: 'Download CV'
+  - text: 'Download CV'
     ref: /dist/files/cv-pvdsteen.pdf
     slug: resume
     icon: download
     visible: true
     download: true
-  -
-    text: 'LinkedIn Profiel'
+  - text: 'LinkedIn Profiel'
     ref: 'https://www.linkedin.com/in/pvdsteen'
     slug: linkedin
     icon: linkedin
     visible: true
     target: _blank
-  -
-    text: 'GitHub Profiel'
+  - text: 'GitHub Profiel'
     ref: 'https://github.com/pvds'
     slug: github
     icon: github
@@ -48,56 +40,47 @@ links:
 about:
   title: 'Over mij'
   intro:
-    content: '
-    <p>
+    content: '<p>
       Als front-end developer met een passie voor UX design ligt mijn focus op het kritisch analyseren van beschikbare data
       om interface en interaction designs te ontwikkelen, verbeteren en implementeren.
       Met als doel de creatie en optimalisatie van boeiende maar vooral gebruiksvriendelijke online producten en services.
-    </p>'
+      </p>'
     expander:
       id: about-intro-expander
       content: '<p>
         Op het gebied van UX design ben ik bekend met het ontwikkelen van op persona’s gebaseerde task flows en scenarios
         om onderbouwde beslissingen te maken voor de opzet van wireframes, interaction flows en prototypen.
-      </p>
-      <p>
+        </p>
+        <p>
         Als front-end developer bied ik een ruime kennis van en ervaring met Javascript, jQuery, AJAX en aanvullende libraries.
         Ik ben bedreven in semantische en toegankelijke inhoud door middel van HTML5, ARIA/WCAG richtlijnen en microdata.
         CSS, Sass en LESS en het implementeren van responsive designs beheers ik volledig.
-      </p>
-      <p>
+        </p>
+        <p>
         Naast de gebruikelijke front-end developer kennis ontwikkel ik mijzelf graag in nieuwe technieken en ondersteunende vakgebieden.
-      </p>'
+        </p>'
       triggertext: 'verder lezen'
       triggertext-alt: false
   personal:
     title: 'Personalia'
     definitions:
-      -
-        term: Naam
+      - term: Naam
         def: 'Peter van der Steen'
-      -
-        term: 'Geboren'
+      - term: 'Geboren'
         def: '12 July 1986'
-      -
-        term: Locatie
+      - term: Locatie
         def: 'Leiden, the Netherlands'
-      -
-        term: Email
-        def: '<a href=''mailto:pvdsteen@gmail.com''>pvdsteen@gmail.com</a>'
-      -
-        term: Telefoon
+      - term: Email
+        def: "<a href='mailto:pvdsteen@gmail.com'>pvdsteen@gmail.com</a>"
+      - term: Telefoon
         def: '+31 6 104 25 975'
-      -
-        term: Skype
+      - term: Skype
         def: 'rockfromtherock'
         id: skype
         class: 'is-optional'
-      -
-        term: Rijbewijs
+      - term: Rijbewijs
         def: 'Auto'
-      -
-        term: Stemming
+      - term: Stemming
         def: Uitmuntend
         id: mood
         class: 'is-optional'
@@ -123,38 +106,31 @@ about:
     title: 'Persoonlijke kwaliteiten'
     type: line
     skills:
-      -
-        title: 'Werk ethos'
+      - title: 'Werk ethos'
         aria-value: '100'
         value: '1'
         text: 'ga tot het uiterste'
-      -
-        title: 'Kritisch denken'
+      - title: 'Kritisch denken'
         aria-value: '95'
         value: '0.95'
         text: 'leuk, puzzels!'
-      -
-        title: Creativiteit
+      - title: Creativiteit
         aria-value: '95'
         value: '0.95'
         text: 'is besmettelijk, deel het'
-      -
-        title: Communicatie
+      - title: Communicatie
         aria-value: '95'
         value: '0.95'
         text: 'ik houd van praten!'
-      -
-        title: Luisteren
+      - title: Luisteren
         aria-value: '90'
         value: '0.9'
         text: 'als ik niet praat'
-      -
-        title: Teamwork
+      - title: Teamwork
         aria-value: '85'
         value: '0.85'
         text: 'hoezee, samenwerking!'
-      -
-        title: Judgement
+      - title: Judgement
         aria-value: '80'
         value: '0.8'
         text: 'eerst denken, dan doen'
@@ -162,84 +138,76 @@ about:
     title: Interesses
     type: line
     skills:
-      -
-        title: Technologie
+      - title: Technologie
         aria-value: '100'
         value: '1'
         text: software/hardware
-      -
-        title: Wetenschap
+      - title: Wetenschap
         aria-value: '95'
         value: '0.95'
         text: sociaal/natuur/biologie
-      -
-        title: Culinair
+      - title: Culinair
         aria-value: '95'
         value: '0.95'
         text: koken/proeven
-      -
-        title: Reizen
+      - title: Reizen
         aria-value: '90'
         value: '0.9'
         text: Azië/Griekenland
-      -
-        title: Natuur
+      - title: Natuur
         aria-value: '90'
         value: '0.9'
         text: rust/ontspanning!
-      -
-        title: Cultuur
+      - title: Cultuur
         aria-value: '85'
         value: '0.85'
         text: muziek/boeken/toneel
-      -
-        title: Sport
+      - title: Sport
         aria-value: '80'
         value: '0.8'
         text: rennen/klimmen
 experience:
   title: Ervaring
   timeline:
-    -
-      from:
+    - from:
         month:
         year: Now
       to:
         month:
-        year: ?
+        year: '?'
       function: 'Front-end developer - <span class="nowrap">UX designer</span>'
       company: 'Uw bedrijf?'
-      content: '<p>
-          Ik ben op zoek naar een nieuwe uitdaging!
+      content: '
+        <p>
+        Ik ben op zoek naar een nieuwe uitdaging!
         </p>'
       expander:
         id: timeline-me-expander
         text: 'waarom ik?'
         text-alt: 'minder over jezelf graag..'
         content: '
-        <p>
+          <p>
           Het is mijn passie om interface en interaction designs te ontwikkelen, verbeteren en implementeren.
-        </p>
-        <p>
+          </p>
+          <p>
           Ik heb ervaring met het ontwikkelen van op gebruikersonderzoek gebaseerde task flows en scenarios.
-          Door middel van user- en data driven design onderbouw ik mijn beslissingen voor de opzet van wireframes, interaction flows en prototypen. 
-        </p>
-        <p>
+          Door middel van user- en data driven design onderbouw ik mijn beslissingen voor de opzet van wireframes, interaction flows en prototypen.
+          </p>
+          <p>
           Als front-end developer bied ik een ruime kennis en ervaring met Javascript, jQuery, AJAX en aanvullende libraries.
           Ik ben bedreven in semantische en toegankelijke inhoud door middel van HTML5, ARIA/WCAG richtlijnen en microdata.
           CSS, Sass en LESS en het implementeren van responsive designs beheers ik volledig.
-        </p>
-        <p>
+          </p>
+          <p>
           Mijn codebase is Git versioned, cross browser/device compatibel, en maakt gebruik van task runners/build tools als NPM, Gulp en Webpack.
-        </p>
-        <p>
+          </p>
+          <p>
           Ik ben een sociaal persoon met goede communicatieve vaardigheden en een groot verantwoordelijkheidsgevoel.
-        </p>
-        <p>
+          </p>
+          <p>
           <a href="#about-personal-information" class="button">Neem contact op</a>
-        </p>'
-    -
-      from:
+          </p>'
+    - from:
         month: Mei
         year: 2013
       to:
@@ -249,56 +217,55 @@ experience:
       company: 'Just Walk'
       content: '
         <p>
-          Bij Just Walk was ik verantwoordelijk voor de ontwikkeling en onderhoud hun e-commerce websites voor het verkopen mobiele telefoon-, energie- en internet en tv contracten.
-          Sinds 2014 zijn deze websites in het Merk <a href="http://www.miky.nl" target="_blank">Miky</a> ondergebracht.
+        Bij Just Walk was ik verantwoordelijk voor de ontwikkeling en onderhoud hun e-commerce websites voor het verkopen mobiele telefoon-, energie- en internet en tv contracten.
+        Sinds 2014 zijn deze websites in het Merk <a href="http://www.miky.nl" target="_blank">Miky</a> ondergebracht.
         </p>'
       expander:
         id: timeline-justwalk-expander
         text: 'uitgebreide omschrijving'
         text-alt: 'minder is meer..'
         content: '
-        <p>
-        Als front-end developer, UX designer en incidentele back-end developer heb ik:
-        </p>
-        <ul>
+          <p>
+          Als front-end developer, UX designer en incidentele back-end developer heb ik:
+          </p>
+          <ul>
           <li><strong>Geïmplementeerd</strong>
-            <ul>
-              <li>een moderne front-end workflow</li>
-              <li>git versioning en deployment</li>
-              <li>een OTAP development cycle</li>
-              <li>Modulaire Sass met Bourbon Neat grid system</li>
-              <li>JS/AJAX functionaliteit</li>
-              <li>microdata en microformats</li>
-              <li>data gedreven ontwikkeling</li>
-              <li>optimalisatie van gebruikersinteractie</li>
-            </ul>
+          <ul>
+          <li>een moderne front-end workflow</li>
+          <li>git versioning en deployment</li>
+          <li>een OTAP development cycle</li>
+          <li>Modulaire Sass met Bourbon Neat grid system</li>
+          <li>JS/AJAX functionaliteit</li>
+          <li>microdata en microformats</li>
+          <li>data gedreven ontwikkeling</li>
+          <li>optimalisatie van gebruikersinteractie</li>
+          </ul>
           </li>
           <li><strong>Ontwikkelt:</strong>
-            <ul>
-              <li>een custom Wordpress thema</li>
-              <li>(co) custom Wordpress plugins</li>
-              <li>multistep order flows</li>
-              <li>wireframes, prototypen</li>
-            </ul>
+          <ul>
+          <li>een custom Wordpress thema</li>
+          <li>(co) custom Wordpress plugins</li>
+          <li>multistep order flows</li>
+          <li>wireframes, prototypen</li>
+          </ul>
           </li>
           <li><strong>Verbeterd</strong>
-            <ul>
-                <li>interface en interaction design</li>
-                <li>snelheid, beveiliging and betrouwbaarheid</li>
-            </ul>
+          <ul>
+          <li>interface en interaction design</li>
+          <li>snelheid, beveiliging and betrouwbaarheid</li>
+          </ul>
           </li>
-        </ul>
+          </ul>
 
-        <p>Gedurende mijn tijd heb ik diverse ondersteunende taken uitgevoerd:</p>
-        <ul>
+          <p>Gedurende mijn tijd heb ik diverse ondersteunende taken uitgevoerd:</p>
+          <ul>
           <li>ontwikkeling van gif/flash daarna HTML5 online reclame</li>
           <li>onderhoud van de intranet site</li>
           <li>samenwerking met hosting provider, CRM leverancier en contract providers</li>
           <li>training van junior front-end developer</li>
           <li>IT support</li>
-        </ul>'
-    -
-      from:
+          </ul>'
+    - from:
         month: Apr
         year: 2011
       to:
@@ -310,11 +277,10 @@ experience:
         <p>
         Ontwikkeling van verscheidene websites en applicaties voor klanten strekkend van medische instellingen en de jurische sector tot non-profit ondernemingen.
         <ul>
-          <li>Consulting voor analyse opzet van data architectuur</li>
-          <li>Consulting voor de analyse en optimalisatie van interface design en gebruikersinteractie.</li>
+        <li>Consulting voor analyse opzet van data architectuur</li>
+        <li>Consulting voor de analyse en optimalisatie van interface design en gebruikersinteractie.</li>
         </ul>'
-    -
-      from:
+    - from:
         month: Sep
         year: 2010
       to:
@@ -324,13 +290,12 @@ experience:
       company: Triangle Productions
       content: '
         <p>
-          Ontwikkeling van Drupal websites voor Urban Resort creatieve broedplaatsen.
+        Ontwikkeling van Drupal websites voor Urban Resort creatieve broedplaatsen.
         </p>
         <p>
-          Consultancy en implementatie van ontwerp specificaties, wireframes en data architectuur.
+        Consultancy en implementatie van ontwerp specificaties, wireframes en data architectuur.
         </p>'
-    -
-      from:
+    - from:
         month: Jun
         year: 2008
       to:
@@ -340,14 +305,13 @@ experience:
       company: Bluewater Energy Services
       content: '
         <p>
-          Ontwerp van verschillende FPSO componenten, specifiek voor de Bluewater "swivel bearing" modules.
+        Ontwerp van verschillende FPSO componenten, specifiek voor de Bluewater "swivel bearing" modules.
         </p>
         <ul>
-          <li>Opzet van ontwerp richtlijnen voor de mechanical design afdeling</li>
-          <li>Opzet van ontwerp templates voor mechanical design</li>
+        <li>Opzet van ontwerp richtlijnen voor de mechanical design afdeling</li>
+        <li>Opzet van ontwerp templates voor mechanical design</li>
         </ul>'
-    -
-      from:
+    - from:
         month: Jun
         year: 2006
       to:
@@ -357,20 +321,19 @@ experience:
       company: 'Bluewater Energy Services'
       content: '
         <p>
-          Verantwoordelijk voor verzameling en oplevering van technische documentatie van FPSO schepen en Single Point Mooring buoy systemen.
+        Verantwoordelijk voor verzameling en oplevering van technische documentatie van FPSO schepen en Single Point Mooring buoy systemen.
         </p>
         <ul>
-          <li>Automatisering van benaming en archivering systems</li>
-          <li>Coördineren van de uitgifte en distributie van bedrijfsdocumentatie</li>
-          <li>Coördineren van het corporate management systeem</li>
-          <li>Zorg dragen voor actuele CMS documentation op Bluewater schepen</li>
+        <li>Automatisering van benaming en archivering systems</li>
+        <li>Coördineren van de uitgifte en distributie van bedrijfsdocumentatie</li>
+        <li>Coördineren van het corporate management systeem</li>
+        <li>Zorg dragen voor actuele CMS documentation op Bluewater schepen</li>
         </ul>'
 
 education:
   title: Opleiding
   timeline:
-    -
-      from:
+    - from:
         month: Aug
         year: 2010
       to:
@@ -380,13 +343,13 @@ education:
       institution: 'Hogeschool van Amsterdam'
       content: '
         <p>
-          Onderwijs op het gebied van onderzoek, UX, marketing, design en development.
+        Onderwijs op het gebied van onderzoek, UX, marketing, design en development.
         </p>
         <strong>Prestaties</strong>
         <ul>
-          <li>Propedeutisch Cum Laude</li>
-          <li>Geaccepteerd voor het excellentie programma</li>
-          <li>Winnaar van het Propedeutisch team project 2010 voor Stichting Urban Resort</li>
+        <li>Propedeutisch Cum Laude</li>
+        <li>Geaccepteerd voor het excellentie programma</li>
+        <li>Winnaar van het Propedeutisch team project 2010 voor Stichting Urban Resort</li>
         </ul>'
       expander:
         id: timeline-iam-expander
@@ -395,33 +358,32 @@ education:
         content: '
           <strong>Focus</strong>
           <ul>
-              <li>User centered design research, interaction design en interactive media.</li>
-              <li>Ontwikkeling van interactieve oplossingen (installaties en web applicaties) for verschillende projecten</li>
+          <li>User centered design research, interaction design en interactive media.</li>
+          <li>Ontwikkeling van interactieve oplossingen (installaties en web applicaties) for verschillende projecten</li>
           </ul>
           <strong>Vakken overzicht</strong>
           <ul>
-              <li>User Centered Development</li>
-              <li>Internet Standards</li>
-              <li>Media Design</li>
-              <li>Human Computer Interaction</li>
-              <li>Content and Editing</li>
-              <li>Marketing and Communication</li>
-              <li>Programming</li>
-              <li>Development methods and techniques</li>
+          <li>User Centered Development</li>
+          <li>Internet Standards</li>
+          <li>Media Design</li>
+          <li>Human Computer Interaction</li>
+          <li>Content and Editing</li>
+          <li>Marketing and Communication</li>
+          <li>Programming</li>
+          <li>Development methods and techniques</li>
           </ul>'
 references:
   title: Referenties
   reference:
-    -
-      image: 'avatar-marius'
+    - image: 'avatar-marius'
       alt: 'referentie door'
       author: 'Marius van der Kooy'
       function: 'Manager'
       company: 'Just Walk'
       content: '
         <p>
-          Peter is IT. Hij leeft voor nieuwe ontwikkelingen, zonder de dagelijkse gang van zaken uit het oog te verliezen.
-          De front-end ontwerpen, alternatieven presenteren, eventueel aanpassen en uiteindelijk ontwikkelen en beheren is voor hem daily business.
+        Peter is IT. Hij leeft voor nieuwe ontwikkelingen, zonder de dagelijkse gang van zaken uit het oog te verliezen.
+        De front-end ontwerpen, alternatieven presenteren, eventueel aanpassen en uiteindelijk ontwikkelen en beheren is voor hem daily business.
         </p>'
       expander:
         id: reference-marius-expander
@@ -429,91 +391,82 @@ references:
         text-alt: 'teveel informatie..'
         content: '
           <p>
-            Daarnaast kan hij als geen ander de communicatie op een effectieve manier tot stand brengen met de ontwikkelaars aan de achterkant.
-            Zowel in persoonlijke zin, als in technische zin zullen ze Peter geen knollen voor citroenen verkopen.
-            Hij zorgt ervoor dat hij altijd op de hoogte is, en kennis heeft van alle delen van de website(s) en IT-structuur.
+          Daarnaast kan hij als geen ander de communicatie op een effectieve manier tot stand brengen met de ontwikkelaars aan de achterkant.
+          Zowel in persoonlijke zin, als in technische zin zullen ze Peter geen knollen voor citroenen verkopen.
+          Hij zorgt ervoor dat hij altijd op de hoogte is, en kennis heeft van alle delen van de website(s) en IT-structuur.
           </p>
           <p>
-            Peter stelt je vragen. En die vragen zijn lastig, want raken de kern van je vraagstuk. Daar voorbij ontstaan mooie, bruikbare en efficiente processen; Zowel commercieel als technisch.
+          Peter stelt je vragen. En die vragen zijn lastig, want raken de kern van je vraagstuk. Daar voorbij ontstaan mooie, bruikbare en efficiente processen; Zowel commercieel als technisch.
           </p>
           <p>
-            Hij is absoluut een toegevoegde waarde in de breedste zin van het woord.
+          Hij is absoluut een toegevoegde waarde in de breedste zin van het woord.
           </p>'
-    -
-      image: 'avatar-bart'
+    - image: 'avatar-bart'
       alt: 'referentie door'
       author: 'Bart Lageweg'
       function: 'Eigenaar'
       company: 'Bizway'
       content: '
         <p>
-          Peter was 5 jaar lang de onmisbare schakel tussen ons als leverancier en Just Walk.
+        Peter was 5 jaar lang de onmisbare schakel tussen ons als leverancier en Just Walk.
         </p>
         <p>
-          Een top UX designer, met humor, communicatievaardigheden en groot verantwoordelijkheidsgevoel.
+        Een top UX designer, met humor, communicatievaardigheden en groot verantwoordelijkheidsgevoel.
         </p>'
-    -
-      image: 'avatar-danny'
+    - image: 'avatar-danny'
       alt: 'referentie door'
       author: 'Danny Visser'
       function: 'Eigenaar'
       company: 'Just Walk'
       content: '
         <p>
-          Een uitstekende developer; flexibel met altijd oog voor de structurele oplossing en de lange termijn.
+        Een uitstekende developer; flexibel met altijd oog voor de structurele oplossing en de lange termijn.
         </p>
         <p>
-          Peter was gedurende de afgelopen 5 jaar een gewaardeerd lid van ons team.<br/>
-          Altijd paraat en een groot verantwoordelijkheidsgevoel.
+        Peter was gedurende de afgelopen 5 jaar een gewaardeerd lid van ons team.<br/>
+        Altijd paraat en een groot verantwoordelijkheidsgevoel.
         </p>'
 knowledge:
   title: Kennis
   content: '
     <p>
-      Ik ontwikkel mijzelf continu door de laatste front-end vaardigheden, hulpmiddelen en technieken te leren:
+    Ik ontwikkel mijzelf continu door de laatste front-end vaardigheden, hulpmiddelen en technieken te leren:
     </p>'
   programming:
     title: Talen
     type: line
     skills:
-      -
-        title: HTML
+      - title: HTML
         aria-value: '95'
         value: '0.95'
         text: expert
         text-alt: 'I dream semantically'
-      -
-        title: CSS
+      - title: CSS
         aria-value: '95'
         value: '0.95'
         text: expert
-        text-alt: 'my wife Sass I''m responsive'
-      -
-        title: JS
+        text-alt: "my wife Sass I'm responsive"
+      - title: JS
         aria-value: '80'
         value: '0.8'
         text: gevorderd
         text-alt: 'let me promise'
-      -
-        title: PHP
+      - title: PHP
         aria-value: '70'
         value: '0.7'
         text: competent
         text-alt: 'I love recursive acronyms'
-      -
-        title: Bash
+      - title: Bash
         aria-value: '60'
         value: '0.6'
         text: competent
         text-alt: 'I believe in reincarnation'
-      -
-        title: Ruby
+      - title: Ruby
         aria-value: '40'
         value: '0.4'
         text: beginner
         text-alt: 'busy polishing my gems'
-      -
-        title: Python
+      - title: Python
         aria-value: '30'
         value: '0.3'
         text: novice
@@ -522,38 +475,31 @@ knowledge:
     title: Technieken
     type: line
     skills:
-      -
-        title: Principes
+      - title: Principes
         aria-value: '90'
         value: '0.9'
         text: YAGNI/DRY/KISS
-      -
-        title: Compatibiliteit
+      - title: Compatibiliteit
         aria-value: '85'
         value: '0.85'
         text: browser/platform/device
-      -
-        title: Automatisering
+      - title: Automatisering
         aria-value: '80'
         value: '0.8'
         text: 'task runners/build tools'
-      -
-        title: 'Design Patterns'
+      - title: 'Design Patterns'
         aria-value: '80'
         value: '0.8'
         text: structure/create/behave
-      -
-        title: 'Paradigmas'
+      - title: 'Paradigmas'
         aria-value: '75'
         value: '0.75'
         text: object/functional/procedural
-      -
-        title: Beveiliging
+      - title: Beveiliging
         aria-value: '70'
         value: '0.7'
         text: CORS/XXS
-      -
-        title: Testing
+      - title: Testing
         aria-value: '60'
         value: '0.6'
         text: unit/integration/quality
@@ -561,28 +507,23 @@ knowledge:
     title: Structuur
     type: chart
     skills:
-      -
-        title: Semantiek
+      - title: Semantiek
         aria-value: '90'
         value: '0.9'
         text: gevorderd
-      -
-        title: Microdata
+      - title: Microdata
         aria-value: '90'
         value: '0.9'
         text: gevorderd
-      -
-        title: JSON/XML
+      - title: JSON/XML
         aria-value: '85'
         value: '0.85'
         text: gevorderd
-      -
-        title: Templating
+      - title: Templating
         aria-value: '75'
         value: '0.75'
         text: competent
-      -
-        title: Toegankelijkheid
+      - title: Toegankelijkheid
         aria-value: '70'
         value: '0.7'
         text: competent
@@ -590,28 +531,23 @@ knowledge:
     title: Visualisatie
     type: chart
     skills:
-      -
-        title: Sass/Scss
+      - title: Sass/Scss
         aria-value: '95'
         value: '0.95'
         text: expert
-      -
-        title: Responsive
+      - title: Responsive
         aria-value: '95'
         value: '0.95'
         text: expert
-      -
-        title: 'Grid systems'
+      - title: 'Grid systems'
         aria-value: '90'
         value: '0.9'
         text: expert
-      -
-        title: 'CSS Animatie'
+      - title: 'CSS Animatie'
         aria-value: '90'
         value: '0.9'
         text: expert
-      -
-        title: Photoshop
+      - title: Photoshop
         aria-value: '70'
         value: '0.7'
         text: competent
@@ -619,28 +555,23 @@ knowledge:
     title: Interactie
     type: chart
     skills:
-      -
-        title: ES5
+      - title: ES5
         aria-value: '85'
         value: '0.85'
         text: gevorderd
-      -
-        title: XHR/AJAX
+      - title: XHR/AJAX
         aria-value: '85'
         value: '0.85'
         text: gevorderd
-      -
-        title: jQuery
+      - title: jQuery
         aria-value: '85'
         value: '0.85'
         text: gevorderd
-      -
-        title: ES6
+      - title: ES6
         aria-value: '70'
         value: '0.7'
         text: competent
-      -
-        title: Frameworks
+      - title: Frameworks
         aria-value: '25'
         value: '0.25'
         text: beginner
@@ -648,33 +579,27 @@ knowledge:
     title: Development
     type: line
     skills:
-      -
-        title: PHPStorm/Webstorm
+      - title: PHPStorm/Webstorm
         aria-value: '95'
         value: '0.95'
         text: IDE
-      -
-        title: 'Sublime Text'
+      - title: 'Sublime Text'
         aria-value: '85'
         value: '0.85'
         text: editor
-      -
-        title: Git
+      - title: Git
         aria-value: '80'
         value: '0.8'
         text: versioning
-      -
-        title: 'Command line/CLI'
+      - title: 'Command line/CLI'
         aria-value: '80'
         value: '0.8'
         text: terminal
-      -
-        title: Valet
+      - title: Valet
         aria-value: '80'
         value: '0.8'
         text: 'minimal NGINX dev environment'
-      -
-        title: Homestead
+      - title: Homestead
         aria-value: '60'
         value: '0.6'
         text: 'Vagrant box'
@@ -682,33 +607,27 @@ knowledge:
     title: CMS/frameworks
     type: line
     skills:
-      -
-        title: Wordpress
+      - title: Wordpress
         aria-value: '95'
         value: '0.95'
         text: bedrock/sage
-      -
-        title: Laravel
+      - title: Laravel
         aria-value: '80'
         value: '0.8'
         text: mix/blade
-      -
-        title: Blogdown
+      - title: Blogdown
         aria-value: '70'
         value: '0.7'
         text: 'mustache/markdown'
-      -
-        title: Drupal
+      - title: Drupal
         aria-value: '60'
         value: '0.6'
         text: CMS
-      -
-        title: Joomla
+      - title: Joomla
         aria-value: '55'
         value: '0.55'
         text: CMS
-      -
-        title: Lumen
+      - title: Lumen
         aria-value: '20'
         value: '0.2'
         text: 'Laravel microframework'
@@ -716,23 +635,19 @@ knowledge:
     title: 'Package managers'
     type: line
     skills:
-      -
-        title: Bower
+      - title: Bower
         aria-value: '90'
         value: '0.9'
         text: front-end
-      -
-        title: NPM
+      - title: NPM
         aria-value: '85'
         value: '0.85'
         text: 'task builder/front-end'
-      -
-        title: Homebrew
+      - title: Homebrew
         aria-value: '75'
         value: '0.75'
         text: OSX
-      -
-        title: Composer
+      - title: Composer
         aria-value: '75'
         value: '0.75'
         text: PHP
@@ -740,23 +655,19 @@ knowledge:
     title: 'Build tools'
     type: line
     skills:
-      -
-        title: 'NPM scripts'
+      - title: 'NPM scripts'
         aria-value: '90'
         value: '0.9'
         text: cli/compiling/testing
-      -
-        title: Grunt/Gulp
+      - title: Grunt/Gulp
         aria-value: '85'
         value: '0.85'
         text: 'build systems'
-      -
-        title: Webpack
+      - title: Webpack
         aria-value: '75'
         value: '0.75'
         text: 'module bundler'
-      -
-        title: Brunch
+      - title: Brunch
         aria-value: '60'
         value: '0.6'
         text: 'simplified build system'

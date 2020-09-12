@@ -1,32 +1,38 @@
 $detail-term-width: 85px;
 
 .definition {
-    font-size: 1.4rem;
-    dt {
-        user-select: none;
-        font-weight: $font-weight-base-strong;
-        float: left;
-        width: $detail-term-width;
-        overflow: hidden;
-        clear: left;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+  font-size: 1.4rem;
+
+  dt {
+    float: left;
+    clear: left;
+    overflow: hidden;
+    width: $detail-term-width;
+    font-weight: $font-weight-base-strong;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  dd {
+    padding: 0 0 $gutter-half * 1.5 ($detail-term-width + $gutter-half);
+  }
+
+  #mood-label {
+    cursor: pointer;
+  }
+
+  #mood {
+    user-select: none;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      cursor: pointer;
     }
-    dd {
-        padding: 0 0 $gutter-half * 1.5 ($detail-term-width + $gutter-half);
+
+    &.is-highlight {
+      color: $orange;
+      transition: all 0.3s ease-in;
     }
-    #mood-label{
-        cursor: pointer;
-    }
-    #mood{
-        transition: all .3s ease-out;
-        user-select: none;
-        &:hover{
-            cursor: pointer;
-        }
-        &.is-highlight{
-            transition: all .3s ease-in;
-            color: $orange;
-        }
-    }
+  }
 }

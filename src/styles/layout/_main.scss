@@ -1,28 +1,30 @@
 main {
-    margin: 0 auto;
-    max-width: #{$bp-xxl}em;
-    transition: .3s;
+  max-width: #{$bp-xxl}em;
+  margin: 0 auto;
+  transition: 0.3s;
 
-    #closure-links{
-        margin: $gutter;
-        a{
-            margin: $gutter-half;
+  #closure-links {
+    margin: $gutter;
+
+    a {
+      margin: $gutter-half;
+    }
+  }
+
+  @include media(sm-max) {
+    #closure-links {
+      a {
+        display: block;
+        margin-bottom: $gutter;
+
+        &:last-child {
+          margin-bottom: $gutter-half;
         }
+      }
     }
+  }
 
-    @include media(sm-max){
-        #closure-links{
-            a{
-                display: block;
-                margin-bottom: $gutter;
-                &:last-child{
-                    margin-bottom: $gutter-half;
-                }
-            }
-        }
-    }
-
-    @include media(lg) {
-        padding: $gutter $gutter $gutter-double $gutter;
-    }
+  @include media(lg) {
+    padding: $gutter $gutter $gutter-double $gutter;
+  }
 }

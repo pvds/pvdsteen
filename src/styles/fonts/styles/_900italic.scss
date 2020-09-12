@@ -1,6 +1,7 @@
 @font-face {
-    font-family: $font-family;
-    @include fontdef("900italic");
-    font-weight: 900;
-    font-style: italic;
+  @include fontdef('900italic');
+
+  font-family: $font-family;
+  font-style: italic;
+  font-weight: 900;
 }

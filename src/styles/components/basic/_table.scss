@@ -1,36 +1,39 @@
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    table-layout: fixed;
-    width: 100%;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
 
-    &.is-default{
-        tr{
-            &:hover{
-                td{
-                    background: darken($white, 5);
-                }
-            }
+  &.is-default {
+    tr {
+      &:hover {
+        td {
+          background: darken($white, 5);
         }
-        td,th{
-            border-bottom: 0.1rem solid darken($white, 10);
-        }
-    }
-    &.is-fixed{
-        top:0;
-        position:fixed;
-        width:auto;
-        display:none;
+      }
     }
 
-    &.is-absolute{
-        position: absolute;
+    td,
+    th {
+      border-bottom: 0.1rem solid darken($white, 10);
     }
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: auto;
+  }
+
+  &.is-absolute {
+    position: absolute;
+  }
 }
 
 td,
 th {
-    background: $white;
-    padding: 1.2rem .6rem;
-    text-align: left;
+  padding: 1.2rem 0.6rem;
+  text-align: left;
+  background: $white;
 }

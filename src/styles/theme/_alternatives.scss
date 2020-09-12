@@ -1,63 +1,76 @@
 body {
-    &.is-cv {
-        #main-wrap {
-            margin-right: 0 !important;
-        }
-        #nav-wrap,
-        #about-languages div:last-child,
-        #about-soft-skills,
-        #about-interests,
-        #about-personal-information .is-optional,
-        .expander-trigger,
-        .links,
-        footer {
-            display: none !important;
-        }
+  &.is-cv {
+    #main-wrap {
+      margin-right: 0 !important;
     }
-    &.is-printfriendly {
-        main {
-            padding: 0 !important;
-        }
-        #main-wrap {
-            color: $black !important;
-            background: none !important;
-            .section-wrap {
-                background: none !important;
-            }
-        }
+
+    #nav-wrap,
+    #about-languages div:last-child,
+    #about-soft-skills,
+    #about-interests,
+    #about-personal-information .is-optional,
+    .expander-trigger,
+    .links,
+    footer {
+      display: none !important;
     }
-    &.is-motivation {
-        main {
-            padding: $gutter !important;
-        }
-        #closure-links {
-            display: block !important;
-            font-size: 1.4rem !important;
-            a {
-                background: $orange !important;
-            }
-            .fa {
-                display: none !important;
-            }
-        }
+  }
+
+  &.is-printfriendly {
+    main {
+      padding: 0 !important;
     }
-    &.is-minimal, .is-printfriendly {
+
+    #main-wrap {
+      background: none !important;
+      color: $black !important;
+
+      .section-wrap {
         background: none !important;
-        svg {
-            display: none !important;
-        }
+      }
     }
-    &.is-high-contrast {
-        .vcard {
-            .card-address {
-                color: $white;
-                font-size: 1.6rem;
-            }
-        }
-        .timeline{
-            .timeline-date{
-                color: darken($orange, 20);
-            }
-        }
+  }
+
+  &.is-motivation {
+    main {
+      padding: $gutter !important;
     }
+
+    #closure-links {
+      display: block !important;
+      font-size: 1.4rem !important;
+
+      a {
+        background: $orange !important;
+      }
+
+      .fa {
+        display: none !important;
+      }
+    }
+  }
+
+  &.is-minimal,
+  .is-printfriendly {
+    background: none !important;
+
+    svg {
+      display: none !important;
+    }
+  }
+
+  &.is-high-contrast {
+    .vcard {
+      .card-address {
+        font-size: 1.6rem;
+        color: $white;
+      }
+    }
+
+    .timeline {
+      .timeline-date {
+        color: darken($orange, 20);
+      }
+    }
+  }
 }

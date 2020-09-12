@@ -4,150 +4,163 @@ $progress-chart-wrap-width: $progress-chart-bar-width + $gutter;
 $progress-line-bar-height: 5px;
 
 .progress-wrap {
-    color: $grey-light;
+  color: $grey-light;
+
+  .progress-title {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: $white;
+  }
+
+  .progress-text {
+    font-size: 1.2rem;
+  }
+
+  &.progress-bullets {
+    /* Progress Bar: Bullets */
+    margin-bottom: $gutter-half * 1.5;
+
     .progress-title {
-        display: inline-block;
-        font-size: 1.4rem;
-        color: $white;
+      display: block;
+      margin-bottom: $progress-bullet-size;
     }
 
-    .progress-text {
-        font-size: 1.2rem;
+    .progress-bar {
+      line-height: $progress-bullet-size;
+      white-space: nowrap;
     }
 
-    &.progress-bullets {
-        /* Progress Bar: Bullets */
-        margin-bottom: $gutter-half * 1.5;
+    .bullet {
+      display: inline-block;
+      width: $progress-bullet-size;
+      height: $progress-bullet-size;
+      border: 1px solid $orange;
+      border-radius: 50%;
+      vertical-align: middle;
 
-        .progress-title {
-            display: block;
-            margin-bottom: $progress-bullet-size;
-        }
-
-        .progress-bar {
-            white-space: nowrap;
-            line-height: $progress-bullet-size;
-        }
-
-        .bullet {
-            display: inline-block;
-            vertical-align: middle;
-            width: $progress-bullet-size;
-            height: $progress-bullet-size;
-            border-radius: 50%;
-            border: 1px solid $orange;
-            &.fill {
-                background-color: $orange;
-            }
-        }
-
-        &.is-animate {
-            .bullet {
-                opacity: 0;
-            }
-        }
-
-        &.is-animated {
-            .bullet {
-                opacity: 1;
-                animation: FadeIn 250ms linear;
-                animation-fill-mode: both;
-
-                &:nth-child(1) {
-                    animation-delay: 0ms
-                }
-                &:nth-child(2) {
-                    animation-delay: 50ms
-                }
-                &:nth-child(3) {
-                    animation-delay: 100ms
-                }
-                &:nth-child(4) {
-                    animation-delay: 145ms
-                }
-                &:nth-child(5) {
-                    animation-delay: 175ms
-                }
-                &:nth-child(6) {
-                    animation-delay: 210ms
-                }
-                &:nth-child(7) {
-                    animation-delay: 240ms
-                }
-                &:nth-child(8) {
-                    animation-delay: 265ms
-                }
-                &:nth-child(9) {
-                    animation-delay: 290ms
-                }
-                &:nth-child(10) {
-                    animation-delay: 310ms
-                }
-            }
-        }
-
-        /* Keyframes */
-        @-webkit-keyframes FadeIn {
-            0% {
-                opacity: 0;
-                transform: scale(.1);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
+      &.fill {
+        background-color: $orange;
+      }
     }
 
-    &.progress-chart {
-        /* Progress Bar: Chart */
-        text-align: center;
-        display: inline-block;
-        width: $progress-chart-wrap-width;
-        margin: $gutter * 1.2 $gutter-half $gutter-half $gutter-half;
-
-        .progress-title {
-            margin-top: 10px;
-        }
-
-        .progress-bar {
-            height: $progress-chart-bar-width;
-            width: $progress-chart-bar-width;
-            margin: 0 auto;
-            position: relative;
-
-            svg {
-                height: 100%;
-                display: block;
-            }
-        }
+    &.is-animate {
+      .bullet {
+        opacity: 0;
+      }
     }
 
-    &.progress-line {
-        /* Progress Bar: Line */
-        margin: $gutter * 1.2 0 $gutter-half 0;
-        color: $grey-light;
+    &.is-animated {
+      .bullet {
+        opacity: 1;
+        animation: FadeIn 250ms linear;
+        animation-fill-mode: both;
 
-        &.is-compressed{
-            margin: $gutter-half * 1.5 0 $gutter-half 0;
+        &:nth-child(1) {
+          animation-delay: 0ms;
         }
 
-        .progress-title {
-            margin-bottom: 10px;
-            padding-right: 3.8em;
-            color: $white;
+        &:nth-child(2) {
+          animation-delay: 50ms;
         }
 
-        .progress-bar {
-            width: 100%;
-            height: $progress-line-bar-height;
+        &:nth-child(3) {
+          animation-delay: 100ms;
         }
 
-        svg {
-            top: 0;
-            left: 0;
-            position: absolute;
-            border-radius: 5px;
+        &:nth-child(4) {
+          animation-delay: 145ms;
         }
+
+        &:nth-child(5) {
+          animation-delay: 175ms;
+        }
+
+        &:nth-child(6) {
+          animation-delay: 210ms;
+        }
+
+        &:nth-child(7) {
+          animation-delay: 240ms;
+        }
+
+        &:nth-child(8) {
+          animation-delay: 265ms;
+        }
+
+        &:nth-child(9) {
+          animation-delay: 290ms;
+        }
+
+        &:nth-child(10) {
+          animation-delay: 310ms;
+        }
+      }
     }
+
+    /* Keyframes */
+    @-webkit-keyframes FadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.1);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &.progress-chart {
+    display: inline-block;
+    width: $progress-chart-wrap-width;
+    margin: $gutter * 1.2 $gutter-half $gutter-half $gutter-half;
+
+    /* Progress Bar: Chart */
+    text-align: center;
+
+    .progress-title {
+      margin-top: 10px;
+    }
+
+    .progress-bar {
+      position: relative;
+      width: $progress-chart-bar-width;
+      height: $progress-chart-bar-width;
+      margin: 0 auto;
+
+      svg {
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+
+  &.progress-line {
+    /* Progress Bar: Line */
+    margin: $gutter * 1.2 0 $gutter-half 0;
+    color: $grey-light;
+
+    &.is-compressed {
+      margin: $gutter-half * 1.5 0 $gutter-half 0;
+    }
+
+    .progress-title {
+      margin-bottom: 10px;
+      padding-right: 3.8em;
+      color: $white;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: $progress-line-bar-height;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 5px;
+    }
+  }
 }

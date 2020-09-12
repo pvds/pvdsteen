@@ -1,17 +1,22 @@
-@mixin button($fill-color: $blue, $text-color: $white, $fill-color-hover: darken($fill-color, 10), $text-color-hover: $text-color){
-    background-color: $fill-color;
-    color: $text-color;
+@mixin button(
+  $fill-color: $blue,
+  $text-color: $white,
+  $fill-color-hover: darken($fill-color, 10),
+  $text-color-hover: $text-color
+) {
+  background-color: $fill-color;
+  color: $text-color;
 
+  &:focus,
+  &:hover {
+    background-color: $fill-color-hover;
+    color: $text-color-hover;
+  }
+
+  &[disabled] {
     &:focus,
     &:hover {
-        background-color: $fill-color-hover;
-        color: $text-color-hover;
+      background-color: $fill-color;
     }
-
-    &[disabled] {
-        &:focus,
-        &:hover {
-            background-color: $fill-color;
-        }
-    }
+  }
 }

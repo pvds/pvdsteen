@@ -1,48 +1,49 @@
 //-- Helpers --//
-@import "helpers/base";
+@import 'helpers/base';
 
 //-- Basic --//
-@import "basic/elements";
-@import "basic/container";
-@import "basic/content";
-@import "basic/classes";
+@import 'basic/elements';
+@import 'basic/container';
+@import 'basic/content';
+@import 'basic/classes';
 
 //-- Theme --//
-@import "theme/classes";
-@import "theme/elements";
-@import "theme/alternatives";
+@import 'theme/classes';
+@import 'theme/elements';
+@import 'theme/alternatives';
 
 //-- Fonts --//
-@import "fonts/fontawesome";
+@import 'fonts/fontawesome';
 
 //-- Dev --//
-@import "dev/helpers";
+@import 'dev/helpers';
 
 //-- Test --//
 //@import "dev/grid";
 
 //-- Layouts --//
-@import "layout/content";
-@import "layout/footer";
-@import "layout/header";
-@import "layout/main";
-@import "layout/nav";
-@import "layout/side";
+@import 'layout/content';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/nav';
+@import 'layout/side';
 
 //-- Components --//
 //@import "components/basic/alert";
-@import "components/basic/button";
-@import "components/basic/expander";
+
+@import 'components/basic/button';
+@import 'components/basic/expander';
 //@import "components/basic/form";
 //@import "components/basic/table";
 
-@import "components/theme/card";
-@import "components/theme/definition";
-@import "components/theme/links";
-@import "components/theme/progress";
-@import "components/theme/reference";
-@import "components/theme/shape";
-@import "components/theme/timeline";
+@import 'components/theme/card';
+@import 'components/theme/definition';
+@import 'components/theme/links';
+@import 'components/theme/progress';
+@import 'components/theme/reference';
+@import 'components/theme/shape';
+@import 'components/theme/timeline';
 
 //-- Templates --//
-@import "templates/frontpage";
+@import 'templates/frontpage';

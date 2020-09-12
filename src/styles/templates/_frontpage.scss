@@ -3,89 +3,99 @@
  */
 
 @include media(md) {
-    #about {
-        @include grid-container;
-    }
+  #about {
+    @include grid-container;
+  }
 
-    #about-personal-information,
-    #about-languages,
-    #about-soft-skills,
-    #about-interests{
-        @include grid-column(6, $neat-grid-no-gutter);
-    }
+  #about-personal-information,
+  #about-languages,
+  #about-soft-skills,
+  #about-interests {
+    @include grid-column(6, $neat-grid-no-gutter);
+  }
 }
 
 /**
  * Knowledge section
  */
+
 #knowledge {
-    @include grid-container;
-    @include media(md) {
-        section {
-            &.has-progress-line {
-                &:not(is-custom){
-                    @include grid-column(6, $neat-grid-no-gutter);
-                }
-            }
-            &.has-progress-chart {
-                @include grid-column(4, $neat-grid-no-gutter);
-            }
+  @include grid-container;
+
+  @include media(md) {
+    section {
+      &.has-progress-line {
+        &:not(is-custom) {
+          @include grid-column(6, $neat-grid-no-gutter);
         }
+      }
+
+      &.has-progress-chart {
+        @include grid-column(4, $neat-grid-no-gutter);
+      }
     }
-    @include media(lg){
-        section {
-            &.has-progress-line {
-                &#knowledge-programming {
-                    @include grid-column(5, $neat-grid-no-gutter);
-                }
-                &#knowledge-techniques {
-                    @include grid-column(7, $neat-grid-no-gutter);
-                }
-            }
+  }
+
+  @include media(lg) {
+    section {
+      &.has-progress-line {
+        &#knowledge-programming {
+          @include grid-column(5, $neat-grid-no-gutter);
         }
-    }
-    @include media(lg-mid){
-        section {
-            &.has-progress-line {
-                &#knowledge-programming,&#knowledge-techniques{
-                    @include grid-column(6, $neat-grid-no-gutter);
-                }
-            }
+
+        &#knowledge-techniques {
+          @include grid-column(7, $neat-grid-no-gutter);
         }
+      }
     }
+  }
+
+  @include media(lg-mid) {
+    section {
+      &.has-progress-line {
+        &#knowledge-programming,
+        &#knowledge-techniques {
+          @include grid-column(6, $neat-grid-no-gutter);
+        }
+      }
+    }
+  }
 }
-
-
-
 
 /**
  * Closure links
  */
-#closure-links{
-    @include media(lg){
-        display: none;
-    }
+
+#closure-links {
+  @include media(lg) {
+    display: none;
+  }
 }
 
 @media print {
-    @page {
-        margin: 0;
-    }
-    .section-wrap {
-        page-break-before: always;
-    }
-    #nav-wrap,
-    #resume-button {
-        display: none;
-    }
-    #sidewrap {
-        width: 100%;
-        position: relative !important;
-    }
-    .is-animate, .bullet {
-        transform: none;
-        animation: none;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
+  @page {
+    margin: 0;
+  }
+
+  .section-wrap {
+    page-break-before: always;
+  }
+
+  #nav-wrap,
+  #resume-button {
+    display: none;
+  }
+
+  #sidewrap {
+    position: relative !important;
+    width: 100%;
+  }
+
+  .is-animate,
+  .bullet {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none;
+    animation: none;
+  }
 }

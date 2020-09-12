@@ -1,53 +1,75 @@
-.is-content{
-    line-height: $line-height;
-    text-align: left;
-    h1,h2,h3,h4,h5,h6{
-        margin: ($spacing+$spacing-half) 0 0 0;
+.is-content {
+  line-height: $line-height;
+  text-align: left;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: ($spacing + $spacing-half) 0 0 0;
+  }
+
+  a {
+    font-weight: $font-weight-base-strong;
+    color: $orange;
+
+    &:hover {
+      color: lighten($orange, 10);
     }
-    a{
-        font-weight: $font-weight-base-strong;
-        color: $orange;
-        &:hover{
-            color: lighten($orange,10);
-        }
-        &[href*="//"]:not([href*="pvdsteen.com"]) {
-            &:after{
-                @include fa;
-                content: '\f08e';
-                font-size: 90%;
-                margin-left: $gutter-fourth;
-            }
-        }
+
+    &[href*="//"]:not([href*="pvdsteen.com"])
+    {
+      &::after {
+        @include fa;
+
+        content: '\f08e';
+        margin-left: $gutter-fourth;
+        font-size: 90%;
+      }
     }
-    .button{
-        padding: $gutter-half $gutter-double;
-        border-radius: $border-radius-half;
-        color: $white;
-        &:hover{
-            color: $white;
-        }
+  }
+
+  .button {
+    padding: $gutter-half $gutter-double;
+    border-radius: $border-radius-half;
+    color: $white;
+
+    &:hover {
+      color: $white;
     }
-    p{
-        margin: $spacing 0;
+  }
+
+  p {
+    margin: $spacing 0;
+  }
+
+  ol,
+  ul {
+    margin: $spacing 0 $spacing $spacing-double;
+
+    * ul,
+    * ol {
+      margin-top: 0;
     }
-    ol,ul{
-        margin: $spacing 0 $spacing $spacing-double;
-        * ul, * ol{
-            margin-top: 0;
-        }
-    }
-    li{
-        display: list-item;
-    }
-    blockquote {
-        margin: $spacing 0 $spacing $spacing-double;
-        padding: $gutter-half;
-        border-left: 6px solid $orange;
-    }
-    > :first-child{
-        margin-top: 0;
-    }
-    > :last-child{
-        margin-bottom: 0;
-    }
+  }
+
+  li {
+    display: list-item;
+  }
+
+  blockquote {
+    margin: $spacing 0 $spacing $spacing-double;
+    padding: $gutter-half;
+    border-left: 6px solid $orange;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }

@@ -1,14 +1,14 @@
 // Images
-$image-path: "../images";
+$image-path: '../images';
 
 // Typography
-$font-path-local: "../fonts";
+$font-path-local: '../fonts';
 //$font-path-cdn: "//cdn.website.com/fonts";
 $font-path: $font-path-local;
 
-$font-base: "Quicksand", sans-serif;
+$font-base: 'Quicksand', sans-serif;
 $font-theme: $font-base;
-$font-code: "monospace", monospace;
+$font-code: 'monospace', monospace;
 
 $font-weight-base: 400;
 $font-weight-base-strong: 700;
@@ -27,13 +27,13 @@ $line-height-base: 1.1;
 $line-height: 1.8;
 
 // Colors
-$black: #222222;
+$black: #222;
 $black-light: #1f1f1f;
-$white: #ffffff;
+$white: #fff;
 $grey: #373737;
 $grey-light: #bcbcbc;
 $grey-dark: #2a2a2a;
-$orange: #C46210;
+$orange: #c46210;
 $orange: #dc6e12; //lighten(#C46210, 10)
 $blue: #1d7889;
 $red: red;
@@ -67,41 +67,41 @@ $gutter-double: $gutter * 2;
 
 //bourbon neat
 $neat-grid: (
-    columns: 12,
-    gutter: $gutter,
+  columns: 12,
+  gutter: $gutter,
 );
 
 $neat-grid-no-gutter: (
-    columns: 12,
-    gutter: 0
+  columns: 12,
+  gutter: 0,
 );
 
 //media is optional > use own grid system for more flexibility
 $neat-grid-extra-gutter: (
-    columns: 12,
-    gutter: $gutter * 1.5
+  columns: 12,
+  gutter: $gutter * 1.5,
 );
 
 $neat-grid-half-gutter: (
-    columns: 12,
-    gutter: $gutter / 2
+  columns: 12,
+  gutter: $gutter / 2,
 );
 
 $neat-grid-24: (
-    columns: 24,
-    gutter: $gutter
+  columns: 24,
+  gutter: $gutter,
 );
 
 $neat-grid-custom-media-example: (
-    columns: 6,
-    gutter: $gutter-double,
-    media: 28em
+  columns: 6,
+  gutter: $gutter-double,
+  media: 28em,
 );
 
 $neat-grid-custom-media-map-get-example: (
-    columns: 6,
-    gutter: $gutter-double,
-    media: map_get($breakpoints, xs)
+  columns: 6,
+  gutter: $gutter-double,
+  media: map_get($breakpoints, xs),
 );
 
 // CSS3
