@@ -27,10 +27,10 @@ svg:
       points: '0,0,550,0,550,670'
 env:
   url: 'https://pvdsteen.com'
-  files: /dist/files/
-  images: /dist/images/
-  styles: /dist/styles/
-  scripts: /dist/scripts/
+  files: files/
+  images: images/
+  styles: styles/
+  scripts: scripts/
 nav:
   -
     id: about
