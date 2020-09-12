@@ -18,13 +18,14 @@
     "compress"
   ],
   "scripts": {
-    "clean": "rimraf dist && mkdirp dist/app/scripts",
+    "clean": "rimraf dist",
     "lint": "run-s lint:*",
     "lint:js": "eslint src/scripts --cache --fix ",
     "lint:css": "stylelint src/styles --cache --fix ",
     "lint:format": "prettier --write **/*.{js,md,scss,mustache,yaml}",
     "sass": "node-sass --include-path node_modules/bourbon-neat/core/ -o dist/app/styles src/styles",
     "postcss": "postcss -u autoprefixer -b \"last 2 versions\" -u cssnano -r dist/app/styles/*.css",
+    "prebabel": "mkdirp dist/app/scripts",
     "babel": "babel src/scripts --out-file dist/app/scripts/app.js --presets=es2015,babili",
     "yamlmerge": "mkdirp dist/tmp/data && run-p yamlmerge:*",
     "yamlmerge:en": "merge-yaml -i src/data/global.yaml src/data/content-en.yaml -o dist/tmp/data/en.merged.yaml",
