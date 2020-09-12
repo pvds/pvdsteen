@@ -1,4 +1,4 @@
-@function parseInt($n) {
+@function parse-int($n) {
   @return $n / ($n * 0 + 1);
 }
 
@@ -12,7 +12,7 @@
       $rem: append($rem, $value);
     } @else {
       $unit: unit($value);
-      $val: parseint($value);
+      $val: parse-int($value);
 
       @if $unit == 'px' {
         $px: append($px, $value);
