@@ -17,6 +17,19 @@ $progress-line-bar-height: 5px;
   }
 
   &.progress-bullets {
+    /* Keyframes */
+    @keyframes FadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.1);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
     /* Progress Bar: Bullets */
     margin-bottom: $gutter-half * 1.5;
 
@@ -94,19 +107,6 @@ $progress-line-bar-height: 5px;
         &:nth-child(10) {
           animation-delay: 310ms;
         }
-      }
-    }
-
-    /* Keyframes */
-    @-webkit-keyframes FadeIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.1);
-      }
-
-      100% {
-        opacity: 1;
-        transform: scale(1);
       }
     }
   }
