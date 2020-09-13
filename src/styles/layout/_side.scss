@@ -4,6 +4,8 @@
   }
 
   @include media(lg) {
+    position: sticky;
+    top: $gutter;
     float: left;
     width: $side-width;
 

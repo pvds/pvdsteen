@@ -6,11 +6,6 @@
     moira.initGlobalVars();
 
     /**
-     * Initialize sticky elements
-     **/
-    new Sticky('.sticky');
-
-    /**
      * Animate Elements
      */
     if (moira.animation.global || (!moira.vars.mobile && moira.animation.mobile)) {

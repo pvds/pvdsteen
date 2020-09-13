@@ -177,6 +177,7 @@ experience:
       to:
         month:
         year: '?'
+      hidden: true
       function: 'Front-end developer - <span class="nowrap">UX designer</span>'
       company: 'Your company?'
       content: '<p>
@@ -207,6 +208,23 @@ experience:
           <p>
           <a href="#about-personal-information" class="button">Contact me</a>
           </p>'
+    - from:
+        month: Sept
+        year: 2017
+      to:
+        month:
+        year: now
+      function: FE/UX development specialist
+      company: 'Priva'
+      content: '
+        <p>
+        As FE/UX development specialist at Priva I am a member of the UX team and design system guild.
+        </p>
+        <p>
+        Working closely with both UX designers and our app development teams I provide a holistic view on developing our <a href="https://design.priva.com" target="_blank">design system</a>.
+        I bridge the gap between design and development and take the lead in setting up processes, standard, tooling and documentation.
+        Besides this I educate FE developers on the UI development specialism through reviews, direct support, courses and workshops.
+        </p>'
     - from:
         month: May
         year: 2013

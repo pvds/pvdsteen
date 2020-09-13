@@ -208,6 +208,24 @@ experience:
           <a href="#about-personal-information" class="button">Neem contact op</a>
           </p>'
     - from:
+        month: Sept
+        year: 2017
+        to:
+          month:
+          year: now
+        function: FE/UX development specialist
+        company: 'Priva'
+        content: '
+          <p>
+          Als FE/UX development specialist bij Priva maak ik onderdeel uit van het UX team en onze design system guild.
+          </p>
+          <p>
+          Door nauwe samenwerking met zowel UX designers als onze app development teams heb ik een holistische kijk op de ontwikkeling van ons <a href="https://design.priva.com"
+          target="_blank">design systeem</a>.
+          Ik overbrug de kloof tussen design en development and neem de leiding in het opzetten van processen, standaarden, tooling and documentatie.
+          Hiernaast houd ik mij bezig met het opleiden van FE developers op het gebied van UI development door middel van reviews, begeleiding, cursussen en workshops.
+          </p>'
+    - from:
         month: Mei
         year: 2013
       to:

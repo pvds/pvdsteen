@@ -220,24 +220,26 @@
                 <h2>{{experience.title}}</h2>
                 <div class="timeline">
                     {{#experience.timeline}}
-                        <div class="timeline-item is-animate">
-                            <div class="timeline-date">
-                                <span>{{from.month}} <strong class="text-upper">{{from.year}}</strong> - {{to.month}}
-                                    <strong>{{to.year}}</strong></span>
+                        {{^hidden}}
+                            <div class="timeline-item is-animate">
+                                <div class="timeline-date">
+                                    <span>{{from.month}} <strong class="text-upper">{{from.year}}</strong> - {{to.month}}
+                                        <strong>{{to.year}}</strong></span>
+                                </div>
+                                <h3 class="timeline-function">{{{function}}}</h3>
+                                <h4 class="timeline-place">{{company}}</h4>
+                                <div class="timeline-description is-content">
+                                    {{{content}}}
+                                    {{#expander}}
+                                        <span class="expander-trigger" role="button" aria-expanded="false" aria-controls="{{id}}"
+                                              {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
+                                        <div id="{{id}}" class="expander-content has-animate is-box has-small-text">
+                                            {{{content}}}
+                                        </div>
+                                    {{/expander}}
+                                </div>
                             </div>
-                            <h3 class="timeline-function">{{{function}}}</h3>
-                            <h4 class="timeline-place">{{company}}</h4>
-                            <div class="timeline-description is-content">
-                                {{{content}}}
-                                {{#expander}}
-                                    <span class="expander-trigger" role="button" aria-expanded="false" aria-controls="{{id}}"
-                                          {{#text-alt}}data-text-alt="{{text-alt}}"{{/text-alt}}>{{text}}</span>
-                                    <div id="{{id}}" class="expander-content has-animate is-box has-small-text">
-                                        {{{content}}}
-                                    </div>
-                                {{/expander}}
-                            </div>
-                        </div>
+                        {{/hidden}}
                     {{/experience.timeline}}
                 </div>
             </section>

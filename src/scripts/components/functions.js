@@ -267,7 +267,7 @@ function listenPrintEvent() {
  * @param {Object} moodField
  */
 function getMood(moodField) {
-  const moodSource = moira.vars.language === 'en' ? '/data/moods-en.json' : '/data/moods-nl.json';
+  const moodSource = moira.vars.language === 'en' ? 'data/moods-en.json' : 'data/moods-nl.json';
   const request = new XMLHttpRequest();
 
   request.open('GET', moodSource, true);
