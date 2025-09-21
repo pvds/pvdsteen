@@ -1,0 +1,18 @@
+/* Default selection colors
+   ====================================================================== */
+::selection {
+	background-color: light-dark(
+		var(--default-selection-light, black),
+		var(--default-selection-dark, white)
+	);
+	color: light-dark(
+		var(--default-selection-dark, white),
+		var(--default-selection-light, black)
+	);
+}
+
+body {
+	padding-bottom: var(--global-spacing-bottom);
+	overscroll-behavior-y: none;
+	background-color: var(--color-primary-200);
+}

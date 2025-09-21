@@ -1,0 +1,22 @@
+@media (prefers-reduced-motion) or (max-width: 767px) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		/* biome-ignore lint/complexity/noImportantStyles: ensure reduced motion is respected */
+		animation: none !important;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		/* Disable all root level view transitions */
+		view-transition-name: none;
+		/*!* Comment out to debug view-transitions *!*/
+		/*&::view-transition-group(*) {*/
+		/*	position: fixed;*/
+		/*	inset: 0;*/
+		/*	animation-duration: 5s;*/
+		/*	animation-fill-mode: both;*/
+		/*}*/
+	}
+}

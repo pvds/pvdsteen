@@ -1,0 +1,26 @@
+name: Run Tests
+description: Execute accessibility and lighthouse tests
+runs:
+    using: "composite"
+    steps:
+        - name: Cache browsers
+          id: playwright-cache
+          uses: actions/cache@v4
+          with:
+              path: ~/.cache/ms-playwright
+              key: ${{ runner.os }}-playwright-browsers-${{ hashFiles('bun.lock') }}
+
+        - name: Install browsers
+          if: ${{ steps.playwright-cache.outputs.cache-hit != 'true' }}
+          run: bunx playwright install chromium --only-shell
+          shell: bash
+
+        - name: Test accessibility
+          continue-on-error: true
+          run: bun run test:axe --minimal --prod
+          shell: bash
+
+        - name: Test Lighthouse
+          continue-on-error: true
+          run: bun run test:lighthouse --prod
+          shell: bash

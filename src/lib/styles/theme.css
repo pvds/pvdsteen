@@ -1,0 +1,218 @@
+/* Grayscale Design palette: https://grayscale.design/app?lums=97.44,90.97,79.53,61.14,42.57,24.17,18.13,13.10,8.15,4.72,1.63&palettes=%23e0a030,%23000000,%23359497,%2349a17a,%23e66f43&filters=0%7C0,0%7C0,0%7C0,0%7C0,0%7C4&names=mimosa,black,primary,secondary,accent&labels=,,,, */
+:root {
+	--mimosa-50: hsl(38, 73.90%, 98.53%);
+	--mimosa-100: hsl(38, 73.90%, 94.70%);
+	--mimosa-200: hsl(38, 73.90%, 87.22%);
+	--mimosa-300: hsl(38, 73.90%, 73.38%);
+	--mimosa-400: hsl(38, 73.90%, 55.31%);
+	--mimosa-500: hsl(38, 73.90%, 40.70%);
+	--mimosa-600: hsl(38, 73.90%, 35.54%);
+	--mimosa-700: hsl(38, 73.90%, 30.63%);
+	--mimosa-800: hsl(38, 73.90%, 24.40%);
+	--mimosa-900: hsl(38, 73.90%, 18.60%);
+	--mimosa-950: hsl(38, 73.90%, 10.48%);
+
+	--black-50: hsl(0, 0%, 99.00%);
+	--black-100: hsl(0, 0%, 96.00%);
+	--black-200: hsl(0, 0%, 90.78%);
+	--black-300: hsl(0, 0%, 80.58%);
+	--black-400: hsl(0, 0%, 68.43%);
+	--black-500: hsl(0, 0%, 53.00%);
+	--black-600: hsl(0, 0%, 46.47%);
+	--black-700: hsl(0, 0%, 39.80%);
+	--black-800: hsl(0, 0%, 31.96%);
+	--black-900: hsl(0, 0%, 24.00%);
+	--black-950: hsl(0, 0%, 13.52%);
+
+	--primary-50: hsl(182, 48.00%, 98.54%);
+	--primary-100: hsl(182, 48.00%, 94.67%);
+	--primary-200: hsl(182, 48.00%, 86.88%);
+	--primary-300: hsl(182, 48.00%, 72.64%);
+	--primary-400: hsl(182, 48.00%, 54.17%);
+	--primary-500: hsl(182, 48.00%, 40.00%);
+	--primary-600: hsl(182, 48.00%, 35.10%);
+	--primary-700: hsl(182, 48.00%, 30.19%);
+	--primary-800: hsl(182, 48.00%, 23.97%);
+	--primary-900: hsl(182, 48.00%, 18.41%);
+	--primary-950: hsl(182, 48.00%, 10.42%);
+
+	--secondary-50: hsl(153, 37.60%, 98.43%);
+	--secondary-100: hsl(153, 37.60%, 95.00%);
+	--secondary-200: hsl(153, 37.60%, 87.97%);
+	--secondary-300: hsl(153, 37.60%, 75.34%);
+	--secondary-400: hsl(153, 37.60%, 59.10%);
+	--secondary-500: hsl(153, 37.60%, 42.89%);
+	--secondary-600: hsl(153, 37.60%, 37.47%);
+	--secondary-700: hsl(153, 37.60%, 32.31%);
+	--secondary-800: hsl(153, 37.60%, 25.51%);
+	--secondary-900: hsl(153, 37.60%, 19.52%);
+	--secondary-950: hsl(153, 37.60%, 10.99%);
+
+	--accent-50: hsl(16, 96.50%, 99.00%);
+	--accent-100: hsl(16, 92.50%, 96.57%);
+	--accent-200: hsl(16, 88.50%, 91.57%);
+	--accent-300: hsl(16, 84.50%, 82.70%);
+	--accent-400: hsl(16, 80.50%, 70.83%);
+	--accent-500: hsl(16, 76.50%, 53.03%);
+	--accent-600: hsl(16, 80.50%, 45.29%);
+	--accent-700: hsl(16, 84.50%, 38.57%);
+	--accent-800: hsl(16, 88.50%, 30.68%);
+	--accent-900: hsl(16, 92.50%, 23.32%);
+	--accent-950: hsl(16, 96.50%, 13.27%);
+}
+
+/* This theme extends from the default theme `@import "tailwindcss/theme" layer(theme)` */
+/* biome-ignore lint/suspicious/noUnknownAtRules: biome 2.3 will support custom tailwind at-rules */
+@theme {
+	/* === COLORS === */
+	--color-\*: initial;
+
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: var(--black-950);
+
+	--color-mimosa-lightest: var(--mimosa-50);
+	--color-mimosa-lighter: var(--mimosa-100);
+	--color-mimosa-light: var(--mimosa-200);
+	--color-mimosa-dark: var(--mimosa-700);
+	--color-mimosa-darker: var(--mimosa-800);
+	--color-mimosa-darkest: var(--mimosa-900);
+	--color-mimosa-black: var(--mimosa-950);
+
+	--color-primary-lightest: var(--primary-50);
+	--color-primary-lighter: var(--primary-100);
+	--color-primary-light: var(--primary-200);
+	--color-primary-dark: var(--primary-700);
+	--color-primary-darker: var(--primary-800);
+	--color-primary-darkest: var(--primary-900);
+	--color-primary-black: var(--primary-950);
+
+	--color-secondary-lightest: var(--secondary-50);
+	--color-secondary-lighter: var(--secondary-100);
+	--color-secondary-light: var(--secondary-200);
+	--color-secondary-dark: var(--secondary-700);
+	--color-secondary-darker: var(--secondary-800);
+	--color-secondary-darkest: var(--secondary-900);
+	--color-secondary-black: var(--secondary-950);
+
+	--color-accent-lightest: var(--accent-50);
+	--color-accent-lighter: var(--accent-100);
+	--color-accent-light: var(--accent-200);
+	--color-accent-dark: var(--accent-700);
+	--color-accent-darker: var(--accent-800);
+	--color-accent-darkest: var(--accent-900);
+	--color-accent-black: var(--accent-950);
+
+	/* === SPACING === */
+	--spacing: 0.25rem;
+
+	/* === BREAKPOINT === */
+	--breakpoint-xs: 32em;
+	--breakpoint-xs-mid: 36em;
+	--breakpoint-sm: 40em;
+	--breakpoint-md: 48em;
+	--breakpoint-md-mid: 56em;
+	--breakpoint-lg: 64em;
+	--breakpoint-xl: 80em;
+	--breakpoint-2xl: 96em;
+
+	/* === CONTAINER === */
+	--container-prose: 55ch;
+
+	/* === FONT === */
+	--font-sans:
+		"Nunito", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	--font-mono:
+		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+		"Courier New", monospace;
+
+	/* === TEXT === */
+	/* placeholder for --text-*, --tracking-*, --leading-* variables */
+
+	/* === RADIUS === */
+	/* placeholder for --radius-* variables */
+
+	/* === SHADOW === */
+	/* placeholder for --shadow-*, --inset-*, ---drop-shadow-* variables */
+
+	/* === ANIMATION === */
+	--transition-delay-shortest: 100ms;
+	--transition-delay-short: 150ms;
+	--transition-delay-normal: var(--default-transition-delay, 250ms);
+	--transition-delay-long: 350ms;
+	--transition-delay-longest: 500ms;
+
+	--transition-duration-shortest: 100ms;
+	--transition-duration-short: 150ms;
+	--transition-duration-normal: var(--default-transition-duration, 250ms);
+	--transition-duration-long: 350ms;
+	--transition-duration-longest: 500ms;
+
+	--animate-wiggle-right: wiggle-right 1s infinite;
+	--animate-wiggle-left: wiggle-left 1s infinite;
+
+	@keyframes wiggle-left {
+		0%,
+		100% {
+			transform: none;
+			animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+		}
+		50% {
+			transform: translateX(-25%);
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
+
+	@keyframes wiggle-right {
+		0%,
+		100% {
+			transform: none;
+			animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+		}
+		50% {
+			transform: translateX(25%);
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
+
+	@keyframes scaleIn {
+		from {
+			opacity: 0;
+			transform: scale(0.8);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	/* === VISUAL EFFECT === */
+	/* placeholder for --blur-*, --perspective-*, --aspect-* variables */
+
+	/* === DEFAULT === */
+	--default-heading-text-wrap: balance;
+	--default-transition-duration: 250ms;
+	--default-transition-delay: 250ms;
+	--default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	--default-font-family: var(--font-sans);
+	--default-mono-font-family: var(--font-mono);
+	--default-selection-light: var(--primary-800);
+	--default-selection-dark: var(--primary-300);
+
+	/* === GLOBAL === */
+	--global-spacing-top: 0px;
+	--global-spacing-bottom: 0px;
+	--global-target-offset: 2ex;
+	--global-focus-color: var(--primary-600);
+	--global-focus-border-radius: var(--radius-sm);
+	--global-focus-outline-offset: 3px;
+	--global-target-scroll-margin-start: calc(
+		var(--global-spacing-top) +
+		var(--global-target-offset)
+	);
+	--global-target-scroll-margin-end: calc(
+		var(--global-spacing-bottom) +
+		var(--global-target-offset)
+	);
+}
