@@ -40,5 +40,5 @@ onNavigate((navigation) => {
 		{@render children()}
 	</main>
 
-	<Footer primary={nav.primary} contact={nav.footerContact} pages={nav.footerPages}/>
+	<Footer />
 </div>

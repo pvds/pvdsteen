@@ -1,19 +1,15 @@
 <script>
 /**
- * @typedef {import('$types/content').SectionTheme} SectionTheme
  * @typedef {Object} Props
  * @property {string} [classes] on outer <section>, use styling the section (position, z-index, etc.)
  * @property {string} [innerClasses] on inner <div>, use for styling the content (grid, flex, etc.)
  * @property {string} [title]
  * @property {'sm'|'md'|'lg'} [size='md']
- * @property {SectionTheme} [theme='default']
  * @property {string} [customSpacing]
- * @property {boolean} [wave]
  * @property {import('svelte').Snippet} [children]
  */
 
 import { SPACING_X_CLASSES } from "$config";
-import WaveSvg from "$visuals/WaveSvg.svelte";
 
 /** @type {Props} */
 let {
@@ -21,9 +17,7 @@ let {
 	innerClasses,
 	title,
 	size = "md",
-	theme = "default",
 	customSpacing,
-	wave,
 	children,
 } = $props();
 
@@ -45,50 +39,15 @@ const spacingY = {
 	},
 };
 
-/** @type {Record<SectionTheme, string>} */
-const THEME_CLASSES = {
-	primary: "bg-primary-lighter text-primary-darker",
-	primaryDark: "bg-primary-darker text-primary-lighter",
-	secondary: "bg-secondary-lighter text-secondary-darker",
-	secondaryDark: "bg-secondary-darker text-secondary-lighter",
-	accent: "bg-accent-lighter text-primary-darker",
-	accentDark: "bg-accent-darker text-primary-lighter",
-	accentSoft: "bg-mimosa-lighter text-primary-darker",
-	default: "",
-};
-const THEME_WAVE_DEFAULT = THEME_CLASSES.accentSoft;
-/** @type {Record<SectionTheme, string>} */
-const WAVE_COLORS = {
-	primary: "primary-lighter",
-	primaryDark: "primary-darker",
-	secondary: "secondary-lighter",
-	secondaryDark: "secondary-darker",
-	accent: "accent-lighter",
-	accentDark: "accent-darker",
-	accentSoft: "mimosa-lighter",
-	default: "mimosa-lighter",
-};
-
 let spacing = $derived(
-	customSpacing ||
-		`${wave ? spacingY[size].wave : spacingY[size].default} ${SPACING_X_CLASSES}`,
+	customSpacing || `${spacingY[size].default} ${SPACING_X_CLASSES}`,
 );
 let titleSpacing = $derived(spacingY[size].title);
-let themeClasses = $derived(
-	theme !== "default" ? THEME_CLASSES[theme] : wave ? THEME_WAVE_DEFAULT : "",
-);
-let waveColor = $derived(WAVE_COLORS[theme]);
 </script>
 
-<section class="relative {classes} {spacing} {themeClasses}">
+<section class="relative {classes} {spacing}">
 	<div class="max-w-6xl mx-auto {innerClasses}">
-		{#if wave}
-			<WaveSvg color={waveColor}>
-				{@render content()}
-			</WaveSvg>
-		{:else}
-			{@render content()}
-		{/if}
+		{@render content()}
 	</div>
 </section>
 

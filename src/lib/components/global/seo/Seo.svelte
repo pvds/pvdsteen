@@ -27,8 +27,10 @@ const constructTitle = (title, category, separator = " - ") => {
  * @param {string} url the URL to prepend
  * @returns {string} the URL with the origin prepended
  */
-const prependURL = (url) =>
-	url?.startsWith("http") ? url : resolve(`/${url}`);
+const prependURL = (url) => {
+	const resolvePath = /** @type {(p: string) => string} */ (resolve);
+	return url?.startsWith("http") ? url : resolvePath(`/${url}`);
+};
 
 /** @type {SEOProps['title']} */
 let title = $derived(

@@ -1,7 +1,6 @@
 import { marked } from "marked";
 import { gfmHeadingId } from "marked-gfm-heading-id";
-import { base } from "$app/paths";
-import { parseShortcodes } from "./shortcodes/shortcodes.js";
+import { resolve } from "$app/paths";
 
 /**
  * Compose multiple functions into a single function.
@@ -30,7 +29,10 @@ export const processSync =
  * @return {string} - The updated content with absolute links.
  */
 export const prependBasePath = (content) => {
-	return content.replace(/href="\/(?!\/)(.*?)"/g, `href="${base}/$1"`);
+	return content.replace(
+		/href="\/(?!\/)(.*?)"/g,
+		`href="${resolve("/")}/$1"`,
+	);
 };
 
 /**
@@ -63,7 +65,6 @@ export const markdownToHtml = (markdown, breaks = false) => {
 
 	marked.use(gfmHeadingId({ prefix: "heading-" }));
 	const htmlProcessor = processSync(
-		parseShortcodes,
 		(input) => marked(input, { async: false, breaks }),
 		obfuscateEmails,
 		prependBasePath,

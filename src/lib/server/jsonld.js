@@ -1,9 +1,9 @@
+// biome-ignore-all lint: first refactor this file
+
 /**
  * @file This file contains the JSON-LD generator functions.
  *
- * @typedef {import('$types/contentful').PostEntry} PostEntry
- * @typedef {import('$types/contentful').PageEntry} PageEntry
- * @typedef {import('$types/contentful').ServiceEntry} ServiceEntry
+ * @typedef {import('$types/content').PageEntry} PageEntry
  * @typedef {import('$global/seo/Seo.svelte.types').JsonLdType} JsonLdType
  *
  * // Schema-dts types:
@@ -45,21 +45,14 @@ import {
 	SITE_PREVIEW_URL,
 	URL_BASE_PRODUCTION,
 } from "$config";
-import {
-	getAggregateRating,
-	getImage,
-	getOrganization,
-	getOrgLogo,
-	getParentUrl,
-	iso8601Date,
-} from "./jsonld.helpers.js";
+import { getOrgLogo, getParentUrl } from "./jsonld.helpers.js";
 
 /**
  * Generate JSON-LD based on the page type.
- * @param {PageEntry|PostEntry|ServiceEntry} entry - The entry data.
+ * @param {PageEntry} entry - The entry data.
  * @param {JsonLdType} jsonLdType - The type of JSON-LD.
- * @param {PostEntry[]|ServiceEntry[]} [items=[]] - Optional array of items for collection pages.
- * @returns {ExtendedBlogPosting | ExtendedWebPage | ExtendedOrganization | ExtendedService | ExtendedCollectionPage | HomePage | undefined}
+ * @param {unknown[]} [items=[]] - Optional array of items for collection pages.
+ * @returns { ExtendedWebPage | HomePage | undefined}
  */
 export const getJsonLd = (entry, jsonLdType = "WebPage", items = []) => {
 	let jsonld;
@@ -74,7 +67,6 @@ export const getJsonLd = (entry, jsonLdType = "WebPage", items = []) => {
 	if (jsonld && !("@graph" in jsonld)) {
 		// Extra global properties for all types except ones using @graph; these need to be
 		// assigned in the appropriate type.
-		jsonld.aggregateRating = getAggregateRating();
 	}
 
 	return jsonld;
@@ -88,6 +80,14 @@ export const getJsonLd = (entry, jsonLdType = "WebPage", items = []) => {
 function getPage(page) {
 	return getBasePage(page, "WebPage");
 }
+
+/**
+ * Generate JSON-LD for the Homepage using @graph.
+ * This returns a JSON-LD object with separate nodes for the WebSite and Organization.
+ *
+ * @param {PageEntry} page - The homepage entry data.
+ * @returns {HomePage}
+ */
 
 // biome-ignore lint/correctness/noUnusedFunctionParameters: keep page parameter for future use
 function getHomePage(page) {
@@ -103,7 +103,6 @@ function getHomePage(page) {
 				publisher: {
 					"@id": `${URL_BASE_PRODUCTION}/#organization`,
 				},
-				aggregateRating: getAggregateRating(),
 			},
 			{
 				"@type": "Organization",

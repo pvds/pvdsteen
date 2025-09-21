@@ -1,8 +1,7 @@
 /**
  * @file JSON-LD helpers.
  *
- * @typedef {import('$types/contentful').ImageField} ImageField
- * @typedef {import('$types/contentful').ReviewEntry} ReviewEntry
+ * @typedef {import('$types/content').ImageField} ImageField
  * @typedef {import('schema-dts').ImageObject} ImageObject
  * @typedef {import('schema-dts').Organization} Organization
  * @typedef {import('schema-dts').AggregateRating} AggregateRating
@@ -14,10 +13,8 @@ import {
 	IMAGE_THUMBNAIL_SIZE,
 	ORG_LOGO_URL,
 	ORG_NAME,
-	SEO_USE_AGGREGATE_RATING,
 	URL_BASE_PRODUCTION,
 } from "$config";
-import reviewItems from "$data/generated/reviews.json";
 import { getImageName } from "../helpers/image.js";
 
 /**
@@ -86,33 +83,5 @@ export function getOrganization() {
 		name: ORG_NAME,
 		logo: getOrgLogo(),
 		url: URL_BASE_PRODUCTION,
-	};
-}
-
-/**
- * Get the aggregate rating object.
- * @return {AggregateRating|undefined}
- */
-export function getAggregateRating() {
-	const reviews = reviewItems;
-	if (!reviews?.length || !SEO_USE_AGGREGATE_RATING) return undefined;
-
-	const ratings = reviews.map((review) => review.fields.rating);
-	const bestRating = Math.max(...ratings);
-	const worstRating = Math.min(...ratings);
-	const ratingValue = Number.parseFloat(
-		(
-			ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length
-		).toFixed(1),
-	);
-	const reviewCount = ratings.length;
-
-	return {
-		"@type": "AggregateRating",
-		bestRating,
-		worstRating,
-		ratingValue,
-		reviewCount,
-		url: `${URL_BASE_PRODUCTION}/reviews`,
 	};
 }

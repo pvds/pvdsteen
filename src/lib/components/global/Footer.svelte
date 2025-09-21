@@ -1,7 +1,7 @@
 <script>
 import Section from "$layout/Section.svelte";
 
-/** @type {Props} */
+// /** @type {Props} */
 // let { } = $props();
 </script>
 

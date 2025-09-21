@@ -1,5 +1,5 @@
 /**
- * Prepare the project for development
+ * Setup the project for development
  * 1. Copy the .env.example file to .env
  * 2. Prompt for empty env variables (can be skipped)
  * 3. Fetch content from Contentful
