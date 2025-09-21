@@ -15,15 +15,8 @@ let menuPopovers = $state([]);
 const base = resolve("/");
 const navItemsBase = menu;
 /** @type NavigationItem */
-const navItemHome = { href: base, label: "Home", title: "Mikrouli home page" };
+const navItemHome = { href: base, label: "Home", title: "Home page" };
 const navItemsWithHome = [navItemHome, ...navItemsBase];
-const bookingCta = {
-	text: "Book a Session",
-	textShort: "Book",
-	textLong: "Book a Session with me",
-	classes:
-		"px-3 md-mid:px-4 py-2 inset-shadow-xs inset-shadow-accent-darkest hover:inset-shadow-black",
-};
 </script>
 <nav class="nav-primary ml-auto"
 	 aria-label="Main navigation">
