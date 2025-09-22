@@ -106,79 +106,67 @@ If you already have all dependencies quick start by running
 
 ## Scripts
 
-- **Setup**
+- **Workspace**
 
-    ```bash
-    bun run prepare        		# Install git hooks with Lefthook
-    ```
+	```bash
+	bun run setup				# Prepare the workspace
+	bun run clean				# Clean the workspace
+	```
+
+- **Prepare**
+
+	```bash
+	bun run prepare				# Install git hooks with Lefthook
+	bun run sync				# Creates the tsconfig.json and generated types 
+	```
 
 - **Development**
 
-    ```bash
-    bun run start          		# Start development server and watch for changes
-    bun run start:prod     		# Build and start production server
-    ```
+	```bash
+	bun run start				# Start development server and watch for changes
+	bun run start:prod			# Build and start production server
+	```
 
 - **Build**
 
-    ```bash
-    bun run build              	# Build for staging
-    bun run build:prod   	# Build for production
-    ```
+	```bash
+	bun run build				# Build for staging
+	bun run build:prod			# Build for production
+	```
 
 - **Preview**
 
-    ```bash
-    bun run preview            	# Preview staging build
-    bun run preview:prod 	# Preview production build
-    ```
+	```bash
+	bun run preview				# Preview staging build
+	bun run preview:prod			# Preview production build
+	```
 
 - **Testing**
 
-    ```bash
-    bun run test:lighthouse 	# Run Lighthouse performance tests
-    bun run test:axe        	# Run accessibility tests
-    ```
-
-- **Watching**
-
-    ```bash
-    bun run watch       		# Watch for changes in code
-    ```
+	```bash
+	bun run test:lighthouse			# Run Lighthouse performance tests
+	bun run test:axe			# Run accessibility tests
+	```
 
 - **Code Quality**
 
-    ```bash
-    bun run check         		# Run formatting, Svelte, and script checks
-    bun run check:ci      		# Run checks for CI pipeline
-    bun run check:all      		# Run all checks including build
-    bun run check:format    	# Check code formatting
-    bun run check:lint	    	# Check code linting
-    bun run write          		# Fix formatting issues
-    ```
-
-- **Content Management**
-
-    ```bash
-    bun run content         	# Fetch content and process assets
-    bun run content:fetch   	# Fetch content from CMS
-    ```
+	```bash
+	bun run check				# Run formatting, Svelte, and script checks
+	bun run check:ci			# Run checks for CI pipeline
+	bun run check:all			# Run all checks including build
+	bun run check:format			# Check code formatting
+	bun run check:lint			# Check code linting
+	bun run watch				# Check code on file changes
+	bun run write				# Fix formatting issues
+	```
 
 - **Asset Management**
 
-    ```bash
-    bun run assets          	# Fetch and process images
-    bun run assets:fetch    	# Fetch assets from CMS
-    bun run assets:process  	# Process fetched assets
-    bun run assets:favicons 	# Generate favicons
-    ```
-
-- **Workspace Management**
-
-    ```bash
-    bun run workspace:prepare 	# Prepare the workspace
-    bun run workspace:clean   	# Clean the workspace
-    ```
+	```bash
+	bun run assets				# Process images
+	bun run assets:process			# Process fetched assets
+	bun run assets:favicons			# Generate favicons
+	```
 
 ---
 
@@ -233,55 +221,51 @@ The project is modular and organized as follows, also refer to
 
 ```
 .
-├── .github/                  # Github related files
-│   ├── actions/              # Composite actions used in workflows
-│   └── workflows/            # CI/CD workflows
-├── docs/                     # Project documentation
-├── images/                   # Soource images for the project
-├── scripts/                  # Node scripts
-│   ├── assets/               # Asset related scripts
-│   │   ├── fetch.js          # Fetch CMS images
-│   │   └── process.js        # Process local and CMS images
-│   ├── content/              # CMS content scripts
-│   │   ├── fetch.js          # Fetch CMS content
-│   │   └── process.js        # Process content data
-│   ├── test/                 # Testing scripts
-│   └── util/                 # Utility scripts
-├── src/                      # Svelte source code
-│   ├── data/                 # JSON data files
-│   │   ├── generated/        # Generated JSON data files
-│   │   ├── global.json       # Global application data
-│   │   └── seo.json          # Default SEO data
-│   ├── lib/                  # Svelte library files
-│   │   ├── components/       # Svelte components
-│   │   │   ├── global/       # Application shell components
-│   │   │   ├── layout/       # Structural layout components
-│   │   │   ├── ui/           # Reusable UI components
-│   │   │   ├── visuals/      # Decorative visual components
-│   │   ├── helpers/          # Helper functions
-│   │   ├── server/           # Server-only code
-│   │   ├── styles/           # Global styling
-│   │   └── types/            # Typing d.ts files for usage in jsdoc
-│   ├── routes/               # SvelteKit route handlers
-│   └── config.js             # Project configuration constants
-├── static/                   # Static assets (copied to build)
-│   ├── fonts/                # Font files
-│   ├── images/               # Image assets
-│   │   ├── cms/              # Optimized CMS images (generated)
-│   │   └── local/            # Optimized local images from (generated)
-│   └── pwa/                  # PWA assets (manifest, icons, images)
-├── .editorconfig             # Editor configuration
-├── .env                      # Environment variables (see .env.example)
-├── .gitignore                # Git ignore rules
-├── .npmrc                    # npm configuration
-├── biome.jsonc               # Linting and formatting configuration
-├── bun.lockb                 # Bun lock file
-├── favicons.json             # Favicon configuration
-├── jsconfig.json             # JavaScript configuration
-├── lefthook.yml              # Git hooks configuration
-├── package.json              # Project metadata
-├── svelte.config.js          # Svelte configuration
-└── vite.config.js            # Vite configuration
+├── .github/				# Github related files
+│   ├── actions/			# Composite actions used in workflows
+│   └── workflows/			# CI/CD workflows
+├── docs/					# Project documentation
+├── images/					# Soource images for the project
+├── scripts/				# Node scripts
+│   ├── assets/				# Asset related scripts
+│   │   └── process.js		# Process images
+│   ├── test/				# Testing scripts
+│   ├── util/				# Utility scripts
+│   └── workspace/			# Utility scripts
+├── src/					# Svelte source code
+│   ├── data/				# JSON data files
+│   │   ├── generated/		# Generated JSON data files
+│   │   ├── global.json		# Global application data
+│   │   └── seo.json		# Default SEO data
+│   ├── lib/				# Svelte library files
+│   │   ├── components/		# Svelte components
+│   │   │   ├── global/		# Application shell components
+│   │   │   ├── layout/		# Structural layout components
+│   │   │   ├── ui/			# Reusable UI components
+│   │   │   ├── visuals/	# Decorative visual components
+│   │   ├── helpers/		# Helper functions
+│   │   ├── server/			# Server-only code
+│   │   ├── styles/			# Global styling
+│   │   └── types/			# Typing d.ts files for usage in jsdoc
+│   ├── routes/				# SvelteKit route handlers
+│   └── config.js			# Project configuration constants
+├── static/					# Static assets (copied to build)
+│   ├── fonts/				# Font files
+│   ├── images/				# Image assets
+│   │   └── local/			# Optimized local images from (generated)
+│   └── pwa/				# PWA assets (manifest, icons, images)
+├── .editorconfig			# Editor configuration
+├── .env					# Environment variables (see .env.example)
+├── .gitignore				# Git ignore rules
+├── .npmrc					# npm configuration
+├── biome.jsonc				# Linting and formatting configuration
+├── bun.lockb				# Bun lock file
+├── favicons.json			# Favicon configuration
+├── jsconfig.json			# JavaScript configuration
+├── lefthook.yml			# Git hooks configuration
+├── package.json			# Project metadata
+├── svelte.config.js		# Svelte configuration
+└── vite.config.js			# Vite configuration
 ```
 
 ---
@@ -292,7 +276,7 @@ The project is modular and organized as follows, also refer to
 | ----------------------- | ------------------------------------------------------------------------- |
 | Installation fails      | Verify Node.js and Bun versions meet requirements.                        |
 | Contentful fetch errors | Ensure `.env` exists and contains valid Contentful keys, see .env.example |
-| Build or dev errors     | Run the clean script: `bun run util:clean`.                               |
+| Build or dev errors     | Run the clean script: `bun run clean`.                               |
 
 ---
 

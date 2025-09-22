@@ -12,7 +12,10 @@
 		"url": "https://github.com/pvds/pvdsteen"
 	},
 	"scripts": {
+		"setup": "bun run scripts/workspace/setup.js",
+		"clean": "bun run scripts/workspace/clean.js",
 		"prepare": "bun run sync && lefthook install",
+		"sync": "svelte-kit sync",
 		"start": "vite dev --host",
 		"start:prod": "bun run build:prod && bun run preview:prod --open",
 		"build": "vite build",
@@ -21,22 +24,19 @@
 		"postbuild:prod": "DEPLOY_TARGET=production bun run assets:sitemap",
 		"preview": "vite preview",
 		"preview:prod": "DEPLOY_TARGET=production vite preview --mode production",
-		"sync": "svelte-kit sync",
 		"test:lighthouse": "bun run scripts/test/lighthouse.js",
 		"test:axe": "bun run scripts/test/axe.js",
-		"watch": "bun run check:lint --watch",
 		"check": "bun run check:format & bun run check:lint",
 		"check:ci": "biome ci & bun run check:lint",
 		"check:all": "bun run check & bun run build -l warn",
 		"check:format": "biome check",
 		"check:lint": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"watch": "bun run check:lint --watch",
 		"write": "biome check --write",
 		"assets": "bun run assets:process --local",
 		"assets:process": "bun run scripts/assets/process.js",
 		"assets:favicons": "bunx realfavicon generate images/icon.svg favicons.json .favicons.json static/pwa",
-		"assets:sitemap": "bun run scripts/assets/helpers/sitemap.js",
-		"setup": "bun run scripts/workspace/setup.js",
-		"clean": "bun run scripts/workspace/clean.js"
+		"assets:sitemap": "bun run scripts/assets/helpers/sitemap.js"
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.10.2",
