@@ -123,7 +123,7 @@ jobs:
         if: ${{ needs.main.outputs.run_production == 'true' }}
         environment:
             name: production
-            url: https://mikrouli.org
+            url: https://pvdsteen.com
         steps:
             - name: setup
               uses: oven-sh/setup-bun@v2

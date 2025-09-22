@@ -14,7 +14,7 @@ const CSP_WHITELIST = {
 };
 
 // TODO: Implement CSP reporting endpoint
-const CSP_REPORT_ENDPOINT = production ? "/" : "/mikrouli";
+const CSP_REPORT_ENDPOINT = production ? "/" : "/pvdsteen";
 /** @type {import('@sveltejs/kit').CspDirectives} */
 const CSP = {
 	"default-src": ["self"], // Default policy for loading resources
@@ -45,7 +45,7 @@ const config = {
 		},
 		prerender: {
 			origin: production
-				? "https://mikrouli.org"
+				? "https://pvdsteen.com"
 				: "https://pvds.github.io",
 		},
 		env: {

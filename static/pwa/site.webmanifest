@@ -1,6 +1,6 @@
 {
-	"name": "Mikrouli - Systemic Change",
-	"short_name": "Mikrouli",
+	"name": "Peter van der Steen",
+	"short_name": "PvdS",
 	"icons": [
 		{
 			"src": "%sveltekit.assets%/pwa/web-app-manifest-192x192.png",

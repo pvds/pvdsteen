@@ -1,7 +1,7 @@
-https://pvdsteen.netlify.app/*		https://mikrouli.org/:splat  301!
-https://solidcore.nl/*				https://mikrouli.org/:splat  301!
-https://www.solidcore.nl/*			https://mikrouli.org/:splat  301!
-https://petersteen.nl/*				https://mikrouli.org/:splat  301!
-https://www.petersteen.com/*		https://mikrouli.org/:splat  301!
-https://petervandersteen.nl/*		https://mikrouli.org/:splat  301!
-https://www.petervandersteen.com/*	https://mikrouli.org/:splat  301!
+https://pvdsteen.netlify.app/*		https://pvdsteen.com/:splat  301!
+https://solidcore.nl/*				https://pvdsteen.com/:splat  301!
+https://www.solidcore.nl/*			https://pvdsteen.com/:splat  301!
+https://petersteen.nl/*				https://pvdsteen.com/:splat  301!
+https://www.petersteen.com/*		https://pvdsteen.com/:splat  301!
+https://petervandersteen.nl/*		https://pvdsteen.com/:splat  301!
+https://www.petervandersteen.com/*	https://pvdsteen.com/:splat  301!
