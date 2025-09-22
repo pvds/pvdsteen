@@ -175,7 +175,7 @@ Data Fetching and API Routes
 - Create API routes in the src/routes/api/ directory.
 - Implement proper request handling and response formatting in API routes.
 - Use SvelteKit's hooks for global API middleware.
-- Data comes from Contentful and is fetched and transformed to .json files in
+- Data comes from .json files in
   the /src/lib/data directory.
 
 SEO and Meta Tags
@@ -214,7 +214,6 @@ Tooling documentation
 
 - Svelte Documentation: https://svelte.dev/docs/svelte/overview
 - SvelteKit Documentation: https://svelte.dev/docs/kit/introduction
-- Contentful Documentation: https://www.contentful.com/developers/docs/
 - Vite Documentation: https://vitejs.dev/guide/
 - JSdoc Documentation: https://jsdoc.app/
 - Biome Documentation: https://biomejs.dev/guides/getting-started/

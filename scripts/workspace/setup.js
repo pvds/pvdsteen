@@ -2,9 +2,8 @@
  * Setup the project for development
  * 1. Copy the .env.example file to .env
  * 2. Prompt for empty env variables (can be skipped)
- * 3. Fetch content from Contentful
- * 4. Fetch images from Contentful
- * 5. Generate processed images and base64 placeholders
+ * 3. Generate processed images and base64 placeholders
+ * 4. Ready for development
  */
 
 import fs from "node:fs";
@@ -75,34 +74,14 @@ const main = async () => {
 	}
 
 	/**
-	 * 3. Fetch content from Contentful
-	 */
-
-	if (fetchContent) {
-		logHeader("Fetching content from Contentful");
-		runCommand("bun run content:fetch --force");
-		logSuccess("Fetched content from Contentful.");
-	}
-
-	/**
-	 * 4. Fetch images from Contentful
-	 */
-
-	if (fetchContent) {
-		logHeader("Fetching images from Contentful");
-		runCommand("bun run images:fetch --cms");
-		logSuccess("Fetched images from Contentful.");
-	}
-
-	/**
-	 * 5. Generate processed images and base64 placeholders
+	 * 3. Generate processed images and base64 placeholders
 	 */
 	logHeader("Generating processed images and base64 placeholders");
 	runCommand("bun run images:process --local --cms");
 	logSuccess("Generated processed images and base64 placeholders.");
 
 	/**
-	 * 6. Ready for development
+	 * 4. Ready for development
 	 */
 	logHeader("Project is ready for development.");
 	logHighlight(

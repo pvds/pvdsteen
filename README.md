@@ -272,11 +272,11 @@ The project is modular and organized as follows, also refer to
 
 ## Troubleshooting
 
-| **Issue**               | **Solution**                                                              |
-| ----------------------- | ------------------------------------------------------------------------- |
-| Installation fails      | Verify Node.js and Bun versions meet requirements.                        |
-| Contentful fetch errors | Ensure `.env` exists and contains valid Contentful keys, see .env.example |
-| Build or dev errors     | Run the clean script: `bun run clean`.                               |
+| **Issue**               | **Solution**                                                                       |
+|-------------------------|------------------------------------------------------------------------------------|
+| Installation fails      | Verify Node.js and Bun versions meet requirements.                                 |
+| Environment not working | Ensure `.env` exists and is not missing values, run `bun run setup` for assistance |
+| Build or dev errors     | Run the clean script: `bun run clean`.                                             |
 
 ---
 

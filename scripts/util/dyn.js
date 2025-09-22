@@ -45,10 +45,6 @@ export const BUILD_PATH_PRODUCTION_RESOLVED = resolve(
 // System
 export const CPU_COUNT = Math.max(2, Math.floor(cpus().length / 2));
 
-// Environment
-export const CONTENTFUL_SPACE_ID = process.env.CONTENTFUL_SPACE_ID;
-export const CONTENTFUL_ACCESS_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
-
 // CLI args
 const CLI_ARGS = process.argv.slice(2);
 export const IS_CMS = CLI_ARGS.includes("--cms");
