@@ -13,9 +13,7 @@
 @import "$lib/styles/components.css" layer(components);
 @import "$lib/styles/utilities.css";
 
-/* === PLUGINS === */
-/* biome-ignore lint/suspicious/noUnknownAtRules: biome 2.3 will support custom tailwind at-rules */
-@plugin "@tailwindcss/typography";
+/* === TAILWIND PLUGINS === */
 
 /* === SOURCES === */
 /* biome-ignore lint/suspicious/noUnknownAtRules: biome 2.3 will support custom tailwind at-rules */
