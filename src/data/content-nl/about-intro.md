@@ -1,0 +1,1 @@
+Als front-end developer met een passie voor UX design ligt mijn focus op het kritisch analyseren van beschikbare data om interface en interaction designs te ontwikkelen, verbeteren en implementeren. Met als doel de creatie en optimalisatie van boeiende maar vooral gebruiksvriendelijke online producten en services.

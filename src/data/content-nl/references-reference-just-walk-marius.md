@@ -1,0 +1,1 @@
+Peter is IT. Hij leeft voor nieuwe ontwikkelingen, zonder de dagelijkse gang van zaken uit het oog te verliezen. De front-end ontwerpen, alternatieven presenteren, eventueel aanpassen en uiteindelijk ontwikkelen en beheren is voor hem daily business.

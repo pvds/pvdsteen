@@ -1,0 +1,1 @@
+Bij Just Walk was ik verantwoordelijk voor de ontwikkeling en onderhoud hun e-commerce websites voor het verkopen mobiele telefoon-, energie- en internet en tv contracten. Sinds 2014 zijn deze websites in het Merk [Miky](http://www.miky.nl) ondergebracht.

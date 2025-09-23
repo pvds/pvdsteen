@@ -1,0 +1,11 @@
+**Focus**  
+- User centered design research, interaction design en interactive media. 
+- Ontwikkeling van interactieve oplossingen (installaties en web applicaties) for verschillende projecten  **Vakken overzicht**  
+- User Centered Development 
+- Internet Standards 
+- Media Design 
+- Human Computer Interaction 
+- Content and Editing 
+- Marketing and Communication 
+- Programming 
+- Development methods and techniques
