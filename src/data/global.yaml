@@ -1,31 +1,4 @@
-svg:
-  triangle:
-    - id: '1'
-      height: '470'
-      width: '730'
-      points: '0,0,730,0,730,470'
-    - id: '2'
-      height: '490'
-      width: '710'
-      points: '0,0,710,0,710,490'
-    - id: '3'
-      height: '520'
-      width: '680'
-      points: '0,0,680,0,680,520'
-    - id: '4'
-      height: '580'
-      width: '620'
-      points: '0,0,620,0,620,580'
-    - id: '5'
-      height: '670'
-      width: '550'
-      points: '0,0,550,0,550,670'
-env:
-  url: 'https://pvdsteen.com'
-  files: files/
-  images: images/
-  styles: styles/
-  scripts: scripts/
+
 nav:
   - id: about
     icon: user
