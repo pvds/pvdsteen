@@ -29,18 +29,23 @@ export const meta = {
 export const nav = [
 	{
 		title: "About me",
+		id: "about",
 	},
 	{
 		title: "Experience",
+		id: "experience",
 	},
 	{
 		title: "Education",
+		id: "education",
 	},
 	{
 		title: "References",
+		id: "references",
 	},
 	{
 		title: "Knowledge",
+		id: "knowledge",
 	},
 ];
 

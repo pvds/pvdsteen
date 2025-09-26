@@ -30,18 +30,23 @@ export const meta = {
 export const nav = [
 	{
 		title: "Over mij",
+		id: "over",
 	},
 	{
 		title: "Ervaring",
+		id: "ervaring",
 	},
 	{
 		title: "Opleiding",
+		id: "opleiding",
 	},
 	{
 		title: "Referenties",
+		id: "referenties",
 	},
 	{
 		title: "Kennis",
+		id: "kennis",
 	},
 ];
 

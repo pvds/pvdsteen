@@ -5,7 +5,7 @@ export type Month = string | null;
 export type Year = string | number;
 
 // ---------- Generic helpers ----------
-export interface Expander {
+export type Expander = {
 	id: string;
 	text?: string;
 	textAlt?: string;
@@ -13,36 +13,36 @@ export interface Expander {
 	triggerText?: string;
 	triggerTextAlt?: string;
 	triggerOnce?: boolean;
-}
+};
 
-export interface DatePoint {
+export type DatePoint = {
 	month: Month;
 	year: Year;
-}
+};
 
-export interface DefinitionItem {
+export type DefinitionItem = {
 	term: string;
 	def: string;
 	id?: string;
 	class?: string;
-}
+};
 
-export interface SkillItem {
+export type SkillItem = {
 	title: string;
 	ariaValue?: string | number;
 	value?: string | number;
 	text?: string;
 	textAlt?: string;
-}
+};
 
-export interface SkillSection {
+export type SkillSection = {
 	title: string;
 	type: "line" | "chart" | "dots";
 	skills: SkillItem[];
-}
+};
 
 // ---------- Top-level sections ----------
-export interface Meta {
+export type Meta = {
 	language: string;
 	title: string;
 	description: string;
@@ -51,21 +51,22 @@ export interface Meta {
 	location: string;
 	region: string;
 	slug?: string;
-}
+};
 
-export interface NavItem {
+export type NavItem = {
 	title: string;
-}
+	id: string;
+};
 
-export interface Card {
+export type Card = {
 	name: string;
 	profession: {
 		first: string;
 		second: string;
 	};
-}
+};
 
-export interface LinkItem {
+export type LinkItem = {
 	text: string;
 	ref: string;
 	slug: string;
@@ -73,9 +74,9 @@ export interface LinkItem {
 	visible: boolean;
 	target?: "_blank" | "_self" | string;
 	download?: boolean;
-}
+};
 
-export interface About {
+export type About = {
 	title: string;
 	intro: {
 		content: string;
@@ -88,9 +89,9 @@ export interface About {
 	languages: SkillSection;
 	soft: SkillSection;
 	interests: SkillSection;
-}
+};
 
-export interface ExperienceTimelineItem {
+export type ExperienceTimelineItem = {
 	from: DatePoint;
 	to: DatePoint;
 	hidden?: boolean;
@@ -98,28 +99,28 @@ export interface ExperienceTimelineItem {
 	company: string;
 	content: string;
 	expander?: Expander;
-}
+};
 
-export interface Experience {
+export type Experience = {
 	title: string;
 	timeline: ExperienceTimelineItem[];
-}
+};
 
-export interface EducationTimelineItem {
+export type EducationTimelineItem = {
 	from: DatePoint;
 	to: DatePoint;
 	function: string;
 	institution: string;
 	content: string;
 	expander?: Expander;
-}
+};
 
-export interface Education {
+export type Education = {
 	title: string;
 	timeline: EducationTimelineItem[];
-}
+};
 
-export interface ReferenceItem {
+export type ReferenceItem = {
 	image: string;
 	alt: string;
 	author: string;
@@ -127,14 +128,14 @@ export interface ReferenceItem {
 	company: string;
 	content: string;
 	expander?: Expander;
-}
+};
 
-export interface References {
+export type References = {
 	title: string;
 	reference: ReferenceItem[];
-}
+};
 
-export interface Knowledge {
+export type Knowledge = {
 	title: string;
 	content: string;
 	programming: SkillSection;
@@ -146,9 +147,9 @@ export interface Knowledge {
 	cmsFrameworks: SkillSection;
 	packageManagers: SkillSection;
 	buildTools: SkillSection;
-}
+};
 
-export interface Content {
+export type Content = {
 	meta: Meta;
 	nav: NavItem[];
 	card: Card;
@@ -158,4 +159,4 @@ export interface Content {
 	education: Education;
 	references: References;
 	knowledge: Knowledge;
-}
+};
