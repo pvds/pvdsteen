@@ -9,7 +9,7 @@
 		"touch": {
 			"transformation": {
 				"type": "background",
-				"backgroundColor": "#2A2A2A",
+				"backgroundColor": "#222",
 				"backgroundRadius": 0,
 				"imageScale": 0.7
 			},
@@ -18,14 +18,14 @@
 		"webAppManifest": {
 			"transformation": {
 				"type": "background",
-				"backgroundColor": "#2A2A2A",
+				"backgroundColor": "#222",
 				"backgroundRadius": 0,
 				"imageScale": 0.7
 			},
-			"backgroundColor": "#2A2A2A",
+			"backgroundColor": "#222",
 			"name": "Peter van der Steen",
 			"shortName": "PvdS",
-			"themeColor": "#2A2A2A"
+			"themeColor": "#d46911"
 		}
 	},
 	"path": "%sveltekit.assets%/pwa/"
