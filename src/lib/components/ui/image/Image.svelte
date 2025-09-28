@@ -1,5 +1,5 @@
 <script>
-import { base } from "$app/paths";
+import { resolve } from "$app/paths";
 import { IMAGE_SIZES } from "$config";
 import metadata from "$data/generated/meta/images.json";
 
@@ -80,7 +80,10 @@ const hasAlpha = $derived(meta?.hasAlpha);
  */
 const srcset = (sizes) =>
 	sizes
-		.map((size) => `${base}${directory}/${image}-${size}.webp ${size}w`)
+		.map(
+			(size) =>
+				`${resolve("/")}${directory}/${image}-${size}.webp ${size}w`,
+		)
 		.join(", ");
 </script>
 
@@ -98,7 +101,7 @@ class:drop-shadow-[0_6px_18px_rgba(0,0,0,0.25)]={loadedImage && maskIndex}>
 		{/if}
 		<picture>
 			<source srcset={srcset(IMAGE_SIZES)} sizes={sizes} type="image/webp" />
-			<img src={`${base}${directory}/${image}-1280.webp`} {alt}
+			<img src={`${resolve('/')}${directory}/${image}-1280.webp`} {alt}
 				class="{POSITION_CLASSES} {positionClass} {classes} {height} {width}"
 				class:opacity-0={!loadedImage}
 				loading={priority ? "eager" : "lazy"}
