@@ -36,21 +36,20 @@ export const getSeo = (entry, jsonLdType = "WebPage", items = []) => {
 		description: "description placeholder",
 		keywords: "keywords placeholder",
 		index: false,
-		jsonld: jsonld,
+		jsonld,
 	};
 };
 
 /**
  * Fetch and process a specific page by its slug.
- * @param {string} slug - The slug to fetch.
+ * @param {string} _slug - The slug to fetch.
  * @returns {PageEntry} - The processed fields.
  * @throws {Error} - Throws a SvelteKit error if the page is not found.
  */
-export const getPage = (slug) => {
-	/** @type {PageEntry} */
-	const homePageEntry = {
+export const getHome = (_slug) => {
+	return {
 		meta: {
-			id: "placeholder-home", // or any unique string/UUID your system expects
+			id: "home-en", // or any unique string/UUID your system expects
 			type: "Entry",
 			createdAt: new Date().toISOString(),
 			updatedAt: new Date().toISOString(),
@@ -59,10 +58,8 @@ export const getPage = (slug) => {
 		fields: {
 			title: "Home",
 			slug: "home",
-			seoDescription: "Placeholder home page",
+			seoDescription: "Peter van der Steen - Web Developer",
 			seoIndex: true,
-			intro: "Welcome to our placeholder homepage",
 		},
 	};
-	return homePageEntry;
 };

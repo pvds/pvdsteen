@@ -57,7 +57,7 @@ export type BaseFields = {
 	seoIndex: boolean;
 	hidden?: boolean;
 	header?: string;
-	intro: string;
+	intro?: string;
 	content?: string;
 	sections?: SectionFields[];
 	outro?: string;
@@ -77,8 +77,7 @@ export type SectionFields = {
 export type PageFields = BaseFields & {
 	menuTitle?: string;
 	heroImage?: ImageField;
-	outroImage?: ImageField;
-	children?: (PageFields | ServiceFields)[];
+	children?: PageFields[];
 };
 
 export type PageEntry = {

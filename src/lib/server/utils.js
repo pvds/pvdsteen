@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { marked } from "marked";
 import { gfmHeadingId } from "marked-gfm-heading-id";
 import { resolve } from "$app/paths";
@@ -70,6 +72,18 @@ export const markdownToHtml = (markdown, breaks = false) => {
 		prependBasePath,
 	);
 	return htmlProcessor(markdown);
+};
+
+/**
+ * Convert contents of markdown file to HTML
+ * @param {string} file
+ * @return {string}
+ */
+export const markdownFileToHtml = (file) => {
+	if (!file) return "";
+	const markdown = readFileSync(path.resolve(file), "utf-8");
+	if (!markdown) return "";
+	return markdownToHtml(markdown);
 };
 
 /**

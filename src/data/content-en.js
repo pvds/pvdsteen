@@ -12,6 +12,8 @@
  * @typedef {import('./content.js').Content} Content
  **/
 
+import { markdownFileToHtml } from "$lib/server/utils.js";
+
 /** @type {Meta} */
 export const meta = {
 	language: "en",
@@ -90,10 +92,12 @@ export const links = [
 export const about = {
 	title: "About me",
 	intro: {
-		content: "./content_md/about-intro.md",
+		content: markdownFileToHtml("src/data/content-en/about-intro.md"),
 		expander: {
 			id: "about-intro-expander",
-			content: "./content_md/about-intro-expander.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/about-intro-expander.md",
+			),
 			triggerText: "read more",
 			triggerTextAlt: "less is more",
 			triggerOnce: false,
@@ -285,13 +289,16 @@ export const experience = {
 			function:
 				'Front-end developer - <span class="nowrap">UX designer</span>',
 			company: "Your company?",
-			content: "./content_md/experience-timeline-your-company.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/experience-timeline-your-company.md",
+			),
 			expander: {
 				id: "timeline-me-expander",
 				text: "why me?",
 				textAlt: "closing this would ruin my day",
-				content:
-					"./content_md/experience-timeline-your-company-expander.md",
+				content: markdownFileToHtml(
+					"src/data/content-en/experience-timeline-your-company-expander.md",
+				),
 			},
 		},
 		{
@@ -305,7 +312,9 @@ export const experience = {
 			},
 			function: "FE/UX development specialist",
 			company: "Priva",
-			content: "./content_md/experience-timeline-priva.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/experience-timeline-priva.md",
+			),
 		},
 		{
 			from: {
@@ -318,13 +327,16 @@ export const experience = {
 			},
 			function: "Front-end developer",
 			company: "Just Walk",
-			content: "./content_md/experience-timeline-just-walk.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/experience-timeline-just-walk.md",
+			),
 			expander: {
 				id: "timeline-justwalk-expander",
 				text: "detailed explanation",
 				textAlt: "less is more..",
-				content:
-					"./content_md/experience-timeline-just-walk-expander.md",
+				content: markdownFileToHtml(
+					"src/data/content-en/experience-timeline-just-walk-expander.md",
+				),
 			},
 		},
 		{
@@ -339,8 +351,9 @@ export const experience = {
 			function:
 				'Owner - <span class="nowrap">UX Designer</span> / <span class="nowrap">Developer</span>',
 			company: "Solid Core Web Solutions",
-			content:
-				"./content_md/experience-timeline-solid-core-web-solutions.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/experience-timeline-solid-core-web-solutions.md",
+			),
 		},
 		{
 			from: {
@@ -353,7 +366,9 @@ export const experience = {
 			},
 			function: "Partner - Developer",
 			company: "Triangle Productions",
-			content: "./content_md/experience-timeline-triangle-productions.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/experience-timeline-triangle-productions.md",
+			),
 		},
 		{
 			from: {
@@ -366,8 +381,9 @@ export const experience = {
 			},
 			function: "Mechanical Designer",
 			company: "Bluewater Energy Services",
-			content:
-				"./content_md/experience-timeline-bluewater-energy-services-designer.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/experience-timeline-bluewater-energy-services-designer.md",
+			),
 		},
 		{
 			from: {
@@ -380,8 +396,9 @@ export const experience = {
 			},
 			function: "Technical Document Controller",
 			company: "Bluewater Energy Services",
-			content:
-				"./content_md/experience-timeline-bluewater-energy-services-controller.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/experience-timeline-bluewater-energy-services-controller.md",
+			),
 		},
 	],
 };
@@ -401,12 +418,16 @@ export const education = {
 			},
 			function: "Interactive Media",
 			institution: "Amsterdam University of Applied Sciences",
-			content: "./content_md/education-timeline.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/education-timeline.md",
+			),
 			expander: {
 				id: "timeline-iam-expander",
 				text: "more information",
 				textAlt: "less is more..",
-				content: "./content_md/education-timeline-expander.md",
+				content: markdownFileToHtml(
+					"src/data/content-en/education-timeline-expander.md",
+				),
 			},
 		},
 	],
@@ -422,13 +443,16 @@ export const references = {
 			author: "Marius van der Kooy",
 			function: "Manager",
 			company: "Just Walk",
-			content: "./content_md/references-reference-just-walk-marius.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/references-reference-just-walk-marius.md",
+			),
 			expander: {
 				id: "reference-marius-expander",
 				text: "read more",
 				textAlt: "less is more..",
-				content:
-					"./content_md/references-reference-just-walk-marius-expander.md",
+				content: markdownFileToHtml(
+					"src/data/content-en/references-reference-just-walk-marius-expander.md",
+				),
 			},
 		},
 		{
@@ -437,7 +461,9 @@ export const references = {
 			alt: "reference by",
 			function: "Owner",
 			company: "Bizway",
-			content: "./content_md/references-reference-bizway.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/references-reference-bizway-bart.md",
+			),
 		},
 		{
 			image: "avatar-danny",
@@ -445,7 +471,9 @@ export const references = {
 			alt: "reference by",
 			function: "Owner",
 			company: "Just Walk",
-			content: "./content_md/references-reference-just-walk-2.md",
+			content: markdownFileToHtml(
+				"src/data/content-en/references-reference-just-walk-danny.md",
+			),
 		},
 	],
 };
@@ -826,7 +854,7 @@ const buildTools = {
 /** @type {Knowledge} */
 export const knowledge = {
 	title: "Knowledge",
-	content: "./content_md/knowledge.md",
+	content: markdownFileToHtml("src/data/content-en/knowledge.md"),
 	programming,
 	techniques,
 	contents,

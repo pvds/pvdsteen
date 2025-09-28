@@ -4,6 +4,9 @@ import Hero from "$layout/Hero.svelte";
 
 let { data } = $props();
 let { header, intro, sections } = data.page.fields;
+let content = data.content;
+
+console.log("Page content:", content);
 </script>
 
 <Hero title={header}>
