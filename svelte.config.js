@@ -42,11 +42,18 @@ const config = {
 		}),
 		paths: {
 			base: production ? "" : "/pvdsteen",
+			relative: false,
 		},
 		prerender: {
 			origin: production
 				? "https://pvdsteen.com"
 				: "https://pvds.github.io",
+			handleHttpError: ({ path, referrer, message }) => {
+				console.error(
+					`[prerender] ${message} at ${path} (linked from ${referrer})`,
+				);
+				throw new Error(`Prerendering failed, see console for details`);
+			},
 		},
 		env: {
 			publicPrefix: "",
