@@ -1,6 +1,4 @@
 <script>
-import { getImageName } from "$lib/helpers/image.js";
-import Image from "$ui/image/Image.svelte";
 import Section from "./Section.svelte";
 
 /**
