@@ -52,7 +52,7 @@ let {
 // 	loadMetadata();
 // });
 
-const IMAGE_DIR = "/images";
+const IMAGE_DIR = "images";
 const POSITION_CLASSES = "absolute object-cover";
 
 const usePlaceholder = false;
