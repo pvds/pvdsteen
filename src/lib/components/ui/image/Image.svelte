@@ -2,6 +2,7 @@
 import { resolve } from "$app/paths";
 import { IMAGE_SIZES } from "$config";
 import metadata from "$data/generated/meta/images.json";
+import { reduceRatio } from "$lib/helpers/ratio.js";
 
 /**
  * @typedef {import('$types/content').ImageMeta} ImageMeta
@@ -70,7 +71,9 @@ const width = $derived(widthClass ? widthClass : "w-full");
 const directory = $derived(`${IMAGE_DIR}/${isLocal ? "local" : "cms"}`);
 
 const placeholder = $derived(meta?.placeholder);
-const aspectRatio = $derived(meta ? `${meta.width}/${meta.height}` : "1/1");
+const aspectRatio = $derived(
+	meta ? reduceRatio(Number(meta.width), Number(meta.height)) : "1/1",
+);
 const hasAlpha = $derived(meta?.hasAlpha);
 
 /**
