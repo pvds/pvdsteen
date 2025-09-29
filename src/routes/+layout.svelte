@@ -24,16 +24,16 @@ onNavigate((navigation) => {
 <Seo/>
 
 <div
-	class="relative flex flex-col p-4 md:flex-row gap-4 app min-h-svh max-w-6xl mx-auto">
+	class="relative flex flex-col p-4 md-mid:flex-row gap-4 app min-h-svh max-w-6xl mx-auto">
 	<Skip />
 
-	<div class="md:max-w-xs">
+	<div class="md-mid:w-[18rem] flex-none">
 		<Header>
 			<Branding />
 		</Header>
 	</div>
 
-	<main id="main-content" class="grow bg-black-darkest rounded-xs" tabindex="-1">
+	<main id="main-content" class="flex flex-col gap-4" tabindex="-1">
 		{@render children()}
 	</main>
 </div>

@@ -1,22 +1,27 @@
 <script>
-import ContentSection from "$layout/ContentSection.svelte";
-import Hero from "$layout/Hero.svelte";
+import Section from "$layout/Section.svelte";
 
 let { data } = $props();
-let { header, intro, sections } = data.page.fields;
-let content = data.content;
-
-console.log("Page content:", content);
+let { header, intro } = data.page.fields;
+let { about, experience, education, references, knowledge } = data.content;
 </script>
 
-<Hero title={header}>
-	{@html intro}
-</Hero>
+<Section title={about.title} classes="bg-black-darkest rounded-xs">
+	{@html about.intro.content}
+</Section>
 
-{#if sections?.length}
-	{#each sections as section, i}
-	<ContentSection size="lg" title={section.header || section.title}>
-		{@html section.content}
-	</ContentSection>
-	{/each}
-{/if}
+<Section title={experience.title} classes="bg-black-darkest rounded-xs">
+
+</Section>
+
+<Section title={education.title} classes="bg-black-darkest rounded-xs">
+
+</Section>
+
+<Section title={references.title} classes="bg-black-darkest rounded-xs">
+
+</Section>
+
+<Section title={knowledge.title} classes="bg-black-darkest rounded-xs">
+
+</Section>

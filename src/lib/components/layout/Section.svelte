@@ -46,7 +46,7 @@ let titleSpacing = $derived(spacingDefault[size].title);
 
 {#snippet content()}
 	{#if title}
-		<h2 class="{titleSpacing} text-primary-darkest text-2xl md:text-3xl font-bold">{title}</h2>
+		<h2 class="{titleSpacing} text-2xl md:text-3xl font-bold">{title}</h2>
 	{/if}
 	{@render children?.()}
 {/snippet}
