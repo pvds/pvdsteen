@@ -1,8 +1,8 @@
 <script>
 import { page } from "$app/state";
-import Hero from "$layout/Hero.svelte";
+import Section from "$layout/Section.svelte";
 </script>
 
-<Hero title={page.status.toString()}>
+<Section title={page.status.toString()}>
 	{page?.error?.message}
-</Hero>
+</Section>

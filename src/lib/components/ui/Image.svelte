@@ -2,10 +2,10 @@
 import { resolve } from "$app/paths";
 import { IMAGE_SIZES } from "$config";
 import metadata from "$data/generated/meta/images.json";
-import { reduceRatio } from "$lib/helpers/ratio.js";
+import { reduceRatio } from "../../helpers/ratio.js";
 
 /**
- * @typedef {import('$types/content').ImageMeta} ImageMeta
+ * @typedef {import('$types/content.js').ImageMeta} ImageMeta
  * @typedef {Record<string, ImageMeta>} Metadata
  * @typedef {Object} Props
  * @property {string} image

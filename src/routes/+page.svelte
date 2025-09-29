@@ -2,7 +2,6 @@
 import Section from "$layout/Section.svelte";
 
 let { data } = $props();
-let { header, intro } = data.page.fields;
 let { about, experience, education, references, knowledge } = data.content;
 </script>
 

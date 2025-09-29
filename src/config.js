@@ -21,7 +21,7 @@ export const ORG_DESCRIPTION =
 	"FE developer with a passion for UX and Design Systems";
 export const ORG_LOGO_URL = "images/logo.svg";
 export const ORG_VAT_ID = ""; // no tax requirements yet
-export const ORG_LINKEDIN = "https://linkedin.com/company/pvdsteen";
+export const ORG_LINKEDIN = "https://linkedin.com/in/pvdsteen";
 export const ORG_SAMEAS = [ORG_LINKEDIN];
 
 // Owner
@@ -116,17 +116,11 @@ export const THRESHOLDS = {
  */
 export const BUTTON_THEME = {
 	primary:
-		"bg-accent-dark hover:bg-accent-darker font-semibold text-white rounded-full",
+		"bg-primary-dark hover:bg-primary-darker font-semibold text-white rounded-full",
 	secondary:
-		"border-2 border-primary-darker font-semibold hover:inset-ring-1 rounded-full",
+		"border-2 border-primary-dark hover:border-primary-darker font-semibold rounded-full",
 	tertiary:
-		"hover:text-accent-dark font-semibold underline underline-offset-2",
-};
-
-export const BUTTON_SIZE = {
-	sm: "px-4 py-2 text-sm",
-	md: "max-md:px-4 md:px-5 py-2 max-md:text-sm md:text-base",
-	lg: "max-md:px-4 md:max-lg:px-5 lg:px-6 py-2 max-md:text-sm lg:text-lg",
+		"hover:text-secondary-dark font-semibold underline underline-offset-2",
 };
 
 // Unicode

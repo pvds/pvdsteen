@@ -6,7 +6,7 @@ import Skip from "$global/Skip.svelte";
 import Seo from "$global/seo/Seo.svelte";
 import "../app.css";
 
-let { children, data } = $props();
+let { children } = $props();
 const disableViewTransitions = true;
 
 onNavigate((navigation) => {

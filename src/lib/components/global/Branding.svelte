@@ -5,7 +5,7 @@ import {
 	OWNER_NAME,
 	OWNER_PROFESSION,
 } from "$config";
-import Image from "$ui/image/Image.svelte";
+import Image from "$ui/Image.svelte";
 </script>
 
 <section role="banner" class="branding flex flex-col items-center text-center">
