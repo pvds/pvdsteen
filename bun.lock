@@ -61,7 +61,7 @@
 
     "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.1.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ=="],
 
-    "@evilmartians/lefthook": ["@evilmartians/lefthook@1.13.4", "", { "os": [ "linux", "win32", "darwin", ], "cpu": [ "x64", "ia32", "arm64", ], "bin": { "lefthook": "bin/index.js" } }, "sha512-TaBms9BVxbuafOd/M4vftS1TlcFDqXa5dYAHxraN/H99MDXumT40YfGZrSW12BgivfA7GKs5lNfSms6a/3hpfQ=="],
+    "@evilmartians/lefthook": ["@evilmartians/lefthook@1.13.5", "", { "os": [ "linux", "win32", "darwin", ], "cpu": [ "x64", "ia32", "arm64", ], "bin": { "lefthook": "bin/index.js" } }, "sha512-Zh9ykP8zb2tniASeAE36cHEwSsD2frCLjRa4OeZ5X3zQY1JIprF8cxRsy3pnyDn/q3CQGhFjsAxfgvMqpsq0qg=="],
 
     "@formatjs/ecma402-abstract": ["@formatjs/ecma402-abstract@2.3.4", "", { "dependencies": { "@formatjs/fast-memoize": "2.2.7", "@formatjs/intl-localematcher": "0.6.1", "decimal.js": "^10.4.3", "tslib": "^2.8.0" } }, "sha512-qrycXDeaORzIqNhBOx0btnhpD1c+/qFIHAN9znofuMJX6QBwtbrmlpWfD4oiUUD2vJUOIYFA/gYtg2KAMGG7sA=="],
 
