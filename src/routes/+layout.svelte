@@ -1,16 +1,12 @@
 <script>
 import { onNavigate } from "$app/navigation";
 import Branding from "$global/Branding.svelte";
-import Footer from "$global/Footer.svelte";
 import Header from "$global/Header.svelte";
-import NavPrimary from "$global/NavPrimary.svelte";
 import Skip from "$global/Skip.svelte";
 import Seo from "$global/seo/Seo.svelte";
 import "../app.css";
 
 let { children, data } = $props();
-let { nav } = data;
-
 const disableViewTransitions = true;
 
 onNavigate((navigation) => {
@@ -28,17 +24,16 @@ onNavigate((navigation) => {
 <Seo/>
 
 <div
-	class="relative flex flex-col app min-h-svh text-primary-darkest">
+	class="relative flex flex-col p-4 md:flex-row gap-4 app min-h-svh max-w-6xl mx-auto">
 	<Skip />
 
-	<Header>
-		<Branding />
-		<NavPrimary menu={nav.primary}/>
-	</Header>
+	<div class="md:max-w-xs">
+		<Header>
+			<Branding />
+		</Header>
+	</div>
 
-	<main id="main-content" class="grow" tabindex="-1">
+	<main id="main-content" class="grow bg-black-darkest rounded-xs" tabindex="-1">
 		{@render children()}
 	</main>
-
-	<Footer />
 </div>

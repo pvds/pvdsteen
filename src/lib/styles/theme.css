@@ -68,6 +68,13 @@
 	--color-\*: initial;
 
 	--color-white: hsl(0, 0%, 100%);
+
+	--color-black-lightest: var(--black-50);
+	--color-black-lighter: var(--black-100);
+	--color-black-light: var(--black-200);
+	--color-black-dark: var(--black-700);
+	--color-black-darker: var(--black-800);
+	--color-black-darkest: var(--black-900);
 	--color-black: var(--black-950);
 
 	--color-primary-lightest: var(--primary-50);

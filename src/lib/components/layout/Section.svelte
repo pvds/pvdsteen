@@ -9,8 +9,6 @@
  * @property {import('svelte').Snippet} [children]
  */
 
-import { SPACING_X_CLASSES } from "$config";
-
 /** @type {Props} */
 let {
 	classes,
@@ -21,25 +19,23 @@ let {
 	children,
 } = $props();
 
-const spacingY = {
+const spacingDefault = {
 	sm: {
-		default: "md-mid:py-6",
+		block: "p-4 md-mid:p-6",
 		title: "mb-4 md-mid:mb-6",
 	},
 	md: {
-		default: "py-2 md-mid:py-10",
+		block: "p-6 md-mid:p-10",
 		title: "mb-6 md-mid:mb-8",
 	},
 	lg: {
-		default: "py-6 md-mid:py-14",
+		block: "p-10 md-mid:p-16",
 		title: "mb-8 md-mid:mb-10",
 	},
 };
 
-let spacing = $derived(
-	customSpacing || `${spacingY[size].default} ${SPACING_X_CLASSES}`,
-);
-let titleSpacing = $derived(spacingY[size].title);
+let spacing = $derived(customSpacing || spacingDefault[size].block);
+let titleSpacing = $derived(spacingDefault[size].title);
 </script>
 
 <section class="relative {classes} {spacing}">

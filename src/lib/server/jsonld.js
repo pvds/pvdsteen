@@ -39,8 +39,8 @@ import {
 	ORG_SAMEAS,
 	ORG_VAT_ID,
 	OWNER_IMAGE,
-	OWNER_JOB_TITLE,
 	OWNER_NAME,
+	OWNER_PROFESSION,
 	OWNER_SAMEAS,
 	SITE_PREVIEW_URL,
 	URL_BASE_PRODUCTION,
@@ -115,7 +115,7 @@ function getHomePage(page) {
 					{
 						"@type": "Person",
 						name: OWNER_NAME,
-						jobTitle: OWNER_JOB_TITLE,
+						jobTitle: OWNER_PROFESSION,
 						worksFor: {
 							"@type": "Organization",
 							name: ORG_NAME,

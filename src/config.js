@@ -26,7 +26,8 @@ export const ORG_SAMEAS = [ORG_LINKEDIN];
 
 // Owner
 export const OWNER_NAME = "Peter van der Steen";
-export const OWNER_JOB_TITLE = "FE Platform developer";
+export const OWNER_LOCATION = "Leiden, The Netherlands";
+export const OWNER_PROFESSION = "FE Platform developer";
 export const OWNER_IMAGE = "images/local/pvdsteen-800.webp";
 export const OWNER_LINKEDIN = "https://www.linkedin.com/in/pvdsteen";
 export const OWNER_SAMEAS = [OWNER_LINKEDIN];
@@ -100,9 +101,6 @@ export const DEBUG_PORT = 9222;
 
 // Params
 export const PARAMS_PAGES_EXCLUDE = ["home"];
-
-// Spacing
-export const SPACING_X_CLASSES = "px-4 sm:px-6 md:px-8";
 
 // Lighthouse
 export const THRESHOLDS = {

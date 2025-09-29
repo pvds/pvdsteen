@@ -27,7 +27,7 @@ let {
 	priority,
 	classes,
 	maskIndex,
-	isLocal = false,
+	isLocal = true,
 	heightClass = "h-full",
 	widthClass = "w-full",
 	positionClass = "object-center",
