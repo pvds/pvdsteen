@@ -1,8 +1,8 @@
 # Pvdsteen brand guide
 
-This unified document ensures that every
-aspect of the brand—from mission to logo usage—remains consistent, empathetic,
-and aligned with the practice’s values.
+This unified document ensures that every aspect of the brand—from mission to
+logo usage—remains consistent, empathetic, and aligned with the practice’s
+values.
 
 ---
 
@@ -11,15 +11,11 @@ and aligned with the practice’s values.
 **Brand Name**  
 Peter van der Steen
 
-**Tagline**  
+**Tagline**
 
-
-**Who We Are**  
-
+**Who We Are**
 
 ### My Mission
-
-
 
 ### My Vision
 
@@ -120,7 +116,7 @@ with the brand’s values of empathy, growth, and inclusion.
 
 ## 4. Typography
 
-**Typeface**: **Nunito** (Weights: 400, 600, 700)
+**Typeface**: **Quicksand** (Weights: 300, 400, 500, 600, 700)
 
 - **Headlines (H1–H3)**
     - Bold (700), more prominent sizes

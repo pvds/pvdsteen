@@ -119,7 +119,7 @@
 
 	/* === FONT === */
 	--font-sans:
-		"Nunito", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Quicksand", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 	--font-mono:
