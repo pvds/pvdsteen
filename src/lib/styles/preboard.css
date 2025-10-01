@@ -58,6 +58,12 @@ body {
 	overflow: clip;
 }
 
+/* Fix flexbox and grid overflowing their container
+   ====================================================================== */
+:where(.grid > *, .flex > *) {
+	min-width: 0;
+}
+
 /* Smooth scrolling for users that don't prefer reduced motion
    ====================================================================== */
 @media (prefers-reduced-motion: no-preference) {
@@ -94,8 +100,10 @@ body {
 
 /* Wrap text to avoid horizontal overflow
    ====================================================================== */
-:where(p, h1, h2, h3, h4, h5, h6) {
-	overflow-wrap: break-word;
+:where(p, li, dd, dt, blockquote, h1, h2, h3, h4, h5, h6, a, span.wrap) {
+	overflow-wrap: anywhere; /* good for URLs/emails/longwords */
+	word-break: normal;
+	hyphens: auto; /* requires lang= on html/body/element */
 }
 
 /* Wrap text to avoid horizontal overflow
