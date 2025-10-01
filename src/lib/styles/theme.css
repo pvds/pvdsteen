@@ -69,33 +69,36 @@
 
 	--color-white: hsl(0, 0%, 100%);
 
-	--color-black-lightest: var(--black-50);
-	--color-black-lighter: var(--black-100);
-	--color-black-light: var(--black-200);
+	--color-black-lightest: var(--black-100);
+	--color-black-lighter: var(--black-200);
+	--color-black-light: var(--black-300);
 	--color-black-dark: var(--black-700);
 	--color-black-darker: var(--black-800);
 	--color-black-darkest: var(--black-900);
 	--color-black: var(--black-950);
 
-	--color-primary-lightest: var(--primary-50);
-	--color-primary-lighter: var(--primary-100);
-	--color-primary-light: var(--primary-200);
+	--color-primary-lightest: var(--primary-100);
+	--color-primary-lighter: var(--primary-200);
+	--color-primary-light: var(--primary-300);
+	--color-primary: var(--primary-500);
 	--color-primary-dark: var(--primary-700);
 	--color-primary-darker: var(--primary-800);
 	--color-primary-darkest: var(--primary-900);
 	--color-primary-black: var(--primary-950);
 
-	--color-secondary-lightest: var(--secondary-50);
-	--color-secondary-lighter: var(--secondary-100);
-	--color-secondary-light: var(--secondary-200);
+	--color-secondary-lightest: var(--secondary-100);
+	--color-secondary-lighter: var(--secondary-200);
+	--color-secondary-light: var(--secondary-300);
+	--color-secondary: var(--secondary-500);
 	--color-secondary-dark: var(--secondary-700);
 	--color-secondary-darker: var(--secondary-800);
 	--color-secondary-darkest: var(--secondary-900);
 	--color-secondary-black: var(--secondary-950);
 
-	--color-accent-lightest: var(--accent-50);
-	--color-accent-lighter: var(--accent-100);
-	--color-accent-light: var(--accent-200);
+	--color-accent-lightest: var(--accent-100);
+	--color-accent-lighter: var(--accent-200);
+	--color-accent-light: var(--accent-300);
+	--color-accent: var(--accent-500);
 	--color-accent-dark: var(--accent-700);
 	--color-accent-darker: var(--accent-800);
 	--color-accent-darkest: var(--accent-900);
