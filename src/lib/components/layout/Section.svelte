@@ -21,7 +21,7 @@ let {
 
 const spacingDefault = {
 	sm: {
-		block: "p-4 md-mid:p-6",
+		block: "",
 		title: "mb-4 md-mid:mb-6",
 	},
 	md: {
@@ -46,7 +46,13 @@ let titleSpacing = $derived(spacingDefault[size].title);
 
 {#snippet content()}
 	{#if title}
-		<h2 class="{titleSpacing} text-2xl md:text-3xl font-bold">{title}</h2>
+		{#if size === "lg"}
+			<h1 class="{titleSpacing} text-3xl md:text-4xl font-bold">{title}</h1>
+		{:else if size === "md"}
+			<h2 class="{titleSpacing} text-2xl md:text-3xl font-bold">{title}</h2>
+		{:else if size === "sm"}
+			<h3 class="{titleSpacing} text-xl md:text-2xl font-light text-black-light">{title}</h3>
+		{/if}
 	{/if}
 	{@render children?.()}
 {/snippet}
