@@ -15,9 +15,7 @@ optimized.
     - [Step 3: Override Metadata in `+page.server.js`](#step-3-override-metadata-in-pageserverjs)
     - [Extendable Custom Meta Tags](#extendable-custom-meta-tags)
 - [Properties](#properties)
-- [Important Notes](#important-notes)
 - [Credits](#credits)
-- [License](#license)
 
 ---
 
