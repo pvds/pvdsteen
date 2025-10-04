@@ -160,20 +160,20 @@ function echo(value) {
 
 ### 3.5 Extending/Implementing Classes
 
-````js
+```js
 /**
-* @class
-* @extends {Array<string>}
-  */
-  class StringArray extends Array {
-  /**
-	* @returns {number}
-	  */
-	  get lengthSquared() {
-	  return this.length * this.length;
-	  }
-	  }
-	  ```
+ * @class
+ * @extends {Array<string>}
+ */
+class StringArray extends Array {
+	/**
+	 * @returns {number}
+	 **/
+	get lengthSquared() {
+		return this.length * this.length;
+	}
+}
+```
 
 ### 3.6 Destructuring Parameters
 
@@ -181,12 +181,12 @@ You can provide JSDoc for destructured objects:
 
 ```js
 /**
-* @param {{ name: string, age?: number }} user
-  */
-  function printUserInfo({ name, age }) {
-  console.log(`User: \${name}, Age: \${age}`);
-  }
-````
+ * @param {{ name: string, age?: number }} user
+ */
+function printUserInfo({ name, age }) {
+	console.log(`User: \${name}, Age: \${age}`);
+}
+```
 
 ---
 
@@ -274,7 +274,6 @@ Example partial `tsconfig.json`:
     ```
 
 3. **Svelte-Specific Patterns**
-
     - Svelte’s `<script>` tags can be in TypeScript mode, but if you prefer
       JSDoc:
 
@@ -393,7 +392,7 @@ A concise collection of resources for JSDoc usage, syntax, and best practices.
 ### Guides & Tutorials
 
 - [Boost your Javascript with JSDoc typing](https://dev.to/samuel-braun/boost-your-javascript-with-jsdoc-typing-3hb3)
-  - extensive comparison of JSDoc and TypeScript.
+    - extensive comparison of JSDoc and TypeScript.
 - [Using JSDoc in JavaScript (LogRocket)](https://blog.logrocket.com/using-jsdoc-javascript/)
   – Beginner-friendly guide.
 - [JSDoc Type Checking in VS Code](https://mariusschulz.com/blog/jsdoc-type-checking-in-vs-code)
