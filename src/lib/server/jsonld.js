@@ -89,7 +89,6 @@ function getPage(page) {
  * @returns {HomePage}
  */
 
-// biome-ignore lint/correctness/noUnusedFunctionParameters: keep page parameter for future use
 function getHomePage(page) {
 	return {
 		"@context": "https://schema.org",
@@ -126,17 +125,20 @@ function getHomePage(page) {
 						alumniOf: [
 							{
 								"@type": "EducationalOrganization",
-								name: "University of Athens",
-							},
-							{
-								"@type": "EducationalOrganization",
-								name: "Leiden University",
+								name: "Amsterdam University of Applied Sciences",
 							},
 						],
 						knowsAbout: [
-							"Systemic Therapy",
-							"Family Therapy",
-							"Mental Health",
+							"Frontend Development",
+							"Software Development",
+							"Web Development",
+							"Web Performance",
+							"User Experience",
+							"Design Systems",
+							"Complex Systems",
+							"Accessibility",
+							"Mentoring",
+							"Agile",
 						],
 					},
 				],
