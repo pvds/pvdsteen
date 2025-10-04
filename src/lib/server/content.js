@@ -31,12 +31,12 @@ export const getSeo = (entry, jsonLdType = "WebPage", items = []) => {
 	}
 	return {
 		...SEO_DEFAULT,
-		title: "title placeholder",
+		title: entry.fields.title,
 		category,
-		description: "description placeholder",
-		keywords: "keywords placeholder",
-		index: false,
-		jsonld,
+		description: entry.fields.seoDescription,
+		keywords: entry.fields.seoKeywords,
+		index: entry.fields.seoIndex,
+		jsonld: jsonld,
 	};
 };
 
