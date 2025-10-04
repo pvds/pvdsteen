@@ -58,6 +58,7 @@ export const getHome = (_slug) => {
 			title: "Home",
 			slug: "/",
 			seoDescription: ORG_DESCRIPTION,
+			seoIndex: true,
 		},
 	};
 };
