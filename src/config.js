@@ -15,10 +15,11 @@ export const SITE_PREVIEW_URL = "images/preview.webp";
 
 // Organization
 export const ORG_NAME = "Peter van der Steen";
-export const ORG_NAME_SUFFIX = "FE Platform developer";
-export const ORG_SLOGAN = "Long term vision, pragmatic solutions";
+export const ORG_NAME_SUFFIX = "platform & design systems lead";
+export const ORG_SLOGAN = "Long-term, pragmatic solutions";
 export const ORG_DESCRIPTION =
-	"FE developer with a passion for UX and Design Systems";
+	"Frontend developer with a passion for UX and design systems. I lead shared platforms" +
+	" enabling teams to ship scalable, performant and accessible products.";
 export const ORG_LOGO_URL = "images/logo.svg";
 export const ORG_VAT_ID = ""; // no tax requirements yet
 export const ORG_LINKEDIN = "https://linkedin.com/in/pvdsteen";
