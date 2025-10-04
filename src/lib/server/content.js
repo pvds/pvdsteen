@@ -7,7 +7,7 @@
  * @typedef {import('$types/global').global} GlobalProps
  */
 
-import { SEO_DEFAULT } from "$config";
+import { ORG_DESCRIPTION, SEO_DEFAULT } from "$config";
 import { getJsonLd } from "./jsonld.js";
 
 /**
@@ -34,7 +34,6 @@ export const getSeo = (entry, jsonLdType = "WebPage", items = []) => {
 		title: entry.fields.title,
 		category,
 		description: entry.fields.seoDescription,
-		keywords: entry.fields.seoKeywords,
 		index: entry.fields.seoIndex,
 		jsonld: jsonld,
 	};
@@ -57,9 +56,8 @@ export const getHome = (_slug) => {
 		},
 		fields: {
 			title: "Home",
-			slug: "home",
-			seoDescription: "Peter van der Steen - Web Developer",
-			seoIndex: true,
+			slug: "/",
+			seoDescription: ORG_DESCRIPTION,
 		},
 	};
 };
