@@ -66,7 +66,6 @@ export const SEO_DEFAULT = {
 	twitter: false,
 	openGraph: true,
 };
-export const SEO_USE_AGGREGATE_RATING = false;
 
 // Files
 export const IMAGES_FILE = "images.json";
