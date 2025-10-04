@@ -31,6 +31,19 @@ export const OWNER_PROFESSION = "FE Platform developer";
 export const OWNER_IMAGE = "images/local/pvdsteen-800.webp";
 export const OWNER_LINKEDIN = "https://www.linkedin.com/in/pvdsteen";
 export const OWNER_SAMEAS = [OWNER_LINKEDIN];
+export const OWNER_ALUMNI_OF = "Amsterdam University of Applied Sciences";
+export const OWNER_KNOWS_ABOUT = [
+	"Frontend Development",
+	"Software Development",
+	"Web Development",
+	"Web Performance",
+	"User Experience",
+	"Design Systems",
+	"Complex Systems",
+	"Accessibility",
+	"Mentoring",
+	"Agile",
+];
 
 // Contact
 export const CONTACT_PHONE = "+31 6 104 25 975";
