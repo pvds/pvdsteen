@@ -4,7 +4,10 @@ declare global {
 	namespace App {
 		// interface Error {}
 		// interface Locals {}
-		// interface PageData {}
+		interface PageData {
+			// make sure this path points to your SEO type export
+			seo: import("$global/seo/Seo.svelte.types").SEOProps;
+		}
 		// interface PageState {}
 		// interface Platform {}
 	}
