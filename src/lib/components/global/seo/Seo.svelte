@@ -1,7 +1,7 @@
 <script>
 import { asset, resolve } from "$app/paths";
 import { page } from "$app/state";
-import { ORG_NAME, ORG_NAME_SUFFIX, ORG_SLOGAN } from "$config";
+import { ORG_NAME, ORG_NAME_SUFFIX, ORG_SLOGAN, SEO_DEFAULT } from "$config";
 import { checkSeo } from "./Seo.helper.js";
 
 /** @typedef {import('./Seo.svelte.types.js').SEOProps} SEOProps */
@@ -24,45 +24,30 @@ const constructTitle = (title, category, separator = " - ") => {
 		: title + separator + categoryPart + ORG_NAME + space + ORG_NAME_SUFFIX;
 };
 
-/** @type {SEOProps['title']} */
-let title = $derived(
-	constructTitle(page.data.seo.title, page.data.seo.category),
-);
-/** @type {SEOProps['description']} */
-let description = $derived(page.data.seo.description);
-/** @type {SEOProps['keywords']} */
-let keywords = $derived(page.data.seo.keywords);
-/** @type {SEOProps['canonical']} */
-let canonical = $derived(page.data.seo.canonical || page.url.href);
-/** @type {SEOProps['siteName']} */
-let siteName = $derived(page.data.seo.siteName);
-/** @type {SEOProps['imageURL']} */
+const seo = $derived(page.data?.seo ?? SEO_DEFAULT);
+
+let title = $derived(constructTitle(seo.title, seo.category));
+let description = $derived(seo.description);
+let keywords = $derived(seo.keywords);
+let canonical = $derived(seo.canonical || page.url.href);
+let siteName = $derived(seo.siteName);
 let imageURL = $derived(
-	page.data.seo?.imageURL ? asset(`/${page.data.seo.imageURL}`) : undefined,
+	page.data.seo?.imageURL ? asset(`/${seo.imageURL}`) : undefined,
 );
-/** @type {SEOProps['logo']} */
-let logo = $derived(
-	page.data.seo?.logo ? asset(`/${page.data.seo.logo}`) : undefined,
-);
-/** @type {SEOProps['author']} */
-let author = $derived(page.data.seo.author);
-/** @type {SEOProps['type']} */
-let type = $derived(page.data.seo.type || "website");
-/** @type {SEOProps['index']} */
-let index = $derived(page.data.seo.index);
-/** @type {SEOProps['twitter']} */
-let twitter = $derived(page.data.seo.twitter || false);
-/** @type {SEOProps['openGraph']} */
-let openGraph = $derived(page.data.seo.openGraph || false);
-/** @type {SEOProps['jsonld']} */
-let jsonld = $derived(page.data.seo.jsonld);
+let logo = $derived(page.data.seo?.logo ? asset(`/${seo.logo}`) : undefined);
+let author = $derived(seo.author);
+let type = $derived(seo.type || "website");
+let index = $derived(seo.index);
+let twitter = $derived(seo.twitter || false);
+let openGraph = $derived(seo.openGraph || false);
+let jsonld = $derived(seo.jsonld);
 
 let ldScript = $derived(
 	`<script type="application/ld+json">${JSON.stringify(jsonld)}${"<"}/script>`,
 );
 
 if (import.meta.env.MODE === "development") {
-	$effect(() => checkSeo(page.data.seo, page.route.id));
+	$effect(() => checkSeo(seo, page.route.id));
 }
 </script>
 
