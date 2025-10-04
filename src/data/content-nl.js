@@ -19,8 +19,6 @@ export const meta = {
 	title: "Peter van der Steen | Front-end developer en user experience designer",
 	description:
 		"Als front-end developer ontwikkel ik een optimale gebruikerservaring met data gedreven interface en interaction design. Bekijk mijn CV!",
-	keywords:
-		"front-end, developer, design, gebruiker, experience, interaction, interface, cv",
 	author: "Peter van der Steen",
 	location: "Leiden, Nederland",
 	region: "Zuid-Holland",

@@ -46,7 +46,6 @@ export type Meta = {
 	language: string;
 	title: string;
 	description: string;
-	keywords: string;
 	author: string;
 	location: string;
 	region: string;

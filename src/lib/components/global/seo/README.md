@@ -51,10 +51,7 @@ export const load = async ({ url }) => {
 	return {
 		seo: {
 			title: "Site name - Slogan",
-			description:
-				"General information about the site",
-			keywords:
-				"keyword1, keyword2, keyword3",
+			description: "General information about the site",
 			imageURL: `${url.origin}/logo.jpg`,
 			siteName: "Site name",
 		},
@@ -67,11 +64,11 @@ export const load = async ({ url }) => {
 Override metadata for specific pages in their respective `+page.server.js`
 files. Metadata defined here will take precedence over the layout defaults.
 
-> In order to access the parent data, you must pass the `parent` function.
-> If you want to reuse parent data in a deeper level, like accessing `blog` 
-> data in a `blog/[slug]` page, you should use a `+layout.server.js` file in
-> the `blog` directory and set the shared data there for it to be accessible
-> in all child pages using the `parent` function.
+> In order to access the parent data, you must pass the `parent` function. If
+> you want to reuse parent data in a deeper level, like accessing `blog` data in
+> a `blog/[slug]` page, you should use a `+layout.server.js` file in the `blog`
+> directory and set the shared data there for it to be accessible in all child
+> pages using the `parent` function.
 
 ```javascript
 // +page.server.js
@@ -82,21 +79,16 @@ export const load = async ({ parent }) => {
 	const seo = {
 		...parentData?.seo,
 		description: "Mikrouli is a platform for systemic change",
-		keywords:
-			"systemic therapy, systemic change, systemic coaching, individual therapy, family therapy, organizational therapy, online therapy",
 	};
 
 	return { seo };
 };
-
 ```
 
 ### Extendable Custom Meta Tags
 
-You can extend the metadata in `+layout.svelte` with custom meta tags by using 
-the 
-`children` 
-slot:
+You can extend the metadata in `+layout.svelte` with custom meta tags by using
+the `children` slot:
 
 ```svelte
 <Seo>
@@ -112,7 +104,6 @@ slot:
 | ------------- | --------------------------------------------------------- | ------------------- | ---------------------------- |
 | `title`       | The title of the page                                     | `string`            | `""`                         |
 | `description` | The description of the page                               | `string`            | `""`                         |
-| `keywords`    | Keywords for the page                                     | `string`            | `""`                         |
 | `canonical`   | The canonical URL of the page                             | `string`            | `""`                         |
 | `siteName`    | The name of the site                                      | `string`            | `""`                         |
 | `imageURL`    | URL of the preview image for social sharing               | `string`            | `""`                         |

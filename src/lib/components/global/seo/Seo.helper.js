@@ -7,7 +7,7 @@
  */
 export const checkSeo = (seo, routeId) => {
 	/** @type {(keyof SEOProps)[]} */
-	const propertiesToCheck = ["description", "keywords"];
+	const propertiesToCheck = ["description"];
 	const missingProperties = propertiesToCheck.filter(
 		(property) => !seo[property],
 	);

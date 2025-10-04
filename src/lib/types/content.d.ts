@@ -53,8 +53,7 @@ export type BaseFields = {
 	title: string;
 	slug: string;
 	seoDescription: string;
-	seoKeywords?: string;
-	seoIndex: boolean;
+	seoIndex?: boolean;
 	hidden?: boolean;
 	header?: string;
 	intro?: string;

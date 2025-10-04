@@ -26,21 +26,12 @@ export type SEOProps = {
 
 	/**
 	 * The description of the page.
-	 * - Optimal length: **50–160 characters** (recommended around 70–155 characters).
+	 * - Optimal length: **50–155 characters** (recommended around 70–155 characters).
 	 * - Make it engaging and unique to improve click‐through rates.
 	 *
 	 * @default ""
 	 */
 	description?: string;
-
-	/**
-	 * Keywords for the page.
-	 * - Although meta keywords are less influential today, keep a concise list
-	 *   (typically **3–5** highly relevant keywords) if used.
-	 *
-	 * @default ""
-	 */
-	keywords?: string;
 
 	/**
 	 * Canonical URL for the page.
