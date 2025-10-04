@@ -8,7 +8,7 @@ let { about, experience, education, references, knowledge } = data.content;
 <Section title={about.title} classes="bg-black-darkest rounded-xs">
 	{@html about.intro.content}
 
-	<div class="grid grid-cols-2 gap-6 mt-10">
+	<div class="grid grid-cols-2 gap-x-12 gap-y-6 mt-10">
 		<Section title={about.personal.title} size="sm">
 			<dl class="grid grid-cols-[100px_1fr] gap-2">
 			{#each about.personal.definitions as definition}
@@ -37,7 +37,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			</ul>
 		</Section>
 		<Section title={about.soft.title} size="sm">
-			<ul class="flex flex-col gap-4">
+			<ul class="flex flex-col gap-3">
 			{#each about.soft.skills as skill}
 				{@const ariaValue = Number(skill.ariaValue)}
 				<li>
@@ -64,7 +64,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			</ul>
 		</Section>
 		<Section title={about.soft.title} size="sm">
-			<ul class="flex flex-col gap-4">
+			<ul class="flex flex-col gap-3">
 				{#each about.interests.skills as skill}
 					{@const ariaValue = Number(skill.ariaValue)}
 					<li>
