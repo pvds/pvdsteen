@@ -62,7 +62,7 @@ export const SEO_DEFAULT = {
 	logo: ORG_LOGO_URL,
 	author: OWNER_NAME,
 	type: "website",
-	index: false,
+	index: true,
 	twitter: false,
 	openGraph: true,
 };
