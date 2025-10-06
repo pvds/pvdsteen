@@ -1,0 +1,50 @@
+/* tailwind v4 – simple readable typography utility */
+/* drop this in your global CSS alongside your @theme block */
+
+@utility prose {
+	/* spacing */
+	& :where(p, ul, ol, blockquote, pre, table):not(:first-child) {
+		@apply mt-2;
+	}
+	& :where(h1, h2, h3, h4, h5, h6):not(:first-child) {
+		@apply mt-4;
+	}
+
+	/* lists */
+	& :where(ul) {
+		@apply list-disc pl-6;
+	}
+	& :where(ol) {
+		@apply list-decimal pl-6;
+	}
+
+	/* headings */
+	& :where(h1, h2, h3, h4, h5, h6) {
+		@apply font-semibold;
+	}
+
+	& :where(h1) {
+		@apply text-2xl;
+	}
+
+	& :where(h2) {
+		@apply text-xl;
+	}
+
+	& :where(h3) {
+		@apply text-lg;
+	}
+
+	/* links + inlines */
+	& :where(a) {
+		@apply underline decoration-dotted underline-offset-4;
+	}
+	& :where(code, kbd, samp) {
+		@apply font-mono text-sm;
+	}
+
+	/* quotes */
+	& :where(blockquote) {
+		@apply border-l pl-4 italic;
+	}
+}
