@@ -1,6 +1,7 @@
-As front-end developer, UX designer and occasional back-end developer I
+As front-end developer and UX designer I have:
 
-- **Implemented**
+### Implemented
+
 - a modern front-end workflow
 - git versioning and deployment
 - an OTAP development cycle
@@ -9,18 +10,22 @@ As front-end developer, UX designer and occasional back-end developer I
 - microdata and microformats
 - data-driven development
 - optimisation of user interaction
-- **Developed**
+
+### Developed
+
 - a custom Wordpress theme
-- (co) custom Wordpress plugins
+- custom Wordpress plugins
 - multistep order flows
 - wireframes, prototypes
-- **Improved**
+- gif/flash then HTML5 online advertising
+
+### Improved
+
 - interface and interaction design
 - performance, security and reliability
 
-Over the years I have done various tasks:
+### Miscellaneous
 
-- development of gif/flash then HTML5 online advertising
 - maintenance of the intranet site
 - collaboration with hosting provider and CRM supplier and contract providers
 - training of junior front-end developer
