@@ -585,7 +585,7 @@ const techniques = {
 /** @type {SkillSection} */
 const contents = {
 	title: "Structure",
-	type: "chart",
+	type: "radial",
 	skills: [
 		{
 			title: "Semantics",
@@ -623,7 +623,7 @@ const contents = {
 /** @type {SkillSection} */
 const visualisation = {
 	title: "Visualisation",
-	type: "chart",
+	type: "radial",
 	skills: [
 		{
 			title: "Sass/Scss",
@@ -661,7 +661,7 @@ const visualisation = {
 /** @type {SkillSection} */
 const interaction = {
 	title: "Interaction",
-	type: "chart",
+	type: "radial",
 	skills: [
 		{
 			title: "ES5",

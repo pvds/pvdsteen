@@ -32,9 +32,11 @@ export type SkillItem = {
 	textAlt?: string;
 };
 
+export type SkillsType = "line" | "radial" | "dots";
+
 export type SkillSection = {
 	title: string;
-	type: "line" | "chart" | "dots";
+	type: SkillsType;
 	skills: SkillItem[];
 };
 

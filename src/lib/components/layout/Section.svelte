@@ -4,6 +4,7 @@
  * @property {string} [classes] on outer <section>, use styling the section (position, z-index, etc.)
  * @property {string} [innerClasses] on inner <div>, use for styling the content (grid, flex, etc.)
  * @property {string} [title]
+ * @property {'left'|'center'|'right'} [align='left']
  * @property {'sm'|'md'|'lg'} [size='md']
  * @property {string} [customSpacing]
  * @property {import('svelte').Snippet} [children]
@@ -14,6 +15,7 @@ let {
 	classes,
 	innerClasses,
 	title,
+	align = "left",
 	size = "md",
 	customSpacing,
 	children,
@@ -38,7 +40,7 @@ let spacing = $derived(customSpacing || spacingDefault[size].block);
 let titleSpacing = $derived(spacingDefault[size].title);
 </script>
 
-<section class="relative {classes} {spacing}">
+<section class="relative {classes} {spacing}" class:text-left={align === "left"} class:text-center={align === "center"} class:text-right={align === "right"}>
 	<div class="max-w-6xl mx-auto {innerClasses}">
 		{@render content()}
 	</div>

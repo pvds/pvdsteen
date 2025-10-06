@@ -24,7 +24,7 @@ onNavigate((navigation) => {
 <Seo/>
 
 <div
-	class="relative flex flex-col p-4 md-mid:flex-row gap-4 app min-h-svh max-w-6xl mx-auto">
+	class="relative flex flex-col p-4 md-mid:flex-row gap-4 app min-h-svh max-w-7xl mx-auto">
 	<Skip />
 
 	<div class="md-mid:w-[18rem] flex-none">

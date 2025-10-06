@@ -1,5 +1,6 @@
 <script>
 import Section from "$layout/Section.svelte";
+import Skills from "$ui/Skills.svelte";
 import Timeline from "$ui/Timeline.svelte";
 
 let { data } = $props();
@@ -19,77 +20,13 @@ let { about, experience, education, references, knowledge } = data.content;
 			</dl>
 		</Section>
 		<Section title={about.languages.title} size="sm">
-			<ul class="flex flex-col gap-4">
-			{#each about.languages.skills as language}
-				{@const ariaValue = Number(language.ariaValue)}
-				{@const value = Number(language.value)}
-				<li>
-					<strong class="block font-semibold mb-2">{language.title}</strong>
-					<div role="progressbar" aria-valuemax="100" aria-valuemin="0"
-						 aria-valuenow={ariaValue} class="flex items-center gap-2">
-					{#each Array(10) as _, i}
-						<span
-							class="w-4 h-4 border-1 border-primary rounded-full {i <= value ?
-							'bg-primary' : ''}"></span>
-					{/each}
-					</div>
-				</li>
-			{/each}
-			</ul>
+			<Skills type="dots" skills={about.languages.skills} />
 		</Section>
 		<Section title={about.soft.title} size="sm">
-			<ul class="flex flex-col gap-3">
-			{#each about.soft.skills as skill}
-				{@const ariaValue = Number(skill.ariaValue)}
-				<li>
-					<div class="flex justify-between items-center mb-2">
-						<strong class="font-semibold">{skill.title}</strong>
-						<p class="text-sm font-light text-black-light">{skill.text}</p>
-					</div>
-					<div
-						role="progressbar"
-						aria-valuemin="0"
-						aria-valuemax="100"
-						aria-valuenow={ariaValue}
-						style={`--p:${ariaValue}%`}
-						class="
-							relative h-1.5 w-full rounded-full bg-black overflow-hidden
-							after:content-[''] after:absolute after:inset-0
-							after:w-[var(--p)] after:h-full after:rounded-full
-							after:bg-primary
-							after:transition-[width] after:duration-500 after:ease-out
-						"
-					></div>
-				</li>
-			{/each}
-			</ul>
+			<Skills type="line" skills={about.soft.skills} />
 		</Section>
 		<Section title={about.soft.title} size="sm">
-			<ul class="flex flex-col gap-3">
-				{#each about.interests.skills as skill}
-					{@const ariaValue = Number(skill.ariaValue)}
-					<li>
-						<div class="flex justify-between items-center mb-2">
-							<strong class="font-semibold">{skill.title}</strong>
-							<p class="text-sm font-light text-black-light">{skill.text}</p>
-						</div>
-						<div
-							role="progressbar"
-							aria-valuemin="0"
-							aria-valuemax="100"
-							aria-valuenow={ariaValue}
-							style={`--p:${ariaValue}%`}
-							class="
-							relative h-1.5 w-full rounded-full bg-black overflow-hidden
-							after:content-[''] after:absolute after:inset-0
-							after:w-[var(--p)] after:h-full after:rounded-full
-							after:bg-primary
-							after:transition-[width] after:duration-500 after:ease-out
-						"
-						></div>
-					</li>
-				{/each}
-			</ul>
+			<Skills type="line" skills={about.interests.skills} />
 		</Section>
 	</div>
 </Section>
@@ -102,10 +39,40 @@ let { about, experience, education, references, knowledge } = data.content;
 	<Timeline items={education.timeline} />
 </Section>
 
-<Section title={references.title} classes="bg-black-darkest rounded-xs">
-
-</Section>
+<Section title={references.title} classes="bg-black-darkest rounded-xs"></Section>
 
 <Section title={knowledge.title} classes="bg-black-darkest rounded-xs">
-
+	<div class="grid grid-cols-2 gap-14 mt-14">
+		<Section title={knowledge.programming.title} size="sm">
+			<Skills type="line" skills={knowledge.programming.skills} />
+		</Section>
+		<Section title={knowledge.techniques.title} size="sm">
+			<Skills type="line" skills={knowledge.techniques.skills} />
+		</Section>
+	</div>
+	<div class="grid grid-cols-3 gap-x-12 gap-y-14 mt-14">
+		<Section title={knowledge.contents.title} size="sm" align="center">
+			<Skills type="radial" skills={knowledge.contents.skills} />
+		</Section>
+		<Section title={knowledge.visualisation.title} size="sm" align="center">
+			<Skills type="radial" skills={knowledge.visualisation.skills} />
+		</Section>
+		<Section title={knowledge.interaction.title} size="sm" align="center">
+			<Skills type="radial" skills={knowledge.interaction.skills} />
+		</Section>
+	</div>
+	<div class="grid grid-cols-2 gap-14 mt-14">
+		<Section title={knowledge.development.title} size="sm">
+			<Skills type="line" skills={knowledge.development.skills} />
+		</Section>
+		<Section title={knowledge.cmsFrameworks.title} size="sm">
+			<Skills type="line" skills={knowledge.cmsFrameworks.skills} />
+		</Section>
+		<Section title={knowledge.packageManagers.title} size="sm">
+			<Skills type="line" skills={knowledge.packageManagers.skills} />
+		</Section>
+		<Section title={knowledge.packageManagers.title} size="sm">
+			<Skills type="line" skills={knowledge.packageManagers.skills} />
+		</Section>
+	</div>
 </Section>
