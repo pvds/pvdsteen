@@ -90,33 +90,24 @@ export type About = {
 	interests: SkillSection;
 };
 
-export type ExperienceTimelineItem = {
+export type TimelineItem = {
 	from: DatePoint;
 	to: DatePoint;
 	hidden?: boolean;
 	function: string;
-	company: string;
+	organization: string;
 	content: string;
 	expander?: Expander;
 };
 
 export type Experience = {
 	title: string;
-	timeline: ExperienceTimelineItem[];
-};
-
-export type EducationTimelineItem = {
-	from: DatePoint;
-	to: DatePoint;
-	function: string;
-	institution: string;
-	content: string;
-	expander?: Expander;
+	timeline: TimelineItem[];
 };
 
 export type Education = {
 	title: string;
-	timeline: EducationTimelineItem[];
+	timeline: TimelineItem[];
 };
 
 export type ReferenceItem = {
@@ -124,7 +115,7 @@ export type ReferenceItem = {
 	alt: string;
 	author: string;
 	function: string;
-	company: string;
+	organization: string;
 	content: string;
 	expander?: Expander;
 };

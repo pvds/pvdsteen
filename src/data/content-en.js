@@ -286,7 +286,7 @@ export const experience = {
 			hidden: true,
 			function:
 				'Front-end developer - <span class="nowrap">UX designer</span>',
-			company: "Your company?",
+			organization: "Your company?",
 			content: markdownFileToHtml(
 				"src/data/content-en/experience-timeline-your-company.md",
 			),
@@ -309,7 +309,7 @@ export const experience = {
 				year: "now",
 			},
 			function: "FE/UX development specialist",
-			company: "Priva",
+			organization: "Priva",
 			content: markdownFileToHtml(
 				"src/data/content-en/experience-timeline-priva.md",
 			),
@@ -324,7 +324,7 @@ export const experience = {
 				year: 2017,
 			},
 			function: "Front-end developer",
-			company: "Just Walk",
+			organization: "Just Walk",
 			content: markdownFileToHtml(
 				"src/data/content-en/experience-timeline-just-walk.md",
 			),
@@ -348,7 +348,7 @@ export const experience = {
 			},
 			function:
 				'Owner - <span class="nowrap">UX Designer</span> / <span class="nowrap">Developer</span>',
-			company: "Solid Core Web Solutions",
+			organization: "Solid Core Web Solutions",
 			content: markdownFileToHtml(
 				"src/data/content-en/experience-timeline-solid-core-web-solutions.md",
 			),
@@ -363,7 +363,7 @@ export const experience = {
 				year: 2011,
 			},
 			function: "Partner - Developer",
-			company: "Triangle Productions",
+			organization: "Triangle Productions",
 			content: markdownFileToHtml(
 				"src/data/content-en/experience-timeline-triangle-productions.md",
 			),
@@ -378,7 +378,7 @@ export const experience = {
 				year: 2009,
 			},
 			function: "Mechanical Designer",
-			company: "Bluewater Energy Services",
+			organization: "Bluewater Energy Services",
 			content: markdownFileToHtml(
 				"src/data/content-en/experience-timeline-bluewater-energy-services-designer.md",
 			),
@@ -393,7 +393,7 @@ export const experience = {
 				year: 2008,
 			},
 			function: "Technical Document Controller",
-			company: "Bluewater Energy Services",
+			organization: "Bluewater Energy Services",
 			content: markdownFileToHtml(
 				"src/data/content-en/experience-timeline-bluewater-energy-services-controller.md",
 			),
@@ -415,7 +415,7 @@ export const education = {
 				year: 2011,
 			},
 			function: "Interactive Media",
-			institution: "Amsterdam University of Applied Sciences",
+			organization: "Amsterdam University of Applied Sciences",
 			content: markdownFileToHtml(
 				"src/data/content-en/education-timeline.md",
 			),
@@ -440,7 +440,7 @@ export const references = {
 			alt: "reference by",
 			author: "Marius van der Kooy",
 			function: "Manager",
-			company: "Just Walk",
+			organization: "Just Walk",
 			content: markdownFileToHtml(
 				"src/data/content-en/references-reference-just-walk-marius.md",
 			),
@@ -458,7 +458,7 @@ export const references = {
 			author: "Bart Lageweg",
 			alt: "reference by",
 			function: "Owner",
-			company: "Bizway",
+			organization: "Bizway",
 			content: markdownFileToHtml(
 				"src/data/content-en/references-reference-bizway-bart.md",
 			),
@@ -468,7 +468,7 @@ export const references = {
 			author: "Danny Visser",
 			alt: "reference by",
 			function: "Owner",
-			company: "Just Walk",
+			organization: "Just Walk",
 			content: markdownFileToHtml(
 				"src/data/content-en/references-reference-just-walk-danny.md",
 			),

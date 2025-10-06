@@ -280,7 +280,7 @@ export const experience = {
 			},
 			function:
 				'Front-end developer - <span class="nowrap">UX designer</span>',
-			company: "Uw bedrijf?",
+			organization: "Uw bedrijf?",
 			content: "./content-nl/experience-timeline-your-company.md",
 			expander: {
 				id: "timeline-me-expander",
@@ -300,7 +300,7 @@ export const experience = {
 				year: "now",
 			},
 			function: "FE/UX development specialist",
-			company: "Priva",
+			organization: "Priva",
 			content: "./content-nl/experience-timeline-priva.md",
 		},
 		{
@@ -313,7 +313,7 @@ export const experience = {
 				year: 2017,
 			},
 			function: "Front-end developer",
-			company: "Just Walk",
+			organization: "Just Walk",
 			content: "./content-nl/experience-timeline-just-walk.md",
 			expander: {
 				id: "timeline-justwalk-expander",
@@ -334,7 +334,7 @@ export const experience = {
 			},
 			function:
 				'Owner - <span class="nowrap">UX Designer</span> / <span class="nowrap">Developer</span>',
-			company: "Solid Core Web Solutions",
+			organization: "Solid Core Web Solutions",
 			content:
 				"./content-nl/experience-timeline-solid-core-web-solutions.md",
 		},
@@ -348,7 +348,7 @@ export const experience = {
 				year: 2011,
 			},
 			function: "Partner - Developer",
-			company: "Triangle Productions",
+			organization: "Triangle Productions",
 			content: "./content-nl/experience-timeline-triangle-productions.md",
 		},
 		{
@@ -361,7 +361,7 @@ export const experience = {
 				year: 2009,
 			},
 			function: "Mechanical Designer",
-			company: "Bluewater Energy Services",
+			organization: "Bluewater Energy Services",
 			content:
 				"./content-nl/experience-timeline-bluewater-energy-services-designer.md",
 		},
@@ -375,7 +375,7 @@ export const experience = {
 				year: 2008,
 			},
 			function: "Technical Document Controller",
-			company: "Bluewater Energy Services",
+			organization: "Bluewater Energy Services",
 			content:
 				"./content-nl/experience-timeline-bluewater-energy-services-controller.md",
 		},
@@ -396,7 +396,7 @@ export const education = {
 				year: 2011,
 			},
 			function: "Interactieve Media",
-			institution: "Hogeschool van Amsterdam",
+			organization: "Hogeschool van Amsterdam",
 			content: "./content-nl/education-timeline.md",
 			expander: {
 				id: "timeline-iam-expander",
@@ -417,7 +417,7 @@ export const references = {
 			alt: "referentie door",
 			author: "Marius van der Kooy",
 			function: "Manager",
-			company: "Just Walk",
+			organization: "Just Walk",
 			content: "./content-nl/references-reference-just-walk-marius.md",
 			expander: {
 				id: "reference-marius-expander",
@@ -432,7 +432,7 @@ export const references = {
 			alt: "referentie door",
 			author: "Bart Lageweg",
 			function: "Eigenaar",
-			company: "Bizway",
+			organization: "Bizway",
 			content: "./content-nl/references-reference-bizway-bart.md",
 		},
 		{
@@ -440,7 +440,7 @@ export const references = {
 			alt: "referentie door",
 			author: "Danny Visser",
 			function: "Eigenaar",
-			company: "Just Walk",
+			organization: "Just Walk",
 			content: "./content-nl/references-reference-just-walk-danny.md",
 		},
 	],
