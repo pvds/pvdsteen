@@ -1,5 +1,6 @@
 <script>
 import Section from "$layout/Section.svelte";
+import Timeline from "$ui/Timeline.svelte";
 
 let { data } = $props();
 let { about, experience, education, references, knowledge } = data.content;
@@ -94,11 +95,11 @@ let { about, experience, education, references, knowledge } = data.content;
 </Section>
 
 <Section title={experience.title} classes="bg-black-darkest rounded-xs">
-
+	<Timeline items={experience.timeline} />
 </Section>
 
 <Section title={education.title} classes="bg-black-darkest rounded-xs">
-
+	<Timeline items={education.timeline} />
 </Section>
 
 <Section title={references.title} classes="bg-black-darkest rounded-xs">
