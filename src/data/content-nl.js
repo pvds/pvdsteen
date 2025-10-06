@@ -93,7 +93,7 @@ export const about = {
 		expander: {
 			id: "about-intro-expander",
 			content: "./content-nl/about-intro-expander.md",
-			triggerText: "verder lezen",
+			text: "verder lezen",
 		},
 	},
 	personal: {

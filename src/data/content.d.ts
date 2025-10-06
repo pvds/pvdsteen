@@ -7,12 +7,9 @@ export type Year = string | number;
 // ---------- Generic helpers ----------
 export type Expander = {
 	id: string;
+	content: string;
 	text?: string;
 	textAlt?: string;
-	content: string; // link to markdown
-	triggerText?: string;
-	triggerTextAlt?: string;
-	triggerOnce?: boolean;
 };
 
 export type DatePoint = {

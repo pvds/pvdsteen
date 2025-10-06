@@ -96,9 +96,8 @@ export const about = {
 			content: markdownFileToHtml(
 				"src/data/content-en/about-intro-expander.md",
 			),
-			triggerText: "read more",
-			triggerTextAlt: "less is more",
-			triggerOnce: false,
+			text: "read more",
+			textAlt: "less is more",
 		},
 	},
 	personal: {
