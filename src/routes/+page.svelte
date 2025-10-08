@@ -10,9 +10,9 @@ let { about, experience, education, references, knowledge } = data.content;
 <Section title={about.title} classes="bg-black-darkest rounded-xs">
 	{@html about.intro.content}
 
-	<div class="grid grid-cols-2 gap-x-12 gap-y-6 mt-10">
+	<div class="grid grid-cols-2 gap-14 mt-14">
 		<Section title={about.personal.title} size="sm">
-			<dl class="grid grid-cols-[100px_1fr] gap-2">
+			<dl class="grid grid-cols-[100px_1fr] gap-3">
 			{#each about.personal.definitions as definition}
 				<dt class="font-semibold">{definition.term}</dt>
 				<dd class="text-black-light">{@html definition.def}</dd>
