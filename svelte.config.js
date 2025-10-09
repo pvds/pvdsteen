@@ -77,6 +77,9 @@ const config = {
 			reportOnly: { ...CSP, "report-to": [CSP_REPORT_ENDPOINT] },
 		},
 	},
+	vitePlugin: {
+		inspector: true,
+	},
 };
 
 export default config;
