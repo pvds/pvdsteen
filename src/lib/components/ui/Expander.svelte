@@ -45,7 +45,9 @@ let { id, text, textAlt, content } = $props();
 		}
 
 		::details-content {
-			transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+			transition: height var(--transition-duration-long) ease, content-visibility var(--transition-delay-long)
+			ease
+			allow-discrete;
 			height: 0;
 			overflow: clip;
 		}
