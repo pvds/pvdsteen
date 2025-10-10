@@ -36,3 +36,22 @@ let { id, text, textAlt, content } = $props();
 		{@html content}
 	</div>
 </details>
+
+<style>
+	/* Browser supports interpolate-size */
+	@supports (interpolate-size: allow-keywords) {
+		:root {
+			interpolate-size: allow-keywords;
+		}
+
+		::details-content {
+			transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+			height: 0;
+			overflow: clip;
+		}
+
+		[open]::details-content {
+			height: auto;
+		}
+	}
+</style>
