@@ -1,5 +1,6 @@
 <script>
 import Section from "$layout/Section.svelte";
+import Reference from "$ui/Reference.svelte";
 import Skills from "$ui/Skills.svelte";
 import Timeline from "$ui/Timeline.svelte";
 
@@ -39,7 +40,13 @@ let { about, experience, education, references, knowledge } = data.content;
 	<Timeline items={education.timeline} />
 </Section>
 
-<Section title={references.title} classes="bg-black-darkest rounded-xs"></Section>
+<Section title={references.title} classes="bg-black-darkest rounded-xs">
+	<div class="flex flex-col gap-14 mt-14">
+		{#each references.reference as reference}
+			<Reference item={reference} />
+		{/each}
+	</div>
+</Section>
 
 <Section title={knowledge.title} classes="bg-black-darkest rounded-xs">
 	<div class="grid grid-cols-2 gap-14 mt-14">

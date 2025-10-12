@@ -435,7 +435,7 @@ export const references = {
 	title: "References",
 	reference: [
 		{
-			image: "avatar-marius",
+			image: "marius",
 			alt: "reference by",
 			author: "Marius van der Kooy",
 			function: "Manager",
@@ -453,7 +453,7 @@ export const references = {
 			},
 		},
 		{
-			image: "avatar-bart",
+			image: "bart",
 			author: "Bart Lageweg",
 			alt: "reference by",
 			function: "Owner",
@@ -463,7 +463,7 @@ export const references = {
 			),
 		},
 		{
-			image: "avatar-danny",
+			image: "danny",
 			author: "Danny Visser",
 			alt: "reference by",
 			function: "Owner",
