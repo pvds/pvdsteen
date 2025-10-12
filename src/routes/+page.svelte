@@ -11,7 +11,7 @@ let { about, experience, education, references, knowledge } = data.content;
 <Section title={about.title} classes="bg-black-darkest rounded-xs">
 	{@html about.intro.content}
 
-	<div class="grid grid-cols-2 gap-14 mt-14">
+	<div class="grid md-mid:grid-cols-2 gap-14 mt-14">
 		<Section title={about.personal.title} size="sm">
 			<dl class="grid grid-cols-[100px_1fr] gap-3">
 			{#each about.personal.definitions as definition}
@@ -49,7 +49,7 @@ let { about, experience, education, references, knowledge } = data.content;
 </Section>
 
 <Section title={knowledge.title} classes="bg-black-darkest rounded-xs">
-	<div class="grid grid-cols-2 gap-14 mt-14">
+	<div class="grid md-mid:grid-cols-2 gap-14 mt-14">
 		<Section title={knowledge.programming.title} size="sm">
 			<Skills type="line" skills={knowledge.programming.skills} />
 		</Section>
@@ -57,7 +57,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			<Skills type="line" skills={knowledge.techniques.skills} />
 		</Section>
 	</div>
-	<div class="grid grid-cols-3 gap-x-12 gap-y-14 mt-14">
+	<div class="grid md-mid:grid-cols-3 gap-x-12 gap-y-14 mt-14">
 		<Section title={knowledge.contents.title} size="sm" align="center">
 			<Skills type="radial" skills={knowledge.contents.skills} />
 		</Section>
@@ -68,7 +68,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			<Skills type="radial" skills={knowledge.interaction.skills} />
 		</Section>
 	</div>
-	<div class="grid grid-cols-2 gap-14 mt-14">
+	<div class="grid md-mid:grid-cols-2 gap-14 mt-14">
 		<Section title={knowledge.development.title} size="sm">
 			<Skills type="line" skills={knowledge.development.skills} />
 		</Section>
