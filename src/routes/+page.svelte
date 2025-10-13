@@ -1,5 +1,6 @@
 <script>
 import Section from "$layout/Section.svelte";
+import Expander from "$ui/Expander.svelte";
 import Reference from "$ui/Reference.svelte";
 import Skills from "$ui/Skills.svelte";
 import Timeline from "$ui/Timeline.svelte";
@@ -8,10 +9,15 @@ let { data } = $props();
 let { about, experience, education, references, knowledge } = data.content;
 </script>
 
-<Section title={about.title} classes="bg-black-darkest rounded-xs">
+<Section title={about.title} classes="@container bg-black-darkest rounded-xs">
 	{@html about.intro.content}
 
-	<div class="grid md-mid:grid-cols-2 gap-14 mt-14">
+	{#if about.intro.expander }
+	<Expander id={about.intro.expander.id} content={about.intro.expander.content}
+			  text={about.intro.expander.text} textAlt={about.intro.expander.textAlt}></Expander>
+	{/if}
+
+	<div class="grid @2xl:grid-cols-2 gap-14 mt-14">
 		<Section title={about.personal.title} size="sm">
 			<dl class="grid grid-cols-[100px_1fr] gap-3">
 			{#each about.personal.definitions as definition}
@@ -48,8 +54,8 @@ let { about, experience, education, references, knowledge } = data.content;
 	</div>
 </Section>
 
-<Section title={knowledge.title} classes="bg-black-darkest rounded-xs">
-	<div class="grid md-mid:grid-cols-2 gap-14 mt-14">
+<Section title={knowledge.title} classes="@container bg-black-darkest rounded-xs">
+	<div class="grid @2xl:grid-cols-2 gap-14 mt-14">
 		<Section title={knowledge.programming.title} size="sm">
 			<Skills type="line" skills={knowledge.programming.skills} />
 		</Section>
@@ -57,7 +63,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			<Skills type="line" skills={knowledge.techniques.skills} />
 		</Section>
 	</div>
-	<div class="grid md-mid:grid-cols-3 gap-x-12 gap-y-14 mt-14">
+	<div class="grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14">
 		<Section title={knowledge.contents.title} size="sm" align="center">
 			<Skills type="radial" skills={knowledge.contents.skills} />
 		</Section>
@@ -68,7 +74,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			<Skills type="radial" skills={knowledge.interaction.skills} />
 		</Section>
 	</div>
-	<div class="grid md-mid:grid-cols-2 gap-14 mt-14">
+	<div class="grid @2xl:grid-cols-2 gap-14 mt-14">
 		<Section title={knowledge.development.title} size="sm">
 			<Skills type="line" skills={knowledge.development.skills} />
 		</Section>
