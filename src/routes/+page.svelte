@@ -12,7 +12,7 @@ const twoColGrid = "grid @xl:grid-cols-2 gap-14 mt-14";
 const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 </script>
 
-<Section title={about.title} classes="@container bg-black-darkest rounded-xs">
+<Section title={about.title} classes="@container reveal bg-black-darkest rounded-xs">
 	{@html about.intro.content}
 
 	{#if about.intro.expander }
@@ -41,15 +41,15 @@ const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 	</div>
 </Section>
 
-<Section title={experience.title} classes="bg-black-darkest rounded-xs">
+<Section title={experience.title} classes="reveal bg-black-darkest rounded-xs">
 	<Timeline items={experience.timeline} />
 </Section>
 
-<Section title={education.title} classes="bg-black-darkest rounded-xs">
+<Section title={education.title} classes="reveal bg-black-darkest rounded-xs">
 	<Timeline items={education.timeline} />
 </Section>
 
-<Section title={references.title} classes="bg-black-darkest rounded-xs">
+<Section title={references.title} classes="reveal bg-black-darkest rounded-xs">
 	<div class="flex flex-col gap-14 mt-14">
 		{#each references.reference as reference}
 			<Reference item={reference} />
@@ -57,7 +57,7 @@ const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 	</div>
 </Section>
 
-<Section title={knowledge.title} classes="@container bg-black-darkest rounded-xs">
+<Section title={knowledge.title} classes="@container reveal bg-black-darkest rounded-xs">
 	<div class={twoColGrid}>
 		<Section title={knowledge.programming.title} size="sm">
 			<Skills type="line" skills={knowledge.programming.skills} />

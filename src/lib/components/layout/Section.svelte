@@ -40,7 +40,8 @@ let spacing = $derived(customSpacing || spacingDefault[size].block);
 let titleSpacing = $derived(spacingDefault[size].title);
 </script>
 
-<section class="relative {classes} {spacing}" class:text-left={align === "left"} class:text-center={align === "center"} class:text-right={align === "right"}>
+<section class="relative {classes} {spacing}" class:text-left={align === "left"}
+		 class:text-center={align === "center"} class:text-right={align === "right"}>
 	<div class="max-w-6xl mx-auto {innerClasses}">
 		{@render content()}
 	</div>
