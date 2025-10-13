@@ -69,7 +69,7 @@ export const links = [
 		download: true,
 	},
 	{
-		text: "LinkedIn Profile",
+		text: "LinkedIn",
 		ref: "https://www.linkedin.com/in/pvdsteen",
 		slug: "linkedin",
 		icon: "linkedin",
@@ -77,7 +77,7 @@ export const links = [
 		target: "_blank",
 	},
 	{
-		text: "GitHub Profile",
+		text: "GitHub",
 		ref: "https://github.com/pvds",
 		slug: "github",
 		icon: "github",

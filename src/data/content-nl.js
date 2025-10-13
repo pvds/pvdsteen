@@ -64,11 +64,11 @@ export const links = [
 		ref: "/dist/files/cv-pvdsteen.pdf",
 		slug: "resume",
 		icon: "download",
-		visible: true,
+		visible: false,
 		download: true,
 	},
 	{
-		text: "LinkedIn Profiel",
+		text: "LinkedIn",
 		ref: "https://www.linkedin.com/in/pvdsteen",
 		slug: "linkedin",
 		icon: "linkedin",
@@ -76,7 +76,7 @@ export const links = [
 		target: "_blank",
 	},
 	{
-		text: "GitHub Profiel",
+		text: "GitHub",
 		ref: "https://github.com/pvds",
 		slug: "github",
 		icon: "github",
