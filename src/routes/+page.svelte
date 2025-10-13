@@ -25,7 +25,7 @@ const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 			<dl class="grid grid-cols-[100px_1fr] gap-3">
 			{#each about.personal.definitions as definition}
 				<dt class="font-semibold">{definition.term}</dt>
-				<dd class="text-black-light">{@html definition.def}</dd>
+				<dd class="text-black-light {definition.class}">{@html definition.def}</dd>
 			{/each}
 			</dl>
 		</Section>

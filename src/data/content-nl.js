@@ -120,14 +120,14 @@ export const about = {
 				def: "+31 6 104 25 975",
 			},
 			{
-				term: "Skype",
-				def: "rockfromtherock",
-				id: "skype",
-				class: "is-optional",
+				term: "GitHub",
+				def: '<a href="//github.com/pvds" target="_blank" rel="noopener">pvds</a>',
+				id: "github",
+				class: "prose",
 			},
 			{
 				term: "Rijbewijs",
-				def: "Auto",
+				def: "Auto (B)",
 			},
 			{
 				term: "Stemming",
