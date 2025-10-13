@@ -100,10 +100,9 @@ body {
 
 /* Wrap text to avoid horizontal overflow
    ====================================================================== */
-:where(p, li, dd, dt, blockquote, h1, h2, h3, h4, h5, h6, a, span.wrap) {
-	overflow-wrap: anywhere; /* good for URLs/emails/longwords */
+:where(p, li, dd, dt, blockquote, h1, h2, h3, h4, h5, h6, a) {
+	overflow-wrap: anywhere;
 	word-break: normal;
-	hyphens: auto; /* requires lang= on html/body/element */
 }
 
 /* Wrap text to avoid horizontal overflow
