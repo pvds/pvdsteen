@@ -15,24 +15,27 @@ let { title, type = "line", skills = [] } = $props();
 <div class="@container">
 <ul aria-label={title ?? null}
 	class={`${type === 'radial' ?
-	'grid grid-cols-1 justify-items-center gap-6 @3xs:grid-cols-2' : 'flex flex-col'} ${type ===
-	'dots' ? 'gap-4' : 'gap-3'}`}>
+	'grid grid-cols-1 justify-items-center gap-6 @3xs:grid-cols-2' : ''}
+	${type === 'line' ? 'flex flex-col' : ''}
+	${type === 'dots' ? 'inline-flex flex-col gap-4' : 'gap-3'}`}>
 {#each skills as s, i (s.title)}
 	{@const ariaValue = Number(s.ariaValue)}
 	{@const value = Number(s.value)}
 	{@const isLastOdd = type === 'radial' && skills.length % 2 === 1 && i === skills.length - 1}
 	<li class:@3xs:col-span-2={isLastOdd}>
 	{#if type === 'dots'}
-		<strong class="block mb-2 font-semibold">{s.title}</strong>
+		<div class="mb-2 flex items-center justify-between gap-2">
+			<strong class="block font-semibold">{s.title}</strong>
+			{#if s.text}
+				<p class="text-sm font-light text-black-light">{s.text}</p>
+			{/if}
+		</div>
 		<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={ariaValue}
-			class="flex items-center gap-2">
+			class="flex items-center justify-between gap-2">
 			{#each Array(10) as _, i}
 				<span class="size-4 border-1 border-primary rounded-full {i < value ?
 				'bg-primary' : ''}"></span>
 			{/each}
-			{#if s.text}
-				<p class="mt-1 text-sm font-light text-black-light">{s.text}</p>
-			{/if}
 		</div>
 
 	{:else if type === 'radial'}
