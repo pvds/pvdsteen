@@ -35,7 +35,7 @@ const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 		<Section title={about.soft.title} size="sm">
 			<Skills type="line" skills={about.soft.skills} />
 		</Section>
-		<Section title={about.soft.title} size="sm">
+		<Section title={about.interests.title} size="sm">
 			<Skills type="line" skills={about.interests.skills} />
 		</Section>
 	</div>
