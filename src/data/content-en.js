@@ -117,17 +117,11 @@ export const about = {
 			},
 			{
 				term: "Email",
-				def: '<a href="mailto:pvdsteen@gmail.com">pvdsteen@gmail.com</a>',
+				def: '<a href="mailto:pvdsteen@gmail.com">pvdsteen<wbr>@gmail.com</a>',
 			},
 			{
 				term: "Phone",
 				def: "+31 6 104 25 975",
-			},
-			{
-				term: "GitHub",
-				def: '<a href="//github.com/pvds" target="_blank" rel="noopener">pvds</a>',
-				id: "github",
-				class: "prose",
 			},
 			{
 				term: "License",
