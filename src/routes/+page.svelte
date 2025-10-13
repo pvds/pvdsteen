@@ -8,7 +8,7 @@ import Timeline from "$ui/Timeline.svelte";
 let { data } = $props();
 let { about, experience, education, references, knowledge } = data.content;
 
-const twoColGrid = "grid @2xl:grid-cols-2 gap-14 mt-14";
+const twoColGrid = "grid @xl:grid-cols-2 gap-14 mt-14";
 const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 </script>
 
