@@ -7,6 +7,9 @@ import Timeline from "$ui/Timeline.svelte";
 
 let { data } = $props();
 let { about, experience, education, references, knowledge } = data.content;
+
+const twoColGrid = "grid @2xl:grid-cols-2 gap-14 mt-14";
+const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 </script>
 
 <Section title={about.title} classes="@container bg-black-darkest rounded-xs">
@@ -17,7 +20,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			  text={about.intro.expander.text} textAlt={about.intro.expander.textAlt}></Expander>
 	{/if}
 
-	<div class="grid @2xl:grid-cols-2 gap-14 mt-14">
+	<div class={twoColGrid}>
 		<Section title={about.personal.title} size="sm">
 			<dl class="grid grid-cols-[100px_1fr] gap-3">
 			{#each about.personal.definitions as definition}
@@ -55,7 +58,7 @@ let { about, experience, education, references, knowledge } = data.content;
 </Section>
 
 <Section title={knowledge.title} classes="@container bg-black-darkest rounded-xs">
-	<div class="grid @2xl:grid-cols-2 gap-14 mt-14">
+	<div class={twoColGrid}>
 		<Section title={knowledge.programming.title} size="sm">
 			<Skills type="line" skills={knowledge.programming.skills} />
 		</Section>
@@ -63,7 +66,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			<Skills type="line" skills={knowledge.techniques.skills} />
 		</Section>
 	</div>
-	<div class="grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14">
+	<div class={threeColGrid}>
 		<Section title={knowledge.contents.title} size="sm" align="center">
 			<Skills type="radial" skills={knowledge.contents.skills} />
 		</Section>
@@ -74,7 +77,7 @@ let { about, experience, education, references, knowledge } = data.content;
 			<Skills type="radial" skills={knowledge.interaction.skills} />
 		</Section>
 	</div>
-	<div class="grid @2xl:grid-cols-2 gap-14 mt-14">
+	<div class={twoColGrid}>
 		<Section title={knowledge.development.title} size="sm">
 			<Skills type="line" skills={knowledge.development.skills} />
 		</Section>
