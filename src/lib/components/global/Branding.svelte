@@ -8,7 +8,7 @@ import {
 import Image from "$ui/Image.svelte";
 </script>
 
-<section role="banner" class="branding flex flex-col items-center text-center">
+<section class="branding flex flex-col items-center text-center">
 	<Image classes="rounded-full border-8 border-secondary-black"
 		   widthClass="w-[12rem] max-w-full"
 		   image="pvdsteen"
