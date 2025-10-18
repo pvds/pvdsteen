@@ -25,12 +25,14 @@ let { title, type = "line", skills = [] } = $props();
 	<li class:@3xs:col-span-2={isLastOdd}>
 	{#if type === 'dots'}
 		<div class="mb-2 flex items-center justify-between gap-2">
-			<strong class="block font-semibold">{s.title}</strong>
+			<strong id="skill-title-{i}" class="block font-semibold">{s.title}</strong>
 			{#if s.text}
 				<p class="text-sm font-light text-black-light">{s.text}</p>
 			{/if}
 		</div>
-		<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={ariaValue}
+		<div role="progressbar" aria-label={s.title} aria-valuemin="0"
+			 aria-valuemax="100"
+			 aria-valuenow={ariaValue}
 			class="flex items-center justify-between gap-2">
 			{#each Array(10) as _, i}
 				<span class="size-4 border-1 border-primary rounded-full {i < value ?
@@ -40,8 +42,8 @@ let { title, type = "line", skills = [] } = $props();
 
 	{:else if type === 'radial'}
 		<figure class="flex flex-col items-center gap-3">
-			<div role="progressbar" aria-valuemin="0" aria-valuemax="100"
-				aria-valuenow={ariaValue} aria-label={`${s.title}: ${ariaValue}%`}
+			<div role="progressbar"  aria-valuemin="0" aria-valuemax="100"
+				aria-valuenow={ariaValue} aria-label={s.title}
 				style="
 					--p: calc({ariaValue} / 100);
 					--gap: 0turn;
@@ -75,7 +77,7 @@ let { title, type = "line", skills = [] } = $props();
 			{#if s.text}<p class="text-sm font-light text-black-light">{s.text}</p>{/if}
 		</div>
 		<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={ariaValue}
-			style={`--p:${ariaValue}%`}
+			style={`--p:${ariaValue}%`} aria-label={s.title}
 			class="
 				relative h-1.5 w-full overflow-hidden rounded-full bg-black
 				after:content-[''] after:absolute after:inset-0
