@@ -863,42 +863,42 @@ const hexaco = {
 	type: "line",
 	skills: [
 		{
-			title: "HONESTY-HUMILITY",
+			title: "Honesty-Humility",
 			ariaValue: 90,
 			value: 0.9,
 			text: "fair, modest",
 			textAlt: "self-advancing",
 		}, // 6.40
 		{
-			title: "EMOTIONALITY",
+			title: "Emotionality",
 			ariaValue: 86,
 			value: 0.86,
 			text: "emotionally attuned",
 			textAlt: "stoic, steady",
 		}, // 6.14
 		{
-			title: "EXTRAVERSION",
+			title: "Extraversion",
 			ariaValue: 80,
 			value: 0.8,
 			text: "expressive, outgoing",
 			textAlt: "quiet, reserved",
 		}, // 5.79
 		{
-			title: "AGREEABLENESS",
+			title: "Agreeableness",
 			ariaValue: 67,
 			value: 0.67,
 			text: "cooperative, flexible",
 			textAlt: "forthright, firm",
 		}, // 5.02
 		{
-			title: "CONSCIENTIOUSNESS",
+			title: "Conscientiousness",
 			ariaValue: 87,
 			value: 0.87,
 			text: "planful, reliable",
 			textAlt: "flexible, spontaneous",
 		}, // 6.21
 		{
-			title: "OPENNESS",
+			title: "Openness",
 			ariaValue: 85,
 			value: 0.85,
 			text: "curious, creative",
