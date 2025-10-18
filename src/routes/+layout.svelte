@@ -33,7 +33,7 @@ onNavigate((navigation) => {
 			<Header>
 				<Branding />
 			</Header>
-			<div class="flex flex-wrap md-mid:flex-col gap-4 mt-4">
+			<aside class="flex flex-wrap md-mid:flex-col gap-4 mt-4">
 				<!--<Button href="/resume.pdf" isExternal={true} title="Download Resume"/>-->
 				<Button href="//www.linkedin.com/in/pvdsteen" isExternal>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="size-8">
@@ -47,7 +47,7 @@ onNavigate((navigation) => {
 					</svg>
 					<span>GitHub</span>
 				</Button>
-			</div>
+			</aside>
 		</div>
 	</div>
 
