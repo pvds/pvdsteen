@@ -924,14 +924,14 @@ const honestyHumility = {
 			ariaValue: 89,
 			value: 0.89,
 			text: "plain-speaking",
-			textAlt: "diplomatic charm",
+			textAlt: "tactful charm",
 		}, // 6.36
 		{
 			title: "Fairness",
 			ariaValue: 87,
 			value: 0.87,
 			text: "even-handed",
-			textAlt: "competitive",
+			textAlt: "advantage-seeking",
 		}, // 6.22
 		{
 			title: "Greed Avoidance",
@@ -1003,14 +1003,14 @@ const extraversion = {
 			ariaValue: 81,
 			value: 0.81,
 			text: "bold",
-			textAlt: "observant",
+			textAlt: "reserved",
 		}, // 5.84
 		{
 			title: "Sociability",
 			ariaValue: 71,
 			value: 0.71,
 			text: "outgoing",
-			textAlt: "private focus",
+			textAlt: "solitary",
 		}, // 5.23
 		{
 			title: "Liveliness",
@@ -1032,7 +1032,7 @@ const agreeableness = {
 			ariaValue: 77,
 			value: 0.77,
 			text: "forgiving",
-			textAlt: "accountability",
+			textAlt: "strict",
 		}, // 5.59
 		{
 			title: "Gentleness",
@@ -1075,7 +1075,7 @@ const conscientiousness = {
 			ariaValue: 96,
 			value: 0.96,
 			text: "persistent",
-			textAlt: "balanced pace",
+			textAlt: "effort-sparing",
 		}, // 6.78
 		{
 			title: "Perfectionism",
@@ -1111,14 +1111,14 @@ const openness = {
 			ariaValue: 92,
 			value: 0.92,
 			text: "curious",
-			textAlt: "efficient",
+			textAlt: "focused",
 		}, // 6.53
 		{
 			title: "Creativity",
 			ariaValue: 80,
 			value: 0.8,
 			text: "original",
-			textAlt: "reliable",
+			textAlt: "practical",
 		}, // 5.81
 		{
 			title: "Unconventionality",
