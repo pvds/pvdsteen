@@ -138,6 +138,13 @@ export type Knowledge = {
 	buildTools: SkillSection;
 };
 
+export type Personality = {
+	title: string;
+	content?: string;
+	factors: SkillSection;
+	facets: SkillSection[];
+};
+
 export type Content = {
 	meta: Meta;
 	nav: NavItem[];

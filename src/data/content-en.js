@@ -8,6 +8,7 @@
  * @typedef {import('./content.js').Education} Education
  * @typedef {import('./content.js').References} References
  * @typedef {import('./content.js').Knowledge} Knowledge
+ * @typedef {import('./content.js').Personality} Personality
  * @typedef {import('./content.js').SkillSection} SkillSection
  * @typedef {import('./content.js').Content} Content
  **/
@@ -854,6 +855,310 @@ export const knowledge = {
 	cmsFrameworks,
 	packageManagers,
 	buildTools,
+};
+
+/** @type {SkillSection} */
+const hexaco = {
+	title: "HEXACO Factors",
+	type: "line",
+	skills: [
+		{
+			title: "HONESTY-HUMILITY",
+			ariaValue: 90,
+			value: 0.9,
+			text: "fair, modest",
+			textAlt: "self-advancing",
+		}, // 6.40
+		{
+			title: "EMOTIONALITY",
+			ariaValue: 86,
+			value: 0.86,
+			text: "emotionally attuned",
+			textAlt: "stoic, steady",
+		}, // 6.14
+		{
+			title: "EXTRAVERSION",
+			ariaValue: 80,
+			value: 0.8,
+			text: "expressive, outgoing",
+			textAlt: "quiet, reserved",
+		}, // 5.79
+		{
+			title: "AGREEABLENESS",
+			ariaValue: 67,
+			value: 0.67,
+			text: "cooperative, flexible",
+			textAlt: "forthright, firm",
+		}, // 5.02
+		{
+			title: "CONSCIENTIOUSNESS",
+			ariaValue: 87,
+			value: 0.87,
+			text: "planful, reliable",
+			textAlt: "flexible, spontaneous",
+		}, // 6.21
+		{
+			title: "OPENNESS",
+			ariaValue: 85,
+			value: 0.85,
+			text: "curious, creative",
+			textAlt: "traditional, steady",
+		}, // 6.10
+		{
+			title: "(interstitial) Altruism",
+			ariaValue: 91,
+			value: 0.91,
+			text: "generous",
+			textAlt: "self-protective",
+		}, // 6.44
+	],
+};
+
+/** @type {SkillSection} */
+const honestyHumility = {
+	title: "Honesty-Humility",
+	type: "line",
+	skills: [
+		{
+			title: "Sincerity",
+			ariaValue: 89,
+			value: 0.89,
+			text: "plain-speaking",
+			textAlt: "diplomatic charm",
+		}, // 6.36
+		{
+			title: "Fairness",
+			ariaValue: 87,
+			value: 0.87,
+			text: "even-handed",
+			textAlt: "competitive",
+		}, // 6.22
+		{
+			title: "Greed Avoidance",
+			ariaValue: 90,
+			value: 0.9,
+			text: "low status focus",
+			textAlt: "status focus",
+		}, // 6.39
+		{
+			title: "Modesty",
+			ariaValue: 94,
+			value: 0.94,
+			text: "low-key",
+			textAlt: "self-promotion",
+		}, // 6.63
+	],
+};
+
+/** @type {SkillSection} */
+const emotionality = {
+	title: "Emotionality",
+	type: "line",
+	skills: [
+		{
+			title: "Dependence",
+			ariaValue: 92,
+			value: 0.92,
+			text: "support-seeking",
+			textAlt: "self-reliant",
+		}, // 6.49
+		{
+			title: "Anxiety",
+			ariaValue: 86,
+			value: 0.86,
+			text: "vigilant",
+			textAlt: "calm under pressure",
+		}, // 6.16
+		{
+			title: "Sentimentality",
+			ariaValue: 79,
+			value: 0.79,
+			text: "tender-hearted",
+			textAlt: "reserved",
+		}, // 5.73
+		{
+			title: "Fearfulness",
+			ariaValue: 61,
+			value: 0.61,
+			text: "risk-cautious",
+			textAlt: "risk-tolerant",
+		}, // 4.68
+	],
+};
+
+/** @type {SkillSection} */
+const extraversion = {
+	title: "Extraversion",
+	type: "line",
+	skills: [
+		{
+			title: "Social Self-esteem",
+			ariaValue: 71,
+			value: 0.71,
+			text: "self-assured",
+			textAlt: "self-effacing",
+		}, // 5.27
+		{
+			title: "Social Boldness",
+			ariaValue: 81,
+			value: 0.81,
+			text: "bold",
+			textAlt: "observant",
+		}, // 5.84
+		{
+			title: "Sociability",
+			ariaValue: 71,
+			value: 0.71,
+			text: "outgoing",
+			textAlt: "private focus",
+		}, // 5.23
+		{
+			title: "Liveliness",
+			ariaValue: 83,
+			value: 0.83,
+			text: "energetic",
+			textAlt: "steady",
+		}, // 5.96
+	],
+};
+
+/** @type {SkillSection} */
+const agreeableness = {
+	title: "Agreeableness",
+	type: "line",
+	skills: [
+		{
+			title: "Forgiveness",
+			ariaValue: 77,
+			value: 0.77,
+			text: "forgiving",
+			textAlt: "accountability",
+		}, // 5.59
+		{
+			title: "Gentleness",
+			ariaValue: 62,
+			value: 0.62,
+			text: "gentle",
+			textAlt: "candid",
+		}, // 4.70
+		{
+			title: "Flexibility",
+			ariaValue: 54,
+			value: 0.54,
+			text: "flexible",
+			textAlt: "resolute",
+		}, // 4.26
+		{
+			title: "Patience",
+			ariaValue: 73,
+			value: 0.73,
+			text: "patient",
+			textAlt: "urgent",
+		}, // 5.36
+	],
+};
+
+/** @type {SkillSection} */
+const conscientiousness = {
+	title: "Conscientiousness",
+	type: "line",
+	skills: [
+		{
+			title: "Organization",
+			ariaValue: 76,
+			value: 0.76,
+			text: "organized",
+			textAlt: "adaptive",
+		}, // 5.54
+		{
+			title: "Diligence",
+			ariaValue: 96,
+			value: 0.96,
+			text: "persistent",
+			textAlt: "balanced pace",
+		}, // 6.78
+		{
+			title: "Perfectionism",
+			ariaValue: 88,
+			value: 0.88,
+			text: "detail care",
+			textAlt: "big picture",
+		}, // 6.31
+		{
+			title: "Prudence",
+			ariaValue: 68,
+			value: 0.68,
+			text: "deliberate",
+			textAlt: "adventurous",
+		}, // 5.09
+	],
+};
+
+/** @type {SkillSection} */
+const openness = {
+	title: "Openness",
+	type: "line",
+	skills: [
+		{
+			title: "Aesthetic Appreciation",
+			ariaValue: 67,
+			value: 0.67,
+			text: "aesthetic focus",
+			textAlt: "utilitarian",
+		}, // 5.02
+		{
+			title: "Inquisitiveness",
+			ariaValue: 92,
+			value: 0.92,
+			text: "curious",
+			textAlt: "efficient",
+		}, // 6.53
+		{
+			title: "Creativity",
+			ariaValue: 80,
+			value: 0.8,
+			text: "original",
+			textAlt: "reliable",
+		}, // 5.81
+		{
+			title: "Unconventionality",
+			ariaValue: 82,
+			value: 0.82,
+			text: "unconventional",
+			textAlt: "conventional",
+		}, // 5.90
+	],
+};
+
+/** @type {SkillSection} */
+const altruism = {
+	title: "Altruism",
+	type: "line",
+	skills: [
+		{
+			title: "Altruism",
+			ariaValue: 91,
+			value: 0.91,
+			text: "giving",
+			textAlt: "self-protective",
+		}, // 6.44
+	],
+};
+
+/** @type {Personality} */
+export const personality = {
+	title: "Personality",
+	content: markdownFileToHtml("src/data/content-en/personality.md"),
+	factors: hexaco,
+	facets: [
+		honestyHumility,
+		emotionality,
+		extraversion,
+		agreeableness,
+		conscientiousness,
+		openness,
+		altruism,
+	],
 };
 
 /** @type {Content} */
