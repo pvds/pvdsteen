@@ -36,9 +36,9 @@ export const ensureChromiumInstalled = async () => {
  * @returns {Promise<{ browser: import('playwright').Browser, page: import('playwright').Page }>}
  */
 export const launchBrowser = async (debugPort = 9222) => {
-	logDebug("Launching browser...");
-
 	await ensureChromiumInstalled();
+
+	logDebug("Launching browser...");
 
 	const browser = await chromium.launch({
 		headless: true,
