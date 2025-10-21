@@ -16,7 +16,7 @@ let { title, type = "line", skills = [] } = $props();
 <ul aria-label={title ?? null}
 	class={`${type === 'radial' ?
 	'grid grid-cols-1 justify-items-center gap-6 @3xs:grid-cols-2' : ''}
-	${type === 'line' ? 'flex flex-col' : ''}
+	${type === 'line' || type === 'scale' ? 'flex flex-col' : ''}
 	${type === 'dots' ? 'inline-flex flex-col gap-4' : 'gap-3'}`}>
 {#each skills as s, i (s.title)}
 	{@const ariaValue = Number(s.ariaValue)}
@@ -71,7 +71,7 @@ let { title, type = "line", skills = [] } = $props();
 				{s.title}
 			</strong>
 		</figure>
-	{:else}
+	{:else if type === 'line'}
 		<div class="mb-2 flex items-center justify-between">
 			<strong class="font-semibold">{s.title}</strong>
 			{#if s.text}<p class="text-sm font-light text-black-light">{s.text}</p>{/if}
@@ -84,6 +84,24 @@ let { title, type = "line", skills = [] } = $props();
 				after:h-full after:w-[var(--p)] after:rounded-full after:bg-primary
 				after:transition-[width] after:duration-500 after:ease-out
 			"></div>
+	{:else if type === 'scale'}
+		<strong class="font-semibold">{s.title}</strong>
+		<div class="mb-1 flex items-center justify-between">
+			{#if s.textAlt}<p
+				class="flex-none text-sm font-light text-black-light">{s.textAlt}</p>{/if}
+			{#if s.text}<p class="flex-none text-sm font-light text-black-light">{s.text}</p>{/if}
+		</div>
+		<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={ariaValue}
+			 style={`--p:${ariaValue}%;
+				--left: min(var(--p), 50%);
+				--w: max(calc(50% - var(--p)), calc(var(--p) - 50%));
+			`} aria-label={s.title}
+			 class="
+				relative h-1.5 w-full overflow-hidden rounded-full bg-black
+				after:content-[''] after:absolute after:inset-0
+				after:h-full after:w-[var(--w)] {ariaValue > 50 ? 'after:rounded-e-full' :
+				'after:rounded-s-full'} after:bg-primary
+				after:transition-[width] after:duration-500 after:ease-out after:left-[var(--left)]"></div>
 	{/if}
 	</li>
 {/each}

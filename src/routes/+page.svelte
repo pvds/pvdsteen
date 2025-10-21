@@ -6,7 +6,8 @@ import Skills from "$ui/Skills.svelte";
 import Timeline from "$ui/Timeline.svelte";
 
 let { data } = $props();
-let { about, experience, education, references, knowledge } = data.content;
+let { about, experience, education, references, knowledge, personality } =
+	data.content;
 
 const twoColGrid = "grid @xl:grid-cols-2 gap-14 mt-14";
 const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
@@ -53,6 +54,27 @@ const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 	<div class="flex flex-col gap-14 mt-14">
 		{#each references.reference as reference}
 			<Reference item={reference} />
+		{/each}
+	</div>
+</Section>
+
+<Section title={personality.title} classes="@container reveal bg-black-darkest rounded-xs">
+	{@html personality.content}
+
+	{#if personality.expander }
+		<Expander id={personality.expander.id} content={personality.expander.content}
+				  text={personality.expander.text} textAlt={personality.expander.textAlt}></Expander>
+	{/if}
+
+	<Section title={personality.factors.title} size="sm" classes="mt-14">
+		<Skills type="scale" skills={personality.factors.skills} />
+	</Section>
+
+	<div class={twoColGrid}>
+		{#each personality.facets as facet}
+			<Section title={facet.title} size="sm">
+				<Skills type="scale" skills={facet.skills} />
+			</Section>
 		{/each}
 	</div>
 </Section>

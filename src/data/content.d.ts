@@ -32,7 +32,7 @@ export type SkillItem = {
 	textAlt?: string;
 };
 
-export type SkillsType = "line" | "radial" | "dots";
+export type SkillsType = "line" | "radial" | "dots" | "scale";
 
 export type SkillSection = {
 	title: string;
@@ -141,6 +141,7 @@ export type Knowledge = {
 export type Personality = {
 	title: string;
 	content?: string;
+	expander?: Expander;
 	factors: SkillSection;
 	facets: SkillSection[];
 };
@@ -155,4 +156,5 @@ export type Content = {
 	education: Education;
 	references: References;
 	knowledge: Knowledge;
+	personality: Personality;
 };

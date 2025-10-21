@@ -8,9 +8,12 @@
  * @typedef {import('./content.js').Education} Education
  * @typedef {import('./content.js').References} References
  * @typedef {import('./content.js').Knowledge} Knowledge
+ * @typedef {import('./content.js').Personality} Personality
  * @typedef {import('./content.js').SkillSection} SkillSection
  * @typedef {import('./content.js').Content} Content
  **/
+
+import { markdownFileToHtml } from "$lib/server/utils.js";
 
 /** @type {Meta} **/
 export const meta = {
@@ -828,6 +831,318 @@ export const knowledge = {
 	buildTools,
 };
 
+/** @type {SkillSection} */
+const hexaco = {
+	title: "Kenmerken",
+	type: "line",
+	skills: [
+		{
+			title: "Eerlijkheid–Nederigheid",
+			ariaValue: 90,
+			value: 0.9,
+			text: "eerlijk, bescheiden",
+			textAlt: "op eigen voordeel gericht",
+		}, // 6.40
+		{
+			title: "Emotionaliteit",
+			ariaValue: 86,
+			value: 0.86,
+			text: "emotioneel afgestemd",
+			textAlt: "stoïcijns, stabiel",
+		}, // 6.14
+		{
+			title: "Extraversie",
+			ariaValue: 80,
+			value: 0.8,
+			text: "expressief, extravert",
+			textAlt: "stil, terughoudend",
+		}, // 5.79
+		{
+			title: "Meegaandheid",
+			ariaValue: 67,
+			value: 0.67,
+			text: "coöperatief, flexibel",
+			textAlt: "recht door zee, standvastig",
+		}, // 5.02
+		{
+			title: "Zorgvuldigheid",
+			ariaValue: 87,
+			value: 0.87,
+			text: "planmatig, betrouwbaar",
+			textAlt: "flexibel, spontaan",
+		}, // 6.21
+		{
+			title: "Openheid",
+			ariaValue: 85,
+			value: 0.85,
+			text: "nieuwsgierig, creatief",
+			textAlt: "traditioneel, constant",
+		}, // 6.10
+		{
+			title: "(interstitieel) Altruïsme",
+			ariaValue: 91,
+			value: 0.91,
+			text: "vrijgevig",
+			textAlt: "zelfbeschermend",
+		}, // 6.44
+	],
+};
+
+/** @type {SkillSection} */
+const honestyHumility = {
+	title: "Eerlijkheid–Nederigheid",
+	type: "line",
+	skills: [
+		{
+			title: "Oprechtheid",
+			ariaValue: 89,
+			value: 0.89,
+			text: "rechtuit",
+			textAlt: "tactvolle charme",
+		}, // 6.36
+		{
+			title: "Rechtvaardigheid",
+			ariaValue: 87,
+			value: 0.87,
+			text: "onpartijdig",
+			textAlt: "voordeelzoekend",
+		}, // 6.22
+		{
+			title: "Hebzuchtvermijding",
+			ariaValue: 90,
+			value: 0.9,
+			text: "weinig statusgericht",
+			textAlt: "statusgericht",
+		}, // 6.39
+		{
+			title: "Bescheidenheid",
+			ariaValue: 94,
+			value: 0.94,
+			text: "onopvallend",
+			textAlt: "zelfpromotie",
+		}, // 6.63
+	],
+};
+
+/** @type {SkillSection} */
+const emotionality = {
+	title: "Emotionaliteit",
+	type: "line",
+	skills: [
+		{
+			title: "Afhankelijkheid",
+			ariaValue: 92,
+			value: 0.92,
+			text: "steunzoekend",
+			textAlt: "zelfredzaam",
+		}, // 6.49
+		{
+			title: "Angst",
+			ariaValue: 86,
+			value: 0.86,
+			text: "waakzaam",
+			textAlt: "kalm onder druk",
+		}, // 6.16
+		{
+			title: "Sentimentaliteit",
+			ariaValue: 79,
+			value: 0.79,
+			text: "zachtaardig",
+			textAlt: "gereserveerd",
+		}, // 5.73
+		{
+			title: "Vreesachtigheid",
+			ariaValue: 61,
+			value: 0.61,
+			text: "risicomijdend",
+			textAlt: "risicotolerant",
+		}, // 4.68
+	],
+};
+
+/** @type {SkillSection} */
+const extraversion = {
+	title: "Extraversie",
+	type: "line",
+	skills: [
+		{
+			title: "Sociaal zelfvertrouwen",
+			ariaValue: 71,
+			value: 0.71,
+			text: "zelfverzekerd",
+			textAlt: "bescheiden",
+		}, // 5.27
+		{
+			title: "Sociale durf",
+			ariaValue: 81,
+			value: 0.81,
+			text: "gedurfd",
+			textAlt: "terughoudend",
+		}, // 5.84
+		{
+			title: "Sociabiliteit",
+			ariaValue: 71,
+			value: 0.71,
+			text: "sociaal",
+			textAlt: "solitair",
+		}, // 5.23
+		{
+			title: "Levendigheid",
+			ariaValue: 83,
+			value: 0.83,
+			text: "energiek",
+			textAlt: "gelijkmatig",
+		}, // 5.96
+	],
+};
+
+/** @type {SkillSection} */
+const agreeableness = {
+	title: "Meegaandheid",
+	type: "line",
+	skills: [
+		{
+			title: "Vergevingsgezindheid",
+			ariaValue: 77,
+			value: 0.77,
+			text: "vergevingsgezind",
+			textAlt: "streng",
+		}, // 5.59
+		{
+			title: "Zachtzinnigheid",
+			ariaValue: 62,
+			value: 0.62,
+			text: "zacht",
+			textAlt: "openhartig",
+		}, // 4.70
+		{
+			title: "Flexibiliteit",
+			ariaValue: 54,
+			value: 0.54,
+			text: "flexibel",
+			textAlt: "vastberaden",
+		}, // 4.26
+		{
+			title: "Geduld",
+			ariaValue: 73,
+			value: 0.73,
+			text: "geduldig",
+			textAlt: "urgent",
+		}, // 5.36
+	],
+};
+
+/** @type {SkillSection} */
+const conscientiousness = {
+	title: "Zorgvuldigheid",
+	type: "line",
+	skills: [
+		{
+			title: "Organisatie",
+			ariaValue: 76,
+			value: 0.76,
+			text: "georganiseerd",
+			textAlt: "adaptief",
+		}, // 5.54
+		{
+			title: "IJver",
+			ariaValue: 96,
+			value: 0.96,
+			text: "volhardend",
+			textAlt: "inspanning vermijdend",
+		}, // 6.78
+		{
+			title: "Perfectionisme",
+			ariaValue: 88,
+			value: 0.88,
+			text: "aandacht voor detail",
+			textAlt: "helikopterview",
+		}, // 6.31
+		{
+			title: "Behoedzaamheid",
+			ariaValue: 68,
+			value: 0.68,
+			text: "doordacht",
+			textAlt: "avontuurlijk",
+		}, // 5.09
+	],
+};
+
+/** @type {SkillSection} */
+const openness = {
+	title: "Openheid",
+	type: "line",
+	skills: [
+		{
+			title: "Esthetische waardering",
+			ariaValue: 67,
+			value: 0.67,
+			text: "esthetische focus",
+			textAlt: "utilitair",
+		}, // 5.02
+		{
+			title: "Nieuwsgierigheid",
+			ariaValue: 92,
+			value: 0.92,
+			text: "nieuwsgierig",
+			textAlt: "gefocust",
+		}, // 6.53
+		{
+			title: "Creativiteit",
+			ariaValue: 80,
+			value: 0.8,
+			text: "origineel",
+			textAlt: "praktisch",
+		}, // 5.81
+		{
+			title: "Onconventionaliteit",
+			ariaValue: 82,
+			value: 0.82,
+			text: "onconventioneel",
+			textAlt: "conventioneel",
+		}, // 5.90
+	],
+};
+
+/** @type {SkillSection} */
+const altruism = {
+	title: "Altruïsme",
+	type: "line",
+	skills: [
+		{
+			title: "Altruïsme",
+			ariaValue: 91,
+			value: 0.91,
+			text: "gevend",
+			textAlt: "zelfbeschermend",
+		}, // 6.44
+	],
+};
+
+/** @type {Personality} */
+export const personality = {
+	title: "Persoonlijkheid",
+	content: markdownFileToHtml("src/data/content-nl/personality.md"),
+	expander: {
+		id: "about-intro-expander",
+		content: markdownFileToHtml(
+			"src/data/content-nl/personality-expander.md",
+		),
+		text: "lees meer",
+		textAlt: "toon minder",
+	},
+	factors: hexaco,
+	facets: [
+		honestyHumility,
+		emotionality,
+		extraversion,
+		agreeableness,
+		conscientiousness,
+		openness,
+		altruism,
+	],
+};
+
 /** @type {Content} **/
 export const contentNl = {
 	meta,
@@ -839,6 +1154,7 @@ export const contentNl = {
 	education,
 	references,
 	knowledge,
+	personality,
 };
 
 export default contentNl;

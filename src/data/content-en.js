@@ -859,7 +859,7 @@ export const knowledge = {
 
 /** @type {SkillSection} */
 const hexaco = {
-	title: "HEXACO Factors",
+	title: "Traits",
 	type: "line",
 	skills: [
 		{
@@ -1149,6 +1149,14 @@ const altruism = {
 export const personality = {
 	title: "Personality",
 	content: markdownFileToHtml("src/data/content-en/personality.md"),
+	expander: {
+		id: "about-intro-expander",
+		content: markdownFileToHtml(
+			"src/data/content-en/personality-expander.md",
+		),
+		text: "read more",
+		textAlt: "less is more",
+	},
 	factors: hexaco,
 	facets: [
 		honestyHumility,
@@ -1172,6 +1180,7 @@ export const contentEn = {
 	education,
 	references,
 	knowledge,
+	personality,
 };
 
 export default contentEn;
