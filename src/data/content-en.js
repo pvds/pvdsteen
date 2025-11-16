@@ -905,7 +905,7 @@ const hexaco = {
 			textAlt: "traditional, steady",
 		}, // 6.10
 		{
-			title: "(interstitial) Altruism",
+			title: "Altruism",
 			ariaValue: 91,
 			value: 0.91,
 			text: "generous",
