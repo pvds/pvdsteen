@@ -26,8 +26,9 @@ let { item } = $props();
 			<span>{item.organization}</span></p>
 		<blockquote>{@html item.content}</blockquote>
 		{#if item.expander}
-			<Expander id={item.expander.id} content={item.expander.content}
-					  text={item.expander.text} textAlt={item.expander.textAlt} />
+			<Expander hasProse id={item.expander.id} text={item.expander.text} textAlt={item.expander.textAlt}>
+				{@html item.expander.content}
+			</Expander>
 		{/if}
 	</div>
 </div>

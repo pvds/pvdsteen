@@ -43,10 +43,9 @@ let { title, items } = $props();
 			</div>
 
 			{#if item.expander}
-				<Expander id={item.expander.id}
-					text={item.expander.text}
-					textAlt={item.expander.textAlt}
-					content={item.expander.content} />
+				<Expander hasProse id={item.expander.id} text={item.expander.text} textAlt={item.expander.textAlt}>
+					{@html item.expander.content}
+				</Expander>
 			{/if}
 		</li>
 	{/each}

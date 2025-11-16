@@ -17,8 +17,10 @@ const threeColGrid = "grid @2xl:grid-cols-3 gap-x-12 gap-y-14 mt-14";
 	{@html about.intro.content}
 
 	{#if about.intro.expander }
-	<Expander id={about.intro.expander.id} content={about.intro.expander.content}
-			  text={about.intro.expander.text} textAlt={about.intro.expander.textAlt}></Expander>
+	<Expander hasProse id={about.intro.expander.id} text={about.intro.expander.text}
+			  textAlt={about.intro.expander.textAlt}>
+		{@html about.intro.expander.content}
+	</Expander>
 	{/if}
 
 	<div class={twoColGrid}>

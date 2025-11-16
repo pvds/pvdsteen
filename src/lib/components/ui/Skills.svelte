@@ -108,14 +108,11 @@ let { title, type = "line", skills = [] } = $props();
 
 
 		{#if s.skills?.length}
-			<Expander
-				id="skill-{slugify(s.title)}"
-				text="show details"
-				textAlt="hide details"
+			<Expander id="skill-{slugify(s.title)}" text="show details" textAlt="hide details"
 			>
 				<div class="ml-6 mb-4">
 					{#if s.description}
-						<div class="my-2 text-sm text-black-light prose-sm">
+						<div class="my-2 text-sm text-black-light prose">
 							{@html s.description}
 						</div>
 					{/if}

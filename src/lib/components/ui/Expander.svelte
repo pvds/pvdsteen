@@ -5,12 +5,12 @@
  * @property {string} id
  * @property {string} [text]
  * @property {string} [textAlt]
- * @property {string} [content]
- * @property {import('svelte').Snippet} [children]
+ * @property {boolean} [hasProse=false]
+ * @property {import('svelte').Snippet} children
  */
 
 /** @type {Props} */
-let { id, text, textAlt, content, children } = $props();
+let { id, text, textAlt, hasProse, children } = $props();
 </script>
 
 <details class="mt-3" id={id}>
@@ -33,14 +33,8 @@ let { id, text, textAlt, content, children } = $props();
 		</span>
 	</summary>
 
-	<div id={`${id}-content`} class="mt-3 text-sm">
-		{#if children}
-			{@render children()}
-		{:else if content}
-			<div class="prose">
-				{@html content}
-			</div>
-		{/if}
+	<div id={`${id}-content`} class="mt-3 text-sm" class:prose={hasProse}>
+		{@render children()}
 	</div>
 </details>
 
