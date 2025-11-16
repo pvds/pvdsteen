@@ -47,4 +47,9 @@
 	& :where(blockquote) {
 		@apply border-l pl-4 italic;
 	}
+
+	/* horizontal rules */
+	& :where(hr) {
+		@apply my-6;
+	}
 }
