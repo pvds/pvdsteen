@@ -13,7 +13,7 @@
  * @typedef {import('./content.js').Content} Content
  **/
 
-import { markdownFileToHtml } from "$lib/server/utils.js";
+import { markdownFileToHtml, markdownToHtml } from "$lib/server/utils.js";
 
 /** @type {Meta} */
 export const meta = {
@@ -860,288 +860,340 @@ export const knowledge = {
 /** @type {SkillSection} */
 const hexaco = {
 	title: "Traits",
-	type: "line",
+	type: "scale",
 	skills: [
 		{
 			title: "Honesty-Humility",
+			description: markdownToHtml(
+				"**High:** avoid manipulating, little temptation to break rules, low interest in wealth/status, modest.\n\n**Low:** ingratiation/manipulation, rule-bending for gain, status-seeking, entitlement.",
+			),
 			ariaValue: 90,
 			value: 0.9,
 			text: "fair, modest",
 			textAlt: "self-advancing",
-		}, // 6.40
+			skills: [
+				{
+					title: "Sincerity",
+					description: markdownToHtml(
+						"genuine vs. flattering to get favors.",
+					),
+					ariaValue: 89,
+					value: 0.89,
+					text: "plain-speaking",
+					textAlt: "tactful charm",
+				},
+				{
+					title: "Fairness",
+					description: markdownToHtml(
+						"avoids fraud/exploitation vs. willing to cheat.",
+					),
+					ariaValue: 87,
+					value: 0.87,
+					text: "even-handed",
+					textAlt: "advantage-seeking",
+				},
+				{
+					title: "Greed Avoidance",
+					description: markdownToHtml(
+						"indifferent to luxury/status vs. desire to display wealth/privilege.",
+					),
+					ariaValue: 90,
+					value: 0.9,
+					text: "low status focus",
+					textAlt: "status focus",
+				},
+				{
+					title: "Modesty",
+					description: markdownToHtml(
+						"unassuming vs. superior/entitled.",
+					),
+					ariaValue: 94,
+					value: 0.94,
+					text: "low-key",
+					textAlt: "self-promotion",
+				},
+			],
+		},
 		{
 			title: "Emotionality",
+			description: markdownToHtml(
+				"**High:** cautious about physical danger, worries under stress, seeks emotional support, strong attachment/empathy.\n\n**Low:** fearless of harm, little worry, self-reliant with concerns, emotionally detached.",
+			),
 			ariaValue: 86,
 			value: 0.86,
 			text: "emotionally attuned",
 			textAlt: "stoic, steady",
-		}, // 6.14
+			skills: [
+				{
+					title: "Fearfulness",
+					description: markdownToHtml(
+						"avoids injury vs. tough/brave to pain.",
+					),
+					ariaValue: 61,
+					value: 0.61,
+					text: "risk-cautious",
+					textAlt: "risk-tolerant",
+				},
+				{
+					title: "Anxiety",
+					description: markdownToHtml(
+						"prone to worry vs. little stress response.",
+					),
+					ariaValue: 86,
+					value: 0.86,
+					text: "vigilant",
+					textAlt: "calm under pressure",
+				},
+				{
+					title: "Dependence",
+					description: markdownToHtml(
+						"wants encouragement/comfort vs. handles problems alone.",
+					),
+					ariaValue: 92,
+					value: 0.92,
+					text: "support-seeking",
+					textAlt: "self-reliant",
+				},
+				{
+					title: "Sentimentality",
+					description: markdownToHtml(
+						"strong bonds/empathy vs. little emotional reaction to others.",
+					),
+					ariaValue: 79,
+					value: 0.79,
+					text: "tender-hearted",
+					textAlt: "reserved",
+				},
+			],
+		},
 		{
 			title: "Extraversion",
+			description: markdownToHtml(
+				"**High:** positive self-regard, confident addressing groups, enjoys social events, energetic/enthusiastic.\n\n**Low:** feels unpopular, awkward in the spotlight, indifferent to socializing, lower optimism/vigor.",
+			),
 			ariaValue: 80,
 			value: 0.8,
 			text: "expressive, outgoing",
 			textAlt: "quiet, reserved",
-		}, // 5.79
+			skills: [
+				{
+					title: "Social Self-Esteem",
+					description: markdownToHtml(
+						"satisfied/likable vs. self-doubt/unpopular.",
+					),
+					ariaValue: 71,
+					value: 0.71,
+					text: "self-assured",
+					textAlt: "self-effacing",
+				},
+				{
+					title: "Social Boldness",
+					description: markdownToHtml(
+						"comfortable leading/speaking vs. shy/awkward.",
+					),
+					ariaValue: 81,
+					value: 0.81,
+					text: "bold",
+					textAlt: "reserved",
+				},
+				{
+					title: "Sociability",
+					description: markdownToHtml(
+						"seeks conversation/parties vs. prefers solitary activities.",
+					),
+					ariaValue: 71,
+					value: 0.71,
+					text: "outgoing",
+					textAlt: "solitary",
+				},
+				{
+					title: "Liveliness",
+					description: markdownToHtml(
+						"cheerful/optimistic vs. less spirited.",
+					),
+					ariaValue: 83,
+					value: 0.83,
+					text: "energetic",
+					textAlt: "steady",
+				},
+			],
+		},
 		{
 			title: "Agreeableness",
+			description: markdownToHtml(
+				"**High:** forgiving, lenient, cooperative/compromising, calm-tempered.\n\n**Low:** holds grudges, critical, stubborn/argumentative, quick to anger.",
+			),
 			ariaValue: 67,
 			value: 0.67,
 			text: "cooperative, flexible",
 			textAlt: "forthright, firm",
-		}, // 5.02
+			skills: [
+				{
+					title: "Forgivingness",
+					description: markdownToHtml(
+						"ready to trust again vs. keeps grudges.",
+					),
+					ariaValue: 77,
+					value: 0.77,
+					text: "forgiving",
+					textAlt: "strict",
+				},
+				{
+					title: "Gentleness",
+					description: markdownToHtml(
+						"mild/lenient vs. harshly critical.",
+					),
+					ariaValue: 62,
+					value: 0.62,
+					text: "gentle",
+					textAlt: "candid",
+				},
+				{
+					title: "Flexibility",
+					description: markdownToHtml(
+						"accommodates/avoids arguments vs. stubborn/argues.",
+					),
+					ariaValue: 54,
+					value: 0.54,
+					text: "flexible",
+					textAlt: "resolute",
+				},
+				{
+					title: "Patience",
+					description: markdownToHtml(
+						"slow to anger vs. quick-tempered.",
+					),
+					ariaValue: 73,
+					value: 0.73,
+					text: "patient",
+					textAlt: "urgent",
+				},
+			],
+		},
 		{
 			title: "Conscientiousness",
+			description: markdownToHtml(
+				"**High:** orderly surroundings/schedules, disciplined effort, detail accuracy, careful deliberation.\n\n**Low:** unconcerned with order, avoids demanding tasks, accepts errors, impulsive decisions.",
+			),
 			ariaValue: 87,
 			value: 0.87,
 			text: "planful, reliable",
 			textAlt: "flexible, spontaneous",
-		}, // 6.21
+			skills: [
+				{
+					title: "Organization",
+					description: markdownToHtml(
+						"tidy/structured vs. sloppy/haphazard.",
+					),
+					ariaValue: 76,
+					value: 0.76,
+					text: "organized",
+					textAlt: "adaptive",
+				},
+				{
+					title: "Diligence",
+					description: markdownToHtml(
+						"strong work ethic vs. low motivation/self-discipline.",
+					),
+					ariaValue: 96,
+					value: 0.96,
+					text: "persistent",
+					textAlt: "effort-sparing",
+				},
+				{
+					title: "Perfectionism",
+					description: markdownToHtml(
+						"checks for mistakes/improvements vs. tolerates errors/neglects details.",
+					),
+					ariaValue: 88,
+					value: 0.88,
+					text: "detail care",
+					textAlt: "big picture",
+				},
+				{
+					title: "Prudence",
+					description: markdownToHtml(
+						"cautious, inhibits impulses vs. acts quickly/impulsively.",
+					),
+					ariaValue: 68,
+					value: 0.68,
+					text: "deliberate",
+					textAlt: "adventurous",
+				},
+			],
+		},
 		{
 			title: "Openness",
+			description: markdownToHtml(
+				"**High:** absorbed by art/nature, curious across domains, imaginative, open to unusual ideas/people.\n\n**Low:** unimpressed by art, low curiosity, little creative drive, avoids unconventional ideas.",
+			),
 			ariaValue: 85,
 			value: 0.85,
 			text: "curious, creative",
 			textAlt: "traditional, steady",
-		}, // 6.10
+			skills: [
+				{
+					title: "Aesthetic Appreciation",
+					description: markdownToHtml(
+						"moved by art/nature vs. rarely absorbed.",
+					),
+					ariaValue: 67,
+					value: 0.67,
+					text: "aesthetic focus",
+					textAlt: "utilitarian",
+				},
+				{
+					title: "Inquisitiveness",
+					description: markdownToHtml(
+						"seeks knowledge/experience vs. little curiosity.",
+					),
+					ariaValue: 92,
+					value: 0.92,
+					text: "curious",
+					textAlt: "focused",
+				},
+				{
+					title: "Creativity",
+					description: markdownToHtml(
+						"prefers innovation/experimentation vs. little originality.",
+					),
+					ariaValue: 80,
+					value: 0.8,
+					text: "original",
+					textAlt: "practical",
+				},
+				{
+					title: "Unconventionality",
+					description: markdownToHtml(
+						"receptive to unusual/radical ideas vs. avoids nonconformity.",
+					),
+					ariaValue: 82,
+					value: 0.82,
+					text: "unconventional",
+					textAlt: "conventional",
+				},
+			],
+		},
 		{
 			title: "Altruism",
+			description: markdownToHtml(
+				"**High:** soft-hearted, avoids harm, generous to those in need.\n\n**Low:** not upset by harming others; seen as hard-hearted.\n\n> **Use with care:** Scores estimate tendencies and can vary by items or rater. Treat the profile as insight, not fate.",
+			),
 			ariaValue: 91,
 			value: 0.91,
 			text: "generous",
 			textAlt: "self-protective",
-		}, // 6.44
-	],
-};
-
-/** @type {SkillSection} */
-const honestyHumility = {
-	title: "Honesty-Humility",
-	type: "line",
-	skills: [
-		{
-			title: "Sincerity",
-			ariaValue: 89,
-			value: 0.89,
-			text: "plain-speaking",
-			textAlt: "tactful charm",
-		}, // 6.36
-		{
-			title: "Fairness",
-			ariaValue: 87,
-			value: 0.87,
-			text: "even-handed",
-			textAlt: "advantage-seeking",
-		}, // 6.22
-		{
-			title: "Greed Avoidance",
-			ariaValue: 90,
-			value: 0.9,
-			text: "low status focus",
-			textAlt: "status focus",
-		}, // 6.39
-		{
-			title: "Modesty",
-			ariaValue: 94,
-			value: 0.94,
-			text: "low-key",
-			textAlt: "self-promotion",
-		}, // 6.63
-	],
-};
-
-/** @type {SkillSection} */
-const emotionality = {
-	title: "Emotionality",
-	type: "line",
-	skills: [
-		{
-			title: "Dependence",
-			ariaValue: 92,
-			value: 0.92,
-			text: "support-seeking",
-			textAlt: "self-reliant",
-		}, // 6.49
-		{
-			title: "Anxiety",
-			ariaValue: 86,
-			value: 0.86,
-			text: "vigilant",
-			textAlt: "calm under pressure",
-		}, // 6.16
-		{
-			title: "Sentimentality",
-			ariaValue: 79,
-			value: 0.79,
-			text: "tender-hearted",
-			textAlt: "reserved",
-		}, // 5.73
-		{
-			title: "Fearfulness",
-			ariaValue: 61,
-			value: 0.61,
-			text: "risk-cautious",
-			textAlt: "risk-tolerant",
-		}, // 4.68
-	],
-};
-
-/** @type {SkillSection} */
-const extraversion = {
-	title: "Extraversion",
-	type: "line",
-	skills: [
-		{
-			title: "Social Self-esteem",
-			ariaValue: 71,
-			value: 0.71,
-			text: "self-assured",
-			textAlt: "self-effacing",
-		}, // 5.27
-		{
-			title: "Social Boldness",
-			ariaValue: 81,
-			value: 0.81,
-			text: "bold",
-			textAlt: "reserved",
-		}, // 5.84
-		{
-			title: "Sociability",
-			ariaValue: 71,
-			value: 0.71,
-			text: "outgoing",
-			textAlt: "solitary",
-		}, // 5.23
-		{
-			title: "Liveliness",
-			ariaValue: 83,
-			value: 0.83,
-			text: "energetic",
-			textAlt: "steady",
-		}, // 5.96
-	],
-};
-
-/** @type {SkillSection} */
-const agreeableness = {
-	title: "Agreeableness",
-	type: "line",
-	skills: [
-		{
-			title: "Forgiveness",
-			ariaValue: 77,
-			value: 0.77,
-			text: "forgiving",
-			textAlt: "strict",
-		}, // 5.59
-		{
-			title: "Gentleness",
-			ariaValue: 62,
-			value: 0.62,
-			text: "gentle",
-			textAlt: "candid",
-		}, // 4.70
-		{
-			title: "Flexibility",
-			ariaValue: 54,
-			value: 0.54,
-			text: "flexible",
-			textAlt: "resolute",
-		}, // 4.26
-		{
-			title: "Patience",
-			ariaValue: 73,
-			value: 0.73,
-			text: "patient",
-			textAlt: "urgent",
-		}, // 5.36
-	],
-};
-
-/** @type {SkillSection} */
-const conscientiousness = {
-	title: "Conscientiousness",
-	type: "line",
-	skills: [
-		{
-			title: "Organization",
-			ariaValue: 76,
-			value: 0.76,
-			text: "organized",
-			textAlt: "adaptive",
-		}, // 5.54
-		{
-			title: "Diligence",
-			ariaValue: 96,
-			value: 0.96,
-			text: "persistent",
-			textAlt: "effort-sparing",
-		}, // 6.78
-		{
-			title: "Perfectionism",
-			ariaValue: 88,
-			value: 0.88,
-			text: "detail care",
-			textAlt: "big picture",
-		}, // 6.31
-		{
-			title: "Prudence",
-			ariaValue: 68,
-			value: 0.68,
-			text: "deliberate",
-			textAlt: "adventurous",
-		}, // 5.09
-	],
-};
-
-/** @type {SkillSection} */
-const openness = {
-	title: "Openness",
-	type: "line",
-	skills: [
-		{
-			title: "Aesthetic Appreciation",
-			ariaValue: 67,
-			value: 0.67,
-			text: "aesthetic focus",
-			textAlt: "utilitarian",
-		}, // 5.02
-		{
-			title: "Inquisitiveness",
-			ariaValue: 92,
-			value: 0.92,
-			text: "curious",
-			textAlt: "focused",
-		}, // 6.53
-		{
-			title: "Creativity",
-			ariaValue: 80,
-			value: 0.8,
-			text: "original",
-			textAlt: "practical",
-		}, // 5.81
-		{
-			title: "Unconventionality",
-			ariaValue: 82,
-			value: 0.82,
-			text: "unconventional",
-			textAlt: "conventional",
-		}, // 5.90
-	],
-};
-
-/** @type {SkillSection} */
-const altruism = {
-	title: "Altruism",
-	type: "line",
-	skills: [
-		{
-			title: "Altruism",
-			ariaValue: 91,
-			value: 0.91,
-			text: "giving",
-			textAlt: "self-protective",
-		}, // 6.44
+			skills: [
+				{
+					title: "Altruism",
+					description: markdownToHtml("giving vs. self-protective."),
+					ariaValue: 91,
+					value: 0.91,
+					text: "giving",
+					textAlt: "self-protective",
+				},
+			],
+		},
 	],
 };
 
@@ -1149,24 +1201,7 @@ const altruism = {
 export const personality = {
 	title: "Personality",
 	content: markdownFileToHtml("src/data/content-en/personality.md"),
-	expander: {
-		id: "about-intro-expander",
-		content: markdownFileToHtml(
-			"src/data/content-en/personality-expander.md",
-		),
-		text: "read more",
-		textAlt: "less is more",
-	},
 	factors: hexaco,
-	facets: [
-		honestyHumility,
-		emotionality,
-		extraversion,
-		agreeableness,
-		conscientiousness,
-		openness,
-		altruism,
-	],
 };
 
 /** @type {Content} */

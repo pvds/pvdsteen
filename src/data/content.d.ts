@@ -26,10 +26,12 @@ export type DefinitionItem = {
 
 export type SkillItem = {
 	title: string;
+	description?: string;
 	ariaValue?: string | number;
 	value?: string | number;
 	text?: string;
 	textAlt?: string;
+	skills?: SkillItem[];
 };
 
 export type SkillsType = "line" | "radial" | "dots" | "scale";
@@ -141,9 +143,7 @@ export type Knowledge = {
 export type Personality = {
 	title: string;
 	content?: string;
-	expander?: Expander;
 	factors: SkillSection;
-	facets: SkillSection[];
 };
 
 export type Content = {

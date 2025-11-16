@@ -13,7 +13,7 @@
  * @typedef {import('./content.js').Content} Content
  **/
 
-import { markdownFileToHtml } from "$lib/server/utils.js";
+import { markdownFileToHtml, markdownToHtml } from "$lib/server/utils.js";
 
 /** @type {Meta} **/
 export const meta = {
@@ -834,288 +834,340 @@ export const knowledge = {
 /** @type {SkillSection} */
 const hexaco = {
 	title: "Kenmerken",
-	type: "line",
+	type: "scale",
 	skills: [
 		{
 			title: "Eerlijkheid–Nederigheid",
+			description: markdownToHtml(
+				"**Hoog:** vermijden van manipulatie, weinig verleiding om regels te breken, weinig interesse in rijkdom/status, bescheiden.\n\n**Laag:** vleierij/manipulatie, regels buigen voor eigen gewin, statuszoekend, gevoel van recht op voorrechten.",
+			),
 			ariaValue: 90,
 			value: 0.9,
 			text: "eerlijk, bescheiden",
 			textAlt: "op eigen voordeel gericht",
-		}, // 6.40
+			skills: [
+				{
+					title: "Oprechtheid",
+					description: markdownToHtml(
+						"oprecht vs. vleien om gunsten te krijgen.",
+					),
+					ariaValue: 89,
+					value: 0.89,
+					text: "rechtuit",
+					textAlt: "tactvolle charme",
+				},
+				{
+					title: "Rechtvaardigheid",
+					description: markdownToHtml(
+						"vermijdt fraude/uitbuiting vs. bereid te valsspelen.",
+					),
+					ariaValue: 87,
+					value: 0.87,
+					text: "onpartijdig",
+					textAlt: "voordeelzoekend",
+				},
+				{
+					title: "Hebzuchtvermijding",
+					description: markdownToHtml(
+						"onverschillig voor luxe/status vs. verlangen om rijkdom/privilege te tonen.",
+					),
+					ariaValue: 90,
+					value: 0.9,
+					text: "weinig statusgericht",
+					textAlt: "statusgericht",
+				},
+				{
+					title: "Bescheidenheid",
+					description: markdownToHtml(
+						"onopvallend vs. superieur/zelfgerechtigd.",
+					),
+					ariaValue: 94,
+					value: 0.94,
+					text: "onopvallend",
+					textAlt: "zelfpromotie",
+				},
+			],
+		},
 		{
 			title: "Emotionaliteit",
+			description: markdownToHtml(
+				"**Hoog:** voorzichtig met fysieke gevaren, maakt zich zorgen onder stress, zoekt emotionele steun, sterke gehechtheid/empathie.\n\n**Laag:** onverschrokken voor schade, weinig zorgen, lost problemen zelf op, emotioneel afstandelijk.",
+			),
 			ariaValue: 86,
 			value: 0.86,
 			text: "emotioneel afgestemd",
 			textAlt: "stoïcijns, stabiel",
-		}, // 6.14
+			skills: [
+				{
+					title: "Vreesachtigheid",
+					description: markdownToHtml(
+						"vermijdt letsel vs. taai/moedig ten opzichte van pijn.",
+					),
+					ariaValue: 61,
+					value: 0.61,
+					text: "risicomijdend",
+					textAlt: "risicotolerant",
+				},
+				{
+					title: "Angst",
+					description: markdownToHtml(
+						"geneigd tot piekeren vs. weinig stressreactie.",
+					),
+					ariaValue: 86,
+					value: 0.86,
+					text: "waakzaam",
+					textAlt: "kalm onder druk",
+				},
+				{
+					title: "Afhankelijkheid",
+					description: markdownToHtml(
+						"wil aanmoediging/troost vs. pakt problemen alleen aan.",
+					),
+					ariaValue: 92,
+					value: 0.92,
+					text: "steunzoekend",
+					textAlt: "zelfredzaam",
+				},
+				{
+					title: "Sentimentaliteit",
+					description: markdownToHtml(
+						"sterke banden/empathie vs. weinig emotionele reactie op anderen.",
+					),
+					ariaValue: 79,
+					value: 0.79,
+					text: "zachtaardig",
+					textAlt: "gereserveerd",
+				},
+			],
+		},
 		{
 			title: "Extraversie",
+			description: markdownToHtml(
+				"**Hoog:** positief zelfbeeld, zelfverzekerd spreken voor groepen, geniet van sociale gebeurtenissen, energiek/enthousiast.\n\n**Laag:** voelt zich onpopulair, onhandig in de spotlights, onverschillig over socializen, minder optimisme/elan.",
+			),
 			ariaValue: 80,
 			value: 0.8,
 			text: "expressief, extravert",
 			textAlt: "stil, terughoudend",
-		}, // 5.79
+			skills: [
+				{
+					title: "Sociaal zelfvertrouwen",
+					description: markdownToHtml(
+						"tevreden/geliefd vs. zelftwijfel/onpopulair.",
+					),
+					ariaValue: 71,
+					value: 0.71,
+					text: "zelfverzekerd",
+					textAlt: "bescheiden",
+				},
+				{
+					title: "Sociale durf",
+					description: markdownToHtml(
+						"comfortabel met leiden/spreken vs. verlegen/onhandig.",
+					),
+					ariaValue: 81,
+					value: 0.81,
+					text: "gedurfd",
+					textAlt: "terughoudend",
+				},
+				{
+					title: "Sociabiliteit",
+					description: markdownToHtml(
+						"zoekt gesprek/feestjes vs. verkiest solistische activiteiten.",
+					),
+					ariaValue: 71,
+					value: 0.71,
+					text: "sociaal",
+					textAlt: "solitair",
+				},
+				{
+					title: "Levendigheid",
+					description: markdownToHtml(
+						"vrolijk/optimistisch vs. minder spirit.",
+					),
+					ariaValue: 83,
+					value: 0.83,
+					text: "energiek",
+					textAlt: "gelijkmatig",
+				},
+			],
+		},
 		{
 			title: "Meegaandheid",
+			description: markdownToHtml(
+				"**Hoog:** vergevingsgezind, toegeeflijk, coöperatief/compromisbereid, kalm van aard.\n\n**Laag:** koestert wrok, kritisch, koppig/argumentatief, snel geprikkeld.",
+			),
 			ariaValue: 67,
 			value: 0.67,
 			text: "coöperatief, flexibel",
 			textAlt: "recht door zee, standvastig",
-		}, // 5.02
+			skills: [
+				{
+					title: "Vergevingsgezindheid",
+					description: markdownToHtml(
+						"snel weer vertrouwen vs. houdt wrok vast.",
+					),
+					ariaValue: 77,
+					value: 0.77,
+					text: "vergevingsgezind",
+					textAlt: "streng",
+				},
+				{
+					title: "Zachtzinnigheid",
+					description: markdownToHtml(
+						"mild/toegeeflijk vs. hard kritisch.",
+					),
+					ariaValue: 62,
+					value: 0.62,
+					text: "zacht",
+					textAlt: "openhartig",
+				},
+				{
+					title: "Flexibiliteit",
+					description: markdownToHtml(
+						"past zich aan/vermijdt ruzie vs. koppig/gaat de strijd aan.",
+					),
+					ariaValue: 54,
+					value: 0.54,
+					text: "flexibel",
+					textAlt: "vastberaden",
+				},
+				{
+					title: "Geduld",
+					description: markdownToHtml(
+						"langzaam boos te krijgen vs. driftig.",
+					),
+					ariaValue: 73,
+					value: 0.73,
+					text: "geduldig",
+					textAlt: "urgent",
+				},
+			],
+		},
 		{
 			title: "Zorgvuldigheid",
+			description: markdownToHtml(
+				"**Hoog:** ordelijke omgeving/planning, gedisciplineerde inspanning, nauwkeurigheid in details, zorgvuldige overweging.\n\n**Laag:** weinig aandacht voor orde, vermijdt veeleisende taken, accepteert fouten, impulsieve beslissingen.",
+			),
 			ariaValue: 87,
 			value: 0.87,
 			text: "planmatig, betrouwbaar",
 			textAlt: "flexibel, spontaan",
-		}, // 6.21
+			skills: [
+				{
+					title: "Organisatie",
+					description: markdownToHtml(
+						"netjes/gestructureerd vs. slordig/chaotisch.",
+					),
+					ariaValue: 76,
+					value: 0.76,
+					text: "georganiseerd",
+					textAlt: "adaptief",
+				},
+				{
+					title: "IJver",
+					description: markdownToHtml(
+						"sterke arbeidsethos vs. lage motivatie/zelfdiscipline.",
+					),
+					ariaValue: 96,
+					value: 0.96,
+					text: "volhardend",
+					textAlt: "inspanning vermijdend",
+				},
+				{
+					title: "Perfectionisme",
+					description: markdownToHtml(
+						"controleert op fouten/verbeteringen vs. tolereert fouten/laat details liggen.",
+					),
+					ariaValue: 88,
+					value: 0.88,
+					text: "aandacht voor detail",
+					textAlt: "helikopterview",
+				},
+				{
+					title: "Behoedzaamheid",
+					description: markdownToHtml(
+						"voorzichtig, remt impulsen vs. handelt snel/impulsief.",
+					),
+					ariaValue: 68,
+					value: 0.68,
+					text: "doordacht",
+					textAlt: "avontuurlijk",
+				},
+			],
+		},
 		{
 			title: "Openheid",
+			description: markdownToHtml(
+				"**Hoog:** geraakt door kunst/natuur, nieuwsgierig over vele domeinen, fantasierijk, open voor ongewone ideeën/mensen.\n\n**Laag:** ongevoelig voor kunst, weinig nieuwsgierigheid, weinig creatieve drang, vermijdt onconventionele ideeën.",
+			),
 			ariaValue: 85,
 			value: 0.85,
 			text: "nieuwsgierig, creatief",
 			textAlt: "traditioneel, constant",
-		}, // 6.10
+			skills: [
+				{
+					title: "Esthetische waardering",
+					description: markdownToHtml(
+						"ontroerd door kunst/natuur vs. zelden geraakt.",
+					),
+					ariaValue: 67,
+					value: 0.67,
+					text: "esthetische focus",
+					textAlt: "utilitair",
+				},
+				{
+					title: "Nieuwsgierigheid",
+					description: markdownToHtml(
+						"zoekt kennis/ervaring vs. weinig nieuwsgierigheid.",
+					),
+					ariaValue: 92,
+					value: 0.92,
+					text: "nieuwsgierig",
+					textAlt: "gefocust",
+				},
+				{
+					title: "Creativiteit",
+					description: markdownToHtml(
+						"verkiest innovatie/experiment vs. weinig originaliteit.",
+					),
+					ariaValue: 80,
+					value: 0.8,
+					text: "origineel",
+					textAlt: "praktisch",
+				},
+				{
+					title: "Onconventionaliteit",
+					description: markdownToHtml(
+						"ontvankelijk voor ongewone/radicale ideeën vs. vermijdt non-conformiteit.",
+					),
+					ariaValue: 82,
+					value: 0.82,
+					text: "onconventioneel",
+					textAlt: "conventioneel",
+				},
+			],
+		},
 		{
-			title: "(interstitieel) Altruïsme",
+			title: "Altruïsme",
+			description: markdownToHtml(
+				"**Hoog:** zachtaardig, vermijdt schade, vrijgevig voor wie het nodig heeft.\n\n**Laag:** niet geraakt door schade aan anderen; wordt gezien als hardvochtig.\n\n> **Gebruik met zorg:** Scores schatten tendensen en kunnen variëren per item of beoordelaar. Zie het profiel als inzicht, niet als lotsbestemming.",
+			),
 			ariaValue: 91,
 			value: 0.91,
 			text: "vrijgevig",
 			textAlt: "zelfbeschermend",
-		}, // 6.44
-	],
-};
-
-/** @type {SkillSection} */
-const honestyHumility = {
-	title: "Eerlijkheid–Nederigheid",
-	type: "line",
-	skills: [
-		{
-			title: "Oprechtheid",
-			ariaValue: 89,
-			value: 0.89,
-			text: "rechtuit",
-			textAlt: "tactvolle charme",
-		}, // 6.36
-		{
-			title: "Rechtvaardigheid",
-			ariaValue: 87,
-			value: 0.87,
-			text: "onpartijdig",
-			textAlt: "voordeelzoekend",
-		}, // 6.22
-		{
-			title: "Hebzuchtvermijding",
-			ariaValue: 90,
-			value: 0.9,
-			text: "weinig statusgericht",
-			textAlt: "statusgericht",
-		}, // 6.39
-		{
-			title: "Bescheidenheid",
-			ariaValue: 94,
-			value: 0.94,
-			text: "onopvallend",
-			textAlt: "zelfpromotie",
-		}, // 6.63
-	],
-};
-
-/** @type {SkillSection} */
-const emotionality = {
-	title: "Emotionaliteit",
-	type: "line",
-	skills: [
-		{
-			title: "Afhankelijkheid",
-			ariaValue: 92,
-			value: 0.92,
-			text: "steunzoekend",
-			textAlt: "zelfredzaam",
-		}, // 6.49
-		{
-			title: "Angst",
-			ariaValue: 86,
-			value: 0.86,
-			text: "waakzaam",
-			textAlt: "kalm onder druk",
-		}, // 6.16
-		{
-			title: "Sentimentaliteit",
-			ariaValue: 79,
-			value: 0.79,
-			text: "zachtaardig",
-			textAlt: "gereserveerd",
-		}, // 5.73
-		{
-			title: "Vreesachtigheid",
-			ariaValue: 61,
-			value: 0.61,
-			text: "risicomijdend",
-			textAlt: "risicotolerant",
-		}, // 4.68
-	],
-};
-
-/** @type {SkillSection} */
-const extraversion = {
-	title: "Extraversie",
-	type: "line",
-	skills: [
-		{
-			title: "Sociaal zelfvertrouwen",
-			ariaValue: 71,
-			value: 0.71,
-			text: "zelfverzekerd",
-			textAlt: "bescheiden",
-		}, // 5.27
-		{
-			title: "Sociale durf",
-			ariaValue: 81,
-			value: 0.81,
-			text: "gedurfd",
-			textAlt: "terughoudend",
-		}, // 5.84
-		{
-			title: "Sociabiliteit",
-			ariaValue: 71,
-			value: 0.71,
-			text: "sociaal",
-			textAlt: "solitair",
-		}, // 5.23
-		{
-			title: "Levendigheid",
-			ariaValue: 83,
-			value: 0.83,
-			text: "energiek",
-			textAlt: "gelijkmatig",
-		}, // 5.96
-	],
-};
-
-/** @type {SkillSection} */
-const agreeableness = {
-	title: "Meegaandheid",
-	type: "line",
-	skills: [
-		{
-			title: "Vergevingsgezindheid",
-			ariaValue: 77,
-			value: 0.77,
-			text: "vergevingsgezind",
-			textAlt: "streng",
-		}, // 5.59
-		{
-			title: "Zachtzinnigheid",
-			ariaValue: 62,
-			value: 0.62,
-			text: "zacht",
-			textAlt: "openhartig",
-		}, // 4.70
-		{
-			title: "Flexibiliteit",
-			ariaValue: 54,
-			value: 0.54,
-			text: "flexibel",
-			textAlt: "vastberaden",
-		}, // 4.26
-		{
-			title: "Geduld",
-			ariaValue: 73,
-			value: 0.73,
-			text: "geduldig",
-			textAlt: "urgent",
-		}, // 5.36
-	],
-};
-
-/** @type {SkillSection} */
-const conscientiousness = {
-	title: "Zorgvuldigheid",
-	type: "line",
-	skills: [
-		{
-			title: "Organisatie",
-			ariaValue: 76,
-			value: 0.76,
-			text: "georganiseerd",
-			textAlt: "adaptief",
-		}, // 5.54
-		{
-			title: "IJver",
-			ariaValue: 96,
-			value: 0.96,
-			text: "volhardend",
-			textAlt: "inspanning vermijdend",
-		}, // 6.78
-		{
-			title: "Perfectionisme",
-			ariaValue: 88,
-			value: 0.88,
-			text: "aandacht voor detail",
-			textAlt: "helikopterview",
-		}, // 6.31
-		{
-			title: "Behoedzaamheid",
-			ariaValue: 68,
-			value: 0.68,
-			text: "doordacht",
-			textAlt: "avontuurlijk",
-		}, // 5.09
-	],
-};
-
-/** @type {SkillSection} */
-const openness = {
-	title: "Openheid",
-	type: "line",
-	skills: [
-		{
-			title: "Esthetische waardering",
-			ariaValue: 67,
-			value: 0.67,
-			text: "esthetische focus",
-			textAlt: "utilitair",
-		}, // 5.02
-		{
-			title: "Nieuwsgierigheid",
-			ariaValue: 92,
-			value: 0.92,
-			text: "nieuwsgierig",
-			textAlt: "gefocust",
-		}, // 6.53
-		{
-			title: "Creativiteit",
-			ariaValue: 80,
-			value: 0.8,
-			text: "origineel",
-			textAlt: "praktisch",
-		}, // 5.81
-		{
-			title: "Onconventionaliteit",
-			ariaValue: 82,
-			value: 0.82,
-			text: "onconventioneel",
-			textAlt: "conventioneel",
-		}, // 5.90
-	],
-};
-
-/** @type {SkillSection} */
-const altruism = {
-	title: "Altruïsme",
-	type: "line",
-	skills: [
-		{
-			title: "Altruïsme",
-			ariaValue: 91,
-			value: 0.91,
-			text: "gevend",
-			textAlt: "zelfbeschermend",
-		}, // 6.44
+			skills: [
+				{
+					title: "Altruïsme",
+					description: markdownToHtml("gevend vs. zelfbeschermend."),
+					ariaValue: 91,
+					value: 0.91,
+					text: "gevend",
+					textAlt: "zelfbeschermend",
+				},
+			],
+		},
 	],
 };
 
@@ -1123,24 +1175,7 @@ const altruism = {
 export const personality = {
 	title: "Persoonlijkheid",
 	content: markdownFileToHtml("src/data/content-nl/personality.md"),
-	expander: {
-		id: "about-intro-expander",
-		content: markdownFileToHtml(
-			"src/data/content-nl/personality-expander.md",
-		),
-		text: "lees meer",
-		textAlt: "toon minder",
-	},
 	factors: hexaco,
-	facets: [
-		honestyHumility,
-		emotionality,
-		extraversion,
-		agreeableness,
-		conscientiousness,
-		openness,
-		altruism,
-	],
 };
 
 /** @type {Content} **/

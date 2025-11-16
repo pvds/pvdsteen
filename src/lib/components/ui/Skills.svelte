@@ -1,4 +1,8 @@
 <script>
+import { slugify } from "$lib/helpers/string.js";
+import Expander from "./Expander.svelte";
+import Skills from "./Skills.svelte";
+
 /**
  * @typedef {import('$data/content').SkillItem} SkillItem
  * @typedef {import('$data/content').SkillsType} SkillsType
@@ -87,8 +91,7 @@ let { title, type = "line", skills = [] } = $props();
 	{:else if type === 'scale'}
 		<strong class="font-semibold">{s.title}</strong>
 		<div class="mb-1 flex items-center justify-between">
-			{#if s.textAlt}<p
-				class="flex-none text-sm font-light text-black-light">{s.textAlt}</p>{/if}
+			{#if s.textAlt}<p class="flex-none text-sm font-light text-black-light">{s.textAlt}</p>{/if}
 			{#if s.text}<p class="flex-none text-sm font-light text-black-light">{s.text}</p>{/if}
 		</div>
 		<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={ariaValue}
@@ -102,8 +105,27 @@ let { title, type = "line", skills = [] } = $props();
 				after:h-full after:w-[var(--w)] {ariaValue > 50 ? 'after:rounded-e-full' :
 				'after:rounded-s-full'} after:bg-primary
 				after:transition-[width] after:duration-500 after:ease-out after:left-[var(--left)]"></div>
+
+
+		{#if s.skills?.length}
+			<Expander
+				id="skill-{slugify(s.title)}"
+				text="show details"
+				textAlt="hide details"
+			>
+				<div class="ml-6 mb-4">
+					{#if s.description}
+						<div class="my-2 text-sm text-black-light prose-sm">
+							{@html s.description}
+						</div>
+					{/if}
+					<Skills skills={s.skills} {type} />
+				</div>
+			</Expander>
+		{/if}
 	{/if}
 	</li>
 {/each}
 </ul>
 </div>
+
