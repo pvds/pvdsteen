@@ -874,9 +874,7 @@ const hexaco = {
 			skills: [
 				{
 					title: "Sincerity",
-					description: markdownToHtml(
-						"genuine vs. flattering to get favors.",
-					),
+					description: "genuine vs. flattering to get favors.",
 					ariaValue: 89,
 					value: 0.89,
 					text: "plain-speaking",
@@ -884,9 +882,8 @@ const hexaco = {
 				},
 				{
 					title: "Fairness",
-					description: markdownToHtml(
+					description:
 						"avoids fraud/exploitation vs. willing to cheat.",
-					),
 					ariaValue: 87,
 					value: 0.87,
 					text: "even-handed",
@@ -894,9 +891,8 @@ const hexaco = {
 				},
 				{
 					title: "Greed Avoidance",
-					description: markdownToHtml(
+					description:
 						"indifferent to luxury/status vs. desire to display wealth/privilege.",
-					),
 					ariaValue: 90,
 					value: 0.9,
 					text: "low status focus",
@@ -904,9 +900,7 @@ const hexaco = {
 				},
 				{
 					title: "Modesty",
-					description: markdownToHtml(
-						"unassuming vs. superior/entitled.",
-					),
+					description: "unassuming vs. superior/entitled.",
 					ariaValue: 94,
 					value: 0.94,
 					text: "low-key",
@@ -926,9 +920,7 @@ const hexaco = {
 			skills: [
 				{
 					title: "Fearfulness",
-					description: markdownToHtml(
-						"avoids injury vs. tough/brave to pain.",
-					),
+					description: "avoids injury vs. tough/brave to pain.",
 					ariaValue: 61,
 					value: 0.61,
 					text: "risk-cautious",
@@ -936,9 +928,7 @@ const hexaco = {
 				},
 				{
 					title: "Anxiety",
-					description: markdownToHtml(
-						"prone to worry vs. little stress response.",
-					),
+					description: "prone to worry vs. little stress response.",
 					ariaValue: 86,
 					value: 0.86,
 					text: "vigilant",
@@ -946,9 +936,8 @@ const hexaco = {
 				},
 				{
 					title: "Dependence",
-					description: markdownToHtml(
+					description:
 						"wants encouragement/comfort vs. handles problems alone.",
-					),
 					ariaValue: 92,
 					value: 0.92,
 					text: "support-seeking",
@@ -956,9 +945,8 @@ const hexaco = {
 				},
 				{
 					title: "Sentimentality",
-					description: markdownToHtml(
+					description:
 						"strong bonds/empathy vs. little emotional reaction to others.",
-					),
 					ariaValue: 79,
 					value: 0.79,
 					text: "tender-hearted",
@@ -978,9 +966,7 @@ const hexaco = {
 			skills: [
 				{
 					title: "Social Self-Esteem",
-					description: markdownToHtml(
-						"satisfied/likable vs. self-doubt/unpopular.",
-					),
+					description: "satisfied/likable vs. self-doubt/unpopular.",
 					ariaValue: 71,
 					value: 0.71,
 					text: "self-assured",
@@ -988,9 +974,8 @@ const hexaco = {
 				},
 				{
 					title: "Social Boldness",
-					description: markdownToHtml(
+					description:
 						"comfortable leading/speaking vs. shy/awkward.",
-					),
 					ariaValue: 81,
 					value: 0.81,
 					text: "bold",
@@ -998,9 +983,8 @@ const hexaco = {
 				},
 				{
 					title: "Sociability",
-					description: markdownToHtml(
+					description:
 						"seeks conversation/parties vs. prefers solitary activities.",
-					),
 					ariaValue: 71,
 					value: 0.71,
 					text: "outgoing",
@@ -1008,9 +992,7 @@ const hexaco = {
 				},
 				{
 					title: "Liveliness",
-					description: markdownToHtml(
-						"cheerful/optimistic vs. less spirited.",
-					),
+					description: "cheerful/optimistic vs. less spirited.",
 					ariaValue: 83,
 					value: 0.83,
 					text: "energetic",
@@ -1030,9 +1012,7 @@ const hexaco = {
 			skills: [
 				{
 					title: "Forgivingness",
-					description: markdownToHtml(
-						"ready to trust again vs. keeps grudges.",
-					),
+					description: "ready to trust again vs. keeps grudges.",
 					ariaValue: 77,
 					value: 0.77,
 					text: "forgiving",
@@ -1040,9 +1020,7 @@ const hexaco = {
 				},
 				{
 					title: "Gentleness",
-					description: markdownToHtml(
-						"mild/lenient vs. harshly critical.",
-					),
+					description: "mild/lenient vs. harshly critical.",
 					ariaValue: 62,
 					value: 0.62,
 					text: "gentle",
@@ -1050,9 +1028,8 @@ const hexaco = {
 				},
 				{
 					title: "Flexibility",
-					description: markdownToHtml(
+					description:
 						"accommodates/avoids arguments vs. stubborn/argues.",
-					),
 					ariaValue: 54,
 					value: 0.54,
 					text: "flexible",
@@ -1060,9 +1037,7 @@ const hexaco = {
 				},
 				{
 					title: "Patience",
-					description: markdownToHtml(
-						"slow to anger vs. quick-tempered.",
-					),
+					description: "slow to anger vs. quick-tempered.",
 					ariaValue: 73,
 					value: 0.73,
 					text: "patient",
@@ -1082,9 +1057,7 @@ const hexaco = {
 			skills: [
 				{
 					title: "Organization",
-					description: markdownToHtml(
-						"tidy/structured vs. sloppy/haphazard.",
-					),
+					description: "tidy/structured vs. sloppy/haphazard.",
 					ariaValue: 76,
 					value: 0.76,
 					text: "organized",
@@ -1092,9 +1065,8 @@ const hexaco = {
 				},
 				{
 					title: "Diligence",
-					description: markdownToHtml(
+					description:
 						"strong work ethic vs. low motivation/self-discipline.",
-					),
 					ariaValue: 96,
 					value: 0.96,
 					text: "persistent",
@@ -1102,9 +1074,8 @@ const hexaco = {
 				},
 				{
 					title: "Perfectionism",
-					description: markdownToHtml(
+					description:
 						"checks for mistakes/improvements vs. tolerates errors/neglects details.",
-					),
 					ariaValue: 88,
 					value: 0.88,
 					text: "detail care",
@@ -1112,9 +1083,8 @@ const hexaco = {
 				},
 				{
 					title: "Prudence",
-					description: markdownToHtml(
+					description:
 						"cautious, inhibits impulses vs. acts quickly/impulsively.",
-					),
 					ariaValue: 68,
 					value: 0.68,
 					text: "deliberate",
@@ -1134,9 +1104,7 @@ const hexaco = {
 			skills: [
 				{
 					title: "Aesthetic Appreciation",
-					description: markdownToHtml(
-						"moved by art/nature vs. rarely absorbed.",
-					),
+					description: "moved by art/nature vs. rarely absorbed.",
 					ariaValue: 67,
 					value: 0.67,
 					text: "aesthetic focus",
@@ -1144,9 +1112,8 @@ const hexaco = {
 				},
 				{
 					title: "Inquisitiveness",
-					description: markdownToHtml(
+					description:
 						"seeks knowledge/experience vs. little curiosity.",
-					),
 					ariaValue: 92,
 					value: 0.92,
 					text: "curious",
@@ -1154,9 +1121,8 @@ const hexaco = {
 				},
 				{
 					title: "Creativity",
-					description: markdownToHtml(
+					description:
 						"prefers innovation/experimentation vs. little originality.",
-					),
 					ariaValue: 80,
 					value: 0.8,
 					text: "original",
@@ -1164,9 +1130,8 @@ const hexaco = {
 				},
 				{
 					title: "Unconventionality",
-					description: markdownToHtml(
+					description:
 						"receptive to unusual/radical ideas vs. avoids nonconformity.",
-					),
 					ariaValue: 82,
 					value: 0.82,
 					text: "unconventional",
@@ -1177,7 +1142,7 @@ const hexaco = {
 		{
 			title: "Altruism",
 			description: markdownToHtml(
-				"**High:** soft-hearted, avoids harm, generous to those in need.\n\n**Low:** not upset by harming others; seen as hard-hearted.\n\n> **Use with care:** Scores estimate tendencies and can vary by items or rater. Treat the profile as insight, not fate.",
+				"**High:** soft-hearted, avoids harm, generous to those in need.\n\n**Low:** not upset by harming others; seen as hard-hearted.",
 			),
 			ariaValue: 91,
 			value: 0.91,
@@ -1186,7 +1151,7 @@ const hexaco = {
 			skills: [
 				{
 					title: "Altruism",
-					description: markdownToHtml("giving vs. self-protective."),
+					description: "giving vs. self-protective.",
 					ariaValue: 91,
 					value: 0.91,
 					text: "giving",
