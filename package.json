@@ -71,5 +71,8 @@
 	],
 	"prettier": {
 		"proseWrap": "always"
+	},
+	"dependencies": {
+		"latest": "^0.2.0"
 	}
 }
