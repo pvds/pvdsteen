@@ -1,0 +1,15 @@
+# Peer dependency settings
+strictPeerDependencies: true # fail install if peer dependencies are missing or incompatible
+
+# Security settings
+minimumReleaseAge: 1440 # minimum number of minutes that must pass after a version is published before pnpm will install it
+minimumReleaseAgeExclude:
+    - marked@17.0.3
+    - svelte@5.51.3
+
+onlyBuiltDependencies:
+    - '@evilmartians/lefthook'
+    - sharp
+
+# Override specific packages to resolve peer dependency issues or vulnerabilities
+# overrides:
